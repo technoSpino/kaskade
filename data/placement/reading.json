@@ -1,0 +1,135 @@
+{
+  "about": "Original texts for the Kaskade placement test (Lesen). Written for Kaskade.",
+  "texts": [
+    {
+      "id": "b1",
+      "origin": "ai",
+      "level": "B1",
+      "title": "Eine Bank, die Menschen verbindet",
+      "kind": "Zeitungsartikel (Lokalteil)",
+      "text": "Wer in Ellertal wohnt und kein Auto hat, hatte es lange schwer. Der Bus in die nächste Stadt fährt nur dreimal am Tag, am Wochenende gar nicht. Seit dem Frühjahr gibt es in dem kleinen Dorf in Nordhessen deshalb eine neue Idee: die Mitfahrbank.\n\nDie Bank steht direkt am Ortsausgang und ist leuchtend gelb gestrichen, damit Autofahrer sie schon von Weitem sehen. Daneben steht eine Tafel mit zwei Klappschildern. Wer mitfahren möchte, setzt sich auf die Bank und klappt das Schild mit seinem Ziel auf: „Bad Arnsfeld“ oder „Bahnhof Hohenbrück“. Autofahrer, die in diese Richtung fahren, können dann anhalten und die Person mitnehmen. Geld kostet die Fahrt nicht.\n\nDie Idee kam von Renate Kolbe, die seit 40 Jahren im Dorf lebt. „Viele ältere Leute hier fahren nicht mehr selbst Auto, wollen aber trotzdem zum Arzt oder zum Einkaufen“, erzählt sie. Zusammen mit dem Bürgermeister hat sie im Winter Spenden für die Bank gesammelt. Ein Schreiner aus dem Ort baute sie kostenlos.\n\nAm Anfang waren manche Bewohner skeptisch. Sie fragten sich, ob es nicht gefährlich ist, zu Fremden ins Auto zu steigen. Frau Kolbe versteht diese Sorge. Sie empfiehlt deshalb, vor der Fahrt kurz miteinander zu sprechen und einer Freundin oder einem Nachbarn das Kennzeichen des Autos zu schicken.\n\nInzwischen wird die Bank regelmäßig genutzt, vor allem vormittags. Auch Jugendliche, die noch keinen Führerschein haben, warten dort manchmal auf eine Mitfahrgelegenheit. Meistens dauert es nicht länger als zehn Minuten, bis jemand anhält.\n\nIm nächsten Jahr sollen zwei weitere Bänke dazukommen: eine in Bad Arnsfeld für die Rückfahrt und eine am Bahnhof. „Dann ist das System endlich komplett“, sagt Frau Kolbe.",
+      "questions": [
+        {
+          "id": "b1q1",
+          "question": "Warum gibt es in Ellertal jetzt eine Mitfahrbank?",
+          "options": [
+            "Weil die Buslinie ganz eingestellt wurde.",
+            "Weil der Bus nur selten fährt und viele Menschen kein Auto haben.",
+            "Weil der Bürgermeister Geld für den Bus sparen wollte."
+          ],
+          "correct": 1,
+          "explanation": "Im Text steht, dass der Bus nur dreimal am Tag fährt und Menschen ohne Auto es schwer hatten."
+        },
+        {
+          "id": "b1q2",
+          "question": "Wie zeigt man, wohin man fahren möchte?",
+          "options": [
+            "Man hält einen Zettel mit dem Ortsnamen hoch.",
+            "Man meldet sich vorher telefonisch an.",
+            "Man klappt an einer Tafel das Schild mit seinem Ziel auf."
+          ],
+          "correct": 2,
+          "explanation": "Neben der Bank steht eine Tafel mit zwei Klappschildern für die beiden Ziele."
+        },
+        {
+          "id": "b1q3",
+          "question": "Was rät Frau Kolbe Menschen, die Angst vor der Fahrt mit Fremden haben?",
+          "options": [
+            "Vorher kurz mit dem Fahrer sprechen und jemandem das Kennzeichen schicken.",
+            "Nur mit Leuten fahren, die man schon kennt.",
+            "Die Bank nur am Vormittag benutzen."
+          ],
+          "correct": 0,
+          "explanation": "Frau Kolbe empfiehlt, kurz miteinander zu sprechen und das Kennzeichen an eine Freundin oder einen Nachbarn zu schicken."
+        },
+        {
+          "id": "b1q4",
+          "question": "Wie lange muss man auf der Bank meistens warten?",
+          "options": [
+            "Ungefähr eine halbe Stunde.",
+            "Bis der nächste Bus kommt.",
+            "Höchstens etwa zehn Minuten."
+          ],
+          "correct": 2,
+          "explanation": "Im Text steht, dass es meistens nicht länger als zehn Minuten dauert, bis jemand anhält."
+        },
+        {
+          "id": "b1q5",
+          "question": "Was ist für das nächste Jahr geplant?",
+          "options": [
+            "Eine neue Busverbindung am Wochenende.",
+            "Zwei zusätzliche Bänke in Bad Arnsfeld und am Bahnhof.",
+            "Eine zweite Bank im Dorf für Jugendliche."
+          ],
+          "correct": 1,
+          "explanation": "Es sollen zwei weitere Bänke kommen: eine in Bad Arnsfeld und eine am Bahnhof."
+        }
+      ]
+    },
+    {
+      "id": "b2",
+      "origin": "ai",
+      "level": "B2",
+      "title": "Bauen im Hinterhof: Wie viel Dichte verträgt die Stadt?",
+      "kind": "Zeitungsartikel",
+      "text": "Wohnraum ist in deutschen Großstädten knapp, doch neue Baugebiete am Stadtrand sind umstritten, weil dafür Felder und Wiesen versiegelt werden müssten. Viele Kommunen setzen deshalb auf die sogenannte Nachverdichtung: Baulücken werden geschlossen, Dachgeschosse ausgebaut, und in Hinterhöfen, die bisher als Parkplatz oder Garten genutzt wurden, entstehen neue Gebäude.\n\nFür die Stadtplanerin Miriam Fasold ist dieser Weg alternativlos. „Wenn wir weiterhin nach außen wachsen würden, bräuchten die Menschen längere Wege, und der Verkehr würde weiter zunehmen“, sagt sie. Eine dichte Stadt sei nicht automatisch eine schlechte Stadt. Entscheidend sei vielmehr, wie gebaut werde. Begrünte Dächer, schattige Innenhöfe und gut erreichbare Parks könnten die Lebensqualität sogar erhöhen. Zudem ließen sich vorhandene Straßen, Leitungen und Buslinien besser auslasten, was langfristig Kosten spare.\n\nJonas Behrendt sieht das anders. Seit zwölf Jahren wohnt er mit seiner Familie in einem Altbau in Köln. Im vergangenen Jahr wurde der Garten hinter seinem Haus für ein fünfstöckiges Wohngebäude geopfert. „Von meinem Küchenfenster aus schaue ich jetzt auf eine Wand“, erzählt er. Besonders belastend sei der Lärm: erst monatelang die Baustelle, jetzt die Geräusche aus den neuen Wohnungen, die im engen Hof viel lauter widerhallten als früher. Grundsätzlich habe er nichts gegen neue Wohnungen, betont Behrendt. Man hätte die Anwohner aber früher und ehrlicher in die Planung einbeziehen müssen.\n\nGenau hier setzt Elif Aydın an, die bei einer Wohnungsgenossenschaft für Neubauprojekte zuständig ist. Ihre Erfahrung: Wo Nachbarn von Anfang an mitreden dürfen, sinkt der Widerstand deutlich. Bei einem ihrer letzten Projekte wurde auf Wunsch der Anwohner auf ein Stockwerk verzichtet; im Gegenzug wurde im Hof ein kleiner Spielplatz angelegt, der allen offensteht. Solche Kompromisse seien nicht immer möglich, aber häufiger, als viele glaubten. „Natürlich kostet die frühzeitige Beteiligung der Nachbarschaft Zeit“, räumt Aydın ein. „Aber ein Projekt, das jahrelang vor Gericht verhandelt wird, wäre am Ende noch teurer.“\n\nFachleute sind sich weitgehend einig, dass die Städte ohne Nachverdichtung den Bedarf an bezahlbarem Wohnraum kaum decken könnten. Umstritten bleibt jedoch, wo die Grenze liegt. Hinzu kommt, dass Neubauten im Hof oft nur über enge Durchfahrten erreichbar sind, was die Arbeit von Feuerwehr und Rettungsdiensten erschweren kann. Kritiker fordern verbindliche Regeln zum Schutz von Grünflächen und zur Vermeidung von Lärm, bevor weitere Höfe bebaut werden. Ob sich die Interessen von Wohnungssuchenden und langjährigen Bewohnern miteinander vereinbaren lassen, wird sich wohl erst in einigen Jahren zeigen.",
+      "questions": [
+        {
+          "id": "b2q1",
+          "question": "Worum geht es in dem Text hauptsächlich?",
+          "options": [
+            "Um die Forderung, mehr Baugebiete am Stadtrand auszuweisen.",
+            "Um Lärm auf Baustellen und wie man ihn verringern kann.",
+            "Um das Bauen auf bereits genutzten Flächen in der Stadt und die Konflikte, die dabei entstehen."
+          ],
+          "correct": 2,
+          "explanation": "Der Text erklärt die Nachverdichtung und zeigt verschiedene Meinungen und Probleme dazu."
+        },
+        {
+          "id": "b2q2",
+          "question": "Welche Meinung vertritt Miriam Fasold?",
+          "options": [
+            "Dichte Städte bieten grundsätzlich eine schlechtere Lebensqualität.",
+            "Ob eine dichte Stadt lebenswert ist, hängt vor allem davon ab, wie gebaut wird.",
+            "Die Städte sollten in Zukunft vor allem nach außen wachsen."
+          ],
+          "correct": 1,
+          "explanation": "Sie sagt, entscheidend sei, wie gebaut werde, zum Beispiel mit begrünten Dächern und Parks."
+        },
+        {
+          "id": "b2q3",
+          "question": "Wie lässt sich die Haltung von Jonas Behrendt am besten beschreiben?",
+          "options": [
+            "Er ist nicht gegen neue Wohnungen, kritisiert aber, wie die Anwohner beteiligt wurden.",
+            "Er lehnt jeden Neubau in seinem Viertel grundsätzlich ab.",
+            "Ihn stört vor allem die fehlende Aussicht, der Lärm ist für ihn kein Problem."
+          ],
+          "correct": 0,
+          "explanation": "Er hat grundsätzlich nichts gegen neue Wohnungen, meint aber, man hätte die Anwohner früher einbeziehen müssen."
+        },
+        {
+          "id": "b2q4",
+          "question": "Warum hält Elif Aydın eine frühe Beteiligung der Nachbarn für sinnvoll, obwohl sie Zeit kostet?",
+          "options": [
+            "Weil Bauprojekte dadurch schneller fertig werden.",
+            "Weil sie langwierige und teure Gerichtsverfahren vermeiden kann.",
+            "Weil man dadurch mehr Stockwerke bauen darf."
+          ],
+          "correct": 1,
+          "explanation": "Sie sagt, ein Projekt, das jahrelang vor Gericht verhandelt wird, wäre am Ende noch teurer."
+        },
+        {
+          "id": "b2q5",
+          "question": "Was sagt der Text über die Zukunft der Nachverdichtung?",
+          "options": [
+            "Es ist noch offen, ob sich die unterschiedlichen Interessen vereinbaren lassen.",
+            "Sie wird in den nächsten Jahren wahrscheinlich ganz gestoppt.",
+            "Es gibt bereits verbindliche Regeln zum Schutz von Grünflächen."
+          ],
+          "correct": 0,
+          "explanation": "Am Ende steht, dass sich erst in einigen Jahren zeigen wird, ob die Interessen zusammenpassen."
+        }
+      ]
+    }
+  ]
+}

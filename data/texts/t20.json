@@ -1,0 +1,63 @@
+{
+  "id": "t20",
+  "origin": "ai",
+  "title": "Omas 80. Geburtstag",
+  "level": "A2+",
+  "theme": "Familie",
+  "slot": "lesen",
+  "text": "Am Sonntag hat Oma Hilde Geburtstag. Sie wird 80 Jahre alt. Die ganze Familie kommt zu ihr nach Freiburg: ihre drei Kinder, ihre sieben Enkel und sogar ihr Bruder aus Wien. Oma Hilde sagt am Telefon: „Ich brauche keine Party. Ich will nur Kaffee und Kuchen.“ Aber ihre Tochter Petra hat andere Pläne.\n\nPetra hat in einem Restaurant einen großen Tisch bestellt. Ihre Mutter weiß nichts davon. Alle Enkel haben Fotos gesucht, und Petra hat daraus ein großes Buch gemacht. Darin sind Bilder von Omas Hochzeit, von ihren Kindern und von vielen Reisen. Der Enkel Max hat ein Lied geschrieben. Er spielt Gitarre, aber nicht sehr gut.\n\nAm Sonntag um zwölf Uhr holt Petra ihre Mutter ab. „Wir gehen nur kurz essen“, sagt sie. Oma Hilde trägt ihr bestes Kleid. Im Restaurant öffnet Petra die Tür, und alle rufen laut: „Überraschung!“ Oma Hilde steht still in der Tür. Dann fängt sie an zu weinen. „Ihr seid ja alle verrückt“, sagt sie. Aber sie lacht dabei.\n\nDas Essen ist sehr gut, und es gibt natürlich auch Kuchen. Danach singt Max sein Lied. Er spielt ein paar falsche Töne, aber niemand sagt etwas. Oma Hilde schaut lange das Buch an. Bei jedem Foto erzählt sie eine Geschichte. Viele Geschichten kennen die Enkel noch nicht.\n\nAm Abend sind alle müde und glücklich. Oma Hilde umarmt jeden Gast. Zu Petra sagt sie leise: „Ich habe ja gesagt, ich will keine Party. Aber das war der schönste Tag seit vielen Jahren. Danke.“",
+  "glossary": [
+    {
+      "term": "Oma",
+      "gloss": "grandma",
+      "note": "die Oma, -s"
+    },
+    {
+      "term": "Enkel",
+      "gloss": "grandchildren; grandson",
+      "note": "der Enkel, -"
+    },
+    {
+      "term": "Gitarre",
+      "gloss": "guitar",
+      "note": "die Gitarre, -n"
+    },
+    {
+      "term": "umarmt",
+      "gloss": "hugs",
+      "note": "umarmen – hat umarmt"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Was möchte Oma Hilde zu ihrem Geburtstag?",
+      "options": [
+        "Eine große Party.",
+        "Nur Kaffee und Kuchen.",
+        "Eine Reise nach Wien."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Was hat Petra für ihre Mutter vorbereitet?",
+      "options": [
+        "Eine Reise mit der ganzen Familie.",
+        "Ein neues Kleid.",
+        "Eine Überraschungsfeier mit einem Buch voller Fotos."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Wie findet Oma Hilde den Tag am Ende?",
+      "options": [
+        "Sehr schön, der schönste Tag seit vielen Jahren.",
+        "Zu laut und zu lang.",
+        "Langweilig, weil Max falsch singt."
+      ],
+      "correct": 0
+    }
+  ],
+  "names": [
+    "Hilde"
+  ]
+}

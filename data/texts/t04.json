@@ -1,0 +1,75 @@
+{
+  "id": "t04",
+  "origin": "ai",
+  "title": "Streit wegen der Musik",
+  "level": "B1",
+  "theme": "Nachbarn",
+  "slot": "lesen",
+  "text": "Herr Lorenz war ein ruhiger Mann. Er wohnte seit zwanzig Jahren im selben Haus und kannte alle Nachbarn. Doch im Frühling zog ein junger Mann in die Wohnung über ihm. Er hieß Felix und spielte Gitarre. Er spielte am Morgen, am Nachmittag und manchmal auch noch um elf Uhr in der Nacht.\n\nZuerst sagte Herr Lorenz nichts. Er wollte keinen Streit. Aber nach zwei Wochen konnte er nicht mehr schlafen. Eines Abends ging er nach oben und klopfte laut an die Tür. „Junger Mann, wissen Sie, wie spät es ist?“, rief er. „Manche Menschen müssen morgen früh arbeiten!“ Felix wurde rot. „Entschuldigung, das wusste ich nicht“, sagte er. Doch Herr Lorenz war schon wieder auf der Treppe.\n\nIn den nächsten Tagen grüßten sich die beiden nicht mehr. Wenn sie sich im Flur trafen, sahen sie zur Seite. Die Musik war jetzt leiser, aber Herr Lorenz fühlte sich trotzdem nicht gut. Er hatte zu laut gesprochen, und das wusste er.\n\nEine Woche später hörte er am Nachmittag wieder Musik von oben. Diesmal war es ein altes Lied, das er sehr gut kannte. Seine Frau hatte es früher oft gesungen. Herr Lorenz setzte sich ans Fenster und hörte zu, bis das Lied zu Ende war.\n\nAm nächsten Tag stand er mit einer Flasche Wein vor Felix' Tür. „Ich war neulich nicht sehr freundlich“, sagte er. „Das tut mir leid.“ Felix lachte erleichtert. „Ich hätte selbst fragen sollen, ob die Musik stört.“ Sie tranken zusammen ein Glas, und Felix spielte das alte Lied noch einmal. Seitdem gilt eine einfache Regel im Haus: Musik gern, aber nach zehn Uhr ist Ruhe. Und jeden Sonntag spielt Felix ein Lied nur für Herrn Lorenz.",
+  "glossary": [
+    {
+      "term": "Frühling",
+      "gloss": "spring",
+      "note": "der Frühling"
+    },
+    {
+      "term": "Gitarre",
+      "gloss": "guitar",
+      "note": "die Gitarre, -n"
+    },
+    {
+      "term": "Treppe",
+      "gloss": "stairs, staircase",
+      "note": "die Treppe, -n"
+    },
+    {
+      "term": "Flur",
+      "gloss": "hallway",
+      "note": "der Flur, -e"
+    },
+    {
+      "term": "erleichtert",
+      "gloss": "relieved",
+      "note": "erleichtern – hat erleichtert"
+    },
+    {
+      "term": "tranken",
+      "gloss": "drank",
+      "note": "trinken – trank – hat getrunken"
+    },
+    {
+      "term": "Regel",
+      "gloss": "rule",
+      "note": "die Regel, -n"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum ist Herr Lorenz am Anfang unzufrieden?",
+      "options": [
+        "Felix spielt oft und auch spät in der Nacht Gitarre.",
+        "Felix grüßt ihn nie.",
+        "Felix stellt seine Sachen in den Flur."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Warum hört Herr Lorenz das alte Lied so gern?",
+      "options": [
+        "Er hat es selbst geschrieben.",
+        "Seine Frau hat es früher oft gesungen.",
+        "Er hat es im Radio gehört."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Welche Regel gilt jetzt im Haus?",
+      "options": [
+        "Musik ist ganz verboten.",
+        "Man darf nur am Sonntag Musik machen.",
+        "Nach zehn Uhr soll es ruhig sein."
+      ],
+      "correct": 2
+    }
+  ]
+}

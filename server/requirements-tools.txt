@@ -1,0 +1,8 @@
+# Not needed for the tests/CI.
+# Rebuild data/freq (scripts/build_freq.py):
+spacy==3.8.16
+# then: .venv/bin/python -m spacy download de_core_news_sm
+
+# Sentence audio (kaskade/tts.py, scripts/tts_deck.py). Piper is GPL-3.0 (used as a tool,
+# not distributed). Voice de_DE-thorsten-medium goes to ~/kaskade-data/tts/voices/.
+piper-tts==1.8.0

@@ -10,8 +10,8 @@ Get the German Declension Learning App running in minutes!
 
 ```bash
 # 1. Extract the zip
-unzip german-declension-mvp.zip
-cd german-declension-mvp
+unzip kaskade.zip
+cd kaskade
 
 # 2. Week 1: Build Table Module
 cd agent-1-table
@@ -53,8 +53,8 @@ cd agent-3-integration
 
 ```bash
 # Extract zip
-unzip german-declension-mvp.zip
-cd german-declension-mvp/app
+unzip kaskade.zip
+cd kaskade/app
 
 # Start local server (choose one):
 python -m http.server 8000
@@ -73,7 +73,7 @@ Once deployed, visit: `https://your-site.netlify.app`
 ## Project Structure at a Glance
 
 ```
-german-declension-mvp/
+kaskade/
 ├── README.md              ← Start here!
 ├── PROJECT_PLAN.md        ← 3-week timeline
 │

@@ -1,0 +1,12 @@
+[Unit]
+Description=Kaskade web (built Vue app via vite preview, 100.64.43.3:5173)
+After=network-online.target kaskade-api.service
+
+[Service]
+WorkingDirectory=%h/kaskade/app
+ExecStart=/usr/bin/npx vite preview --host 100.64.43.3 --port 5173 --strictPort
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target

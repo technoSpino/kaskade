@@ -1,0 +1,296 @@
+/*
+ * Kaskade building blocks. Values only via theme tokens (themes.css).
+ * Tailwind utilities are used for layout; these utilities map to tokens.
+ */
+
+@theme inline {
+  --color-canvas: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--border);
+  --color-line-strong: var(--border-strong);
+  --color-ink: var(--text);
+  --color-ink-2: var(--text-2);
+  --color-muted: var(--muted);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--primary-text);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--accent-text);
+  --color-callout: var(--callout);
+  --color-new: var(--word-new-bg);
+  --color-learning: var(--word-learning);
+  --color-success: var(--success);
+  --color-success-bg: var(--success-bg);
+  --color-danger: var(--danger);
+  --color-case-n: var(--case-n);
+  --color-case-a: var(--case-a);
+  --color-case-d: var(--case-d);
+  --color-case-g: var(--case-g);
+  --color-case-n-bg: var(--case-n-bg);
+  --color-case-a-bg: var(--case-a-bg);
+  --color-case-d-bg: var(--case-d-bg);
+  --color-case-g-bg: var(--case-g-bg);
+  --radius-box: var(--radius-sm);
+  --radius-card: var(--radius-lg);
+  --font-app: var(--font-ui);
+  --font-head: var(--font-heading);
+  --font-reader: var(--font-read);
+}
+
+.k-app {
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height);
+  font-variant-numeric: tabular-nums;
+}
+.k-app a { color: var(--link); }
+.k-app a:hover { color: var(--text); }
+.k-app :focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+
+.k-main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 480px) {
+  .k-main { padding: 20px 16px 40px; gap: 18px; }
+}
+
+.k-card {
+  background: var(--surface);
+  border: var(--border-width) solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 24px;
+  min-width: 0;
+}
+.k-card-strong { border-color: var(--text); border-width: calc(var(--border-width) + 1px); }
+@media (max-width: 480px) { .k-card { padding: 18px 16px; } }
+
+.k-eyebrow {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+.k-h1 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(30px, 6vw, 40px);
+  line-height: 1.1;
+  font-weight: var(--heading-weight);
+  letter-spacing: var(--heading-spacing);
+  text-transform: var(--heading-transform);
+}
+.k-h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 20px;
+  font-weight: var(--heading-weight);
+  text-transform: var(--heading-transform);
+}
+.k-lead { margin: 10px 0 0; font-size: 17px; line-height: 1.55; color: var(--text-2); max-width: 68ch; }
+.k-small { font-size: 14px; color: var(--text-2); }
+.k-hint { font-size: 13px; color: var(--muted); }
+.k-read { font-family: var(--font-read); }
+
+.k-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 48px;
+  padding: 0 20px;
+  border: var(--border-width) solid var(--primary);
+  border-radius: var(--radius-sm);
+  background: var(--primary);
+  color: var(--primary-text) !important;
+  font: inherit;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+}
+.k-btn:hover { background: var(--primary-hover); }
+.k-btn:disabled { opacity: 0.45; cursor: not-allowed; }
+/* aria-disabled instead of disabled: stays focusable, so its tooltip shows on hover and keyboard focus (also in Firefox). */
+.k-btn[aria-disabled='true'] { opacity: 0.45; cursor: not-allowed; }
+.k-btn[aria-disabled='true']:hover { background: var(--primary); }
+
+/* Tooltip for a control: shows on hover and focus. */
+.k-tip { position: relative; display: inline-flex; }
+.k-tip-bubble {
+  display: none;
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 8px);
+  z-index: 20;
+  width: max-content;
+  max-width: 260px;
+  padding: 8px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--text);
+  color: var(--surface);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+  text-align: left;
+  box-shadow: var(--shadow);
+}
+.k-tip:hover .k-tip-bubble,
+.k-tip:focus-within .k-tip-bubble { display: block; }
+@media (max-width: 480px) {
+  .k-tip-bubble { right: auto; left: 0; max-width: min(260px, calc(100vw - 48px)); }
+}
+.k-btn-ghost {
+  background: var(--surface);
+  color: var(--text) !important;
+  border-color: var(--border-strong);
+}
+.k-btn-ghost:hover { background: var(--surface-2); }
+.k-btn-sm { min-height: var(--touch); padding: 0 14px; font-size: 14px; }
+
+.k-kbd {
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  border: 1px solid currentColor;
+  border-radius: 4px;
+  padding: 0 6px;
+  opacity: 0.75;
+}
+
+.k-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: var(--radius-pill);
+}
+.k-chip-accent { background: var(--accent); color: var(--accent-text); }
+.k-chip-success { background: var(--success-bg); color: var(--success); }
+
+/* Origin of content (#16): AI-written badge, or the source of real material. */
+.k-origin {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+.k-origin-ai {
+  padding: 2px 8px;
+  border: 1px solid var(--origin-ai-border);
+  border-radius: var(--radius-pill);
+  background: var(--origin-ai-bg);
+  color: var(--origin-ai-text);
+  white-space: nowrap;
+}
+.k-origin-real { color: var(--muted); font-weight: 600; }
+
+.k-callout {
+  background: var(--callout);
+  color: var(--text-2);
+  border-radius: var(--radius-lg);
+  padding: 16px 18px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.k-callout strong { color: var(--text); }
+
+.k-input {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 12px;
+  border: var(--border-width) solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+}
+textarea.k-input { min-height: 220px; line-height: 1.6; font-family: var(--font-read); font-size: 17px; }
+
+.k-option {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  text-align: left;
+  min-height: 56px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-read);
+  font-size: 18px;
+  color: var(--text);
+  background: var(--surface);
+  border: var(--border-width) solid var(--border-strong);
+  cursor: pointer;
+}
+.k-option:hover { border-color: var(--text); }
+.k-option[aria-checked='true'] {
+  background: var(--callout);
+  border: calc(var(--border-width) + 1px) solid var(--text);
+}
+.k-option .k-key {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-ui);
+  font-weight: 800;
+  font-size: 14px;
+  background: var(--surface-2);
+  color: var(--text);
+}
+.k-option[aria-checked='true'] .k-key { background: var(--primary); color: var(--primary-text); }
+
+.k-progress { height: 6px; background: var(--border); border-radius: 3px; overflow: hidden; }
+.k-progress > div { height: 100%; background: var(--primary); border-radius: 3px; transition: width 0.2s; }
+
+.k-mark { background: var(--word-new-bg); color: var(--text); padding: 0 5px; border-radius: 4px; }
+
+.k-case {
+  flex: none;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 15px;
+}
+.k-case-N { color: var(--case-n); background: var(--case-n-bg); }
+.k-case-A { color: var(--case-a); background: var(--case-a-bg); }
+.k-case-D { color: var(--case-d); background: var(--case-d-bg); }
+.k-case-G { color: var(--case-g); background: var(--case-g-bg); }
+
+.k-error {
+  border-left: 4px solid var(--danger);
+  background: var(--surface);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 14px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .k-app *, .k-app *::before, .k-app *::after { transition: none !important; animation: none !important; }
+}

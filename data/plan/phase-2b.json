@@ -1,0 +1,699 @@
+{
+  "about": "Kaskade 4-week plan for Phase 2B: exact assignments for every block (follow-up #16) — real material first (ARD/ZDF Mediathek episodes fetched into the library, Easy German Podcast episodes, that day's nachrichtenleicht.de articles (#22; week 1 Tuesday was tagesschau, already read), YouTube via Language Reactor, books with notice); Kaskade's AI-written texts and practice tasks only as fallback, tagged. One material per block in day.materials (catalog: stock.json); prompts and week 6 come from weeks-1-4.json. #27: no exam block; the 60-min lesen block holds two exact items (text after audio, audio after text).",
+  "phase": "2B",
+  "block": [
+    {
+      "id": "karten",
+      "start": "09:00",
+      "minutes": 15,
+      "title": "Karten: nur die Lücken",
+      "kind": "karten",
+      "label": "Karten · nur Lücken",
+      "short": "Karten"
+    },
+    {
+      "id": "input",
+      "start": "09:15",
+      "minutes": 65,
+      "title": "Schauen & minen",
+      "kind": "input",
+      "label": "Schauen & minen",
+      "short": "Schauen"
+    },
+    {
+      "id": "pause",
+      "start": "10:20",
+      "minutes": 10,
+      "title": "Pause",
+      "kind": "pause",
+      "label": "Pause",
+      "short": "Pause"
+    },
+    {
+      "id": "lesen",
+      "start": "10:30",
+      "minutes": 60,
+      "title": "Frei lesen oder hören",
+      "kind": "lesen",
+      "label": "Frei lesen / hören · ohne Tools",
+      "short": "Frei"
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "theme": "Krimi: Tatort und SOKO in Etappen",
+      "goal": "Diese Woche schaust du den Tatort „Schweigen“ in drei Teilen und danach eine Folge SOKO Leipzig, und du hörst einen Radio-Tatort aus Berlin. Du minest die Sätze, die du wirklich wieder hören willst.",
+      "days": [
+        {
+          "day": "Mo",
+          "focus": "Start in Phase 2B: Tatort „Schweigen“, erster Teil.",
+          "karten": "Nur die Lücken: fällige Karten und geminte Sätze, dann neue Kernwörter mit K sortieren — was du kennst, kommt sofort weg. Höchstens 15 Minuten.",
+          "input": "Tatort: Schweigen (ARD Mediathek · NDR), 0:00–30:14, in deiner Bibliothek. Nach jeder Zeile pausiert das Video: unbekannte Wörter antippen, 5 bis 10 gute Sätze minen.",
+          "lesen": "Easy German Podcast 698 „Wie Lara ganz alleine akzentfrei Deutsch gelernt hat“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "tatort-schweigen",
+              "from": "0:00",
+              "to": "30:14"
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-698",
+              "minutes": 30,
+              "desc": "Easy German Podcast 698 „Wie Lara ganz alleine akzentfrei Deutsch gelernt hat“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 30,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Di",
+          "focus": "Dranbleiben: Tatort, zweiter Teil.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "Tatort: Schweigen, 30:14–60:40. Ziel: der Handlung folgen. Nur Sätze minen, die oft vorkommen und die du selbst sagen möchtest.",
+          "lesen": "tagesschau.de · Inland: die drei neuesten Artikel des Tages. Heute stehen hier die drei Links. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen. Danach: Easy German Podcast 684 „Als Praktikantin im Deutschen Bundestag“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "tatort-schweigen",
+              "from": "30:14",
+              "to": "60:40"
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "inland",
+              "count": 3,
+              "minutes": 35,
+              "desc": "tagesschau.de · Inland: die drei neuesten Artikel des Tages. Heute stehen hier die drei Links. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-684",
+              "minutes": 25,
+              "desc": "Easy German Podcast 684 „Als Praktikantin im Deutschen Bundestag“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        },
+        {
+          "day": "Mi",
+          "focus": "Schnelle Umgangssprache: kurze Zeilen hören lernen.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "Tatort: Schweigen, 60:40–89:21 (Ende). Kurze, schnelle Zeilen mit R so oft wiederholen, bis du jedes Wort hörst.",
+          "lesen": "Easy German Podcast 700 „Die Kunst des Loslassens“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "tatort-schweigen",
+              "from": "60:40",
+              "to": "89:21"
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-700",
+              "minutes": 30,
+              "desc": "Easy German Podcast 700 „Die Kunst des Loslassens“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 30,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Do",
+          "focus": "Wie reden Ermittler? Fragen, Vermutungen, Vorwürfe.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "Neuer Krimi: SOKO Leipzig „Das Auge“ (ZDF Mediathek), 0:00–22:04, in deiner Bibliothek. Fragen und Vermutungen minen: „Wo waren Sie gestern Abend?“",
+          "lesen": "ARD Radio Tatort „Übertherapie – Toter Arzt im Berliner Drogenmilieu“ (Hörspiel, ARD Sounds), 0:00–27:00, in deiner Bibliothek. Ein Krimi nur zum Hören: Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "soko-leipzig-das-auge",
+              "from": "0:00",
+              "to": "22:04"
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "radio-tatort-uebertherapie",
+              "from": "0:00",
+              "minutes": 30,
+              "desc": "ARD Radio Tatort „Übertherapie – Toter Arzt im Berliner Drogenmilieu“ (Hörspiel, ARD Sounds), 0:00–27:00, in deiner Bibliothek. Ein Krimi nur zum Hören: Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 30,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Fr",
+          "focus": "Wochenrückblick: SOKO zu Ende, die geminten Sätze der Woche — und nach dem Radio Tatort der Lesetest für Schirachs „Verbrechen“.",
+          "karten": "Keine neuen Kernwörter: nur Wiederholungen und die geminten Sätze der Woche.",
+          "input": "SOKO Leipzig „Das Auge“, 22:04–43:31 (Ende). Wer war es? Danach in den Karten die Sätze der Woche durchgehen.",
+          "lesen": "ARD Radio Tatort „Übertherapie – Toter Arzt im Berliner Drogenmilieu“ (Hörspiel, ARD Sounds), 27:00–54:12 (Ende). Wer war es? Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: Lesetest: Schirach, „Verbrechen“ — die ersten zwei Seiten von „Fähner“ (S. 7–8), in der Leseprobe des Verlags. Ohne Wörterbuch lesen, nicht zurückblättern — dann einschätzen: Wie viel hast du verstanden?",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "soko-leipzig-das-auge",
+              "from": "22:04",
+              "to": "43:31"
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "radio-tatort-uebertherapie",
+              "from": "27:00",
+              "minutes": 35,
+              "desc": "ARD Radio Tatort „Übertherapie – Toter Arzt im Berliner Drogenmilieu“ (Hörspiel, ARD Sounds), 27:00–54:12 (Ende). Wer war es? Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "lesetest",
+              "book": "schirach-verbrechen",
+              "part": "S. 7–8",
+              "minutes": 25,
+              "desc": "Lesetest: Schirach, „Verbrechen“ — die ersten zwei Seiten von „Fähner“ (S. 7–8), in der Leseprobe des Verlags. Ohne Wörterbuch lesen, nicht zurückblättern — dann einschätzen: Wie viel hast du verstanden?"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "theme": "Arbeit und Alltag: Comedy und Debatte",
+      "goal": "Diese Woche schaust du zwei Folgen „Merz gegen Merz“ über eine Familienfirma, die Fintech-Satire „King of Stonks“, eine Debatte aus „Die 100“ und Straßeninterviews über Gehälter. Du liest Schirachs „Verbrechen“: jeden Tag ganze Fälle.",
+      "days": [
+        {
+          "day": "Mo",
+          "focus": "Familienfirma und Ehekrise: Sprüche und Redewendungen.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "Merz gegen Merz, Folge 1 „Hoch soll'n sie leben“ (ZDF Mediathek), ganze Folge 0:00–22:35, in deiner Bibliothek. Sprüche und Redewendungen minen, die im Alltag nützlich sind.",
+          "lesen": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 7–42: „Fähner“ und „Tanatas Teeschale“. Das Vorwort (S. 5–6) gern vorher. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut. Danach: Easy German Podcast 693 „Eine Fahrradtour mit Barack Obama“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "merz-gegen-merz-1",
+              "from": "0:00"
+            },
+            {
+              "block": "lesen",
+              "kind": "book",
+              "book": "schirach-verbrechen",
+              "part": "S. 7–42: „Fähner“ und „Tanatas Teeschale“",
+              "minutes": 35,
+              "desc": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 7–42: „Fähner“ und „Tanatas Teeschale“. Das Vorwort (S. 5–6) gern vorher. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-693",
+              "minutes": 25,
+              "desc": "Easy German Podcast 693 „Eine Fahrradtour mit Barack Obama“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        },
+        {
+          "day": "Di",
+          "focus": "Termine und Absprachen im Job.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "Merz gegen Merz, Folge 2 „Alles neu – alles anders“, ganze Folge 0:00–23:06. Sätze zu Terminen und Absprachen minen: „Können wir das verschieben?“",
+          "lesen": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 43–74: „Das Cello“ und „Der Igel“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut. Danach: Easy German Podcast 695 „Die Angst vor der Angst“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "merz-gegen-merz-2",
+              "from": "0:00"
+            },
+            {
+              "block": "lesen",
+              "kind": "book",
+              "book": "schirach-verbrechen",
+              "part": "S. 43–74: „Das Cello“ und „Der Igel“",
+              "minutes": 35,
+              "desc": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 43–74: „Das Cello“ und „Der Igel“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-695",
+              "minutes": 25,
+              "desc": "Easy German Podcast 695 „Die Angst vor der Angst“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        },
+        {
+          "day": "Mi",
+          "focus": "Von der Arbeit erzählen: Start-up, Chef und Kollegen.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "King of Stonks (Netflix), Staffel 1, Folge 1 „It's the Economy, Stupid“, 0:00–24:00, in Chrome mit Language Reactor: deutsche Untertitel an, nach jedem Satz pausieren lassen. Sätze aus dem Büroalltag in Language Reactor speichern.",
+          "lesen": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 75–88: „Glück“. Eine kurze Geschichte: Wenn Zeit bleibt, lies sie ein zweites Mal. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut. Danach: Easy German Podcast 701 „Aktivismus in Deutschland — Jakob Springfeld über Heimat, Demokratie und Engagement“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "netflix",
+              "clip": "netflix-king-of-stonks",
+              "episode": "Staffel 1, Folge 1 „It's the Economy, Stupid“",
+              "from": "0:00",
+              "to": "24:00"
+            },
+            {
+              "block": "lesen",
+              "kind": "book",
+              "book": "schirach-verbrechen",
+              "part": "S. 75–88: „Glück“",
+              "minutes": 35,
+              "desc": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 75–88: „Glück“. Eine kurze Geschichte: Wenn Zeit bleibt, lies sie ein zweites Mal. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-701",
+              "minutes": 25,
+              "desc": "Easy German Podcast 701 „Aktivismus in Deutschland — Jakob Springfeld über Heimat, Demokratie und Engagement“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        },
+        {
+          "day": "Do",
+          "focus": "Meinung sagen und widersprechen.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "Die 100 – was Deutschland bewegt: „Können wir uns diesen Sozialstaat noch leisten?“ (ARD Mediathek), 0:00–24:42. Redemittel minen: „Ich sehe das anders, weil …“",
+          "lesen": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 89–120: „Summertime“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut. Danach: Easy German Podcast 699 „Pipi-Kacka-Humor“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "die-100-sozialstaat",
+              "from": "0:00",
+              "to": "24:42"
+            },
+            {
+              "block": "lesen",
+              "kind": "book",
+              "book": "schirach-verbrechen",
+              "part": "S. 89–120: „Summertime“",
+              "minutes": 35,
+              "desc": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 89–120: „Summertime“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-699",
+              "minutes": 25,
+              "desc": "Easy German Podcast 699 „Pipi-Kacka-Humor“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        },
+        {
+          "day": "Fr",
+          "focus": "Wochenrückblick: echte Stimmen von der Straße.",
+          "karten": "Keine neuen Kernwörter: nur Wiederholungen und die geminten Sätze der Woche.",
+          "input": "Easy German auf YouTube: „Can You Live Well on This Salary in Germany?“, 0:00–14:30, in Chrome mit Language Reactor. Zweimal schauen: erst mit deutschen Untertiteln, dann ohne.",
+          "lesen": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 121–160: „Notwehr“ und „Grün“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut. Danach: Easy German Podcast 697 „Alles cringe“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "youtube",
+              "clip": "yt-easygerman-gehalt",
+              "from": "0:00",
+              "to": "14:30"
+            },
+            {
+              "block": "lesen",
+              "kind": "book",
+              "book": "schirach-verbrechen",
+              "part": "S. 121–160: „Notwehr“ und „Grün“",
+              "minutes": 35,
+              "desc": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 121–160: „Notwehr“ und „Grün“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-697",
+              "minutes": 25,
+              "desc": "Easy German Podcast 697 „Alles cringe“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "theme": "Gesundheit und Behörden: Drama und Doku",
+      "goal": "Diese Woche schaust du eine Reportage über Bürokratie, eine Folge „Charité“ und eine Quarks-Doku über Schlaf. Du liest die letzten drei Fälle aus „Verbrechen“ und hörst einen Krimi über das Gesundheitssystem.",
+      "days": [
+        {
+          "day": "Mo",
+          "focus": "Behörden und Papierkram.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "RESPEKT: „Flüchtlinge – Vorurteile, Bürokratie und das Recht auf einen Neubeginn“ (ARD alpha), ganze Sendung 0:00–28:50, in deiner Bibliothek. Sätze minen, die du auf einem Amt brauchst.",
+          "lesen": "Easy German Podcast 690 „Vom Einwanderer zum Staatsbürger in 3 Jahren“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "respekt-buerokratie",
+              "from": "0:00"
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-690",
+              "minutes": 30,
+              "desc": "Easy German Podcast 690 „Vom Einwanderer zum Staatsbürger in 3 Jahren“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 30,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Di",
+          "focus": "Im Krankenhaus: Ärzte und Patienten.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "Charité, Folge 19 „Ankunft“ (ARD Mediathek · MDR), 0:00–24:49, in deiner Bibliothek. Sätze aus Gesprächen zwischen Ärzten und Patienten minen.",
+          "lesen": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 161–184: „Der Dorn“ und „Liebe“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut. Danach: Easy German Podcast 696 „Das fünfte Rad am Wagen“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "charite-19-ankunft",
+              "from": "0:00",
+              "to": "24:49"
+            },
+            {
+              "block": "lesen",
+              "kind": "book",
+              "book": "schirach-verbrechen",
+              "part": "S. 161–184: „Der Dorn“ und „Liebe“",
+              "minutes": 35,
+              "desc": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 161–184: „Der Dorn“ und „Liebe“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-696",
+              "minutes": 25,
+              "desc": "Easy German Podcast 696 „Das fünfte Rad am Wagen“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        },
+        {
+          "day": "Mi",
+          "focus": "Begründen: weil, deshalb, trotzdem.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "Charité, Folge 19 „Ankunft“, 24:49–48:44 (Ende). Sätze minen, in denen jemand etwas begründet.",
+          "lesen": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 185–205: „Der Äthiopier“. Die letzte Geschichte. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut. Danach: Easy German Podcast 692 „Gottlos“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "charite-19-ankunft",
+              "from": "24:49"
+            },
+            {
+              "block": "lesen",
+              "kind": "book",
+              "book": "schirach-verbrechen",
+              "part": "S. 185–205: „Der Äthiopier“",
+              "minutes": 35,
+              "desc": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 185–205: „Der Äthiopier“. Die letzte Geschichte. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-692",
+              "minutes": 25,
+              "desc": "Easy German Podcast 692 „Gottlos“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        },
+        {
+          "day": "Do",
+          "focus": "Erklären und nachfragen: Wissen über den Körper.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "Quarks: „Schlaf – Die billigste Medizin der Welt“ (ARD Mediathek · WDR), 0:00–22:09, in deiner Bibliothek. Erklärungen und Fachwörter minen, die oft vorkommen.",
+          "lesen": "Kriminalhörspiel „Paradise City – SciFi-Krimi im Gesundheitssystem“ (Deutschlandfunk Kultur), 0:00–28:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "quarks-schlaf",
+              "from": "0:00",
+              "to": "22:09"
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "dlf-krimi-paradise-city",
+              "from": "0:00",
+              "minutes": 30,
+              "desc": "Kriminalhörspiel „Paradise City – SciFi-Krimi im Gesundheitssystem“ (Deutschlandfunk Kultur), 0:00–28:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 30,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Fr",
+          "focus": "Wochenrückblick: die geminten Sätze der Woche.",
+          "karten": "Keine neuen Kernwörter: nur Wiederholungen und die geminten Sätze der Woche.",
+          "input": "Quarks: „Schlaf – Die billigste Medizin der Welt“, 22:09–44:35 (Ende). Danach in den Karten die Sätze der Woche durchgehen.",
+          "lesen": "Kriminalhörspiel „Paradise City – SciFi-Krimi im Gesundheitssystem“ (Deutschlandfunk Kultur), 28:00–55:33 (Ende). Wer war es? Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "quarks-schlaf",
+              "from": "22:09"
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "dlf-krimi-paradise-city",
+              "from": "28:00",
+              "minutes": 30,
+              "desc": "Kriminalhörspiel „Paradise City – SciFi-Krimi im Gesundheitssystem“ (Deutschlandfunk Kultur), 28:00–55:33 (Ende). Wer war es? Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 30,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "theme": "Freizeit, Reisen und Nachrichten",
+      "goal": "Diese Woche reist du mit „Wunderschön!“ durch die Eifel, fährst mit „Feuer & Flamme“ zu einem Einsatz, liest die ersten Kapitel von „QualityLand“ und machst am Freitag den nächsten Satz-Check mit dem neuen Tatort.",
+      "days": [
+        {
+          "day": "Mo",
+          "focus": "Freizeit und Ausflüge.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "Wunderschön!: „Durch die wilde Nordeifel“ (ARD Mediathek · WDR), 0:00–22:06, in deiner Bibliothek. Ausdrücke für unterwegs minen.",
+          "lesen": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), vom Anfang („Versionshinweis“) bis zum Ende von „QualityLand Reiseführer: Ohrwürmer“ — die Kapitel stehen im Kindle im Inhaltsverzeichnis. Die erfundenen Produktnamen (TheShop, QualityPartner …) sind Namen: nicht nachschlagen. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut. Danach: Easy German Podcast 691 „Auf Fehler scheißen“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "wunderschoen-nordeifel",
+              "from": "0:00",
+              "to": "22:06"
+            },
+            {
+              "block": "lesen",
+              "kind": "book",
+              "book": "kling-qualityland",
+              "part": "Vom Anfang bis „QualityLand Reiseführer: Ohrwürmer“",
+              "chapters": [
+                "Versionshinweis",
+                "QualityLand Reiseführer: Ohrwürmer"
+              ],
+              "minutes": 35,
+              "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), vom Anfang („Versionshinweis“) bis zum Ende von „QualityLand Reiseführer: Ohrwürmer“ — die Kapitel stehen im Kindle im Inhaltsverzeichnis. Die erfundenen Produktnamen (TheShop, QualityPartner …) sind Namen: nicht nachschlagen. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-691",
+              "minutes": 25,
+              "desc": "Easy German Podcast 691 „Auf Fehler scheißen“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        },
+        {
+          "day": "Di",
+          "focus": "Nachrichten verstehen: Meldung für Meldung.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "Wunderschön!: „Durch die wilde Nordeifel“, 22:06–43:37 (Ende). Wie beschreibt die Sprecherin Orte und Wege?",
+          "lesen": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen. Danach: Easy German Podcast 689 „Corinna Schmud“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "wunderschoen-nordeifel",
+              "from": "22:06"
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 30,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-689",
+              "minutes": 30,
+              "desc": "Easy German Podcast 689 „Corinna Schmud“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        },
+        {
+          "day": "Mi",
+          "focus": "Wie reden Menschen spontan? Einsatz bei der Feuerwehr.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "Feuer & Flamme, Folge 1 „Extreme Hitze bei Wohnungsbrand“ (ARD Mediathek · WDR), 0:00–21:13, in deiner Bibliothek. Spontane Sätze und Füllwörter minen: „Na ja, also …“",
+          "lesen": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Ado & Eva“ („Peter Arbeitsloser hat einmal …“) bis zum Ende von „PartnerCare“ — im Kindle: Inhaltsverzeichnis → „Ado & Eva“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut. Danach: Easy German Podcast 688 „Anarchie im Kühlschrank“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "feuer-und-flamme-s11e01",
+              "from": "0:00",
+              "to": "21:13"
+            },
+            {
+              "block": "lesen",
+              "kind": "book",
+              "book": "kling-qualityland",
+              "part": "„Ado & Eva“ („Peter Arbeitsloser hat einmal …“) bis „PartnerCare“",
+              "chapters": [
+                "Ado & Eva",
+                "PartnerCare"
+              ],
+              "minutes": 35,
+              "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Ado & Eva“ („Peter Arbeitsloser hat einmal …“) bis zum Ende von „PartnerCare“ — im Kindle: Inhaltsverzeichnis → „Ado & Eva“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-688",
+              "minutes": 25,
+              "desc": "Easy German Podcast 688 „Anarchie im Kühlschrank“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        },
+        {
+          "day": "Do",
+          "focus": "Frei sprechen: kurze Sätze unter Druck.",
+          "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
+          "input": "Feuer & Flamme, Folge 1, 21:13–44:17 (Ende). Kurze Kommandos und Rückfragen minen.",
+          "lesen": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Jetzt spricht der Vater des Killerroboters“ bis zum Ende von „Kalliope 7.3“ — im Kindle: Inhaltsverzeichnis → „Jetzt spricht der Vater des Killerroboters“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut. Danach: Easy German Podcast 687 „Kontakt mit dem Lack eines Autos“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "feuer-und-flamme-s11e01",
+              "from": "21:13"
+            },
+            {
+              "block": "lesen",
+              "kind": "book",
+              "book": "kling-qualityland",
+              "part": "„Jetzt spricht der Vater des Killerroboters“ bis „Kalliope 7.3“",
+              "chapters": [
+                "Jetzt spricht der Vater des Killerroboters",
+                "Kalliope 7.3"
+              ],
+              "minutes": 35,
+              "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Jetzt spricht der Vater des Killerroboters“ bis zum Ende von „Kalliope 7.3“ — im Kindle: Inhaltsverzeichnis → „Jetzt spricht der Vater des Killerroboters“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-687",
+              "minutes": 25,
+              "desc": "Easy German Podcast 687 „Kontakt mit dem Lack eines Autos“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        },
+        {
+          "day": "Fr",
+          "focus": "Monatsrückblick und nächster Satz-Check.",
+          "karten": "Keine neuen Kernwörter: nur Wiederholungen und die geminten Sätze.",
+          "input": "Satz-Check mit „Tatort: Unter Freunden“ (ARD Mediathek · NDR): drei Minuten ab 0:00 ehrlich bewerten, danach im Schauen weiter bis 30:00.",
+          "lesen": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „QualityLand Reiseführer: Maschinenstürmer“ bis zum Ende von „Vorstellungsgespräch“ — im Kindle: Inhaltsverzeichnis → „QualityLand Reiseführer: Maschinenstürmer“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut. Danach: Easy German Podcast 686 „Den Schuh zieh ich mir nicht an!“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "satzcheck",
+              "clip": "tatort-unter-freunden",
+              "from": "0:00",
+              "to": "30:00"
+            },
+            {
+              "block": "lesen",
+              "kind": "book",
+              "book": "kling-qualityland",
+              "part": "„QualityLand Reiseführer: Maschinenstürmer“ bis „Vorstellungsgespräch“",
+              "chapters": [
+                "QualityLand Reiseführer: Maschinenstürmer",
+                "Vorstellungsgespräch"
+              ],
+              "minutes": 35,
+              "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „QualityLand Reiseführer: Maschinenstürmer“ bis zum Ende von „Vorstellungsgespräch“ — im Kindle: Inhaltsverzeichnis → „QualityLand Reiseführer: Maschinenstürmer“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-686",
+              "minutes": 25,
+              "desc": "Easy German Podcast 686 „Den Schuh zieh ich mir nicht an!“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

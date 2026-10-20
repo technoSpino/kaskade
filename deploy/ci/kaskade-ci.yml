@@ -1,0 +1,48 @@
+name: Kaskade CI
+
+on:
+  push:
+    branches: [kaskade]
+  pull_request:
+    branches: [kaskade]
+
+concurrency:
+  group: kaskade-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  frontend:
+    name: Frontend unit tests & build
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: app/package-lock.json
+      - run: npm ci
+      - run: npm run test
+      - run: npm run build
+
+  server:
+    name: API tests & content validation
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: server
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+          cache: pip
+          cache-dependency-path: server/requirements.txt
+      - run: pip install -r requirements.txt spacy==3.8.16 && python -m spacy download de_core_news_sm
+      - name: Unit + API tests
+        run: pytest -q -k "not content"
+      - name: Content validation (data/)
+        run: pytest -q -k content

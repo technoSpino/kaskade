@@ -1,0 +1,9 @@
+[Unit]
+Description=Kaskade plan stock: fetch due Mediathek/podcast items, pick today's news, Materialcheck
+After=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/kaskade/server
+ExecStart=%h/kaskade/server/.venv/bin/python scripts/stock.py
+Nice=10

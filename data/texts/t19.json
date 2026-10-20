@@ -1,0 +1,75 @@
+{
+  "id": "t19",
+  "origin": "ai",
+  "title": "Eine Woche ohne Handy",
+  "level": "B1",
+  "theme": "Medien",
+  "slot": "input",
+  "text": "Meine Freundin hat mir vor einem Monat eine Frage gestellt: „Weißt du eigentlich, wie viele Stunden du jeden Tag am Handy bist?“ Ich wusste es nicht. Also habe ich nachgesehen: fast fünf Stunden! Das war mir peinlich. Deshalb habe ich beschlossen, eine Woche lang ohne Handy zu leben.\n\nDer erste Tag war schwer. Morgens wollte ich wie immer zuerst die Nachrichten lesen, aber das Handy lag in einer Schublade. In der Straßenbahn wusste ich nicht, wohin ich schauen sollte. Alle anderen Leute sahen auf ihr Handy, nur ich nicht. Ich fühlte mich ein bisschen dumm, aber auch ein bisschen stolz.\n\nAm zweiten und dritten Tag gab es echte Probleme. Ich musste einen Termin beim Arzt machen und hatte keine Telefonnummer. Ich konnte meine Freunde nicht anrufen, und ohne Karte habe ich mich in der Stadt verlaufen. Ein älterer Herr hat mir dann den Weg erklärt. Das ist mir seit Jahren nicht mehr passiert.\n\nAb dem vierten Tag wurde es besser. Ich habe abends wieder Bücher gelesen, was ich früher sehr gern gemacht habe. Ich bin besser eingeschlafen und morgens früher aufgestanden. Mit meinen Kollegen habe ich in der Pause wirklich geredet, statt auf den Bildschirm zu starren.\n\nNach sieben Tagen habe ich das Handy wieder angemacht. Ich hatte 214 Nachrichten, aber nur drei waren wirklich wichtig. Heute benutze ich mein Handy wieder, aber anders: Am Abend lege ich es um neun Uhr weg, und beim Essen bleibt es in der Tasche. Ich würde jedem empfehlen, so eine Woche einmal auszuprobieren. Es ist nicht leicht, aber man lernt viel über sich selbst.",
+  "glossary": [
+    {
+      "term": "Schublade",
+      "gloss": "drawer",
+      "note": "die Schublade, -n"
+    },
+    {
+      "term": "Straßenbahn",
+      "gloss": "tram",
+      "note": "die Straßenbahn, -en"
+    },
+    {
+      "term": "vierten",
+      "gloss": "fourth",
+      "note": "der/die/das vierte; am vierten Tag"
+    },
+    {
+      "term": "Bildschirm",
+      "gloss": "screen",
+      "note": "der Bildschirm, -e"
+    },
+    {
+      "term": "starren",
+      "gloss": "to stare",
+      "note": "auf etwas starren; hat gestarrt"
+    },
+    {
+      "term": "angemacht",
+      "gloss": "switched on",
+      "note": "anmachen – hat angemacht"
+    },
+    {
+      "term": "auszuprobieren",
+      "gloss": "to try out",
+      "note": "ausprobieren – hat ausprobiert"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum macht die Person eine Woche ohne Handy?",
+      "options": [
+        "Das Handy ist kaputt.",
+        "Sie war jeden Tag fast fünf Stunden am Handy.",
+        "Ihr Chef hat es verlangt."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Was war am zweiten und dritten Tag schwierig?",
+      "options": [
+        "Sie hat sich in der Stadt verlaufen und konnte niemanden anrufen.",
+        "Sie konnte nicht schlafen.",
+        "Sie hatte keine Zeit zum Lesen."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Wie benutzt die Person ihr Handy heute?",
+      "options": [
+        "Gar nicht mehr.",
+        "Genau wie früher.",
+        "Weniger: ab neun Uhr abends und beim Essen gar nicht."
+      ],
+      "correct": 2
+    }
+  ]
+}

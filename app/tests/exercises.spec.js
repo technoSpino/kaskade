@@ -51,11 +51,16 @@ test.describe('Skill Builder exercises', () => {
   });
 
   test('is reachable from the nav and home page', async ({ page }) => {
-    await page.goto('/');
+    // Since Kaskade, the grammar app's home lives at /nachschlagen and its pages
+    // are in the "Nachschlagen" menu of the main navigation.
+    await page.goto('/nachschlagen');
     await page.getByRole('link', { name: 'Build Skills' }).click();
     await expect(page).toHaveURL(/\/exercises$/);
-    await page.getByRole('link', { name: 'Home' }).first().click();
-    await page.getByRole('link', { name: 'Exercises' }).first().click();
+    await page.getByRole('button', { name: /Nachschlagen/ }).click();
+    await page.getByRole('link', { name: 'Übersicht' }).click();
+    await expect(page).toHaveURL(/\/nachschlagen$/);
+    await page.getByRole('button', { name: /Nachschlagen/ }).click();
+    await page.getByRole('link', { name: 'Übungen' }).click();
     await expect(page.getByRole('heading', { name: 'Skill Builder' })).toBeVisible();
   });
 

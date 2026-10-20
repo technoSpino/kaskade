@@ -1,0 +1,80 @@
+{
+  "id": "t18",
+  "origin": "ai",
+  "title": "Kochabend mit Freunden – und alles geht schief",
+  "level": "B1",
+  "theme": "Freizeit",
+  "slot": "lesen",
+  "text": "Lukas wollte seinen Freunden endlich zeigen, dass er kochen kann. Deshalb lud er sie für Samstagabend zu sich ein. Er hatte ein Rezept im Internet gefunden: Fisch mit Reis, danach ein Kuchen mit Schokolade. Das sah auf den Fotos ganz einfach aus.\n\nAm Samstag begann er schon um vier Uhr. Zuerst machte er den Kuchen, denn der brauchte am längsten. Dann rief seine Mutter an, und Lukas redete eine halbe Stunde mit ihr. Als er wieder in die Küche kam, sah er es sofort: Der Kuchen war schwarz. „Das ist kein Problem“, sagte er sich. „Ich kaufe einfach Eis.“\n\nUm sieben Uhr klingelte es. Anna, Paul und Julia standen vor der Tür, mit Wein und großem Hunger. Lukas machte schnell den Reis und den Fisch. Leider hatte er vergessen, dass Julia keinen Fisch isst. Und der Reis war so weich, dass er wie Suppe aussah. Lukas wurde rot. „Ich hätte doch lieber Pizza bestellen sollen“, sagte er leise.\n\nAber seine Freunde lachten nur. Paul öffnete den Kühlschrank und fand Eier, Käse und Milch. Anna schnitt Brot, und Julia deckte den Tisch. Nach zwanzig Minuten stand ein großes Omelett auf dem Tisch. Es war nicht schön, aber es schmeckte wunderbar.\n\nSie saßen bis Mitternacht zusammen, mit Eis und Wein, und erzählten von ihren eigenen Fehlern in der Küche. Paul hatte einmal Salz statt Zucker in seinen Kaffee getan, und bei Anna war einmal sogar die Feuerwehr gekommen. Am Ende sagte Julia: „Das war der beste Kochabend seit Langem. Nächsten Monat kochen wir bei mir, und ich mache alles falsch, versprochen.“",
+  "glossary": [
+    {
+      "term": "Rezept",
+      "gloss": "recipe",
+      "note": "das Rezept, -e"
+    },
+    {
+      "term": "Reis",
+      "gloss": "rice",
+      "note": "der Reis"
+    },
+    {
+      "term": "Schokolade",
+      "gloss": "chocolate",
+      "note": "die Schokolade"
+    },
+    {
+      "term": "Kühlschrank",
+      "gloss": "fridge",
+      "note": "der Kühlschrank, -schränke"
+    },
+    {
+      "term": "Omelett",
+      "gloss": "omelette",
+      "note": "das Omelett, -s"
+    },
+    {
+      "term": "Salz",
+      "gloss": "salt",
+      "note": "das Salz"
+    },
+    {
+      "term": "Zucker",
+      "gloss": "sugar",
+      "note": "der Zucker"
+    },
+    {
+      "term": "Feuerwehr",
+      "gloss": "fire brigade",
+      "note": "die Feuerwehr, -en"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum ist der Kuchen schwarz?",
+      "options": [
+        "Lukas hat zu lange mit seiner Mutter telefoniert.",
+        "Das Rezept war falsch.",
+        "Paul hat Salz in den Kuchen getan."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Was essen die Freunde am Ende?",
+      "options": [
+        "Pizza vom Restaurant.",
+        "Ein Omelett mit Brot, danach Eis.",
+        "Fisch mit Reis."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Wie finden die Freunde den Abend?",
+      "options": [
+        "Sie sind enttäuscht und gehen früh nach Hause.",
+        "Sie streiten über das Essen.",
+        "Sie finden ihn sehr schön."
+      ],
+      "correct": 2
+    }
+  ]
+}

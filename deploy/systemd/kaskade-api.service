@@ -1,0 +1,13 @@
+[Unit]
+Description=Kaskade API (FastAPI, 127.0.0.1:8000)
+After=network-online.target
+
+[Service]
+WorkingDirectory=%h/kaskade/server
+EnvironmentFile=-%h/kaskade-data/.env
+ExecStart=%h/kaskade/server/.venv/bin/uvicorn kaskade.main:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=3
+
+[Install]
+WantedBy=default.target

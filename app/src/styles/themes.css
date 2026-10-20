@@ -1,0 +1,519 @@
+/*
+ * Kaskade themes. Every colour, font, radius, border width and shadow used by
+ * Kaskade components comes from these custom properties (hard rule 9).
+ * Switch with <html data-theme="…">: signal (default) · nacht · papier ·
+ * bauhaus · fokus · magazin. Contrast is checked by themes.test.js.
+ */
+
+/* ── Signal: the approved mockups ─────────────────────────────── */
+:root,
+:root[data-theme='signal'] {
+  color-scheme: light;
+  --bg: #f3f4f6;
+  --surface: #ffffff;
+  --surface-2: #eceef2;
+  --border: #dcdfe5;
+  --border-strong: #c5cad3;
+  --border-width: 1px;
+  --text: #14161b;
+  --text-2: #3d4350;
+  --muted: #5b6270;
+  --kicker: #5b6270;
+  --primary: #14161b;
+  --primary-hover: #2e323c;
+  --primary-text: #ffffff;
+  --accent: #ffd23f;
+  --accent-text: #14161b;
+  --callout: #fff4c2;
+  --word-new-bg: #ffe27a;
+  --word-new-tint: #fff5d1;       /* reader: calm new-word tint … */
+  --word-new-underline: #a37b00;  /* … plus a thin underline */
+  --word-learning: #5b3fd6;
+  --focus: #5b3fd6;
+  --focus-width: 3px;
+  --link: #3b2bb0;
+  --nav-bg: #14161b;
+  --nav-text: #ffffff;
+  --nav-muted: #c9cdd6;
+  --nav-hover: #2a2e37;
+  --nav-border: 0 solid transparent;
+  --stage-bg: #1f232b;
+  --stage-text: #ffffff;
+  --stage-muted: #c9cdd6;
+  --stage-caption-bg: rgb(20 22 27 / 0.85);
+  --rate-help: #6b7280;
+  --rate-hard: #d5d9e0;
+  --success: #1f5f2a;
+  --success-bg: #e8f5e9;
+  --danger: #b71c1c;
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+  --radius-lg: 14px;
+  --shadow: none;
+  --font-ui: 'Archivo', system-ui, sans-serif;
+  --font-heading: 'Archivo', system-ui, sans-serif;
+  --font-read: 'Literata', Georgia, serif;
+  --font-size-base: 16px;
+  --line-height: 1.5;
+  --heading-weight: 800;
+  --heading-transform: none;
+  --heading-spacing: -0.02em;
+  --touch: 44px;
+  --case-n: #1565c0;
+  --case-a: #c62828;
+  --case-d: #2e7d32;
+  --case-g: #b45309;
+  --case-n-bg: #e3f2fd;
+  --case-a-bg: #ffebee;
+  --case-d-bg: #e8f5e9;
+  --case-g-bg: #fff3e0;
+  --timeline-upcoming: #efecfc;
+  --timeline-upcoming-border: #8d7fe3;
+  --timeline-text: #14161b;
+  --timeline-current: #5b3fd6;
+  --timeline-current-border: #5b3fd6;
+  --timeline-current-text: #ffffff;
+  --timeline-done: #d5d9e0;
+  --timeline-done-text: #3d4350;
+  --timeline-pause: #eceef2;
+  --timeline-pause-line: #c5cad3;
+  --origin-ai-bg: #efecfc;        /* "KI-geschrieben" badge */
+  --origin-ai-text: #3b2bb0;
+  --origin-ai-border: #8d7fe3;
+  --chart-active: #5b3fd6;
+  --chart-passive: #b57a00;
+}
+
+/* ── Nacht: same layout, dark ─────────────────────────────────── */
+:root[data-theme='nacht'] {
+  color-scheme: dark;
+  --bg: #0f1115;
+  --surface: #171a20;
+  --surface-2: #1e222a;
+  --border: #2c313b;
+  --border-strong: #3d4350;
+  --border-width: 1px;
+  --text: #eceef2;
+  --text-2: #c3c8d2;
+  --muted: #9aa1ae;
+  --kicker: #9aa1ae;
+  --primary: #ffd23f;
+  --primary-hover: #ffe070;
+  --primary-text: #14161b;
+  --accent: #ffd23f;
+  --accent-text: #14161b;
+  --callout: #2a2410;
+  --word-new-bg: #4a3b00;
+  --word-new-tint: #2e2814;       /* reader: calm new-word tint … */
+  --word-new-underline: #e0b43a;  /* … plus a thin underline */
+  --word-learning: #a996ff;
+  --focus: #a996ff;
+  --focus-width: 3px;
+  --link: #b9abff;
+  --nav-bg: #08090c;
+  --nav-text: #eceef2;
+  --nav-muted: #9aa1ae;
+  --nav-hover: #1e222a;
+  --nav-border: 1px solid #2c313b;
+  --stage-bg: #08090c;
+  --stage-text: #eceef2;
+  --stage-muted: #9aa1ae;
+  --stage-caption-bg: rgb(8 9 12 / 0.85);
+  --rate-help: #7a818f;
+  --rate-hard: #3d4350;
+  --success: #7bc67e;
+  --success-bg: #132d17;
+  --danger: #ef8a8a;
+  --radius-sm: 10px;
+  --radius-pill: 999px;
+  --radius-lg: 14px;
+  --shadow: none;
+  --font-ui: 'Archivo', system-ui, sans-serif;
+  --font-heading: 'Archivo', system-ui, sans-serif;
+  --font-read: 'Literata', Georgia, serif;
+  --font-size-base: 16px;
+  --line-height: 1.5;
+  --heading-weight: 800;
+  --heading-transform: none;
+  --heading-spacing: -0.02em;
+  --touch: 44px;
+  --case-n: #64b5f6;
+  --case-a: #ef8a8a;
+  --case-d: #7bc67e;
+  --case-g: #f2a65a;
+  --case-n-bg: #10263d;
+  --case-a-bg: #3a1616;
+  --case-d-bg: #132d17;
+  --case-g-bg: #3a2410;
+  --timeline-upcoming: #232035;
+  --timeline-upcoming-border: #7d70c9;
+  --timeline-text: #eceef2;
+  --timeline-current: #a996ff;
+  --timeline-current-border: #a996ff;
+  --timeline-current-text: #14161b;
+  --timeline-done: #2c313b;
+  --timeline-done-text: #c3c8d2;
+  --timeline-pause: #1e222a;
+  --timeline-pause-line: #3d4350;
+  --origin-ai-bg: #232035;        /* "KI-geschrieben" badge */
+  --origin-ai-text: #c9bcff;
+  --origin-ai-border: #7d70c9;
+  --chart-active: #a996ff;
+  --chart-passive: #e0a33a;
+}
+
+/* ── Papier: editorial, serif, hairline rules ─────────────────── */
+:root[data-theme='papier'] {
+  color-scheme: light;
+  --bg: #f6f1e7;
+  --surface: #fffdf8;
+  --surface-2: #efe8da;
+  --border: #ddd3c1;
+  --border-strong: #c9bda6;
+  --border-width: 1px;
+  --text: #231f1a;
+  --text-2: #463f35;
+  --muted: #6b6152;
+  --kicker: #6b6152;
+  --primary: #1e4d4d;
+  --primary-hover: #163a3a;
+  --primary-text: #fffdf8;
+  --accent: #f2d88a;
+  --accent-text: #231f1a;
+  --callout: #f7ecc9;
+  --word-new-bg: #f5df94;
+  --word-new-tint: #f9eecb;       /* reader: calm new-word tint … */
+  --word-new-underline: #9a7419;  /* … plus a thin underline */
+  --word-learning: #1e4d4d;
+  --focus: #1e4d4d;
+  --focus-width: 2px;
+  --link: #1e4d4d;
+  --nav-bg: #f6f1e7;
+  --nav-text: #231f1a;
+  --nav-muted: #5c5345;
+  --nav-hover: #efe8da;
+  --nav-border: 1px solid #ddd3c1;
+  --stage-bg: #231f1a;
+  --stage-text: #fffdf8;
+  --stage-muted: #ddd3c1;
+  --stage-caption-bg: rgb(35 31 26 / 0.85);
+  --rate-help: #7d7262;
+  --rate-hard: #ddd3c1;
+  --success: #2f6b35;
+  --success-bg: #e6efe2;
+  --danger: #a8322a;
+  --radius-sm: 2px;
+  --radius-pill: 4px;
+  --radius-lg: 4px;
+  --shadow: none;
+  --font-ui: 'Source Serif 4', Georgia, serif;
+  --font-heading: 'Source Serif 4', Georgia, serif;
+  --font-read: 'Literata', Georgia, serif;
+  --font-size-base: 17px;
+  --line-height: 1.55;
+  --heading-weight: 700;
+  --heading-transform: none;
+  --heading-spacing: -0.01em;
+  --touch: 44px;
+  --case-n: #1f5a96;
+  --case-a: #a8322a;
+  --case-d: #2f6b35;
+  --case-g: #9a5212;
+  --case-n-bg: #e6eef6;
+  --case-a-bg: #f6e6e3;
+  --case-d-bg: #e6efe2;
+  --case-g-bg: #f6ebdc;
+  --timeline-upcoming: #e6efec;
+  --timeline-upcoming-border: #5f8b87;
+  --timeline-text: #231f1a;
+  --timeline-current: #1e4d4d;
+  --timeline-current-border: #1e4d4d;
+  --timeline-current-text: #fffdf8;
+  --timeline-done: #e2dacb;
+  --timeline-done-text: #4a4237;
+  --timeline-pause: #efe8da;
+  --timeline-pause-line: #c9bda6;
+  --origin-ai-bg: #e6efec;        /* "KI-geschrieben" badge */
+  --origin-ai-text: #1e4d4d;
+  --origin-ai-border: #5f8b87;
+  --chart-active: #1e4d4d;
+  --chart-passive: #9a6a12;
+}
+
+/* ── Bauhaus: loud and geometric ──────────────────────────────── */
+:root[data-theme='bauhaus'] {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f2f2f2;
+  --border: #000000;
+  --border-strong: #000000;
+  --border-width: 2px;
+  --text: #000000;
+  --text-2: #1a1a1a;
+  --muted: #4d4d4d;
+  --kicker: #000000;
+  --primary: #000000;
+  --primary-hover: #333333;
+  --primary-text: #ffffff;
+  --accent: #ffd000;
+  --accent-text: #000000;
+  --callout: #ffd000;
+  --word-new-bg: #ffd000;
+  --word-new-tint: #fff6c2;       /* reader: calm new-word tint … */
+  --word-new-underline: #000000;  /* … plus a thin underline */
+  --word-learning: #000000;
+  --focus: #000000;
+  --focus-width: 3px;
+  --link: #000000;
+  --nav-bg: #000000;
+  --nav-text: #ffffff;
+  --nav-muted: #d9d9d9;
+  --nav-hover: #333333;
+  --nav-border: 0 solid transparent;
+  --stage-bg: #000000;
+  --stage-text: #ffffff;
+  --stage-muted: #d9d9d9;
+  --stage-caption-bg: rgb(0 0 0 / 0.85);
+  --rate-help: #808080;
+  --rate-hard: #e0e0e0;
+  --success: #000000;
+  --success-bg: #ffd000;
+  --danger: #000000;
+  --radius-sm: 0;
+  --radius-pill: 0;
+  --radius-lg: 0;
+  --shadow: 4px 4px 0 #000000;
+  --font-ui: 'Archivo', system-ui, sans-serif;
+  --font-heading: 'Archivo Black', 'Archivo', system-ui, sans-serif;
+  --font-read: 'Literata', Georgia, serif;
+  --font-size-base: 16px;
+  --line-height: 1.5;
+  --heading-weight: 400;
+  --heading-transform: uppercase;
+  --heading-spacing: 0.04em;
+  --touch: 44px;
+  --case-n: #0047ab;
+  --case-a: #d10000;
+  --case-d: #007a33;
+  --case-g: #a84b00;
+  --case-n-bg: #e3f2fd;
+  --case-a-bg: #ffebee;
+  --case-d-bg: #e8f5e9;
+  --case-g-bg: #fff3e0;
+  --timeline-upcoming: #f2f2f2;
+  --timeline-upcoming-border: #000000;
+  --timeline-text: #000000;
+  --timeline-current: #ffd000;
+  --timeline-current-border: #000000;
+  --timeline-current-text: #000000;
+  --timeline-done: #cccccc;
+  --timeline-done-text: #000000;
+  --timeline-pause: #ffffff;
+  --timeline-pause-line: #808080;
+  --origin-ai-bg: #ffffff;        /* "KI-geschrieben" badge */
+  --origin-ai-text: #000000;
+  --origin-ai-border: #000000;
+  --chart-active: #000000;
+  --chart-passive: #808080;
+}
+
+/* ── Fokus: calm, large, high legibility ──────────────────────── */
+:root[data-theme='fokus'] {
+  color-scheme: light;
+  --bg: #fafaf7;
+  --surface: #ffffff;
+  --surface-2: #f0f0eb;
+  --border: #d9d9d4;
+  --border-strong: #b5b5ae;
+  --border-width: 1px;
+  --text: #1a1a1a;
+  --text-2: #333333;
+  --muted: #555555;
+  --kicker: #555555;
+  --primary: #1a1a1a;
+  --primary-hover: #3a3a3a;
+  --primary-text: #ffffff;
+  --accent: #c99700;
+  --accent-text: #1a1a1a;
+  --callout: #fff6d6;
+  --word-new-bg: #fff6d6;
+  --word-new-tint: #fff6d6;       /* reader: calm new-word tint … */
+  --word-new-underline: #9c7a00;  /* … plus a thin underline */
+  --word-learning: #555555;
+  --focus: #1a1a1a;
+  --focus-width: 3px;
+  --link: #1a1a1a;
+  --nav-bg: #ffffff;
+  --nav-text: #1a1a1a;
+  --nav-muted: #555555;
+  --nav-hover: #f0f0eb;
+  --nav-border: 1px solid #d9d9d4;
+  --stage-bg: #1a1a1a;
+  --stage-text: #ffffff;
+  --stage-muted: #d9d9d4;
+  --stage-caption-bg: rgb(26 26 26 / 0.85);
+  --rate-help: #808080;
+  --rate-hard: #d9d9d4;
+  --success: #2e7d32;
+  --success-bg: #e8f5e9;
+  --danger: #b71c1c;
+  --radius-sm: 6px;
+  --radius-pill: 999px;
+  --radius-lg: 10px;
+  --shadow: none;
+  --font-ui: 'Kaskade Digits', 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --font-heading: 'Kaskade Digits', 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --font-read: 'Kaskade Digits', 'Atkinson Hyperlegible', system-ui, sans-serif;
+  --font-size-base: 18px;
+  --line-height: 1.7;
+  --heading-weight: 700;
+  --heading-transform: none;
+  --heading-spacing: 0;
+  --touch: 52px;
+  --case-n: #1565c0;
+  --case-a: #c62828;
+  --case-d: #2e7d32;
+  --case-g: #b45309;
+  --case-n-bg: #e3f2fd;
+  --case-a-bg: #ffebee;
+  --case-d-bg: #e8f5e9;
+  --case-g-bg: #fff3e0;
+  --timeline-upcoming: #f6f6f1;
+  --timeline-upcoming-border: #8f8f88;
+  --timeline-text: #1a1a1a;
+  --timeline-current: #b88a00;
+  --timeline-current-border: #b88a00;
+  --timeline-current-text: #1a1a1a;
+  --timeline-done: #e6e6e1;
+  --timeline-done-text: #555555;
+  --timeline-pause: #f0f0eb;
+  --timeline-pause-line: #b5b5ae;
+  --origin-ai-bg: #f6f6f1;        /* "KI-geschrieben" badge */
+  --origin-ai-text: #333333;
+  --origin-ai-border: #8f8f88;
+  --chart-active: #b88a00;
+  --chart-passive: #6b6b66;
+}
+
+/* ── Magazin: news-magazine style ─────────────────────────────── */
+:root[data-theme='magazin'] {
+  color-scheme: light;
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f4f4f2;
+  --border: #d6d6d2;
+  --border-strong: #b5b5b0;
+  --border-width: 1px;
+  --text: #111111;
+  --text-2: #2e2e2e;
+  --muted: #5a5a5a;
+  --kicker: #c93a12;
+  --accent-rule: #e64415;
+  --primary: #111111;
+  --primary-hover: #333333;
+  --primary-text: #ffffff;
+  --accent: #c93a12;
+  --accent-text: #ffffff;
+  --callout: #f4f4f2;
+  --word-new-bg: #ffe7a3;
+  --word-new-tint: #fff4d6;       /* reader: calm new-word tint … */
+  --word-new-underline: #a87d00;  /* … plus a thin underline */
+  --word-learning: #111111;
+  --focus: #111111;
+  --focus-width: 2px;
+  --link: #111111;
+  --nav-bg: #ffffff;
+  --nav-text: #111111;
+  --nav-muted: #3d3d3d;
+  --nav-hover: #f4f4f2;
+  --nav-border: 1px solid #111111;
+  --stage-bg: #111111;
+  --stage-text: #ffffff;
+  --stage-muted: #d6d6d2;
+  --stage-caption-bg: rgb(17 17 17 / 0.85);
+  --rate-help: #7a7a7a;
+  --rate-hard: #d6d6d2;
+  --success: #2e7d32;
+  --success-bg: #e8f5e9;
+  --danger: #9f1239;
+  --radius-sm: 2px;
+  --radius-pill: 0;
+  --radius-lg: 0;
+  --shadow: none;
+  --font-ui: 'Libre Franklin', system-ui, sans-serif;
+  --font-heading: 'Source Serif 4', Georgia, serif;
+  --font-read: 'Literata', Georgia, serif;
+  --font-size-base: 16px;
+  --line-height: 1.5;
+  --heading-weight: 700;
+  --heading-transform: none;
+  --heading-spacing: -0.01em;
+  --touch: 44px;
+  --case-n: #1f5faf;
+  --case-a: #9f1239;
+  --case-d: #2e7d32;
+  --case-g: #9a5212;
+  --case-n-bg: #e3f2fd;
+  --case-a-bg: #fde8ee;
+  --case-d-bg: #e8f5e9;
+  --case-g-bg: #fff3e0;
+  --timeline-upcoming: #f4f4f2;
+  --timeline-upcoming-border: #8a8a86;
+  --timeline-text: #111111;
+  --timeline-current: #e64415;
+  --timeline-current-border: #e64415;
+  --timeline-current-text: #111111;
+  --timeline-done: #d6d6d2;
+  --timeline-done-text: #3a3a3a;
+  --timeline-pause: #f4f4f2;
+  --timeline-pause-line: #b5b5b0;
+  --origin-ai-bg: #f4f4f2;        /* "KI-geschrieben" badge */
+  --origin-ai-text: #a8300d;
+  --origin-ai-border: #c93a12;
+  --chart-active: #e64415;
+  --chart-passive: #8a8a86;
+}
+
+/* ── Theme character beyond plain tokens ──────────────────────── */
+
+/* Papier + Magazin: cards become ruled sections */
+:root[data-theme='papier'] .k-card,
+:root[data-theme='magazin'] .k-card {
+  background: transparent;
+  border-width: 1px 0 0;
+  border-radius: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+:root[data-theme='papier'] .k-card-strong,
+:root[data-theme='magazin'] .k-card-strong { border-top: 3px double var(--text); }
+:root[data-theme='papier'] .k-eyebrow {
+  text-transform: lowercase;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  font-size: 15px;
+}
+:root[data-theme='magazin'] .k-eyebrow { color: var(--kicker); letter-spacing: 0.1em; }
+:root[data-theme='magazin'] .k-header { border-top: 4px solid var(--accent-rule); }
+:root[data-theme='magazin'] .k-card-strong { border-top: 3px solid var(--accent-rule); }
+
+/* Bauhaus: heavy uppercase headings, hard shadows on buttons too */
+:root[data-theme='bauhaus'] .k-btn { box-shadow: var(--shadow); text-transform: uppercase; letter-spacing: 0.04em; }
+:root[data-theme='bauhaus'] .k-btn:active { transform: translate(2px, 2px); box-shadow: 2px 2px 0 #000000; }
+:root[data-theme='bauhaus'] .k-eyebrow { letter-spacing: 0.12em; }
+
+/* Fokus: larger, calmer, highlights as thick underlines */
+:root[data-theme='fokus'] .k-main { zoom: 1.08; gap: 32px; }
+:root[data-theme='fokus'] body { font-variant-numeric: lining-nums tabular-nums; }
+:root[data-theme='fokus'] .k-mark { background: var(--word-new-bg); border-bottom: 3px solid var(--accent); border-radius: 0; }
+:root[data-theme='fokus'] .k-chip-accent { background: transparent; color: var(--text); border-bottom: 3px solid var(--accent); border-radius: 0; }
+:root[data-theme='fokus'] .k-btn { min-height: var(--touch); }
+
+/* The original grammar pages ("Nachschlagen") keep their light design in every theme. */
+.k-legacy {
+  color-scheme: light;
+  background: #f9fafb;
+  color: #111827;
+  font-family: system-ui, sans-serif;
+}

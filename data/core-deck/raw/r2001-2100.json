@@ -1,0 +1,994 @@
+[
+ {
+  "rank": 2001,
+  "lemma": "genügen",
+  "pos": "VERB",
+  "display": "genügen · hat genügt",
+  "gloss": "to be enough, to suffice",
+  "sentence": "Eine kurze Nachricht per E-Mail genügt.",
+  "target": "genügt",
+  "en": "A short email is enough.",
+  "note": "= reichen",
+  "case": null
+ },
+ {
+  "rank": 2002,
+  "lemma": "wundern",
+  "pos": "VERB",
+  "display": "sich wundern · hat sich gewundert",
+  "gloss": "to be surprised, to wonder",
+  "sentence": "Ich wundere mich, dass er noch nicht da ist.",
+  "target": "wundere",
+  "en": "I'm surprised he isn't here yet.",
+  "note": "sich wundern über + Akkusativ",
+  "case": "A"
+ },
+ {
+  "rank": 2003,
+  "lemma": "festnehmen",
+  "pos": "VERB",
+  "display": "festnehmen · nahm fest · hat festgenommen",
+  "gloss": "to arrest",
+  "sentence": "Die Polizei hat zwei Verdächtige festgenommen.",
+  "target": "festgenommen",
+  "en": "The police have arrested two suspects.",
+  "note": "trennbar: Die Polizei nimmt ihn fest.",
+  "case": null
+ },
+ {
+  "rank": 2004,
+  "lemma": "Vogel",
+  "pos": "NOUN",
+  "display": "der Vogel · die Vögel",
+  "gloss": "bird",
+  "sentence": "Morgens singen die Vögel vor meinem Fenster.",
+  "target": "Vögel",
+  "en": "In the mornings the birds sing outside my window.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2005,
+  "skip": "Duplikat: vermuten"
+ },
+ {
+  "rank": 2006,
+  "lemma": "Mitternacht",
+  "pos": "NOUN",
+  "display": "die Mitternacht · kein Plural",
+  "gloss": "midnight",
+  "sentence": "Die Party ging bis nach Mitternacht.",
+  "target": "Mitternacht",
+  "en": "The party went on until after midnight.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2007,
+  "skip": "Name"
+ },
+ {
+  "rank": 2008,
+  "lemma": "auslösen",
+  "pos": "VERB",
+  "display": "auslösen · hat ausgelöst",
+  "gloss": "to trigger, to set off",
+  "sentence": "Der Rauch hat den Feueralarm ausgelöst.",
+  "target": "ausgelöst",
+  "en": "The smoke set off the fire alarm.",
+  "note": "trennbar",
+  "case": null
+ },
+ {
+  "rank": 2009,
+  "skip": "Duplikat: Freundin"
+ },
+ {
+  "rank": 2010,
+  "lemma": "lecker",
+  "pos": "ADJ",
+  "display": "lecker",
+  "gloss": "tasty, delicious",
+  "sentence": "Die Suppe schmeckt total lecker!",
+  "target": "lecker",
+  "en": "The soup tastes really delicious!",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2011,
+  "lemma": "locken",
+  "pos": "VERB",
+  "display": "locken · hat gelockt",
+  "gloss": "to lure, to attract",
+  "sentence": "Das schöne Wetter hat viele Leute in die Parks gelockt.",
+  "target": "gelockt",
+  "en": "The nice weather drew lots of people into the parks.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2012,
+  "lemma": "Klinik",
+  "pos": "NOUN",
+  "display": "die Klinik · die Kliniken",
+  "gloss": "clinic, hospital",
+  "sentence": "Meine Mutter liegt seit Montag in der Klinik.",
+  "target": "Klinik",
+  "en": "My mother has been in hospital since Monday.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2013,
+  "lemma": "Reaktion",
+  "pos": "NOUN",
+  "display": "die Reaktion · die Reaktionen",
+  "gloss": "reaction",
+  "sentence": "Wie war seine Reaktion auf die Nachricht?",
+  "target": "Reaktion",
+  "en": "How did he react to the news?",
+  "note": "Reaktion auf + Akkusativ",
+  "case": "A"
+ },
+ {
+  "rank": 2014,
+  "lemma": "fähig",
+  "pos": "ADJ",
+  "display": "fähig",
+  "gloss": "capable, able",
+  "sentence": "Sie ist eine sehr fähige Ärztin.",
+  "target": "fähige",
+  "en": "She's a very capable doctor.",
+  "note": "zu etwas fähig sein",
+  "case": null
+ },
+ {
+  "rank": 2015,
+  "lemma": "dicht",
+  "pos": "ADJ",
+  "display": "dicht",
+  "gloss": "dense, thick; tight",
+  "sentence": "Auf der Autobahn war heute dichter Verkehr.",
+  "target": "dichter",
+  "en": "There was heavy traffic on the motorway today.",
+  "note": "auch: dichter Nebel; das Fenster ist dicht",
+  "case": null
+ },
+ {
+  "rank": 2016,
+  "lemma": "kotzen",
+  "pos": "VERB",
+  "display": "kotzen · hat gekotzt",
+  "gloss": "to puke, to throw up",
+  "sentence": "Nach der Party musste er kotzen.",
+  "target": "kotzen",
+  "en": "After the party he had to throw up.",
+  "note": "vulgär; normal: sich übergeben",
+  "case": null
+ },
+ {
+  "rank": 2017,
+  "lemma": "antworten",
+  "pos": "VERB",
+  "display": "antworten · hat geantwortet",
+  "gloss": "to answer, to reply",
+  "sentence": "Sie hat mir noch nicht auf meine E-Mail geantwortet.",
+  "target": "geantwortet",
+  "en": "She still hasn't replied to my email.",
+  "note": "jemandem (Dativ) antworten; antworten auf + Akkusativ",
+  "case": "A"
+ },
+ {
+  "rank": 2018,
+  "lemma": "verhandeln",
+  "pos": "VERB",
+  "display": "verhandeln · hat verhandelt",
+  "gloss": "to negotiate",
+  "sentence": "Ich will mit meinem Chef über mehr Gehalt verhandeln.",
+  "target": "verhandeln",
+  "en": "I want to negotiate a higher salary with my boss.",
+  "note": "verhandeln über + Akkusativ",
+  "case": "A"
+ },
+ {
+  "rank": 2019,
+  "lemma": "bereuen",
+  "pos": "VERB",
+  "display": "bereuen · hat bereut",
+  "gloss": "to regret",
+  "sentence": "Ich habe den Umzug nach Leipzig nie bereut.",
+  "target": "bereut",
+  "en": "I've never regretted moving to Leipzig.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2020,
+  "lemma": "verschaffen",
+  "pos": "VERB",
+  "display": "verschaffen · hat verschafft",
+  "gloss": "to get, to obtain (for sb)",
+  "sentence": "Ich muss mir erst einen Überblick verschaffen.",
+  "target": "verschaffen",
+  "en": "First I need to get an overview.",
+  "note": "sich (Dativ) etwas verschaffen",
+  "case": "D"
+ },
+ {
+  "rank": 2021,
+  "lemma": "Bürger",
+  "pos": "NOUN",
+  "display": "der Bürger · die Bürger",
+  "gloss": "citizen",
+  "sentence": "Viele Bürger haben sich über den Lärm beschwert.",
+  "target": "Bürger",
+  "en": "Many residents have complained about the noise.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2022,
+  "lemma": "vorgehen",
+  "pos": "VERB",
+  "display": "vorgehen · ging vor · ist vorgegangen",
+  "gloss": "to go ahead; to proceed; (clock) to be fast",
+  "sentence": "Geht schon mal vor, ich komme gleich nach.",
+  "target": "Geht",
+  "en": "You go on ahead, I'll follow in a minute.",
+  "note": "trennbar; auch: Meine Uhr geht vor. (= zu schnell)",
+  "case": null
+ },
+ {
+  "rank": 2023,
+  "lemma": "Internet",
+  "pos": "NOUN",
+  "display": "das Internet · kein Plural",
+  "gloss": "internet",
+  "sentence": "In unserer neuen Wohnung haben wir noch kein Internet.",
+  "target": "Internet",
+  "en": "We don't have internet in our new flat yet.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2024,
+  "lemma": "Grenze",
+  "pos": "NOUN",
+  "display": "die Grenze · die Grenzen",
+  "gloss": "border; limit",
+  "sentence": "Wir sind mit dem Auto über die Grenze nach Polen gefahren.",
+  "target": "Grenze",
+  "en": "We drove across the border into Poland.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2025,
+  "lemma": "Politik",
+  "pos": "NOUN",
+  "display": "die Politik · kein Plural",
+  "gloss": "politics; policy",
+  "sentence": "Ich interessiere mich nicht besonders für Politik.",
+  "target": "Politik",
+  "en": "I'm not particularly interested in politics.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2026,
+  "lemma": "täuschen",
+  "pos": "VERB",
+  "display": "täuschen · hat getäuscht",
+  "gloss": "to deceive; sich täuschen: to be mistaken",
+  "sentence": "Wenn ich mich nicht täusche, ist das unser Bus.",
+  "target": "täusche",
+  "en": "If I'm not mistaken, that's our bus.",
+  "note": "sich täuschen = sich irren",
+  "case": null
+ },
+ {
+  "rank": 2027,
+  "lemma": "Kreis",
+  "pos": "NOUN",
+  "display": "der Kreis · die Kreise",
+  "gloss": "circle; district",
+  "sentence": "Bitte setzen Sie sich in einen Kreis.",
+  "target": "Kreis",
+  "en": "Please sit in a circle.",
+  "note": "auch: der Landkreis (Verwaltung)",
+  "case": null
+ },
+ {
+  "rank": 2028,
+  "skip": "Fragment (Duplikat: zurechtkommen)"
+ },
+ {
+  "rank": 2029,
+  "lemma": "Besitz",
+  "pos": "NOUN",
+  "display": "der Besitz · kein Plural",
+  "gloss": "possession, property",
+  "sentence": "Das Haus ist seit hundert Jahren im Besitz der Familie.",
+  "target": "Besitz",
+  "en": "The house has been in the family's possession for a hundred years.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2030,
+  "lemma": "abhalten",
+  "pos": "VERB",
+  "display": "abhalten · hielt ab · hat abgehalten",
+  "gloss": "to keep (sb from sth); to hold (a meeting)",
+  "sentence": "Ich will dich nicht länger von der Arbeit abhalten.",
+  "target": "abhalten",
+  "en": "I don't want to keep you from your work any longer.",
+  "note": "jemanden von etwas (Dativ) abhalten; trennbar",
+  "case": "D"
+ },
+ {
+  "rank": 2031,
+  "lemma": "Krankenwagen",
+  "pos": "NOUN",
+  "display": "der Krankenwagen · die Krankenwagen",
+  "gloss": "ambulance",
+  "sentence": "Schnell, ruf bitte einen Krankenwagen!",
+  "target": "Krankenwagen",
+  "en": "Quick, call an ambulance, please!",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2032,
+  "lemma": "Text",
+  "pos": "NOUN",
+  "display": "der Text · die Texte",
+  "gloss": "text",
+  "sentence": "Kannst du den Text für mich korrigieren?",
+  "target": "Text",
+  "en": "Can you correct the text for me?",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2033,
+  "lemma": "aufwachsen",
+  "pos": "VERB",
+  "display": "aufwachsen · wuchs auf · ist aufgewachsen",
+  "gloss": "to grow up",
+  "sentence": "Ich bin in einem kleinen Dorf aufgewachsen.",
+  "target": "aufgewachsen",
+  "en": "I grew up in a small village.",
+  "note": "trennbar; Perfekt mit sein",
+  "case": null
+ },
+ {
+  "rank": 2034,
+  "skip": "Duplikat: öffnen"
+ },
+ {
+  "rank": 2035,
+  "skip": "Name"
+ },
+ {
+  "rank": 2036,
+  "skip": "Französisch"
+ },
+ {
+  "rank": 2037,
+  "lemma": "Schnee",
+  "pos": "NOUN",
+  "display": "der Schnee · kein Plural",
+  "gloss": "snow",
+  "sentence": "Heute Nacht sind zwanzig Zentimeter Schnee gefallen.",
+  "target": "Schnee",
+  "en": "Twenty centimetres of snow fell last night.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2038,
+  "lemma": "vergiften",
+  "pos": "VERB",
+  "display": "vergiften · hat vergiftet",
+  "gloss": "to poison",
+  "sentence": "In dem Krimi wird ein reicher Mann vergiftet.",
+  "target": "vergiftet",
+  "en": "In the crime novel a rich man is poisoned.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2039,
+  "lemma": "verderben",
+  "pos": "VERB",
+  "display": "verderben · verdarb · hat verdorben",
+  "gloss": "to spoil, to ruin",
+  "sentence": "Der Regen hat uns den ganzen Ausflug verdorben.",
+  "target": "verdorben",
+  "en": "The rain ruined our whole trip.",
+  "note": "jemandem (Dativ) etwas verderben; Essen ist verdorben = schlecht",
+  "case": null
+ },
+ {
+  "rank": 2040,
+  "lemma": "Führer",
+  "pos": "NOUN",
+  "display": "der Führer · die Führer",
+  "gloss": "guide; leader",
+  "sentence": "Ein Führer hat uns durch das alte Schloss geführt.",
+  "target": "Führer",
+  "en": "A guide showed us around the old castle.",
+  "note": "heute meist: Stadtführer, Reiseführer, Führerschein",
+  "case": null
+ },
+ {
+  "rank": 2041,
+  "skip": "Duplikat: fühlen"
+ },
+ {
+  "rank": 2042,
+  "lemma": "Antrag",
+  "pos": "NOUN",
+  "display": "der Antrag · die Anträge",
+  "gloss": "application (form)",
+  "sentence": "Den Antrag können Sie auch online stellen.",
+  "target": "Antrag",
+  "en": "You can also submit the application online.",
+  "note": "einen Antrag stellen",
+  "case": null
+ },
+ {
+  "rank": 2043,
+  "lemma": "Krone",
+  "pos": "NOUN",
+  "display": "die Krone · die Kronen",
+  "gloss": "crown",
+  "sentence": "Der Zahnarzt sagt, ich brauche eine neue Krone.",
+  "target": "Krone",
+  "en": "The dentist says I need a new crown.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2044,
+  "skip": "Duplikat: abhauen"
+ },
+ {
+  "rank": 2045,
+  "skip": "Duplikat: träumen"
+ },
+ {
+  "rank": 2046,
+  "skip": "Duplikat: Dämon"
+ },
+ {
+  "rank": 2047,
+  "lemma": "begrüßen",
+  "pos": "VERB",
+  "display": "begrüßen · hat begrüßt",
+  "gloss": "to greet, to welcome",
+  "sentence": "Der Chef hat die neuen Kollegen herzlich begrüßt.",
+  "target": "begrüßt",
+  "en": "The boss warmly welcomed the new colleagues.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2048,
+  "lemma": "heftig",
+  "pos": "ADJ",
+  "display": "heftig",
+  "gloss": "violent, fierce, heavy",
+  "sentence": "Gestern Abend gab es ein heftiges Gewitter.",
+  "target": "heftiges",
+  "en": "There was a violent thunderstorm last night.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2049,
+  "lemma": "Brille",
+  "pos": "NOUN",
+  "display": "die Brille · die Brillen",
+  "gloss": "glasses",
+  "sentence": "Ohne Brille kann ich nicht lesen.",
+  "target": "Brille",
+  "en": "I can't read without my glasses.",
+  "note": "die Brille = Singular (eine Brille = one pair of glasses)",
+  "case": null
+ },
+ {
+  "rank": 2050,
+  "lemma": "blasen",
+  "pos": "VERB",
+  "display": "blasen · blies · hat geblasen",
+  "gloss": "to blow",
+  "sentence": "Draußen bläst ein kalter Wind.",
+  "target": "bläst",
+  "en": "A cold wind is blowing outside.",
+  "note": "er bläst",
+  "case": null
+ },
+ {
+  "rank": 2051,
+  "lemma": "Heimat",
+  "pos": "NOUN",
+  "display": "die Heimat · kein Plural",
+  "gloss": "home, homeland",
+  "sentence": "Ich vermisse manchmal meine Heimat.",
+  "target": "Heimat",
+  "en": "I sometimes miss my home country.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2052,
+  "skip": "Duplikat: gern (am liebsten)"
+ },
+ {
+  "rank": 2053,
+  "lemma": "Leiter",
+  "pos": "NOUN",
+  "display": "der Leiter · die Leiter",
+  "gloss": "head, manager",
+  "sentence": "Ich möchte bitte mit dem Leiter der Filiale sprechen.",
+  "target": "Leiter",
+  "en": "I'd like to speak to the branch manager, please.",
+  "note": "die Leiter (Plural: die Leitern) = ladder",
+  "case": null
+ },
+ {
+  "rank": 2054,
+  "lemma": "flehen",
+  "pos": "VERB",
+  "display": "flehen · hat gefleht",
+  "gloss": "to beg, to plead",
+  "sentence": "Er hat sie angefleht, ihn nicht zu verlassen.",
+  "target": "angefleht",
+  "en": "He begged her not to leave him.",
+  "note": "meist: jemanden anflehen",
+  "case": null
+ },
+ {
+  "rank": 2055,
+  "lemma": "Kauf",
+  "pos": "NOUN",
+  "display": "der Kauf · die Käufe",
+  "gloss": "purchase",
+  "sentence": "Beim Kauf einer Waschmaschine sollte man auf den Stromverbrauch achten.",
+  "target": "Kauf",
+  "en": "When buying a washing machine, you should pay attention to its power consumption.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2056,
+  "lemma": "küssen",
+  "pos": "VERB",
+  "display": "küssen · hat geküsst",
+  "gloss": "to kiss",
+  "sentence": "Er hat sie zum Abschied auf die Wange geküsst.",
+  "target": "geküsst",
+  "en": "He kissed her on the cheek to say goodbye.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2057,
+  "skip": "Duplikat: spinnen"
+ },
+ {
+  "rank": 2058,
+  "lemma": "betreten",
+  "pos": "VERB",
+  "display": "betreten · betrat · hat betreten",
+  "gloss": "to enter; to step on",
+  "sentence": "Bitte betreten Sie den Rasen nicht.",
+  "target": "betreten",
+  "en": "Please keep off the grass.",
+  "note": "nicht trennbar; Schild: Betreten verboten!",
+  "case": null
+ },
+ {
+  "rank": 2059,
+  "lemma": "verlegen",
+  "pos": "VERB",
+  "display": "verlegen · hat verlegt",
+  "gloss": "to postpone, to move; to misplace",
+  "sentence": "Der Termin wurde auf nächsten Montag verlegt.",
+  "target": "verlegt",
+  "en": "The appointment has been moved to next Monday.",
+  "note": "auch: Ich habe meine Brille verlegt. Adjektiv: verlegen = schüchtern",
+  "case": null
+ },
+ {
+  "rank": 2060,
+  "lemma": "Cent",
+  "pos": "NOUN",
+  "display": "der Cent · die Cents",
+  "gloss": "cent",
+  "sentence": "Die Brötchen kosten jetzt 50 Cent pro Stück.",
+  "target": "Cent",
+  "en": "The bread rolls now cost 50 cents each.",
+  "note": "nach Zahlen: 50 Cent (ohne -s)",
+  "case": null
+ },
+ {
+  "rank": 2061,
+  "lemma": "Schlacht",
+  "pos": "NOUN",
+  "display": "die Schlacht · die Schlachten",
+  "gloss": "battle",
+  "sentence": "Das Buch erzählt von einer berühmten Schlacht im Mittelalter.",
+  "target": "Schlacht",
+  "en": "The book tells of a famous battle in the Middle Ages.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2062,
+  "skip": "Duplikat: abmachen"
+ },
+ {
+  "rank": 2063,
+  "lemma": "Schrei",
+  "pos": "NOUN",
+  "display": "der Schrei · die Schreie",
+  "gloss": "scream, cry",
+  "sentence": "Mitten in der Nacht hörten wir einen lauten Schrei.",
+  "target": "Schrei",
+  "en": "In the middle of the night we heard a loud scream.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2064,
+  "skip": "Duplikat: erschrecken"
+ },
+ {
+  "rank": 2065,
+  "skip": "Duplikat: Offizier"
+ },
+ {
+  "rank": 2066,
+  "skip": "Duplikat: schwören"
+ },
+ {
+  "rank": 2067,
+  "lemma": "ablenken",
+  "pos": "VERB",
+  "display": "ablenken · hat abgelenkt",
+  "gloss": "to distract",
+  "sentence": "Das Handy lenkt mich beim Lernen ständig ab.",
+  "target": "lenkt",
+  "en": "My phone keeps distracting me when I'm studying.",
+  "note": "trennbar",
+  "case": null
+ },
+ {
+  "rank": 2068,
+  "skip": "Name"
+ },
+ {
+  "rank": 2069,
+  "lemma": "Affäre",
+  "pos": "NOUN",
+  "display": "die Affäre · die Affären",
+  "gloss": "affair",
+  "sentence": "In der Zeitung steht, dass der Bürgermeister eine Affäre hatte.",
+  "target": "Affäre",
+  "en": "The paper says the mayor had an affair.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2070,
+  "lemma": "kündigen",
+  "pos": "VERB",
+  "display": "kündigen · hat gekündigt",
+  "gloss": "to cancel (a contract); to quit; to give notice",
+  "sentence": "Ich habe meinen Handyvertrag gekündigt.",
+  "target": "gekündigt",
+  "en": "I've cancelled my mobile phone contract.",
+  "note": "etwas kündigen; jemandem (Dativ) kündigen",
+  "case": null
+ },
+ {
+  "rank": 2071,
+  "lemma": "ausziehen",
+  "pos": "VERB",
+  "display": "ausziehen · zog aus · ist ausgezogen",
+  "gloss": "to move out; to take off (clothes)",
+  "sentence": "Unsere Nachbarn ziehen nächsten Monat aus.",
+  "target": "ziehen",
+  "en": "Our neighbours are moving out next month.",
+  "note": "aus der Wohnung: ist ausgezogen; Kleidung: hat ausgezogen",
+  "case": null
+ },
+ {
+  "rank": 2072,
+  "lemma": "bekämpfen",
+  "pos": "VERB",
+  "display": "bekämpfen · hat bekämpft",
+  "gloss": "to fight, to combat",
+  "sentence": "Die Feuerwehr hat das Feuer die ganze Nacht bekämpft.",
+  "target": "bekämpft",
+  "en": "The fire brigade fought the fire all night.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2073,
+  "skip": "Duplikat: Kampf"
+ },
+ {
+  "rank": 2074,
+  "lemma": "ertönen",
+  "pos": "VERB",
+  "display": "ertönen · hat ertönt",
+  "gloss": "to sound, to ring out",
+  "sentence": "Plötzlich ertönte im ganzen Haus der Feueralarm.",
+  "target": "ertönte",
+  "en": "Suddenly the fire alarm went off throughout the building.",
+  "note": "gehoben",
+  "case": null
+ },
+ {
+  "rank": 2075,
+  "lemma": "Tausend",
+  "pos": "NOUN",
+  "display": "das Tausend · die Tausende",
+  "gloss": "thousand",
+  "sentence": "Tausende Menschen haben am Wochenende demonstriert.",
+  "target": "Tausende",
+  "en": "Thousands of people demonstrated at the weekend.",
+  "note": "die Zahl klein: tausend Euro",
+  "case": null
+ },
+ {
+  "rank": 2076,
+  "lemma": "heutzutage",
+  "pos": "ADV",
+  "display": "heutzutage",
+  "gloss": "nowadays",
+  "sentence": "Heutzutage bezahlt fast jeder mit dem Handy.",
+  "target": "Heutzutage",
+  "en": "Nowadays almost everyone pays with their phone.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2077,
+  "skip": "Name"
+ },
+ {
+  "rank": 2078,
+  "lemma": "Holz",
+  "pos": "NOUN",
+  "display": "das Holz · die Hölzer",
+  "gloss": "wood",
+  "sentence": "Der Tisch ist aus echtem Holz.",
+  "target": "Holz",
+  "en": "The table is made of real wood.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2079,
+  "lemma": "Fingerabdruck",
+  "pos": "NOUN",
+  "display": "der Fingerabdruck · die Fingerabdrücke",
+  "gloss": "fingerprint",
+  "sentence": "Für den neuen Reisepass braucht man Fingerabdrücke.",
+  "target": "Fingerabdrücke",
+  "en": "You need fingerprints for the new passport.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2080,
+  "lemma": "Kaiser",
+  "pos": "NOUN",
+  "display": "der Kaiser · die Kaiser",
+  "gloss": "emperor",
+  "sentence": "Früher hat der Kaiser in diesem Schloss gewohnt.",
+  "target": "Kaiser",
+  "en": "The emperor used to live in this palace.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2081,
+  "lemma": "versauen",
+  "pos": "VERB",
+  "display": "versauen · hat versaut",
+  "gloss": "to mess up, to ruin",
+  "sentence": "Der Regen hat uns das Grillfest versaut.",
+  "target": "versaut",
+  "en": "The rain ruined our barbecue.",
+  "note": "umgangssprachlich; = verderben",
+  "case": null
+ },
+ {
+  "rank": 2082,
+  "lemma": "Fluch",
+  "pos": "NOUN",
+  "display": "der Fluch · die Flüche",
+  "gloss": "curse",
+  "sentence": "In dem Märchen liegt ein Fluch auf dem Schloss.",
+  "target": "Fluch",
+  "en": "In the fairy tale there's a curse on the castle.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2083,
+  "skip": "Duplikat: ziehen"
+ },
+ {
+  "rank": 2084,
+  "lemma": "Scheidung",
+  "pos": "NOUN",
+  "display": "die Scheidung · die Scheidungen",
+  "gloss": "divorce",
+  "sentence": "Nach der Scheidung ist er in eine kleine Wohnung gezogen.",
+  "target": "Scheidung",
+  "en": "After the divorce he moved into a small flat.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2085,
+  "lemma": "binden",
+  "pos": "VERB",
+  "display": "binden · band · hat gebunden",
+  "gloss": "to tie, to bind",
+  "sentence": "Sie bindet sich die Haare zu einem Pferdeschwanz.",
+  "target": "bindet",
+  "en": "She ties her hair into a ponytail.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2086,
+  "lemma": "Bart",
+  "pos": "NOUN",
+  "display": "der Bart · die Bärte",
+  "gloss": "beard",
+  "sentence": "Seit dem Urlaub trägt mein Mann einen Bart.",
+  "target": "Bart",
+  "en": "My husband has had a beard since the holiday.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2087,
+  "lemma": "vermeiden",
+  "pos": "VERB",
+  "display": "vermeiden · vermied · hat vermieden",
+  "gloss": "to avoid",
+  "sentence": "Ich versuche, Zucker so gut wie möglich zu vermeiden.",
+  "target": "vermeiden",
+  "en": "I try to avoid sugar as much as possible.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2088,
+  "lemma": "Klo",
+  "pos": "NOUN",
+  "display": "das Klo · die Klos",
+  "gloss": "loo, toilet",
+  "sentence": "Wo ist hier das Klo?",
+  "target": "Klo",
+  "en": "Where's the loo here?",
+  "note": "umgangssprachlich; = die Toilette",
+  "case": null
+ },
+ {
+  "rank": 2089,
+  "skip": "Duplikat: vergessen"
+ },
+ {
+  "rank": 2090,
+  "lemma": "begeistert",
+  "pos": "ADJ",
+  "display": "begeistert",
+  "gloss": "enthusiastic, thrilled",
+  "sentence": "Die Kinder waren von dem Zoo total begeistert.",
+  "target": "begeistert",
+  "en": "The children were absolutely thrilled with the zoo.",
+  "note": "begeistert von + Dativ",
+  "case": "D"
+ },
+ {
+  "rank": 2091,
+  "lemma": "umdrehen",
+  "pos": "VERB",
+  "display": "(sich) umdrehen · hat (sich) umgedreht",
+  "gloss": "to turn (around)",
+  "sentence": "Dreh dich mal um, hinter dir steht dein Chef!",
+  "target": "Dreh",
+  "en": "Turn around, your boss is standing behind you!",
+  "note": "trennbar: sich umdrehen",
+  "case": null
+ },
+ {
+  "rank": 2092,
+  "skip": "Fragment (nur in festen Wendungen und Verben wie niederlegen)"
+ },
+ {
+  "rank": 2093,
+  "skip": "Duplikat: erklären"
+ },
+ {
+  "rank": 2094,
+  "skip": "Name"
+ },
+ {
+  "rank": 2095,
+  "lemma": "fließen",
+  "pos": "VERB",
+  "display": "fließen · floss · ist geflossen",
+  "gloss": "to flow",
+  "sentence": "Der Rhein fließt durch viele Städte.",
+  "target": "fließt",
+  "en": "The Rhine flows through many cities.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2096,
+  "lemma": "aufgrund",
+  "pos": "ADP",
+  "display": "aufgrund",
+  "gloss": "because of, due to",
+  "sentence": "Aufgrund des Streiks fallen heute viele Züge aus.",
+  "target": "Aufgrund",
+  "en": "Due to the strike, many trains are cancelled today.",
+  "note": "aufgrund + Genitiv",
+  "case": "G"
+ },
+ {
+  "rank": 2097,
+  "lemma": "momentan",
+  "pos": "ADV",
+  "display": "momentan",
+  "gloss": "at the moment",
+  "sentence": "Momentan habe ich sehr viel Stress bei der Arbeit.",
+  "target": "Momentan",
+  "en": "At the moment I'm very stressed at work.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2098,
+  "skip": "Duplikat: solcher"
+ },
+ {
+  "rank": 2099,
+  "lemma": "meistens",
+  "pos": "ADV",
+  "display": "meistens",
+  "gloss": "mostly, usually",
+  "sentence": "Am Wochenende schlafe ich meistens lange.",
+  "target": "meistens",
+  "en": "At the weekend I usually sleep in.",
+  "note": null,
+  "case": null
+ },
+ {
+  "rank": 2100,
+  "lemma": "Vision",
+  "pos": "NOUN",
+  "display": "die Vision · die Visionen",
+  "gloss": "vision",
+  "sentence": "Die neue Chefin hat eine klare Vision für die Firma.",
+  "target": "Vision",
+  "en": "The new boss has a clear vision for the company.",
+  "note": null,
+  "case": null
+ }
+]

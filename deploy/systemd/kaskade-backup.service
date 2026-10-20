@@ -1,0 +1,7 @@
+[Unit]
+Description=Kaskade backup of ~/kaskade-data to ~/kaskade-backups
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/kaskade/server
+ExecStart=%h/kaskade/server/.venv/bin/python scripts/backup.py

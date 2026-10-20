@@ -1,0 +1,70 @@
+{
+  "id": "t14",
+  "origin": "ai",
+  "title": "Ein Brief vom Amt",
+  "level": "B1",
+  "theme": "Behörden",
+  "slot": "lesen",
+  "text": "Es war ein ganz normaler Dienstag, als Marta Nowak einen dicken Brief in ihrem Briefkasten fand. Oben links stand der Name einer Behörde. Sie öffnete ihn sofort und las die erste Seite. Dann las sie sie noch einmal. Sie verstand fast jedes Wort, aber den Sinn verstand sie nicht.\n\nDer Brief hatte vier Seiten. Die Sätze waren so lang, dass sie am Ende den Anfang schon wieder vergessen hatte. Nur eine Sache war klar: Sie sollte innerhalb von vierzehn Tagen „die erforderlichen Unterlagen“ schicken. Welche Unterlagen? Das stand irgendwo auf Seite drei, sehr klein geschrieben.\n\nAm Abend zeigte sie den Brief ihrem Mitbewohner Felix, der in Hamburg geboren war. „Kein Problem“, sagte er und setzte sich an den Tisch in der Küche. Nach fünf Minuten wurde er still. Nach zehn Minuten sagte er: „Ehrlich gesagt verstehe ich das auch nicht.“ Marta war fast froh. Wenn sogar ein Deutscher den Brief nicht verstand, lag es nicht an ihrem Deutsch.\n\nAm nächsten Morgen rief sie die Nummer an, die unten auf dem Brief stand. Ein Herr Brückner meldete sich. Er war sehr nett. „Oh, dieser Brief“, sagte er und lachte ein bisschen. „Den versteht keiner. Sie müssen uns nur eine Kopie von Ihrem Arbeitsvertrag schicken. Das ist alles.“\n\nMarta schickte die Kopie noch am selben Tag. Den Brief hat sie trotzdem behalten. Er hängt jetzt in ihrer Küche, und wenn Besuch kommt, dürfen alle versuchen, die erste Seite zu erklären. Bis heute hat es niemand geschafft.",
+  "glossary": [
+    {
+      "term": "Briefkasten",
+      "gloss": "letterbox",
+      "note": "der Briefkasten, -kästen"
+    },
+    {
+      "term": "Sätze",
+      "gloss": "sentences",
+      "note": "der Satz, Sätze"
+    },
+    {
+      "term": "erforderlichen",
+      "gloss": "required (formal)",
+      "note": "erforderlich"
+    },
+    {
+      "term": "Unterlagen",
+      "gloss": "documents, paperwork",
+      "note": "die Unterlagen (Pl.)"
+    },
+    {
+      "term": "Mitbewohner",
+      "gloss": "flatmate",
+      "note": "der Mitbewohner, -"
+    },
+    {
+      "term": "Arbeitsvertrag",
+      "gloss": "employment contract",
+      "note": "der Arbeitsvertrag, -verträge"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Was war das Problem mit dem Brief?",
+      "options": [
+        "Er war in einer fremden Sprache geschrieben.",
+        "Marta verstand die Wörter, aber nicht den Sinn.",
+        "Der Brief war an eine andere Person."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Wie reagiert Felix auf den Brief?",
+      "options": [
+        "Er erklärt Marta alles in fünf Minuten.",
+        "Er sagt, sie soll den Brief wegwerfen.",
+        "Er versteht den Brief auch nicht."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Was muss Marta am Ende tun?",
+      "options": [
+        "Eine Kopie von ihrem Arbeitsvertrag schicken.",
+        "Persönlich zum Amt gehen.",
+        "Ein langes Formular ausfüllen."
+      ],
+      "correct": 0
+    }
+  ]
+}

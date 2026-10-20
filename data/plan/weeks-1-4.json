@@ -1,0 +1,1060 @@
+{
+  "about": "Kaskade 4-week plan for Phase 2A: exact assignments for every block (follow-up #16) — library texts by id for interactive and free reading, stocked Mediathek episodes with time ranges, Easy German Podcast episodes, that day's nachrichtenleicht.de articles (#22). Original prompts modelled on common B1 task types (AI-written, tagged). #27: no exam block, no mock exam; the prompts stay for the Prüfung page. The 55-min lesen block holds exact items that fill it: text, then audio, then nachrichtenleicht.",
+  "phase": "2A",
+  "block": [
+    {
+      "id": "karten",
+      "start": "09:00",
+      "minutes": 30,
+      "title": "Karten",
+      "kind": "karten",
+      "label": "Karten",
+      "short": "Karten"
+    },
+    {
+      "id": "input",
+      "start": "09:30",
+      "minutes": 55,
+      "title": "Interaktiv schauen oder lesen",
+      "kind": "input",
+      "label": "Interaktiv schauen / lesen",
+      "short": "Schauen"
+    },
+    {
+      "id": "pause",
+      "start": "10:25",
+      "minutes": 10,
+      "title": "Pause",
+      "kind": "pause",
+      "label": "Pause",
+      "short": "Pause"
+    },
+    {
+      "id": "lesen",
+      "start": "10:35",
+      "minutes": 55,
+      "title": "Freies Lesen",
+      "kind": "lesen",
+      "label": "Freies Lesen · ohne Tools",
+      "short": "Lesen"
+    }
+  ],
+  "weeks": [
+    {
+      "week": 1,
+      "theme": "Wohnen und Nachbarn",
+      "goal": "Diese Woche geht es um dein Zuhause, dein Haus und deine Nachbarn.",
+      "days": [
+        {
+          "day": "Mo",
+          "focus": "Einstieg: Falls noch nicht erledigt, zuerst die Einstufung abschließen.",
+          "karten": "15 neue Kernwörter. Bekannte Wörter mit K („kenne ich schon“) schnell aussortieren.",
+          "input": "„Ärger mit der Heizung“ (A2+, Kaskade-Bibliothek t01). Interaktiv lesen: unbekannte Wörter antippen, gute Sätze speichern.",
+          "lesen": "„Ein Paket für die Nachbarin“ (A2+, Kaskade-Bibliothek t02). Frei lesen: ohne Wörterbuch, einfach weiterlesen. Danach: Easy German Podcast 701 „Aktivismus in Deutschland — Jakob Springfeld über Heimat, Demokratie und Engagement“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "text",
+              "text": "t01"
+            },
+            {
+              "block": "lesen",
+              "kind": "text",
+              "text": "t02",
+              "minutes": 5,
+              "desc": "„Ein Paket für die Nachbarin“ (A2+, Kaskade-Bibliothek t02). Frei lesen: ohne Wörterbuch, einfach weiterlesen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-701",
+              "minutes": 30,
+              "desc": "Easy German Podcast 701 „Aktivismus in Deutschland — Jakob Springfeld über Heimat, Demokratie und Engagement“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 20,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Di",
+          "focus": "Wörter rund um Haus, Hof und Nachbarschaft.",
+          "karten": "20 neue Kernwörter + Wiederholungen. Weiter mit K sortieren: Was du sicher kennst, kommt sofort weg.",
+          "input": "„Besichtigung einer Wohnung“ (B1, Kaskade-Bibliothek t03). Interaktiv lesen: unbekannte Wörter antippen, gute Sätze speichern.",
+          "lesen": "„Streit wegen der Musik“ (B1, Kaskade-Bibliothek t04). Frei lesen: ohne Wörterbuch, einfach weiterlesen. Danach: Easy German Podcast 699 „Pipi-Kacka-Humor“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "text",
+              "text": "t03"
+            },
+            {
+              "block": "lesen",
+              "kind": "text",
+              "text": "t04",
+              "minutes": 5,
+              "desc": "„Streit wegen der Musik“ (B1, Kaskade-Bibliothek t04). Frei lesen: ohne Wörterbuch, einfach weiterlesen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-699",
+              "minutes": 30,
+              "desc": "Easy German Podcast 699 „Pipi-Kacka-Humor“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 20,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Mi",
+          "focus": "Ein Problem in der Wohnung höflich beschreiben.",
+          "karten": "20 neue Kernwörter + alle Wiederholungen.",
+          "input": "Merz gegen Merz, Folge 1 „Hoch soll'n sie leben“ (ZDF Mediathek), 0:00–22:35, in deiner Bibliothek. Mit deutschen Untertiteln: nach jeder Zeile pausieren, Wörter antippen, gute Sätze speichern.",
+          "lesen": "„Samstag auf dem Wochenmarkt“ (A2+, Kaskade-Bibliothek t05). Frei lesen: ohne Wörterbuch, einfach weiterlesen. Danach: Easy German Podcast 697 „Alles cringe“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "merz-gegen-merz-1",
+              "from": "0:00",
+              "to": "22:35"
+            },
+            {
+              "block": "lesen",
+              "kind": "text",
+              "text": "t05",
+              "minutes": 5,
+              "desc": "„Samstag auf dem Wochenmarkt“ (A2+, Kaskade-Bibliothek t05). Frei lesen: ohne Wörterbuch, einfach weiterlesen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-697",
+              "minutes": 30,
+              "desc": "Easy German Podcast 697 „Alles cringe“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 20,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Do",
+          "focus": "Über eigene Erfahrungen sprechen: Wie wohnst du?",
+          "karten": "20 neue Kernwörter + alle Wiederholungen.",
+          "input": "Merz gegen Merz, Folge 2 „Alles neu – alles anders“, 0:00–23:06, in deiner Bibliothek. Mindestens drei gute Sätze speichern.",
+          "lesen": "Easy German Podcast 698 „Wie Lara ganz alleine akzentfrei Deutsch gelernt hat“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "merz-gegen-merz-2",
+              "from": "0:00",
+              "to": "23:06"
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-698",
+              "minutes": 30,
+              "desc": "Easy German Podcast 698 „Wie Lara ganz alleine akzentfrei Deutsch gelernt hat“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 25,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Fr",
+          "focus": "Wochenrückblick: Lieblingssätze der Woche wiederholen.",
+          "karten": "Keine neuen Karten, nur Wiederholungen. Danach die gespeicherten Sätze der Woche durchgehen.",
+          "input": "Merz gegen Merz, Folge 1 „Hoch soll'n sie leben“, noch einmal, 0:00–22:35, in deiner Bibliothek. Heute verstehst du schon mehr: diesmal ohne anzuhalten.",
+          "lesen": "„Omas 80. Geburtstag“ (A2+, Kaskade-Bibliothek t20). Frei lesen: ohne Wörterbuch, einfach weiterlesen. Danach: Easy German Podcast 696 „Das fünfte Rad am Wagen“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "merz-gegen-merz-1",
+              "from": "0:00",
+              "to": "22:35"
+            },
+            {
+              "block": "lesen",
+              "kind": "text",
+              "text": "t20",
+              "minutes": 5,
+              "desc": "„Omas 80. Geburtstag“ (A2+, Kaskade-Bibliothek t20). Frei lesen: ohne Wörterbuch, einfach weiterlesen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-696",
+              "minutes": 30,
+              "desc": "Easy German Podcast 696 „Das fünfte Rad am Wagen“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 20,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "theme": "Arbeit und Termine",
+      "goal": "Diese Woche übst du Wörter und Sätze rund um Arbeit, Kollegen und Termine.",
+      "days": [
+        {
+          "day": "Mo",
+          "focus": "Wörter rund um Arbeit, Kollegen und Arbeitszeiten.",
+          "karten": "20 neue Kernwörter + alle Wiederholungen.",
+          "input": "„Der erste Tag im neuen Job“ (A2+, Kaskade-Bibliothek t06). Interaktiv lesen: unbekannte Wörter antippen, gute Sätze speichern.",
+          "lesen": "„Ein Termin wird verschoben“ (A2+, Kaskade-Bibliothek t07). Frei lesen: ohne Wörterbuch, einfach weiterlesen. Danach: Easy German Podcast 692 „Gottlos“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "text",
+              "text": "t06"
+            },
+            {
+              "block": "lesen",
+              "kind": "text",
+              "text": "t07",
+              "minutes": 5,
+              "desc": "„Ein Termin wird verschoben“ (A2+, Kaskade-Bibliothek t07). Frei lesen: ohne Wörterbuch, einfach weiterlesen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-692",
+              "minutes": 30,
+              "desc": "Easy German Podcast 692 „Gottlos“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 20,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Di",
+          "focus": "Termine vereinbaren, verschieben und absagen.",
+          "karten": "20 neue Kernwörter + alle Wiederholungen.",
+          "input": "„Gespräch mit der Chefin über mehr Gehalt“ (B1, Kaskade-Bibliothek t08). Interaktiv lesen: unbekannte Wörter antippen, gute Sätze speichern.",
+          "lesen": "„Die Kollegin, die immer zu spät kommt“ (B1, Kaskade-Bibliothek t09). Frei lesen: ohne Wörterbuch, einfach weiterlesen. Danach: Easy German Podcast 691 „Auf Fehler scheißen“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "text",
+              "text": "t08"
+            },
+            {
+              "block": "lesen",
+              "kind": "text",
+              "text": "t09",
+              "minutes": 5,
+              "desc": "„Die Kollegin, die immer zu spät kommt“ (B1, Kaskade-Bibliothek t09). Frei lesen: ohne Wörterbuch, einfach weiterlesen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-691",
+              "minutes": 30,
+              "desc": "Easy German Podcast 691 „Auf Fehler scheißen“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 20,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Mi",
+          "focus": "Von der Arbeit erzählen, im Perfekt.",
+          "karten": "20 neue Kernwörter + alle Wiederholungen.",
+          "input": "Merz gegen Merz, Folge 3 „Jeder ist ersetzbar“ (ZDF Mediathek), 0:00–22:47, in deiner Bibliothek. Sätze aus Gesprächen unter Kollegen speichern.",
+          "lesen": "Easy German Podcast 684 „Als Praktikantin im Deutschen Bundestag“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "merz-gegen-merz-3",
+              "from": "0:00",
+              "to": "22:47"
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-684",
+              "minutes": 30,
+              "desc": "Easy German Podcast 684 „Als Praktikantin im Deutschen Bundestag“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 25,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Do",
+          "focus": "Die eigene Meinung sagen und nachfragen.",
+          "karten": "20 neue Kernwörter + alle Wiederholungen.",
+          "input": "Die 100 – was Deutschland bewegt: „Können wir uns diesen Sozialstaat noch leisten?“ (ARD Mediathek), 0:00–16:22, in deiner Bibliothek. Nützliche Redemittel speichern: „Ich finde, dass …“",
+          "lesen": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen. Danach: Easy German Podcast 689 „Corinna Schmud“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "die-100-sozialstaat",
+              "from": "0:00",
+              "to": "16:22"
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 30,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-689",
+              "minutes": 25,
+              "desc": "Easy German Podcast 689 „Corinna Schmud“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        },
+        {
+          "day": "Fr",
+          "focus": "Wochenrückblick: Lieblingssätze der Woche wiederholen und laut vorlesen.",
+          "karten": "Keine neuen Karten, nur Wiederholungen. Schwierige Wörter der Woche noch einmal ansehen.",
+          "input": "Easy German auf YouTube: „Can You Live Well on This Salary in Germany?“, 0:00–14:30, in Chrome mit Language Reactor. Mit deutschen und englischen Untertiteln schauen, gute Sätze speichern.",
+          "lesen": "„Mit dem Rad zur Arbeit“ (B1, Kaskade-Bibliothek t13). Frei lesen: ohne Wörterbuch, einfach weiterlesen. Danach: Easy German Podcast 688 „Anarchie im Kühlschrank“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "youtube",
+              "clip": "yt-easygerman-gehalt",
+              "from": "0:00",
+              "to": "14:30"
+            },
+            {
+              "block": "lesen",
+              "kind": "text",
+              "text": "t13",
+              "minutes": 5,
+              "desc": "„Mit dem Rad zur Arbeit“ (B1, Kaskade-Bibliothek t13). Frei lesen: ohne Wörterbuch, einfach weiterlesen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-688",
+              "minutes": 30,
+              "desc": "Easy German Podcast 688 „Anarchie im Kühlschrank“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 20,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "theme": "Gesundheit und Behörden",
+      "goal": "Diese Woche geht es um Arzt, Apotheke und Ämter.",
+      "days": [
+        {
+          "day": "Mo",
+          "focus": "Behörden: Briefe und Formulare verstehen.",
+          "karten": "20 neue Kernwörter + alle Wiederholungen.",
+          "input": "„Ein Termin beim Bürgeramt“ (B1, Kaskade-Bibliothek t12). Interaktiv lesen: unbekannte Wörter antippen, gute Sätze speichern.",
+          "lesen": "„Ein Brief vom Amt“ (B1, Kaskade-Bibliothek t14). Frei lesen: ohne Wörterbuch, einfach weiterlesen. Danach: Easy German Podcast 687 „Kontakt mit dem Lack eines Autos“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "text",
+              "text": "t12"
+            },
+            {
+              "block": "lesen",
+              "kind": "text",
+              "text": "t14",
+              "minutes": 5,
+              "desc": "„Ein Brief vom Amt“ (B1, Kaskade-Bibliothek t14). Frei lesen: ohne Wörterbuch, einfach weiterlesen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-687",
+              "minutes": 30,
+              "desc": "Easy German Podcast 687 „Kontakt mit dem Lack eines Autos“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 20,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Di",
+          "focus": "Gesundheit: Was machst du, wenn du krank bist?",
+          "karten": "20 neue Kernwörter + alle Wiederholungen.",
+          "input": "„Eine Erkältung im Herbst“ (A2+, Kaskade-Bibliothek t11). Interaktiv lesen: unbekannte Wörter antippen, gute Sätze speichern.",
+          "lesen": "Easy German Podcast 695 „Die Angst vor der Angst“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "text",
+              "text": "t11"
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-695",
+              "minutes": 30,
+              "desc": "Easy German Podcast 695 „Die Angst vor der Angst“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 25,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Mi",
+          "focus": "Die eigene Meinung schriftlich begründen.",
+          "karten": "20 neue Kernwörter + alle Wiederholungen.",
+          "input": "RESPEKT: „Flüchtlinge – Vorurteile, Bürokratie und das Recht auf einen Neubeginn“ (ARD alpha), ab 0:00 bis zum Ende, in deiner Bibliothek. Sätze speichern, die du auf einem Amt brauchst.",
+          "lesen": "Easy German Podcast 690 „Vom Einwanderer zum Staatsbürger in 3 Jahren“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "respekt-buerokratie",
+              "from": "0:00"
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-690",
+              "minutes": 30,
+              "desc": "Easy German Podcast 690 „Vom Einwanderer zum Staatsbürger in 3 Jahren“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 25,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Do",
+          "focus": "Aufgaben verteilen und Hilfe anbieten.",
+          "karten": "20 neue Kernwörter + alle Wiederholungen.",
+          "input": "Quarks: „Schlaf – Die billigste Medizin der Welt“ (ARD Mediathek · WDR), 0:00–22:09, in deiner Bibliothek. Pausieren, nachschlagen, Erklärungen speichern.",
+          "lesen": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen. Danach: Easy German Podcast 686 „Den Schuh zieh ich mir nicht an!“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "quarks-schlaf",
+              "from": "0:00",
+              "to": "22:09"
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 30,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-686",
+              "minutes": 25,
+              "desc": "Easy German Podcast 686 „Den Schuh zieh ich mir nicht an!“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        },
+        {
+          "day": "Fr",
+          "focus": "Wochenrückblick: Lieblingssätze der Woche wiederholen.",
+          "karten": "Keine neuen Karten, nur Wiederholungen. Danach die gespeicherten Sätze der Woche durchgehen.",
+          "input": "Charité, Folge 19 „Ankunft“ (ARD Mediathek · MDR), 0:00–24:49, in deiner Bibliothek. Sätze aus Gesprächen in der Klinik speichern.",
+          "lesen": "„Probetraining im Sportverein“ (A2+, Kaskade-Bibliothek t10). Frei lesen: ohne Wörterbuch, einfach weiterlesen. Danach: Easy German Podcast 685 „Ich geh Crashout“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "charite-19-ankunft",
+              "from": "0:00",
+              "to": "24:49"
+            },
+            {
+              "block": "lesen",
+              "kind": "text",
+              "text": "t10",
+              "minutes": 5,
+              "desc": "„Probetraining im Sportverein“ (A2+, Kaskade-Bibliothek t10). Frei lesen: ohne Wörterbuch, einfach weiterlesen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-685",
+              "minutes": 30,
+              "desc": "Easy German Podcast 685 „Ich geh Crashout“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 20,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "theme": "Freizeit, Reisen und Medien",
+      "goal": "Diese Woche geht es um freie Zeit, Ausflüge, Reisen und Medien.",
+      "days": [
+        {
+          "day": "Mo",
+          "focus": "Von Freizeit und Ausflügen erzählen.",
+          "karten": "20 neue Kernwörter + alle Wiederholungen.",
+          "input": "„Der Zug hat Verspätung“ (A2+, Kaskade-Bibliothek t16). Interaktiv lesen: unbekannte Wörter antippen, gute Sätze speichern.",
+          "lesen": "„Ein Wochenende an der Ostsee“ (B1, Kaskade-Bibliothek t17). Frei lesen: ohne Wörterbuch, einfach weiterlesen. Danach: Easy German Podcast 683 „Wenn dein Kind deine Deutschlehrerin ist“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "text",
+              "text": "t16"
+            },
+            {
+              "block": "lesen",
+              "kind": "text",
+              "text": "t17",
+              "minutes": 5,
+              "desc": "„Ein Wochenende an der Ostsee“ (B1, Kaskade-Bibliothek t17). Frei lesen: ohne Wörterbuch, einfach weiterlesen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-683",
+              "minutes": 30,
+              "desc": "Easy German Podcast 683 „Wenn dein Kind deine Deutschlehrerin ist“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 20,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Di",
+          "focus": "Reisen: mit dem Zug statt mit dem Flugzeug?",
+          "karten": "20 neue Kernwörter + alle Wiederholungen.",
+          "input": "Wunderschön!: „Durch die wilde Nordeifel“ (ARD Mediathek · WDR), 0:00–22:06, in deiner Bibliothek. Ausdrücke für unterwegs speichern.",
+          "lesen": "„Kochabend mit Freunden – und alles geht schief“ (B1, Kaskade-Bibliothek t18). Frei lesen: ohne Wörterbuch, einfach weiterlesen. Danach: Easy German Podcast 682 „Ein Freund, den du noch nicht kennst“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "wunderschoen-nordeifel",
+              "from": "0:00",
+              "to": "22:06"
+            },
+            {
+              "block": "lesen",
+              "kind": "text",
+              "text": "t18",
+              "minutes": 5,
+              "desc": "„Kochabend mit Freunden – und alles geht schief“ (B1, Kaskade-Bibliothek t18). Frei lesen: ohne Wörterbuch, einfach weiterlesen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-682",
+              "minutes": 30,
+              "desc": "Easy German Podcast 682 „Ein Freund, den du noch nicht kennst“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 20,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Mi",
+          "focus": "Medien und Deutschlernen: deine Meinung.",
+          "karten": "20 neue Kernwörter + alle Wiederholungen.",
+          "input": "„Eine Woche ohne Handy“ (B1, Kaskade-Bibliothek t19). Interaktiv lesen: unbekannte Wörter antippen, gute Sätze speichern.",
+          "lesen": "Easy German Podcast 693 „Eine Fahrradtour mit Barack Obama“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "text",
+              "text": "t19"
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-693",
+              "minutes": 30,
+              "desc": "Easy German Podcast 693 „Eine Fahrradtour mit Barack Obama“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 25,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        },
+        {
+          "day": "Do",
+          "focus": "Eine Präsentation frei halten.",
+          "karten": "20 neue Kernwörter + alle Wiederholungen.",
+          "input": "Feuer & Flamme, Folge 1 „Extreme Hitze bei Wohnungsbrand“ (ARD Mediathek · WDR), 0:00–21:13, in deiner Bibliothek. Kurze, spontane Sätze speichern.",
+          "lesen": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen. Danach: Easy German Podcast 681 „Alle Schraubenzieher sollten Kreuzschlitzschraubenzieher sein“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "feuer-und-flamme-s11e01",
+              "from": "0:00",
+              "to": "21:13"
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 30,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-681",
+              "minutes": 25,
+              "desc": "Easy German Podcast 681 „Alle Schraubenzieher sollten Kreuzschlitzschraubenzieher sein“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            }
+          ]
+        },
+        {
+          "day": "Fr",
+          "focus": "Wochen- und Monatsrückblick: Lieblingssätze wiederholen und den eigenen Fortschritt ansehen.",
+          "karten": "Keine neuen Karten, nur Wiederholungen. Danach kurz prüfen: Wie viele Kernwörter kennst du jetzt?",
+          "input": "Wunderschön!: „Durch die wilde Nordeifel“, ab 22:06 bis zum Ende, in deiner Bibliothek. Wie viel verstehst du jetzt ohne Pausen?",
+          "lesen": "Easy German Podcast 700 „Die Kunst des Loslassens“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen. Danach: nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen.",
+          "materials": [
+            {
+              "block": "input",
+              "kind": "clip",
+              "clip": "wunderschoen-nordeifel",
+              "from": "22:06"
+            },
+            {
+              "block": "lesen",
+              "kind": "clip",
+              "clip": "egp-700",
+              "minutes": 30,
+              "desc": "Easy German Podcast 700 „Die Kunst des Loslassens“, 0:00–30:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen."
+            },
+            {
+              "block": "lesen",
+              "kind": "news",
+              "feed": "leicht",
+              "minutes": 25,
+              "desc": "nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die neuesten Artikel des Tages, die Links stehen hier. Lesen, ohne nachzuschlagen — eine Lücke ist kein Grund zu stoppen."
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "prompts": [
+    {
+      "id": "s01",
+      "skill": "schreiben",
+      "type": "E-Mail an Freunde (informell)",
+      "title": "Ein Beet im Hof",
+      "situation": "In deinem Haus gibt es seit Kurzem einen Gemeinschaftsgarten im Hof. Du hast dort ein kleines Beet bekommen. Schreib deiner Freundin Lea eine E-Mail.",
+      "points": [
+        "Beschreib den Garten und dein Beet.",
+        "Erzähl, wie du dabei Nachbarn kennengelernt hast.",
+        "Lade Lea für Samstagnachmittag in den Garten ein."
+      ],
+      "words": 80,
+      "minutes": 20,
+      "tips": [
+        "Anrede und Gruß nicht vergessen: Liebe Lea, … / Viele Grüße",
+        "Zu jedem Punkt zwei bis drei Sätze schreiben.",
+        "Konnektoren benutzen: weil, deshalb, außerdem."
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "p01",
+      "skill": "sprechen",
+      "type": "Gemeinsam etwas planen",
+      "title": "Ein Hoffest für das Haus",
+      "situation": "Du und deine Nachbarin wollt im Juni ein kleines Fest im Hof organisieren. Alle Leute aus dem Haus sollen kommen. Plant das Fest zusammen. Übe beide Rollen allein oder später mit der KI.",
+      "points": [
+        "Wann soll das Fest stattfinden?",
+        "Wie ladet ihr die Nachbarn ein?",
+        "Wer bringt Essen und Getränke mit?",
+        "Was macht ihr, wenn es regnet?",
+        "Wer räumt am Ende auf?"
+      ],
+      "minutes": 15,
+      "tips": [
+        "Vorschläge machen: Was hältst du davon, wenn …? / Ich schlage vor, dass …",
+        "Auf den Partner reagieren: Gute Idee! / Das finde ich schwierig, weil …",
+        "Am Ende kurz zusammenfassen, wer was macht."
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "s02",
+      "skill": "schreiben",
+      "type": "Formelle E-Mail",
+      "title": "Kein Licht im Fahrradkeller",
+      "situation": "Im Fahrradkeller deines Hauses funktioniert das Licht seit zwei Wochen nicht. Abends ist es dort ganz dunkel. Schreib eine kurze E-Mail an die Hausverwaltung.",
+      "points": [
+        "Beschreib das Problem genau.",
+        "Erklär, warum das gefährlich ist.",
+        "Bitte um eine schnelle Reparatur und eine Antwort."
+      ],
+      "words": 50,
+      "minutes": 15,
+      "tips": [
+        "In der E-Mail die Sie-Form benutzen: Sehr geehrte Damen und Herren, … / Mit freundlichen Grüßen",
+        "Höflich bitten: Könnten Sie bitte …? / Ich wäre Ihnen dankbar, wenn …",
+        "Kurz bleiben: 40 bis 60 Wörter reichen."
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "p02",
+      "skill": "sprechen",
+      "type": "Ein Thema präsentieren",
+      "title": "Dinge mit Nachbarn teilen",
+      "situation": "Du hältst eine kurze Präsentation (3–4 Minuten) zum Thema „Werkzeug und andere Dinge mit Nachbarn teilen“. Gliedere sie in fünf Folien.",
+      "points": [
+        "Folie 1: Das Thema vorstellen.",
+        "Folie 2: Eigene Erfahrung: Was hast du schon einmal geliehen oder verliehen?",
+        "Folie 3: Wie ist das in deinem Heimatland?",
+        "Folie 4: Vor- und Nachteile nennen und deine Meinung sagen.",
+        "Folie 5: Abschluss und Dank fürs Zuhören."
+      ],
+      "minutes": 15,
+      "tips": [
+        "Überleitungen benutzen: Ich komme jetzt zu … / Zum Schluss möchte ich …",
+        "Nur Stichwörter auf die Folien schreiben und frei sprechen.",
+        "Laut üben und die Zeit stoppen."
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "s03",
+      "skill": "schreiben",
+      "type": "Forumsbeitrag: Meinung zu einer Aussage",
+      "title": "Duzen im Job?",
+      "situation": "In einem Online-Forum geht es um die Frage „Du oder Sie bei der Arbeit?“. Jemand schreibt: „In einer Firma sollten sich alle duzen, auch die Chefin.“ Schreib einen Beitrag mit deiner Meinung.",
+      "points": [
+        "Sag, ob du zustimmst, und begründe deine Meinung.",
+        "Erzähl von einer eigenen Erfahrung.",
+        "Nenn ein Argument der anderen Seite."
+      ],
+      "words": 80,
+      "minutes": 20,
+      "tips": [
+        "Meinung einleiten: Ich finde, dass … / Meiner Meinung nach …",
+        "Mit aber oder trotzdem auch die andere Seite zeigen.",
+        "Ein kurzer Einstieg wie „Hallo zusammen“ reicht."
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "p03",
+      "skill": "sprechen",
+      "type": "Gemeinsam etwas planen",
+      "title": "Der erste Tag für neue Kolleginnen",
+      "situation": "Nächsten Montag fangen zwei neue Kolleginnen in deiner Firma an. Du und ein Kollege sollt ihren ersten Arbeitstag vorbereiten. Plant den Tag zusammen.",
+      "points": [
+        "Wann und wo begrüßt ihr die beiden?",
+        "Wer zeigt ihnen das Gebäude?",
+        "Wo esst ihr zusammen zu Mittag?",
+        "Was brauchen sie am ersten Tag, z. B. Schlüssel oder Laptop?",
+        "Wer ist in der ersten Woche ihre Ansprechperson?"
+      ],
+      "minutes": 15,
+      "tips": [
+        "Zeitangaben üben: um halb zehn, nach der Mittagspause, am Nachmittag.",
+        "Höflich ablehnen: Das passt leider nicht so gut, weil …",
+        "Gegenvorschlag machen: Wie wäre es stattdessen mit …?"
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "s04",
+      "skill": "schreiben",
+      "type": "E-Mail an Freunde (informell)",
+      "title": "Neuer Job im Café",
+      "situation": "Du arbeitest seit einer Woche in einem Café. Das Café sucht noch eine Aushilfe. Dein Freund Jonas sucht gerade einen Job. Schreib ihm eine E-Mail.",
+      "points": [
+        "Erzähl, wie deine erste Woche war.",
+        "Beschreib, wen das Café sucht und wann man arbeiten muss.",
+        "Schlag Jonas vor, wann er vorbeikommen kann."
+      ],
+      "words": 80,
+      "minutes": 20,
+      "tips": [
+        "Anrede und Gruß: Lieber Jonas, … / Bis bald!",
+        "Über die erste Woche im Perfekt schreiben: Ich habe … gelernt.",
+        "Vorschläge machen: Hast du Lust, …? / Wie wäre es mit …?"
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "p04",
+      "skill": "sprechen",
+      "type": "Über ein Thema sprechen",
+      "title": "Pünktlichkeit im Job",
+      "situation": "Stell dir vor: Deine Partnerin hat eine Präsentation zum Thema „Wie wichtig ist Pünktlichkeit bei der Arbeit?“ gehalten. Reagiere darauf und sprich mit ihr über das Thema.",
+      "points": [
+        "Bedank dich und sag, was dir gefallen hat.",
+        "Stell eine Frage zur Präsentation.",
+        "Erzähl kurz, wie das in deinem Job oder Kurs ist.",
+        "Sag, ob es in deinem Heimatland anders ist.",
+        "Beantworte eine Rückfrage deiner Partnerin."
+      ],
+      "minutes": 15,
+      "tips": [
+        "Feedback geben: Mir hat besonders gefallen, dass … / Interessant fand ich …",
+        "Nachfragen: Was meinst du genau mit …? / Wie ist das bei dir?",
+        "Bei einer Rückfrage Zeit gewinnen: Gute Frage! Ich denke, …"
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "s05",
+      "skill": "schreiben",
+      "type": "Formelle E-Mail",
+      "title": "Fehler in der Meldebescheinigung",
+      "situation": "Du hast vom Bürgeramt deine Meldebescheinigung bekommen. Dein Nachname ist dort falsch geschrieben. Du brauchst das Dokument bald für deinen Arbeitgeber. Schreib eine E-Mail an das Bürgeramt.",
+      "points": [
+        "Erklär, welches Dokument du bekommen hast.",
+        "Beschreib den Fehler.",
+        "Frag, wie du schnell eine korrigierte Bescheinigung bekommst."
+      ],
+      "words": 60,
+      "minutes": 15,
+      "tips": [
+        "In der E-Mail die Sie-Form benutzen: Sehr geehrte Damen und Herren, … / Mit freundlichen Grüßen",
+        "Wichtige Daten nennen: Name, Geburtsdatum, Adresse.",
+        "Höflich fragen: Könnten Sie mir bitte mitteilen, …?"
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "p05",
+      "skill": "sprechen",
+      "type": "Ein Thema präsentieren",
+      "title": "Gleich zum Arzt oder abwarten?",
+      "situation": "Du hältst eine kurze Präsentation (3–4 Minuten) zum Thema „Bei einer Erkältung sofort zum Arzt gehen oder erst abwarten?“. Gliedere sie in fünf Folien.",
+      "points": [
+        "Folie 1: Das Thema vorstellen.",
+        "Folie 2: Eigene Erfahrung: Was machst du, wenn du erkältet bist?",
+        "Folie 3: Wie macht man das in deinem Heimatland?",
+        "Folie 4: Vor- und Nachteile beider Wege nennen und deine Meinung sagen.",
+        "Folie 5: Abschluss und Dank fürs Zuhören."
+      ],
+      "minutes": 15,
+      "tips": [
+        "Den Aufbau ankündigen: Zuerst erzähle ich …, danach …",
+        "Vor- und Nachteile verbinden: Einerseits …, andererseits …",
+        "Laut üben und die Zeit stoppen."
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "s06",
+      "skill": "schreiben",
+      "type": "Forumsbeitrag: Meinung zu einer Aussage",
+      "title": "Gesund leben mit dem Handy?",
+      "situation": "In einem Forum zum Thema Gesundheit liest du diese Aussage: „Wer seine Schritte und seinen Schlaf mit dem Handy misst, lebt gesünder.“ Schreib einen Beitrag mit deiner Meinung.",
+      "points": [
+        "Sag deine Meinung zu der Aussage.",
+        "Erzähl, wie du selbst auf deine Gesundheit achtest.",
+        "Nenn einen möglichen Nachteil solcher Apps."
+      ],
+      "words": 80,
+      "minutes": 20,
+      "tips": [
+        "Meinung begründen: Ich stimme zu, weil … / Ich sehe das anders, denn …",
+        "Beispiele einleiten: zum Beispiel, bei mir ist es so, dass …",
+        "Am Ende einen Satz als Fazit schreiben: Insgesamt finde ich …"
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "p06",
+      "skill": "sprechen",
+      "type": "Gemeinsam etwas planen",
+      "title": "Hilfe für einen kranken Freund",
+      "situation": "Euer Freund Malte hat sich das Bein gebrochen und muss zwei Wochen zu Hause bleiben. Du und eine Freundin wollt ihm helfen. Plant zusammen, wer was macht.",
+      "points": [
+        "Wer kauft wann für ihn ein?",
+        "Wer begleitet ihn zur Kontrolle beim Arzt?",
+        "Wer holt seine Medikamente aus der Apotheke?",
+        "Wann besucht ihr ihn, und was bringt ihr mit?"
+      ],
+      "minutes": 15,
+      "tips": [
+        "Aufgaben verteilen: Kannst du … übernehmen? / Ich kümmere mich um …",
+        "Termine absprechen: Passt dir Dienstag? / Am Mittwoch kann ich leider nicht.",
+        "Am Ende kurz zusammenfassen, wer was macht."
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "s07",
+      "skill": "schreiben",
+      "type": "E-Mail an Freunde (informell)",
+      "title": "Kanutour am Wochenende",
+      "situation": "Du hast am Wochenende mit ein paar Kolleginnen eine Kanutour auf einem Fluss gemacht. Deine Freundin Samira möchte beim nächsten Mal mitkommen. Schreib ihr eine E-Mail.",
+      "points": [
+        "Erzähl, wie die Tour war.",
+        "Beschreib, was nicht so gut geklappt hat.",
+        "Schlag einen Termin für eine gemeinsame Tour vor."
+      ],
+      "words": 80,
+      "minutes": 20,
+      "tips": [
+        "Gefühle zeigen: Es hat mir total gut gefallen. / Leider …",
+        "Die Reihenfolge zeigen: zuerst, danach, am Ende.",
+        "Gruß am Ende nicht vergessen: Liebe Grüße"
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "p07",
+      "skill": "sprechen",
+      "type": "Über ein Thema sprechen",
+      "title": "Mit dem Zug in den Urlaub",
+      "situation": "Stell dir vor: Dein Partner hat eine Präsentation zum Thema „Urlaub mit dem Zug statt mit dem Flugzeug“ gehalten. Reagiere darauf und sprich mit ihm über das Thema.",
+      "points": [
+        "Bedank dich und sag, was du interessant fandest.",
+        "Stell eine Frage zur Präsentation.",
+        "Erzähl von einer eigenen Reise mit dem Zug oder dem Flugzeug.",
+        "Sag, was dir im Urlaub wichtig ist.",
+        "Beantworte eine Rückfrage deines Partners."
+      ],
+      "minutes": 15,
+      "tips": [
+        "Feedback geben: Danke für die Präsentation. Besonders interessant fand ich …",
+        "Nachfragen: Wie lange dauert …? / Was kostet das ungefähr?",
+        "Zustimmen oder widersprechen: Da hast du recht. / Das sehe ich etwas anders."
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "s08",
+      "skill": "schreiben",
+      "type": "Forumsbeitrag: Meinung zu einer Aussage",
+      "title": "Deutsch lernen mit Serien?",
+      "situation": "In einem Forum für Deutschlernende schreibt jemand: „Mit Serien lernt man keine Sprache. Man muss vor allem Grammatik lernen.“ Schreib einen Beitrag mit deiner Meinung.",
+      "points": [
+        "Sag, was du von der Aussage hältst.",
+        "Erzähl, wie du selbst Deutsch lernst.",
+        "Gib anderen Lernenden einen konkreten Tipp."
+      ],
+      "words": 80,
+      "minutes": 20,
+      "tips": [
+        "Meinung einleiten: Ich bin der Meinung, dass … / Ich sehe das so: …",
+        "Konnektoren benutzen: deshalb, trotzdem, außerdem.",
+        "Den Tipp als Vorschlag formulieren: Probiert doch mal …"
+      ],
+      "origin": "ai"
+    },
+    {
+      "id": "p08",
+      "skill": "sprechen",
+      "type": "Ein Thema präsentieren",
+      "title": "Wie informierst du dich?",
+      "situation": "Du hältst eine kurze Präsentation (3–4 Minuten) zum Thema „Nachrichten: Zeitung, App oder soziale Medien?“. Gliedere sie in fünf Folien.",
+      "points": [
+        "Folie 1: Das Thema vorstellen.",
+        "Folie 2: Eigene Erfahrung: Wie liest oder hörst du Nachrichten?",
+        "Folie 3: Wie informieren sich die Menschen in deinem Heimatland?",
+        "Folie 4: Vor- und Nachteile nennen und deine Meinung sagen.",
+        "Folie 5: Abschluss und Dank fürs Zuhören."
+      ],
+      "minutes": 15,
+      "tips": [
+        "Überleitungen benutzen: Ich komme jetzt zu … / Zum Schluss möchte ich …",
+        "Vergleichen: Im Vergleich zu … / Bei uns ist es eher so, dass …",
+        "Zum Abschluss: Vielen Dank fürs Zuhören! Gibt es noch Fragen?"
+      ],
+      "origin": "ai"
+    }
+  ]
+}

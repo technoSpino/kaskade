@@ -1,0 +1,21 @@
+{
+  "id": "t16",
+  "origin": "ai",
+  "title": "Der Zug hat Verspätung",
+  "level": "A2+",
+  "theme": "Reisen",
+  "slot": "input",
+  "text": "Es ist Freitagabend. Jonas steht am Bahnhof in Köln. Er will nach Hamburg fahren, denn seine Schwester Lena hat morgen Geburtstag. Der Zug fährt um 18:10 Uhr. Jonas hat seine Tasche, ein Geschenk und einen Kaffee. Alles ist gut.\n\nDann kommt eine Durchsage: „Der Zug nach Hamburg hat heute etwa 40 Minuten Verspätung. Wir bitten um Entschuldigung.“ Jonas seufzt. Er schreibt Lena eine Nachricht: „Ich komme später. Der Zug ist zu spät, wie immer.“ Lena antwortet sofort: „Kein Problem. Ich warte auf dich. Wir essen dann einfach später.“\n\nJonas setzt sich auf eine Bank. Neben ihm sitzt eine alte Frau mit einem kleinen Hund. Sie fragt: „Fahren Sie auch nach Hamburg?“ „Ja“, sagt Jonas. „Und Sie?“ „Ich besuche meinen Sohn. Er hat ein Baby bekommen. Jetzt bin ich Oma!“ Die Frau zeigt ihm Fotos auf ihrem Handy. Das Baby ist sehr klein und schläft auf allen Bildern.\n\nNach 40 Minuten hört man wieder eine Stimme: „Der Zug kommt heute auf Gleis 7, nicht auf Gleis 4.“ Alle Leute laufen schnell los. Jonas hilft der Frau mit ihrem Koffer. Der Hund läuft fröhlich mit.\n\nIm Zug sitzen sie zusammen. Die Fahrt dauert vier Stunden, aber sie ist nicht langweilig. Die Frau erzählt viele Geschichten, und Jonas lacht oft. Um kurz nach elf kommt er in Hamburg an. Lena wartet am Bahnhof. „Wie war die Fahrt?“, fragt sie. Jonas lächelt. „Lang. Aber eigentlich ganz schön.“",
+  "glossary": [
+    {"term": "Bahnhof", "gloss": "train station", "note": "der Bahnhof, -höfe"},
+    {"term": "Durchsage", "gloss": "announcement (over the loudspeaker)", "note": "die Durchsage, -n"},
+    {"term": "Verspätung", "gloss": "delay", "note": "die Verspätung, -en; Verspätung haben = to be late"},
+    {"term": "Oma", "gloss": "grandma", "note": "die Oma, -s"},
+    {"term": "Gleis", "gloss": "platform, track", "note": "das Gleis, -e"}
+  ],
+  "questions": [
+    {"question": "Warum fährt Jonas nach Hamburg?", "options": ["Er hat dort einen neuen Job.", "Seine Schwester hat Geburtstag.", "Er besucht seinen Sohn."], "correct": 1},
+    {"question": "Was ist das Problem am Bahnhof?", "options": ["Der Zug hat Verspätung und kommt auf einem anderen Gleis.", "Jonas hat seine Tasche vergessen.", "Der Zug fährt heute gar nicht."], "correct": 0},
+    {"question": "Wie findet Jonas die Fahrt am Ende?", "options": ["Sehr langweilig.", "Zu teuer.", "Lang, aber eigentlich schön."], "correct": 2}
+  ]
+}

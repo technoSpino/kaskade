@@ -1,0 +1,75 @@
+{
+  "id": "t06",
+  "origin": "ai",
+  "title": "Der erste Tag im neuen Job",
+  "level": "A2+",
+  "theme": "Arbeit",
+  "slot": "input",
+  "text": "Montag, 7:45 Uhr. Lena Hartmann steht vor einem großen, hellen Haus in Köln. Heute ist ihr erster Tag bei einer kleinen Firma für Software. Sie ist ein bisschen nervös. Hat sie die richtige Kleidung an? Ist sie zu früh?\n\nAm Eingang wartet schon ein Mann mit einer Tasse Kaffee in der Hand. „Guten Morgen! Ich bin Paul. Ich zeige dir heute alles. Bei uns sagen alle du, ist das okay?“ Lena lacht. „Klar, gern.“\n\nZuerst bekommt sie einen Schlüssel und einen Laptop. Dann gehen sie zusammen durch das ganze Büro. Paul zeigt ihr die Küche, den Drucker und die Toiletten. „Den Kaffee gibt es hier umsonst“, sagt er. „Aber wer die Maschine leer macht, füllt sie auch wieder auf. Das ist die wichtigste Regel im Haus.“\n\nUm zehn Uhr gibt es ein kurzes Treffen mit dem Team. Sechs Leute sitzen am Tisch, und alle stellen sich vor. Lena versucht, sich die Namen zu merken. Aber nach drei Namen hat sie den ersten schon wieder vergessen. Eine Frau aus dem Team sieht das und lächelt. „Keine Sorge. Am Anfang war das bei mir genauso.“\n\nMittags essen alle zusammen in der Kantine. Am Nachmittag liest Lena viele E-Mails und will ihr Passwort ändern. Das dauert eine halbe Stunde, denn das System findet jedes neue Passwort zu schwach.\n\nUm fünf Uhr fährt sie nach Hause. Sie ist müde, aber zufrieden. Ihr Freund fragt: „Und, wie war’s?“ Lena denkt kurz nach. „Gut. Ich kenne noch nicht alle Namen, aber ich weiß schon, wo der Kaffee ist.“",
+  "glossary": [
+    {
+      "term": "Software",
+      "gloss": "software",
+      "note": "die Software"
+    },
+    {
+      "term": "hellen",
+      "gloss": "bright, light-coloured",
+      "note": "hell"
+    },
+    {
+      "term": "okay",
+      "gloss": "okay, fine",
+      "note": "umgangssprachlich"
+    },
+    {
+      "term": "Laptop",
+      "gloss": "laptop",
+      "note": "der Laptop, -s"
+    },
+    {
+      "term": "Regel",
+      "gloss": "rule",
+      "note": "die Regel, -n"
+    },
+    {
+      "term": "Kantine",
+      "gloss": "staff canteen",
+      "note": "die Kantine, -n"
+    },
+    {
+      "term": "Passwort",
+      "gloss": "password",
+      "note": "das Passwort, Passwörter"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Was bekommt Lena am Morgen zuerst?",
+      "options": [
+        "Einen Kaffee und ein Telefon",
+        "Einen Schlüssel und einen Laptop",
+        "Ein Passwort und eine E-Mail"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Was ist die wichtigste Regel im Haus?",
+      "options": [
+        "Wer die Kaffeemaschine leer macht, füllt sie wieder auf.",
+        "Alle müssen um acht Uhr im Büro sein.",
+        "Man darf in der Küche nicht essen."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Warum dauert das neue Passwort so lange?",
+      "options": [
+        "Lena hat ihren Laptop vergessen.",
+        "Paul hat keine Zeit für sie.",
+        "Das System findet jedes Passwort zu schwach."
+      ],
+      "correct": 2
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "name": "german-declension-learning",
+  "name": "kaskade",
   "version": "1.0.0",
   "description": "Interactive German declension learning app with color-coded tables and flashcards",
   "main": "app/index.html",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/german-declension-mvp.git"
+    "url": "https://github.com/technoSpino/kaskade.git"
   },
   "keywords": [
     "german",
@@ -30,9 +30,9 @@
   "author": "Your Name",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yourusername/german-declension-mvp/issues"
+    "url": "https://github.com/technoSpino/kaskade/issues"
   },
-  "homepage": "https://github.com/yourusername/german-declension-mvp#readme",
+  "homepage": "https://github.com/technoSpino/kaskade#readme",
   "devDependencies": {
     "clean-css-cli": "^5.6.2",
     "gh-pages": "^6.0.0",

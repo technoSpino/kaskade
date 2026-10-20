@@ -1,0 +1,564 @@
+{
+  "about": "Exact real material the plan assigns (follow-up #16). Links only: Kaskade downloads Mediathek episodes and podcast episodes into ~/kaskade-data before their plan day (server/scripts/stock.py, daily timer); nothing here is copied into git. availableTo = 'verfügbar bis' as checked on 2026-10-11. YouTube and Netflix (Germany) run in Matt's Chrome with Language Reactor (the server is blocked there); books are bought by Matt with notice.",
+  "items": [
+    {
+      "key": "tatort-schweigen",
+      "kind": "mediathek",
+      "title": "Tatort: Schweigen",
+      "tag": "krimi",
+      "source": "ARD Mediathek · NDR",
+      "match": "Tatort: Schweigen",
+      "url": "https://www.ardmediathek.de/video/tatort/schweigen-2024/ndr/Y3JpZDovL25kci5kZS9kNjhiNGZiMC04YmE0LTQyNjUtODk1Yi1mMWRhZDM4NWJmNjFfZ2FuemVTZW5kdW5n",
+      "availableTo": "2027-05-17",
+      "themeCheck": "2026-10-16: Synopsis + UT geprüft — Kindesmissbrauch ist der Fall (9 Treffer in den UT, 10 im gesprochenen Text). Nur Woche 1, schon gesehen; nicht wieder planen."
+    },
+    {
+      "key": "soko-leipzig-das-auge",
+      "kind": "mediathek",
+      "title": "SOKO Leipzig: Das Auge",
+      "tag": "krimi",
+      "source": "ZDF Mediathek",
+      "match": "SOKO Leipzig: Das Auge",
+      "url": "https://www.zdf.de/video/serien/soko-leipzig-104/das-auge-102",
+      "availableTo": "2027-09-24",
+      "themeCheck": "2026-10-16: Synopsis (ZDF: eine Polizistin gesteht den Mord an einem Rockerchef) + UT geprüft, kein Kindesmissbrauch (0 Treffer)"
+    },
+    {
+      "key": "merz-gegen-merz-1",
+      "kind": "mediathek",
+      "title": "Merz gegen Merz, Folge 1: Hoch soll'n sie leben",
+      "tag": "comedy",
+      "source": "ZDF Mediathek",
+      "url": "https://www.zdf.de/video/serien/merz-gegen-merz-102/merz-gegen-merz-folge-1-102",
+      "availableTo": "2028-05-13",
+      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)"
+    },
+    {
+      "key": "merz-gegen-merz-2",
+      "kind": "mediathek",
+      "title": "Merz gegen Merz, Folge 2: Alles neu – alles anders",
+      "tag": "comedy",
+      "source": "ZDF Mediathek",
+      "url": "https://www.zdf.de/video/serien/merz-gegen-merz-102/folge-2-172",
+      "availableTo": "2028-05-13",
+      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)"
+    },
+    {
+      "key": "merz-gegen-merz-3",
+      "kind": "mediathek",
+      "title": "Merz gegen Merz, Folge 3: Jeder ist ersetzbar",
+      "tag": "comedy",
+      "source": "ZDF Mediathek",
+      "url": "https://www.zdf.de/video/serien/merz-gegen-merz-102/folge-3-180",
+      "availableTo": "2028-05-13",
+      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)"
+    },
+    {
+      "key": "die-100-sozialstaat",
+      "kind": "mediathek",
+      "title": "Die 100 – was Deutschland bewegt: Können wir uns diesen Sozialstaat noch leisten?",
+      "tag": "talk",
+      "source": "ARD Mediathek · NDR",
+      "url": "https://www.ardmediathek.de/video/die-100-was-deutschland-bewegt/koennen-wir-uns-diesen-sozialstaat-noch-leisten/ard/Y3JpZDovL25kci5kZS8xMzczNmY2MS0wM2I5LTRhMzEtOTg0ZC04Y2JjOWU1OTFiYjM",
+      "availableTo": "2027-03-25",
+      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)"
+    },
+    {
+      "key": "respekt-buerokratie",
+      "kind": "mediathek",
+      "title": "RESPEKT: Flüchtlinge – Vorurteile, Bürokratie und das Recht auf einen Neubeginn",
+      "tag": "doku",
+      "source": "ARD Mediathek · ARD alpha",
+      "url": "https://www.ardmediathek.de/video/respekt/fluechtlinge-vorurteile-buerokratie-und-das-recht-auf-einen-neubeginn/ard-alpha/Y3JpZDovL2JyLmRlL3ZpZGVvL2ZjZjQ0ZGY0LTczYTctNDU2Ny04YzAxLWQ1MTc1M2I0MzgzZQ",
+      "availableTo": "2031-02-27",
+      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)"
+    },
+    {
+      "key": "charite-19-ankunft",
+      "kind": "mediathek",
+      "title": "Charité, Folge 19: Ankunft",
+      "tag": "drama",
+      "source": "ARD Mediathek · MDR",
+      "url": "https://www.ardmediathek.de/video/charite/folge-19-ankunft-s04-e01/mdr/Y3JpZDovL21kci5kZS9zZW5kdW5nLzI4MjA0MC81NDAxNjItNTE5ODUz",
+      "availableTo": "2027-01-16",
+      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)"
+    },
+    {
+      "key": "quarks-schlaf",
+      "kind": "mediathek",
+      "title": "Quarks: Schlaf – Die billigste Medizin der Welt",
+      "tag": "doku",
+      "source": "ARD Mediathek · WDR",
+      "url": "https://www.ardmediathek.de/video/quarks/schlaf-die-billigste-medizin-der-welt/wdr/Y3JpZDovL3dkci5kZS9CZWl0cmFnLXNvcGhvcmEtZjY0YTI0MmUtNTFlZC00ZmIxLThlNDMtZjBmMjY1ZWI5NTQ4",
+      "availableTo": "2030-11-22",
+      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)"
+    },
+    {
+      "key": "wunderschoen-nordeifel",
+      "kind": "mediathek",
+      "title": "Wunderschön!: Durch die wilde Nordeifel",
+      "tag": "doku",
+      "source": "ARD Mediathek · WDR",
+      "url": "https://www.ardmediathek.de/video/wunderschoen/durch-die-wilde-nordeifel/wdr/Y3JpZDovL3dkci5kZS9CZWl0cmFnLWZiMTkzYjZmLTQyMWUtNGJkNS1hY2QxLTRhMGE4NTI0NzIxOA",
+      "availableTo": "2029-08-30",
+      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)"
+    },
+    {
+      "key": "feuer-und-flamme-s11e01",
+      "kind": "mediathek",
+      "title": "Feuer & Flamme, Folge 1: Extreme Hitze bei Wohnungsbrand",
+      "tag": "doku",
+      "source": "ARD Mediathek · WDR",
+      "url": "https://www.ardmediathek.de/video/feuer-und-flamme/folge-1-extreme-hitze-bei-wohnungsbrand-s11-e01/wdr/Y3JpZDovL3dkci5kZS9CZWl0cmFnLXNvcGhvcmEtNTNkNmMwMjAtNjgwMi00NmRlLTg3M2MtNmIwOTcwMTBhNmFm",
+      "availableTo": "2028-08-03",
+      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)"
+    },
+    {
+      "key": "tatort-unter-freunden",
+      "kind": "mediathek",
+      "title": "Tatort: Unter Freunden",
+      "tag": "krimi",
+      "source": "ARD Mediathek · NDR",
+      "url": "https://www.ardmediathek.de/video/tatort/unter-freunden/ndr/Y3JpZDovL25kci5kZS9hMjIyNWMyMC05NDUwLTQzMjktOGUyZi0yMDMwYzIzZGQ0ZjFfZ2FuemVTZW5kdW5n",
+      "availableTo": "2027-10-11",
+      "fetchOn": "2026-10-12",
+      "themeCheck": "2026-10-16: Synopsis geprüft (ARD: tote Buchhalterin, Subventionsbetrug bei einem Kieler Hightech-Unternehmen), kein Kindesmissbrauch; UT folgt nach dem Import"
+    },
+    {
+      "key": "egp-698",
+      "kind": "podcast",
+      "title": "Easy German Podcast 698: Wie Lara ganz alleine akzentfrei Deutsch gelernt hat",
+      "tag": "podcast",
+      "source": "Easy German Podcast #698",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 698,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-700",
+      "kind": "podcast",
+      "title": "Easy German Podcast 700: Die Kunst des Loslassens",
+      "tag": "podcast",
+      "source": "Easy German Podcast #700",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 700,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-695",
+      "kind": "podcast",
+      "title": "Easy German Podcast 695: Die Angst vor der Angst",
+      "tag": "podcast",
+      "source": "Easy German Podcast #695",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 695,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-684",
+      "kind": "podcast",
+      "title": "Easy German Podcast 684: Als Praktikantin im Deutschen Bundestag",
+      "tag": "podcast",
+      "source": "Easy German Podcast #684",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 684,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-690",
+      "kind": "podcast",
+      "title": "Easy German Podcast 690: Vom Einwanderer zum Staatsbürger in 3 Jahren",
+      "tag": "podcast",
+      "source": "Easy German Podcast #690",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 690,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-693",
+      "kind": "podcast",
+      "title": "Easy German Podcast 693: Eine Fahrradtour mit Barack Obama",
+      "tag": "podcast",
+      "source": "Easy German Podcast #693",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 693,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-701",
+      "kind": "podcast",
+      "title": "Easy German Podcast 701: Aktivismus in Deutschland — Jakob Springfeld über Heimat, Demokratie und Engagement",
+      "tag": "podcast",
+      "source": "Easy German Podcast #701",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 701,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-699",
+      "kind": "podcast",
+      "title": "Easy German Podcast 699: Pipi-Kacka-Humor",
+      "tag": "podcast",
+      "source": "Easy German Podcast #699",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 699,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-697",
+      "kind": "podcast",
+      "title": "Easy German Podcast 697: Alles cringe",
+      "tag": "podcast",
+      "source": "Easy German Podcast #697",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 697,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-696",
+      "kind": "podcast",
+      "title": "Easy German Podcast 696: Das fünfte Rad am Wagen",
+      "tag": "podcast",
+      "source": "Easy German Podcast #696",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 696,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-692",
+      "kind": "podcast",
+      "title": "Easy German Podcast 692: Gottlos",
+      "tag": "podcast",
+      "source": "Easy German Podcast #692",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 692,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-691",
+      "kind": "podcast",
+      "title": "Easy German Podcast 691: Auf Fehler scheißen",
+      "tag": "podcast",
+      "source": "Easy German Podcast #691",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 691,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-689",
+      "kind": "podcast",
+      "title": "Easy German Podcast 689: Corinna Schmud",
+      "tag": "podcast",
+      "source": "Easy German Podcast #689",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 689,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-688",
+      "kind": "podcast",
+      "title": "Easy German Podcast 688: Anarchie im Kühlschrank",
+      "tag": "podcast",
+      "source": "Easy German Podcast #688",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 688,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-687",
+      "kind": "podcast",
+      "title": "Easy German Podcast 687: Kontakt mit dem Lack eines Autos",
+      "tag": "podcast",
+      "source": "Easy German Podcast #687",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 687,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-686",
+      "kind": "podcast",
+      "title": "Easy German Podcast 686: Den Schuh zieh ich mir nicht an!",
+      "tag": "podcast",
+      "source": "Easy German Podcast #686",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 686,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-685",
+      "kind": "podcast",
+      "title": "Easy German Podcast 685: Ich geh Crashout",
+      "tag": "podcast",
+      "source": "Easy German Podcast #685",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 685,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-683",
+      "kind": "podcast",
+      "title": "Easy German Podcast 683: Wenn dein Kind deine Deutschlehrerin ist",
+      "tag": "podcast",
+      "source": "Easy German Podcast #683",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 683,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-682",
+      "kind": "podcast",
+      "title": "Easy German Podcast 682: Ein Freund, den du noch nicht kennst",
+      "tag": "podcast",
+      "source": "Easy German Podcast #682",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 682,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "egp-681",
+      "kind": "podcast",
+      "title": "Easy German Podcast 681: Alle Schraubenzieher sollten Kreuzschlitzschraubenzieher sein",
+      "tag": "podcast",
+      "source": "Easy German Podcast #681",
+      "feed": "https://proxyfeed.svmaudio.com/feeds/easygerman/feed.xml",
+      "episode": 681,
+      "url": "https://www.easygerman.org/podcast",
+      "themeCheck": "2026-10-16: kein Krimi (Gesprächspodcast), kein Text zum Durchsuchen"
+    },
+    {
+      "key": "radio-tatort-uebertherapie",
+      "kind": "audio",
+      "title": "ARD Radio Tatort: Übertherapie – Toter Arzt im Berliner Drogenmilieu",
+      "tag": "krimi",
+      "source": "ARD Radio Tatort · ARD Sounds",
+      "url": "https://www.ardsounds.de/episode/urn:ard:episode:f077cd135b666f76/",
+      "audio": "https://swr-dl.ard-mcdn.de/swr/swrkultur/hoerspiel/ard-radio-tatort/ard-radio-tatort-uebertherapie.mp3",
+      "availableTo": "2027-06-12",
+      "themeCheck": "2026-10-16: Synopsis geprüft (ARD Sounds: toter Arzt im Neuköllner Drogenmilieu), kein Kindesmissbrauch; Hörspiel ohne UT und Transkript"
+    },
+    {
+      "key": "dlf-krimi-paradise-city",
+      "kind": "audio",
+      "title": "Kriminalhörspiel: Paradise City – SciFi-Krimi im Gesundheitssystem",
+      "tag": "krimi",
+      "source": "Deutschlandfunk Kultur · Kriminalhörspiel",
+      "url": "https://www.hoerspielundfeature.de/kriminalhoerspiel-paradise-city-100.html",
+      "audio": "https://podcast-mp3.dradio.de/podcast/2026/06/15/paradise_city_drk_20260615_2205_2bf707cf.mp3?refId=krimi-hoerspiel-100",
+      "availableTo": "2027-06-15",
+      "themeCheck": "2026-10-16: Synopsis geprüft (Deutschlandfunk Kultur: Patientendaten, eine Vertuschung bis in die Regierung), kein Kindesmissbrauch; Hörspiel ohne UT und Transkript"
+    },
+    {
+      "key": "yt-easygerman-gehalt",
+      "kind": "youtube",
+      "title": "Easy German: Can You Live Well on This Salary in Germany? (Straßeninterviews)",
+      "tag": "talk",
+      "source": "YouTube · Easy German",
+      "video": "ERHUpp091Kw",
+      "url": "https://www.youtube.com/watch?v=ERHUpp091Kw",
+      "duration": 870,
+      "themeCheck": "2026-10-16: kein Krimi (Straßeninterviews), nicht in der Bibliothek, kein Text zum Durchsuchen"
+    },
+    {
+      "key": "netflix-king-of-stonks",
+      "kind": "netflix",
+      "title": "King of Stonks",
+      "tag": "comedy",
+      "source": "Netflix · deutsche Originalserie",
+      "url": "https://www.netflix.com/de/title/81389612",
+      "themeCheck": "2026-10-16: kein Krimi (Comedy-Serie), nicht in der Bibliothek, kein Text zum Durchsuchen"
+    }
+  ],
+  "setup": [
+    {
+      "id": "language-reactor",
+      "title": "Language Reactor in Chrome installieren",
+      "text": "Chrome-Erweiterung für YouTube und Netflix: deutsche und englische Untertitel, Pause nach jedem Satz, Wörterbuch per Klick. Kostenlos reicht.",
+      "url": "https://www.languagereactor.com/",
+      "forKind": [
+        "youtube",
+        "netflix"
+      ],
+      "noticeDays": 2
+    }
+  ],
+  "books": [
+    {
+      "id": "schirach-verbrechen",
+      "author": "Ferdinand von Schirach",
+      "title": "Verbrechen",
+      "publisher": "btb",
+      "isbn": "978-3-442-77066-3",
+      "format": "paper",
+      "pages": 208,
+      "price": "12,00 €",
+      "note": "Elf wahre Kriminalfälle eines Berliner Strafverteidigers: nüchterne, klare Sätze, jede Geschichte für sich. Harte Fälle (Gewalt) — eine Geschichte darf man überspringen.",
+      "alternatives": "E-Book (btb, ISBN 978-3-641-26778-0, 10,99 €) · Hörbuch-Auswahl mit 8 Geschichten (Der Hörverlag, 3 h 28 min)",
+      "shops": [
+        {
+          "name": "Penguin/btb",
+          "url": "https://www.penguin.de/buecher/ferdinand-von-schirach-verbrechen/taschenbuch/9783442770663"
+        },
+        {
+          "name": "Hugendubel",
+          "url": "https://www.hugendubel.de/de/taschenbuch/ferdinand_von_schirach-verbrechen-38554708-produkt-details.html"
+        },
+        {
+          "name": "Thalia",
+          "url": "https://www.thalia.de/shop/home/artikeldetails/A1057322056"
+        }
+      ],
+      "edition": "Taschenbuch, 13.04.2020",
+      "ebook": {
+        "isbn": "978-3-641-26778-0",
+        "price": "10,99 €"
+      },
+      "pagesNote": "208 Seiten laut Verlag, Text S. 5–205; Seitenzahlen der Geschichten aus dem Inhaltsverzeichnis dieser Ausgabe (DNB-Scan https://d-nb.info/1203761619/04)",
+      "genre": "krimi",
+      "themeCheck": "2026-10-16: Inhaltsangaben aller 11 Geschichten (Wikipedia „Verbrechen (Buch)“) + Leseprobe S. 5–20 geprüft, kein Kindesmissbrauch",
+      "leseprobe": {
+        "url": "https://www.bic-media.com/books/content/shortened/9783442770663.pdf",
+        "via": "penguin.de → Leseprobe (Blick ins Buch, btb)",
+        "pages": "S. 5–20",
+        "pdfOffset": 2,
+        "note": "Die Leseprobe des Verlags zeigt diese Ausgabe mit ihren Seitenzahlen: Vorwort S. 5–6, „Fähner“ ab S. 7 (geprüft 13.10.2026)."
+      }
+    },
+    {
+      "id": "kling-qualityland",
+      "author": "Marc-Uwe Kling",
+      "title": "QualityLand",
+      "genre": "scifi",
+      "publisher": "Ullstein eBooks",
+      "isbn": "978-3-8437-1597-3",
+      "asin": "B071436DMF",
+      "format": "ebook",
+      "formatLabel": "Kindle-E-Book (Dunkle Edition)",
+      "price": "9,99 €",
+      "note": "Satirischer Science-Fiction-Roman: ein Land, in dem Algorithmen alles für dich entscheiden. Kurze Kapitel, viel Alltagsdialog, klare Sätze; dazu erfundene Produktnamen (TheShop, QualityPartner …).",
+      "shops": [
+        {
+          "name": "Amazon.de (Kindle)",
+          "url": "https://www.amazon.de/dp/B071436DMF"
+        }
+      ],
+      "edition": "Kindle-Ausgabe, 22.09.2017",
+      "editionNote": "Amazon.de verkauft als Kindle-Ausgabe nur „QualityLand: Roman | Dunkle Edition“ (ASIN B071436DMF, 9,99 €, Ullstein Ebooks, 22.09.2017, ISBN 978-3843715973). Ullstein führt dieses E-Book als einziges (ePub, 9,99 €), seine Leseprobe ist die Dunkle Edition (geprüft 16.10.2026).",
+      "chaptersNote": "Kapitel und Reihenfolge aus dem Inhaltsverzeichnis dieses E-Books (Ullsteins Leseprobe als EPUB, https://www.bic-media.com/books/content/shortened/9783843715973.epub). Länge der Kapitel: Kapitelzeiten des ungekürzten Hörbuchs, Dunkle Edition, vom Autor gelesen (Audible B075F2NCQP, 8 h 26 min), bei ~137 Wörtern pro Minute (gezählt an den ganzen Kapiteln der Leseprobe), gelesen mit 110 Wörtern pro Minute wie die Bibliothekstexte (geprüft 16.10.2026).",
+      "chapters": [
+        {
+          "title": "Versionshinweis",
+          "audioMin": 1.32
+        },
+        {
+          "title": "QualityLand Reiseführer: Einführung",
+          "audioMin": 4.14
+        },
+        {
+          "title": "Ein Kuss",
+          "audioMin": 12.37
+        },
+        {
+          "title": "FeSaZus",
+          "audioMin": 0.79
+        },
+        {
+          "title": "Die größte Koalition",
+          "audioMin": 12.25
+        },
+        {
+          "title": "QualityLand Reiseführer: Ohrwürmer",
+          "audioMin": 1.29
+        },
+        {
+          "title": "Ado & Eva",
+          "audioMin": 9.79
+        },
+        {
+          "title": "QualityLand Reiseführer: Level",
+          "audioMin": 6.7
+        },
+        {
+          "title": "QualityPartner",
+          "audioMin": 10.93
+        },
+        {
+          "title": "PartnerCare",
+          "audioMin": 5.44
+        },
+        {
+          "title": "Jetzt spricht der Vater des Killerroboters",
+          "audioMin": 2.45
+        },
+        {
+          "title": "Die Stimme der instrumentellen Vernunft",
+          "audioMin": 6.49
+        },
+        {
+          "title": "QualityCare",
+          "audioMin": 5.79
+        },
+        {
+          "title": "Frau aus Province bringt ihr hundertstes Baby zur Welt",
+          "audioMin": 1.74
+        },
+        {
+          "title": "Kalliope 7.3",
+          "audioMin": 13.08
+        },
+        {
+          "title": "QualityLand Reiseführer: Maschinenstürmer",
+          "audioMin": 1.82
+        },
+        {
+          "title": "Das Moravec’sche Paradox",
+          "audioMin": 7.63
+        },
+        {
+          "title": "Im Keller",
+          "audioMin": 8.16
+        },
+        {
+          "title": "Familie erhält Kampfroboter statt Staubsauger",
+          "audioMin": 1.68
+        },
+        {
+          "title": "Vorstellungsgespräch",
+          "audioMin": 8.61
+        },
+        {
+          "title": "Kleiner Helfer",
+          "audioMin": 6.38
+        }
+      ]
+    }
+  ],
+  "later": [
+    {
+      "id": "kaenguru-hoerbuch",
+      "title": "Marc-Uwe Kling: Die Känguru-Chroniken — Hörbuch, vom Autor gelesen",
+      "publisher": "Hörbuch Hamburg",
+      "length": "4 h 52 min",
+      "use": "später, optional, für den Hörblock (nicht im 4-Wochen-Plan, keine Kaufkarte)",
+      "url": "https://www.hoerbuch-hamburg.de/hoerbuch/die-kaenguru-chroniken-die-kaenguru-werke-1-9783869091082/"
+    }
+  ]
+}
