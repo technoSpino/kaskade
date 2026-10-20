@@ -39,17 +39,86 @@ def default_start(today: date) -> date:
     return monday if today.weekday() <= 2 else monday + timedelta(days=7)
 
 
-def plan_day(start: date, today: date, data: dict | None = None) -> dict:
-    """Which plan week/day `today` is, relative to the Monday `start`."""
+# ── Weeks off (#36) ──────────────────────────────────────────────────────────
+# A pause is a run of whole Mon–Sun weeks ({"from": Monday, "to": Sunday}, setting `pauses`). The
+# plan doesn't happen in them: every date derived from the plan start skips them, so the week after
+# a pause is the plan week that would have been in it.
+
+def pauses() -> list[dict]:
+    """The weeks off as stored (the plan functions below take them as an argument)."""
+    from . import db
+    return db.get_setting("pauses", [])
+
+
+def monday(d: date) -> date:
+    return d - timedelta(days=d.weekday())
+
+
+def weeks_off(start: date, pauses=()) -> list[int]:
+    """The calendar weeks he took off, counted from the week of `start` (0), sorted."""
+    off = set()
+    for p in pauses or ():
+        a, b = monday(date.fromisoformat(p["from"])), date.fromisoformat(p["to"])
+        while a <= b:
+            if a >= start:
+                off.add((a - start).days // 7)
+            a += timedelta(weeks=1)
+    return sorted(off)
+
+
+def slot_date(start: date, week: int, weekday: int, pauses=()) -> date:
+    """The calendar date of plan week `week` (0-based), weekday `weekday` — after the weeks off."""
+    k = week
+    for p in weeks_off(start, pauses):
+        if p <= k:
+            k += 1
+    return start + timedelta(weeks=k, days=weekday)
+
+
+def plan_index(start: date, day: date, pauses=()) -> tuple[int, bool]:
+    """(plan week of `day`, 0-based; paused?). In a week off: the plan week that comes after it."""
+    k = (day - start).days // 7
+    off = weeks_off(start, pauses)
+    return k - sum(p < k for p in off), k in off
+
+
+def pause_around(start: date, day: date, pauses=()) -> dict | None:
+    """The run of weeks off `day` lies in: {from, to, resume} (ISO dates), else None."""
+    off = set(weeks_off(start, pauses))
+    k = (day - start).days // 7
+    if k not in off:
+        return None
+    a = k
+    while a - 1 in off:
+        a -= 1
+    b = k
+    while b + 1 in off:
+        b += 1
+    first, resume = start + timedelta(weeks=a), start + timedelta(weeks=b + 1)
+    return {"from": first.isoformat(), "to": (resume - timedelta(days=1)).isoformat(), "resume": resume.isoformat()}
+
+
+def paused_days(days: list[str], start: date, pauses=()) -> list[bool]:
+    """For each ISO date: in a week off? (the hours chart shows those days as "frei")."""
+    off = set(weeks_off(start, pauses))
+    return [(date.fromisoformat(d) - start).days // 7 in off and date.fromisoformat(d) >= start for d in days]
+
+
+def plan_day(start: date, today: date, data: dict | None = None, pauses=()) -> dict:
+    """Which plan week/day `today` is, relative to the Monday `start` and the weeks off (#36)."""
     data = data or plan()
     offset = (today - start).days
-    week = offset // 7 + 1 if offset >= 0 else 0
+    index, paused = plan_index(start, today, pauses)
+    week = index + 1 if offset >= 0 else 0
     weekday = today.weekday()
     out = {"date": today.isoformat(), "weekday": WEEKDAYS[weekday], "week": week,
            "weekend": weekday >= 5, "beforeStart": offset < 0, "day": None, "theme": None,
-           "goal": None, "exam": None, "mockExam": None,
+           "goal": None, "exam": None, "mockExam": None, "pause": None,
            # week 5 to-dos (e.g. set up the AI key before the week-6 mock exam), also on its weekend
-           "todos": data.get(f"week{week}", {}).get("todos", []) if week == 5 else []}
+           "todos": data.get(f"week{week}", {}).get("todos", []) if week == 5 and not paused else []}
+    if paused:  # a week off: no block, the next plan week comes after it
+        out["pause"] = pause_around(start, today, pauses)
+        return out
     if offset < 0 or weekday >= 5:
         return out
     weeks = data["weeks"]
@@ -65,12 +134,12 @@ def plan_day(start: date, today: date, data: dict | None = None) -> dict:
     return out
 
 
-def upcoming(start: date, data: dict) -> list[dict]:
+def upcoming(start: date, data: dict, pauses=()) -> list[dict]:
     """Fahrplan "next steps": week-5 to-dos and the week-6 mock exam, with their dates."""
-    out = [{"week": 5, "date": (start + timedelta(weeks=4)).isoformat(), "id": t["id"], "title": t["title"],
+    out = [{"week": 5, "date": slot_date(start, 4, 0, pauses).isoformat(), "id": t["id"], "title": t["title"],
             "text": t["text"], "doneWhen": t.get("doneWhen")} for t in data.get("week5", {}).get("todos", [])]
     if data.get("week6"):
-        out.append({"week": 6, "date": (start + timedelta(weeks=5)).isoformat(), "id": "mock-exam",
+        out.append({"week": 6, "date": slot_date(start, 5, 0, pauses).isoformat(), "id": "mock-exam",
                     "title": data["week6"]["title"], "text": data["week6"]["note"], "doneWhen": None})
     return out
 

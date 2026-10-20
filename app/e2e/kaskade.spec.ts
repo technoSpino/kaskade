@@ -1565,3 +1565,53 @@ test('#30 Starten after a jump: the saved 0:06 doesn\'t pull him back, and "Zur�
     sql('UPDATE media SET key = NULL WHERE id = ?', clip.id)
   }
 })
+
+test('#36 Woche frei nehmen: preview, take a later week off, the dates move, undo — and Heute in a week off', async ({ page }) => {
+  const errors = watchConsole(page)
+  await page.addInitScript(() => { try { localStorage.setItem('kaskade-theme', 'signal') } catch { /* about:blank */ } })
+  const restore = asMatt()
+  try {
+    await page.goto('/fahrplan')
+    const notice = page.getByTestId('fp-notice-kling-qualityland')
+    await expect(notice).toContainText('ab 2.11. im Plan, Woche 4')
+    const box = page.getByTestId('fp-pause')
+    await box.getByTestId('fp-pause-select').selectOption('2026-10-26')
+    const preview = box.getByTestId('fp-pause-preview')
+    await expect(preview).toContainText('beginnt Mo 2.11. statt Mo 26.10. — alles danach eine Woche später.')
+    await expect(preview).toContainText('Marc-Uwe Kling: QualityLand: fällig Sa 7.11. statt Sa 31.10.')
+    await expect(preview).toContainText('Heute zeigt dann: „Freie Woche bis So 1.11. — weiter am Mo 2.11.')
+    for (const width of [1280, 480]) {
+      await page.setViewportSize({ width, height: 900 })
+      await box.screenshot({ path: join(SHOTS, `fahrplan-woche-frei-${width}.png`) })
+    }
+    await box.getByTestId('fp-pause-take').click()
+    await expect(box.getByTestId('fp-pause-2026-10-26')).toContainText('Frei: Mo 26.10.–So 1.11.')
+    await expect(preview).toHaveCount(0)
+    await expect(notice).toContainText('ab 9.11. im Plan, Woche 4')   // every date follows the shifted plan
+    await page.goto('/')
+    await expect(page.getByTestId('block-karten')).toBeVisible()      // this week isn't the one off
+    await page.goto('/fahrplan')
+    await box.getByTestId('fp-pause-undo-2026-10-26').click()
+    await expect(box.getByTestId('fp-pauses')).toHaveCount(0)
+    await expect(notice).toContainText('ab 2.11. im Plan, Woche 4')
+
+    // the week off is this one: one calm line on Heute, no blocks, Karten optional, the days "frei"
+    sql("INSERT INTO settings(key, value) VALUES ('pauses', ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value",
+      JSON.stringify([{ from: '2026-10-12', to: '2026-10-18' }]))
+    await page.goto('/')
+    await expect(page.getByTestId('heute-pause')).toContainText('Freie Woche bis So 18.10. — weiter am Mo 19.10.')
+    await expect(page.getByTestId('pause-karten')).toContainText(/Karten freiwillig · \d+ fällig/)
+    await expect(page.getByTestId('block-karten')).toHaveCount(0)
+    await expect(page.getByTestId('timeline')).toHaveCount(0)
+    await expect(page.getByTestId('too-hard')).toHaveCount(0)
+    await expect(page.getByTestId('free-6')).toHaveText('frei')
+    for (const width of [1280, 480]) {
+      await page.setViewportSize({ width, height: 900 })
+      await page.screenshot({ path: join(SHOTS, `heute-woche-frei-${width}.png`), fullPage: true })
+    }
+  } finally {
+    sql("DELETE FROM settings WHERE key = 'pauses'")
+    restore()
+  }
+  expect(errors).toEqual([])
+})

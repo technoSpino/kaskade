@@ -12,7 +12,7 @@ rated by its first day 09:00 is read as at 60 %. Each pass through the 4 weeks s
 import json
 from datetime import date, datetime, time, timedelta, timezone
 
-from . import db, srs, stock
+from . import db, plan, srs, stock
 
 PCTS = (20, 40, 60, 80, 100)
 TOO_HARD = 70               # under this, Heute says "Zu schwer"
@@ -128,34 +128,40 @@ def short_author(book: dict) -> str:
     return (book.get("author") or book["title"]).split()[-1]
 
 
-def _days(start: date, data: dict, pred) -> list[date]:
-    return [start + timedelta(weeks=wi, days=di) for wi, w in enumerate(data["weeks"]) for di, d in enumerate(w["days"])
-            if any(pred(m) for m in d.get("materials", []))]
+def _days(start: date, data: dict, pred, n: int = 0, pauses=()) -> list[date]:
+    """The dates of pass `n` through the plan's weeks with a material matching `pred` (weeks off skipped, #36)."""
+    first = n * len(data["weeks"])
+    return [plan.slot_date(start, first + wi, di, pauses) for wi, w in enumerate(data["weeks"])
+            for di, d in enumerate(w["days"]) if any(pred(m) for m in d.get("materials", []))]
 
 
-def _pass(start: date, data: dict, day: date) -> tuple[date, date]:
-    """First and last+1 date of the pass through the plan's weeks that `day` lies in."""
-    span = timedelta(weeks=len(data["weeks"]))
-    n = max(0, (day - start) // span)
-    return start + n * span, start + (n + 1) * span
+def _pass(start: date, data: dict, day: date, pauses=()) -> int:
+    """Which pass through the plan's weeks `day` lies in (a week off belongs to the plan week after it)."""
+    return max(0, plan.plan_index(start, day, pauses)[0] // len(data["weeks"]))
 
 
-def book_mode(book_id: str, day: date, start: date, data: dict) -> dict:
-    """How `book_id` is read on `day`: {mode: frei | nachschlagen | spaeter, pct, why, …}."""
+def book_mode(book_id: str, day: date, start: date, data: dict, pauses=None) -> dict:
+    """How `book_id` is read on `day`: {mode: frei | nachschlagen | spaeter, pct, why, …}.
+    `pauses`: the weeks off (#36), by default the stored ones."""
     b = stock.book(book_id) or {"id": book_id, "title": book_id, "author": ""}
     name = short_author(b)
-    lo, hi = _pass(start, data, day)
-    offset = lo - start
-    tested = _days(start, data, lambda m: m["kind"] == "lesetest" and m.get("book") == book_id)
-    reading = [d + offset for d in _days(start, data, lambda m: m["kind"] == "book" and m.get("book") == book_id)]
+    pauses = plan.pauses() if pauses is None else pauses
+    n = _pass(start, data, day, pauses)
+    weeks = len(data["weeks"])
+    lo, hi = plan.slot_date(start, n * weeks, 0, pauses), plan.slot_date(start, (n + 1) * weeks, 0, pauses)
+    is_test = lambda m: m["kind"] == "lesetest" and m.get("book") == book_id  # noqa: E731
+    is_book = lambda m: m["kind"] == "book" and m.get("book") == book_id  # noqa: E731
+    tested = _days(start, data, is_test, n, pauses)
+    reading = _days(start, data, is_book, n, pauses)
     cutoff = cutoff_of(day)
+    real_today = srs.now_utc().astimezone(srs.TZ).date()
     with db.tx() as conn:
         r = conn.execute(
             "SELECT local_date, kind, pct FROM ratings WHERE book = ? AND pct IS NOT NULL AND local_date >= ?"
             " AND local_date <= ? AND created_at < ? ORDER BY created_at DESC LIMIT 1",
             (book_id, lo.isoformat(), day.isoformat(), cutoff)).fetchone()
     out = {"book": book_id, "name": name, "pct": None, "assumed": False, "date": None, "source": None, "show": True}
-    test = next((d + offset for d in tested), None)
+    test = next(iter(tested), None)
     if r:
         pct = r["pct"]
         out.update(pct=pct, date=r["local_date"], source=r["kind"])
@@ -165,6 +171,12 @@ def book_mode(book_id: str, day: date, start: date, data: dict) -> dict:
         pct = 60
         out.update(pct=60, assumed=True)
         reason = f"{name}: kein Lesetest bis {_wd(reading[0])} {_dm(reading[0])} 09:00 → wie 60 %"
+    elif test and reading and test < real_today:
+        # the test day is over without a rating (Heute only asks on the day) — e.g. a week off before
+        # the first reading day (#36): it's decided, not "still ahead"
+        pct = 60
+        out.update(pct=60, assumed=True)
+        reason = f"{name}: kein Lesetest am {_wd(test)} {_dm(test)} → wie 60 %"
     elif test:  # the test is still ahead: it decides
         first = _wd(reading[0]) + " " + _dm(reading[0]) if reading else "danach"
         out.update(mode="frei", why=f"{name}: der Lesetest am {_wd(test)} {_dm(test)} entscheidet, wie du ab {first} liest")
@@ -177,11 +189,10 @@ def book_mode(book_id: str, day: date, start: date, data: dict) -> dict:
     elif pct >= 60:
         out.update(mode="nachschlagen", why=f"{reason} → bis zu 3 Wörter pro Seite nachschlagen")
     else:
-        span = hi - lo
-        back = (reading[0] + span) if reading else hi
-        retest = test + span if test else None
+        back = next(iter(_days(start, data, is_book, n + 1, pauses)), hi)  # the same days of the next pass
+        retest = next(iter(_days(start, data, is_test, n + 1, pauses)), None)
         out.update(mode="spaeter", back=back.isoformat(), retest=retest.isoformat() if retest else None,
-                   why=f"{reason} → kommt nach Woche {(hi - start).days // 7} wieder"
+                   why=f"{reason} → kommt nach Woche {(n + 1) * weeks} wieder"
                        f"{f' (neuer Lesetest {_wd(retest)} {_dm(retest)})' if retest else ''}, bis dahin nachrichtenleicht")
     return out
 

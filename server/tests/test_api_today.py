@@ -118,7 +118,7 @@ def test_manual_immersion_counts_into_today_and_fahrplan(client, monkeypatch):
     assert t["weekTotals"]["passive"][1] == 1800 and t["weekTotals"]["seconds"][0] == 3600
     assert t["immersion"]["hours"] == 151.5
     f = client.get("/api/fahrplan").json()
-    assert f["hours"] == 151.5 and f["weeks"][-1] == {"week": "2026-10-12", "aktiv": 1.0, "passiv": 0.5}
+    assert f["hours"] == 151.5 and f["weeks"][-1] == {"week": "2026-10-12", "aktiv": 1.0, "passiv": 0.5, "free": False}
     lst = client.get("/api/immersion").json()
     assert [e["title"] for e in lst["entries"]] == ["Checker Tobi", "Serie"]
     assert client.delete(f"/api/immersion/{r.json()['id']}").json() == {"ok": True}

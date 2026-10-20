@@ -6,7 +6,7 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from uvicorn.logging import DefaultFormatter
 
-from . import config, db, stock
+from . import config, db, srs, stock
 from .routes import cards, feed, media, placement, practice, ratings, reader, satzcheck, texts, today, vocab
 
 # Our own log lines (#30: every saved clip position) in the journal, formatted like uvicorn's
@@ -45,7 +45,7 @@ app.include_router(ratings.router)
 def status():
     """Learner status for the header and Heute (phase from the last Einstufung)."""
     with db.tx() as conn:
-        running = conn.execute("SELECT block, started_at FROM activity WHERE ended_at IS NULL").fetchone()
+        running = today.current_timer(conn, srs.now_utc())
     return {
         "phase": db.get_setting("phase"),
         "name": db.get_setting("name", "Matt"),

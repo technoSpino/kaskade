@@ -82,6 +82,10 @@ const passiveH = computed(() => (t.value ? sumH(t.value.weekTotals.passive) : 0)
 const showForm = ref(false)
 const hours = (x) => x.toLocaleString('de-DE', { maximumFractionDigits: 1 })
 const todayIndex = computed(() => (t.value ? t.value.weekTotals.days.indexOf(t.value.date) : -1))
+// #36: days of a week off count as "frei" in the chart, not as missed
+const isFree = (i) => !!t.value?.weekTotals.free?.[i]
+const anyFree = computed(() => !!t.value?.weekTotals.free?.some(Boolean))
+const weekOff = computed(() => !!t.value?.weekTotals.free?.slice(0, 5).every(Boolean))
 const skills = computed(() => t.value?.placement?.skills ?? null)
 const nextSatzcheck = computed(() => {
   const sc = t.value?.satzcheck
@@ -232,6 +236,11 @@ const timelineLabel = computed(() => {
           Woche {{ t.week }} · {{ t.theme }} · Lernblock 09:00–11:30, 2 h 20 min aktiv, 10 min Pause.
           Heute: <strong style="color: var(--text)">{{ day.focus }}</strong>
         </p>
+        <template v-else-if="t && t.pause">
+          <!-- #36: a week off — one calm line, no blocks; Karten stay open but optional -->
+          <p class="k-lead" data-testid="heute-pause">{{ t.pause.line }}</p>
+          <p class="k-small m-0 mt-2"><router-link to="/karten" style="font-weight: 600" data-testid="pause-karten">Karten freiwillig · {{ t.cards.due }} fällig</router-link></p>
+        </template>
         <p v-else-if="t && t.beforeStart" class="k-lead">
           Der Plan startet bald. Woche 1 beginnt am <strong style="color: var(--text)">{{ formatDate(t.preview.date) }}</strong>. Wenn du magst: Einstufung machen und die ersten Karten sortieren.
         </p>
@@ -269,7 +278,7 @@ const timelineLabel = computed(() => {
 
     <div v-if="t" class="flex flex-wrap gap-6 items-start">
       <div class="flex flex-col gap-6 min-w-0" style="flex: 999 1 560px">
-      <section class="k-card min-w-0" style="padding-bottom: 8px" aria-labelledby="plan-h">
+      <section v-if="!t.pause" class="k-card min-w-0" style="padding-bottom: 8px" aria-labelledby="plan-h">
         <div class="flex flex-wrap items-baseline justify-between gap-2">
           <h2 id="plan-h" class="k-h2">Lernblock 09:00–11:30</h2>
           <p class="k-small m-0">
@@ -375,7 +384,7 @@ const timelineLabel = computed(() => {
           <button class="k-btn k-btn-ghost k-btn-sm" @click="copyFeed">{{ copied ? '✓ Kopiert' : 'Link kopieren' }}</button>
         </div>
       </section>
-      <MaterialsCard :blocks="t.block" :data="mat" />
+      <MaterialsCard v-if="!t.pause" :blocks="t.block" :data="mat" />
       <DueSoon v-if="mat" :notices="mat.notices" :today="mat.today.date" @changed="loadMaterials" />
       </div>
 
@@ -415,16 +424,17 @@ const timelineLabel = computed(() => {
           <div class="k-progress mt-2" style="height: 8px" role="img" :aria-label="`${Math.round(t.immersion.share * 100)} Prozent der Stunden bis B2`">
             <div :style="{ width: t.immersion.share * 100 + '%' }"></div>
           </div>
-          <p class="m-0 mt-5 mb-2 k-small" style="font-weight: 700">Diese Woche · {{ hours(activeH + passiveH) }} h <span style="font-weight: 500">· Block-Ziel 11,7 h aktiv</span></p>
-          <p v-if="activeH + passiveH === 0" class="k-small m-0" data-testid="heute-hours-empty">{{ NO_HOURS_YET }}</p>
+          <p class="m-0 mt-5 mb-2 k-small" style="font-weight: 700">Diese Woche · {{ hours(activeH + passiveH) }} h <span style="font-weight: 500">· {{ weekOff ? 'freie Woche' : 'Block-Ziel 11,7 h aktiv' }}</span></p>
+          <p v-if="activeH + passiveH === 0 && !anyFree" class="k-small m-0" data-testid="heute-hours-empty">{{ NO_HOURS_YET }}</p>
           <template v-else>
           <div class="grid grid-cols-7 gap-2 items-end" style="height: 120px; border-bottom: 1px solid var(--border-strong)" role="img" aria-label="Stunden pro Tag diese Woche, aktiv und passiv">
             <div
               v-for="(b, i) in bars"
               :key="i"
               class="flex flex-col gap-0.5"
-              :title="`${WEEKDAYS[i]}: ${hours(t.weekTotals.seconds[i] / 3600)} h aktiv · ${hours(t.weekTotals.passive[i] / 3600)} h passiv`"
+              :title="`${WEEKDAYS[i]}: ${isFree(i) ? 'frei · ' : ''}${hours(t.weekTotals.seconds[i] / 3600)} h aktiv · ${hours(t.weekTotals.passive[i] / 3600)} h passiv`"
             >
+              <span v-if="isFree(i) && !b.aktiv && !b.passiv" class="hb-free" :data-testid="`free-${i}`">frei</span>
               <div v-if="b.passiv" :style="{ height: b.passiv + 'px', background: 'var(--chart-passive)', borderRadius: '4px 4px 0 0' }"></div>
               <div v-if="b.aktiv" :style="{ height: b.aktiv + 'px', background: 'var(--chart-active)', borderRadius: b.passiv ? '0' : '4px 4px 0 0' }"></div>
             </div>
@@ -533,6 +543,7 @@ const timelineLabel = computed(() => {
 .hb-after-label { font-size: 13px; font-weight: 800; color: var(--text-2); }
 .hb-url { font-size: 13px; word-break: break-all; }
 .hb-sw { width: 10px; height: 10px; border-radius: 3px; }
+.hb-free { margin-top: auto; padding-bottom: 4px; text-align: center; font-size: 11px; font-weight: 700; color: var(--muted); }
 .hb-target {
   position: absolute;
   top: -5px;

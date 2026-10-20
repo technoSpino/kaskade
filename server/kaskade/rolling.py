@@ -15,9 +15,9 @@ block he ticked off counts as heard up to its end; a saved position further on s
 import json
 import re
 import statistics
-from datetime import date, timedelta
+from datetime import date
 
-from . import db, stock
+from . import db, plan, stock
 
 ROLLING_KINDS = {"mediathek", "podcast", "audio"}
 AUDIO_KINDS = {"podcast", "audio"}  # #31: also heard outside Kaskade (on the phone): no player position
@@ -50,15 +50,16 @@ def rolls(m: dict | None) -> bool:
     return bool(m) and m["kind"] == "clip" and (stock.item(m["clip"]) or {}).get("kind") in ROLLING_KINDS
 
 
-def slots(start: date, data: dict, block: str) -> list[dict]:
+def slots(start: date, data: dict, block: str, pauses=()) -> list[dict]:
     """Every plan day's material for `block`, in date order: {date, m, text}. A block with two
-    items (#27: audio and a text) rolls its audio item; each item has its own text ("desc")."""
+    items (#27: audio and a text) rolls its audio item; each item has its own text ("desc").
+    Weeks off (#36) have no slot: the clip goes on where he stopped on the next plan day."""
     out = []
     for wi, w in enumerate(data["weeks"]):
         for di, d in enumerate(w["days"]):
             mats = [x for x in d.get("materials", []) if x["block"] == block]
             m = next((x for x in mats if rolls(x)), mats[0] if mats else None)
-            out.append({"date": start + timedelta(weeks=wi, days=di), "m": m, "text": (m or {}).get("desc") or d.get(block, "")})
+            out.append({"date": plan.slot_date(start, wi, di, pauses), "m": m, "text": (m or {}).get("desc") or d.get(block, "")})
     return out
 
 
@@ -223,7 +224,7 @@ def load_cues(media_id: int) -> list[dict]:
 
 def plan_block(block: str, data: dict, start: date, ctx) -> dict[date, dict]:
     """The rolling ranges of one block from ctx.today on, fixing today's on its first computation."""
-    block_slots = slots(start, data, block)
+    block_slots = slots(start, data, block, getattr(ctx, "pauses", ()))
     planned: dict[str, list[dict]] = {}
     for s in block_slots:
         if rolls(s["m"]):

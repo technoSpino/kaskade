@@ -30,7 +30,7 @@ def assignments(day: date) -> dict[str, dict]:
     data, start = _plan()
     ctx = materials.Ctx(day)
     ctx.live = day == ctx.real_today
-    return {it["block"]: it for it in materials.day_items(plan.plan_day(start, day, data), ctx, data, start)}
+    return {it["block"]: it for it in materials.day_items(plan.plan_day(start, day, data, ctx.pauses), ctx, data, start)}
 
 
 def rateable(it: dict) -> bool:

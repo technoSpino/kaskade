@@ -5,19 +5,21 @@ import { bookLine, dueFor, dueLabel } from '../../lib/materials'
 import { formatDate, formatDecimal, formatNumber } from '../../lib/format'
 import { byBlock, shortDate, TOO_HARD } from '../../lib/ratings'
 import WeeksChart from '../../components/kaskade/WeeksChart.vue'
+import PauseWeek from '../../components/kaskade/PauseWeek.vue'
 
 const f = ref(null)
 const r = ref(null) // #23/#24: ratings per block and how each book is read
 const error = ref(null)
 
-onMounted(async () => {
+async function load() {
   api.get('/ratings').then((x) => { r.value = x }).catch(() => { r.value = null })
   try {
     f.value = await api.get('/fahrplan')
   } catch (e) {
     error.value = e.message
   }
-})
+}
+onMounted(load)
 const groups = computed(() => (r.value ? byBlock(r.value.ratings) : []))
 const anyRating = computed(() => groups.value.some((g) => g.rows.length))
 
@@ -204,6 +206,9 @@ const GOALS = [
         </template>
       </section>
     </div>
+
+    <!-- #36: a week off moves the plan back; the dates above follow it -->
+    <PauseWeek @changed="load" />
   </main>
 </template>
 

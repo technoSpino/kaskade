@@ -589,7 +589,7 @@ def missing(today: date, start: date, data: dict, days: int = 14) -> list[dict]:
     out, seen = [], set()
     for i in range(days):
         day = today + timedelta(days=i)
-        for it in materials.flat(materials.day_items(plan.plan_day(start, day, data), ctx, data, start)):
+        for it in materials.flat(materials.day_items(plan.plan_day(start, day, data, ctx.pauses), ctx, data, start)):
             mid = it.get("mediaId")
             if it["kind"] in ("clip", "satzcheck") and mid and not it.get("audio") and mid not in seen:
                 seen.add(mid)

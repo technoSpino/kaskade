@@ -324,6 +324,7 @@ function onKey(e) {
             <div><p class="m-0" style="font-size: 28px; font-weight: 800" data-testid="due-count">{{ data.counts.left }}</p><p class="k-small m-0">offen<template v-if="data.counts.new"> · davon {{ data.counts.new }} neu</template></p></div>
             <div><p class="m-0" style="font-size: 28px; font-weight: 800" data-testid="done-count">{{ data.counts.doneToday }}</p><p class="k-small m-0">fertig</p></div>
           </div>
+          <p v-if="data.counts.newHeld" class="k-small m-0 mt-2.5" data-testid="new-held">Nach der freien Woche erst die fälligen — neue Karten kommen wieder, sobald weniger als 20 fällig sind.</p>
           <p class="k-small m-0 mt-3.5 pt-3" style="border-top: 1px solid var(--surface-2)">
             FSRS-Ziel: <strong style="color: var(--text)">90 % behalten</strong><template v-if="stats?.retention30 != null"> · letzte 30 Tage: {{ Math.round(stats.retention30 * 100) }} %</template>
           </p>

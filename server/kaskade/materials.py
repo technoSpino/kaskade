@@ -119,8 +119,9 @@ def parse_feed(feed: str, body: bytes) -> list[dict]:
     return pick_leicht(body, None) if feed == "leicht" else pick_articles(body, None)
 
 
-def news_for(day: date, feed: str, today: date, count: int = 3) -> list[dict] | None:
-    """The articles picked for `day` (fixed once picked). Picked on the day itself; None before.
+def news_for(day: date, feed: str, today: date | None, count: int = 3) -> list[dict] | None:
+    """The articles picked for `day` (fixed once picked). Picked on the day itself; None before
+    (and in a preview, `today` None: only what was picked already).
     The newest ones he hasn't had on an earlier day."""
     with db.tx() as conn:
         row = conn.execute("SELECT items FROM news_picks WHERE local_date = ? AND feed = ?",
@@ -163,6 +164,7 @@ class Ctx:
         self.bought = set(db.get_setting("booksBought", []))
         self.setup_done = set(db.get_setting("setupDone", []))
         self.links = read_check().get("links", {})
+        self.pauses = plan.pauses()  # #36: the weeks he took off
         self._rolling: dict = {}
 
     def rolling(self, block: str, data: dict, start: date) -> dict[date, dict]:
@@ -182,6 +184,9 @@ class Ctx:
         if day == self.today:
             with db.tx() as conn:
                 return srs.counts(conn, self.now)["new"]
+        caught = db.get_setting("cardsCaughtUp", [])
+        if srs.backlog_pause(self.pauses, caught, day.isoformat(), self.due_cards(day)):
+            return 0  # #36: after a week off the backlog comes first
         return min(srs.new_per_day(), max(0, self.unseen))
 
 
@@ -264,7 +269,8 @@ def _news(m: dict, ctx: Ctx, day: date) -> dict:
     name = NEWS_FEEDS[m["feed"]][0]
     # nachrichtenleicht: 5 articles, adjusted to how much he understood last time (#22/#23)
     count = ratings.leicht_count(m.get("minutes") or 35) if m["feed"] == "leicht" else m.get("count", 3)
-    items = news_for(day, m["feed"], ctx.today, count)
+    # picked only on the real day, never by a preview (?today=, #36's check): it would fix a later day's articles early
+    items = news_for(day, m["feed"], ctx.real_today if ctx.live else None, count)
     n = len(items) if items else count
     out = _base(m["block"], "news", title=f"{name}: die {n} neuesten Artikel", source=name, minutes=m.get("minutes"),
                 feed=m["feed"], count=n)
@@ -293,7 +299,7 @@ def _text(m: dict, ctx: Ctx) -> dict:
 def _book(m: dict, ctx: Ctx, first_day: date | None, day: date, text: str, data: dict, start: date) -> dict:
     """A book part, read the way the book's latest rating says (#24) — or, at 20–40 %, nachrichtenleicht."""
     b = stock.book(m["book"]) or {"id": m["book"], "author": "", "title": m["book"], "format": "paper"}
-    mode = ratings.book_mode(b["id"], day, start, data)
+    mode = ratings.book_mode(b["id"], day, start, data, ctx.pauses)
     if mode["mode"] == "spaeter":
         out = _news({"block": m["block"], "kind": "news", "feed": "leicht", "minutes": m.get("minutes", 35)}, ctx, day)
         out.update(mode=mode, text=f"Statt {mode['name']}: {out['text']}")
@@ -382,14 +388,14 @@ def _cards(ctx: Ctx, day: date) -> dict:
 BUILDERS = {"clip": _clip, "satzcheck": _satzcheck}
 
 
-def first_days(start: date, data: dict) -> dict[str, date]:
-    """The first plan date each book is read on (for "Kaufen bis")."""
+def first_days(start: date, data: dict, pauses=()) -> dict[str, date]:
+    """The first plan date each book is read on (for "Kaufen bis"), after the weeks off (#36)."""
     out: dict[str, date] = {}
     for wi, w in enumerate(data["weeks"]):
         for di, d in enumerate(w["days"]):
             for m in d.get("materials", []):
                 if m["kind"] == "book":
-                    when = start + timedelta(weeks=wi, days=di)
+                    when = plan.slot_date(start, wi, di, pauses)
                     out[m["book"]] = min(out.get(m["book"], when), when)
     return out
 
@@ -446,7 +452,7 @@ def day_items(info: dict, ctx: Ctx, data: dict, start: date) -> list[dict]:
     if not d:
         return []
     day = date.fromisoformat(info["date"])
-    books = first_days(start, data)
+    books = first_days(start, data, ctx.pauses)
     out = []
     for b in data["block"]:
         if b["kind"] == "pause":
@@ -476,11 +482,11 @@ def flat(items: list[dict]) -> list[dict]:
     return [x for it in items for x in [it, *it.get("then", [])]]
 
 
-def next_plan_day(start: date, today: date, data: dict) -> tuple[date, str]:
-    """Tomorrow if it has a block, else the next day that does ("next")."""
+def next_plan_day(start: date, today: date, data: dict, pauses=()) -> tuple[date, str]:
+    """Tomorrow if it has a block, else the next day that does ("next") — after a week off, too."""
     d = today + timedelta(days=1)
-    for _ in range(60):
-        if plan.plan_day(start, d, data)["day"]:
+    for _ in range(400):
+        if plan.plan_day(start, d, data, pauses)["day"]:
             return d, "tomorrow" if d == today + timedelta(days=1) else "next"
         d += timedelta(days=1)
     return d, "next"
@@ -489,14 +495,14 @@ def next_plan_day(start: date, today: date, data: dict) -> tuple[date, str]:
 def notices(start: date, today: date, data: dict, ctx: Ctx) -> list[dict]:
     """Dated to-dos ahead of the plan ("Bald fällig"): buy a book, install Language Reactor.
     `by` is the due date (paper a week ahead; `byEbook` two days ahead), sorted by it."""
-    week = lambda d: (d - start).days // 7 + 1  # noqa: E731
+    week = lambda d: plan.plan_index(start, d, ctx.pauses)[0] + 1  # noqa: E731
     out = []
-    for book_id, first in sorted(first_days(start, data).items(), key=lambda kv: kv[1]):
+    for book_id, first in sorted(first_days(start, data, ctx.pauses).items(), key=lambda kv: kv[1]):
         b = stock.book(book_id)
-        if not b or book_id in ctx.bought or first < today and ratings.book_mode(book_id, today, start, data)["mode"] != "spaeter":
+        if not b or book_id in ctx.bought or first < today and ratings.book_mode(book_id, today, start, data, ctx.pauses)["mode"] != "spaeter":
             continue
         # #24: at 20–40 % the book waits for the next pass through the plan — and so does buying it
-        mode = ratings.book_mode(book_id, max(first, today + timedelta(days=1)), start, data)
+        mode = ratings.book_mode(book_id, max(first, today + timedelta(days=1)), start, data, ctx.pauses)
         if mode["mode"] == "spaeter":
             first = date.fromisoformat(mode["back"])
         item = {"type": "book", "id": book_id, "by": stock.notice(first, b.get("format", "paper")).isoformat(),
@@ -509,7 +515,7 @@ def notices(start: date, today: date, data: dict, ctx: Ctx) -> list[dict]:
     for wi, w in enumerate(data["weeks"]):
         for di, d in enumerate(w["days"]):
             for m in d.get("materials", []):
-                when = start + timedelta(weeks=wi, days=di)
+                when = plan.slot_date(start, wi, di, ctx.pauses)
                 if when >= today:
                     kinds_used[m["kind"]] = min(kinds_used.get(m["kind"], when), when)
     for s in stock.catalog().get("setup", []):
@@ -561,7 +567,7 @@ def check(today: date, start: date, data: dict, days: int = 7, links: bool = Tru
     gaps, urls = [], {}
     for i in range(days):
         day = today + timedelta(days=i)
-        info = plan.plan_day(start, day, data)
+        info = plan.plan_day(start, day, data, ctx.pauses)
         for it in flat(day_items(info, ctx, data, start)):
             href = (it.get("start") or {}).get("href")
             if links and href and href not in urls:

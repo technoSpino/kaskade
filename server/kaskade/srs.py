@@ -135,6 +135,35 @@ def _state(row) -> int | None:
     return json.loads(row["fsrs"]).get("state") if row["fsrs"] else None
 
 
+BACKLOG = 20  # #36: after a week off, no new cards while this many are due
+
+
+def _setting(conn, key: str, default=None):
+    row = conn.execute("SELECT value FROM settings WHERE key = ?", (key,)).fetchone()
+    return json.loads(row["value"]) if row else default
+
+
+def backlog_pause(pauses: list[dict], caught_up: list[str], day: str, due: int) -> dict | None:
+    """#36: the week off whose backlog holds new cards back on `day` (ISO), else None. From its first
+    day until, after it, fewer than BACKLOG cards are due once (`caught_up` lists those pauses)."""
+    started = [p for p in pauses or () if p["from"] <= day]
+    p = max(started, key=lambda x: x["from"], default=None)
+    if not p or p["from"] in caught_up or due < BACKLOG:
+        return None
+    return p
+
+
+def _new_held(conn, today: str, due: int) -> bool:
+    pauses, caught = _setting(conn, "pauses", []), _setting(conn, "cardsCaughtUp", [])
+    if backlog_pause(pauses, caught, today, due):
+        return True
+    p = max((x for x in pauses if x["to"] < today), key=lambda x: x["from"], default=None)
+    if p and p["from"] not in caught and due < BACKLOG:  # caught up after the week off: new cards again
+        conn.execute("INSERT INTO settings(key, value) VALUES ('cardsCaughtUp', ?) ON CONFLICT(key) DO UPDATE"
+                     " SET value = excluded.value", (json.dumps(sorted({*caught, p["from"]})),))
+    return False
+
+
 def counts(conn, at: datetime) -> dict:
     """Distinct cards for today (#25). left = reviews due by Berlin midnight + every card in a
     short-term step (they come back today) + new cards left; doneToday = cards reviewed today
@@ -148,11 +177,14 @@ def counts(conn, at: datetime) -> dict:
     seen = conn.execute("SELECT COUNT(*) FROM cards").fetchone()[0]
     total = len(deck()) + conn.execute("SELECT COUNT(*) FROM mined").fetchone()[0]
     new_left = min(max(0, new_per_day() - introduced), max(0, total - seen))
+    held = _new_held(conn, today, len(stepped) + len(reviews))
+    if held:
+        new_left = 0  # #36: the backlog after a week off first
     coming_back = {r["id"] for r in stepped} | {r["id"] for r in reviews}
     reviewed = {r[0] for r in conn.execute("SELECT DISTINCT card_id FROM review_log WHERE local_date = ?", (today,))}
     done = len(reviewed - coming_back)
     left = len(stepped) + len(reviews) + new_left
-    return {"left": left, "doneToday": done, "new": new_left, "due": len(stepped) + len(reviews),
+    return {"left": left, "doneToday": done, "new": new_left, "due": len(stepped) + len(reviews), "newHeld": held,
             "waiting": len(waiting), "nextAt": min((r["due"] for r in waiting), default=None)}
 
 
