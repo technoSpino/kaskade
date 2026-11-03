@@ -6,8 +6,9 @@ budget — ≈ 25 min of film in the 65-min input block (with pausing), ≈ 28 m
 35-min lesen block; once a few days are measured, his own pace — and ends in a pause between two
 lines. The rest of a clip is split evenly over the days it needs. A clip that needs more days
 than planned pushes the next ones back, one finished early lets them move up: nothing is
-skipped. Today's range is fixed the first time it's computed (the 06:30 Materialcheck, or the
-first visit to Heute), so it doesn't slide while he watches.
+skipped, except a show he doesn't like (#37, setting `dislikedShows`). Today's range is fixed
+the first time it's computed (the 06:30 Materialcheck, or the first visit to Heute), so it
+doesn't slide while he watches.
 
 Audio he hears on the phone leaves no player position (#31): an audio range he rated or whose
 block he ticked off counts as heard up to its end; a saved position further on still wins.
@@ -111,16 +112,17 @@ def text_for(planned: list[dict], frm: float, to: float | None, final: bool) -> 
 
 
 def schedule(block_slots: list[dict], clips: dict[str, dict], pos: dict[str, float], film: float, today: date,
-             frozen: dict | None = None, today_done: bool = False) -> dict[date, dict]:
+             frozen: dict | None = None, today_done: bool = False, skip: frozenset = frozenset()) -> dict[date, dict]:
     """date → {clip, from, to, final, text} for every rolling slot from `today` on.
 
     clips: key → {"end", "cues", "planned"}; pos: key → saved position. Each day is assumed to
     reach its target (except today once the block is ticked off) — tomorrow's real start is
     computed tomorrow from where he really is. A slot with its own "minutes" (the lesen block's
-    audio, #27) gets that much audio instead of `film`.
+    audio, #27) gets that much audio instead of `film`. Clips in `skip` (a show he doesn't like,
+    #37) never come up; their slots take the next clip. Today's fixed range stays as it is.
     """
     rolling = [s for s in block_slots if rolls(s["m"])]
-    order = list(dict.fromkeys(s["m"]["clip"] for s in rolling))
+    order = [c for c in dict.fromkeys(s["m"]["clip"] for s in rolling) if c not in skip]
     pos = dict(pos)
 
     def finished(c):  # never started = not finished, however short
@@ -244,7 +246,8 @@ def plan_block(block: str, data: dict, start: date, ctx) -> dict[date, dict]:
     fixed = frozen(day, block)
     with db.tx() as conn:
         done = conn.execute("SELECT 1 FROM plan_done WHERE local_date = ? AND block = ?", (day.isoformat(), block)).fetchone()
-    out = schedule(block_slots, clips, pos, film_budget(block, minutes), day, fixed, bool(done))
+    skip = frozenset(k for k in planned if stock.disliked(k))  # #37
+    out = schedule(block_slots, clips, pos, film_budget(block, minutes), day, fixed, bool(done), skip)
     if ctx.live and day == ctx.real_today and not fixed and not done and day in out:  # the real today only
         freeze(day, block, out[day], pos)
     return out

@@ -37,6 +37,12 @@ def book(book_id: str) -> dict | None:
     return next((b for b in catalog().get("books", []) if b["id"] == book_id), None)
 
 
+def disliked(key: str | None) -> bool:
+    """#37: a show Matt doesn't like — setting `dislikedShows`, catalog key prefixes ("merz-gegen-merz").
+    Never fetched, never rolled into a day, hidden from the library until he has started it."""
+    return bool(key) and any(key.startswith(p) for p in db.get_setting("dislikedShows", []))
+
+
 def guess_tag(title: str) -> str | None:
     """A genre for a clip from its title (editable later in "Deine Clips")."""
     t = title.lower()
@@ -78,8 +84,8 @@ def link_existing() -> list[str]:
     rows = _rows()
     have = {r["key"] for r in rows if r["key"]}
     for it in catalog()["items"]:
-        if it["key"] in have or not it.get("match"):
-            continue
+        if it["key"] in have or not it.get("match") or disliked(it["key"]):
+            continue  # #37: his own upload of a disliked show stays his, not a hidden plan clip
         row = next((r for r in rows if not r["key"] and r["title"].startswith(it["match"])), None)
         if row:
             with db.tx() as conn:
@@ -191,10 +197,13 @@ def due(it: dict, today: date) -> bool:
 
 def run(today: date, only: set[str] | None = None) -> dict:
     """Link existing clips, then fetch every due item that isn't in the library yet."""
-    report = {"linked": link_existing(), "fetched": [], "failed": [], "waiting": []}
+    report = {"linked": link_existing(), "fetched": [], "failed": [], "waiting": [], "disliked": []}
     have = by_key()
     for it in catalog()["items"]:
         if it["kind"] not in FETCHERS or it["key"] in have or (only and it["key"] not in only):
+            continue
+        if disliked(it["key"]):  # #37: not even with --only
+            report["disliked"].append(it["key"])
             continue
         if not due(it, today):
             report["waiting"].append({"key": it["key"], "fetchOn": it["fetchOn"]})

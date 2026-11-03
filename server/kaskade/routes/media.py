@@ -73,7 +73,9 @@ def list_media():
     with db.tx() as conn:
         rows = conn.execute("SELECT * FROM media ORDER BY id DESC").fetchall()
     progress = _progress()
-    return [_row(r, progress=progress) for r in rows]
+    # #37: a show he doesn't like is hidden until he has started it (the files stay; one he watched stays listed)
+    return [_row(r, progress=progress) for r in rows
+            if not (stock.disliked(r["key"]) and not progress.get(r["id"], {}).get("position"))]
 
 
 def last_clip() -> dict | None:

@@ -204,7 +204,7 @@
     {
       "week": 2,
       "theme": "Arbeit und Alltag: Comedy und Debatte",
-      "goal": "Diese Woche schaust du zwei Folgen „Merz gegen Merz“ über eine Familienfirma, die Fintech-Satire „King of Stonks“, eine Debatte aus „Die 100“ und Straßeninterviews über Gehälter. Du liest Schirachs „Verbrechen“: jeden Tag ganze Fälle.",
+      "goal": "Diese Woche schaust du eine Folge „Merz gegen Merz“ über eine Familienfirma, die Fintech-Satire „King of Stonks“, eine Debatte aus „Die 100“ und Straßeninterviews über Gehälter. Du liest Schirachs „Verbrechen“: jeden Tag ganze Fälle.",
       "days": [
         {
           "day": "Mo",
@@ -240,13 +240,13 @@
           "day": "Di",
           "focus": "Termine und Absprachen im Job.",
           "karten": "Fällige Karten und geminte Sätze, danach neue Kernwörter mit K sortieren. Höchstens 15 Minuten.",
-          "input": "Merz gegen Merz, Folge 2 „Alles neu – alles anders“, ganze Folge 0:00–23:06. Sätze zu Terminen und Absprachen minen: „Können wir das verschieben?“",
+          "input": "Merz gegen Merz, Folge 1 „Hoch soll'n sie leben“ (ZDF Mediathek), ganze Folge 0:00–22:35, in deiner Bibliothek: die eine Folge dieser Woche (am Montag ging noch SOKO Leipzig zu Ende). Sprüche und Redewendungen minen, die im Alltag nützlich sind.",
           "lesen": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 43–74: „Das Cello“ und „Der Igel“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut. Danach: Easy German Podcast 695 „Die Angst vor der Angst“, 0:00–25:00, in deiner Bibliothek. Einfach laufen lassen: nicht pausieren, nichts nachschlagen.",
           "materials": [
             {
               "block": "input",
               "kind": "clip",
-              "clip": "merz-gegen-merz-2",
+              "clip": "merz-gegen-merz-1",
               "from": "0:00"
             },
             {

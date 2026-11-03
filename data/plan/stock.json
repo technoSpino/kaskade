@@ -31,7 +31,8 @@
       "source": "ZDF Mediathek",
       "url": "https://www.zdf.de/video/serien/merz-gegen-merz-102/merz-gegen-merz-folge-1-102",
       "availableTo": "2028-05-13",
-      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)"
+      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)",
+      "note": "2026-11-03 (#37): Matt mag die Serie nicht (Setting dislikedShows: merz-gegen-merz) — gesehen, nicht wieder planen"
     },
     {
       "key": "merz-gegen-merz-2",
@@ -41,7 +42,8 @@
       "source": "ZDF Mediathek",
       "url": "https://www.zdf.de/video/serien/merz-gegen-merz-102/folge-2-172",
       "availableTo": "2028-05-13",
-      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)"
+      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)",
+      "dropped": "2026-11-03 (#37): Matt mag die Serie nicht — in keinem Plan, in der Bibliothek versteckt (Datei bleibt)"
     },
     {
       "key": "merz-gegen-merz-3",
@@ -51,7 +53,8 @@
       "source": "ZDF Mediathek",
       "url": "https://www.zdf.de/video/serien/merz-gegen-merz-102/folge-3-180",
       "availableTo": "2028-05-13",
-      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)"
+      "themeCheck": "2026-10-16: kein Krimi; UT + gesprochener Text durchsucht, kein Kindesmissbrauch (0 Treffer)",
+      "dropped": "2026-11-03 (#37): Matt mag die Serie nicht — in keinem Plan, in der Bibliothek versteckt (Datei bleibt)"
     },
     {
       "key": "die-100-sozialstaat",

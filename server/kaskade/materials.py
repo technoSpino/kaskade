@@ -422,6 +422,11 @@ def _item(m: dict, b: dict, ctx: Ctx, day: date, d: dict, data: dict, start: dat
         item = _base(b["id"], m["kind"], title=m.get("title", ""), origin=None)
     if m.get("desc") and not item.get("text"):
         item["text"] = m["desc"]
+    if stock.disliked(item.get("clip")) and day > ctx.real_today:
+        # #37: a show he doesn't like, still in a plan as written (e.g. weeks 5+ repeat weeks 1–4) — the
+        # rolling queue skips it already; a gap for the Materialcheck. Today and past days stay as they were.
+        item = _base(b["id"], "none", title="Noch nichts eingeplant", status="todo", origin=None,
+                     detail=f"„{item['title']}“ ist aus dem Plan — hier kommt noch etwas anderes hin")
     item["block"] = b["id"]
     return item
 

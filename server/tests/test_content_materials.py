@@ -114,7 +114,24 @@ def test_stock_is_real_and_sourced():
 
 def test_every_stock_item_is_used():
     used = {m.get("clip") for name in PLANS for _, d in days(name) for m in d["materials"]}
-    assert set(KEYS) <= used | {None}, set(KEYS) - used
+    dropped = {k for k, it in KEYS.items() if it.get("dropped")}  # #37: kept in the catalog, in no plan
+    assert set(KEYS) - dropped <= used | {None}, set(KEYS) - dropped - used
+    assert not dropped & used, dropped & used
+
+
+def test_merz_gegen_merz_2_and_3_are_in_no_plan():
+    """#37: Matt didn't like the show after Folge 1 — Folge 2 and 3 left both plans, so neither the
+    rolling queue nor a phase switch brings them back, and no text promises them."""
+    assert {k for k, it in KEYS.items() if it.get("dropped")} == {"merz-gegen-merz-2", "merz-gegen-merz-3"}
+    for name in PLANS:
+        raw = json.dumps(load(name), ensure_ascii=False)
+        for gone in ("merz-gegen-merz-2", "merz-gegen-merz-3", "Folge 2 „Alles neu", "Folge 3 „Jeder ist ersetzbar", "zwei Folgen"):
+            assert gone not in raw, f"{name}: {gone}"
+    week2 = load("plan/phase-2b.json")["weeks"][1]
+    assert week2["goal"].startswith("Diese Woche schaust du eine Folge „Merz gegen Merz“")
+    tue = week2["days"][1]
+    # Tuesday stays a rolling slot (today's fixed range of Folge 1 shows there); its text says Folge 1
+    assert tue["materials"][0]["clip"] == "merz-gegen-merz-1" and tue["input"].startswith("Merz gegen Merz, Folge 1")
 
 
 def test_plan_prompts_are_tagged_ai():
