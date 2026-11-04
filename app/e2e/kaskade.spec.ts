@@ -877,30 +877,38 @@ test('Material on Friday: the next plan day is Monday', async ({ page }) => {
   await expect(page.getByTestId('due-schirach-verbrechen')).toHaveCount(0)
 })
 
-test('#32 Bald fällig: QualityLand as a Kindle ebook, due Sa 31.10., one shop link, no paper option', async ({ page, request }) => {
+test('#32 Bald fällig: QualityLand as a Kindle ebook, due Mi 4.11. (#38: after Momo), one shop link, no paper option', async ({ page, request }) => {
   const errors = watchConsole(page)
   await page.addInitScript(() => { try { localStorage.setItem('kaskade-theme', 'signal') } catch { /* about:blank */ } })
-  // Fahrplan → Nächste Schritte lists it with the edition (Matt's 2B plan)
+  // Fahrplan → Nächste Schritte lists it with the edition (Matt's 2B plan); #38: it starts after Momo's 11 days from Do 22.10.
   const restore = asMatt()
   try {
     await page.goto('/fahrplan')
-    await expect(page.getByTestId('fp-notice-kling-qualityland')).toContainText('Kindle-E-Book (Dunkle Edition) · ASIN B071436DMF · 9,99 € · ab 2.11. im Plan, Woche 4')
+    await expect(page.getByTestId('fp-notice-kling-qualityland')).toContainText('Kindle-E-Book (Dunkle Edition) · ASIN B071436DMF · 9,99 € · ab 6.11. im Plan, Woche 4')
     await expect(page.getByTestId('fp-upcoming')).not.toContainText('Nordwind')
+    await expect(page.getByTestId('fp-books')).toContainText('Momo: mitlesen, zwei Kapitel am Tag — ab Do 22.10.')
+    await expect(page.getByTestId('fp-books')).toContainText('QualityLand: nach Momo, ab Fr 6.11.')
   } finally {
     restore()
   }
-  await materialsAt(page, '2026-10-30')
+  await materialsAt(page, '2026-11-03')
   await page.goto('/')
   const due = page.getByTestId('due-kling-qualityland')
-  await expect(due).toContainText('Fällig Sa 31.10. · morgen')
+  await expect(due).toContainText('Fällig Mi 4.11. · morgen')
   await expect(due).toContainText('Marc-Uwe Kling: QualityLand kaufen')
-  await expect(due).toContainText('ab 2.11. im Plan, Woche 4 · Kindle-E-Book (Dunkle Edition), ASIN B071436DMF, 9,99 €')
+  await expect(due).toContainText('ab 6.11. im Plan, Woche 4 · Kindle-E-Book (Dunkle Edition), ASIN B071436DMF, 9,99 €')
   await expect(due).not.toContainText('Taschenbuch')
   await expect(due).not.toContainText('E-Book reicht')
   await expect(due.getByRole('link')).toHaveCount(1)
   await expect(due.getByRole('link', { name: 'Amazon.de (Kindle) ↗' })).toHaveAttribute('href', 'https://www.amazon.de/dp/B071436DMF')
-  // Friday → the next plan day is Monday 2.11.: the first chapters, by name
-  const lesen = page.getByTestId('mat-next-lesen')
+  await expect(page.getByTestId('due-momo')).toHaveCount(0)   // he has the paper book and the audiobook
+  // Tuesday → Wednesday 4.11. is still Momo, read along with the audiobook
+  await expect(page.getByTestId('mat-tomorrow-lesen')).toContainText('Michael Ende: Momo · Kapitel 19–20 — Papierbuch mitlesen, Hörbuch auf Spotify · 49 min')
+  // Thursday → Friday 6.11. is QualityLand's first day: the first chapters, by name
+  await page.unroute('**/api/materials')
+  await materialsAt(page, '2026-11-05')
+  await page.reload()
+  const lesen = page.getByTestId('mat-tomorrow-lesen')
   await expect(lesen).toContainText('Marc-Uwe Kling: QualityLand')
   await expect(lesen).toContainText('Vom Anfang bis „QualityLand Reiseführer: Ohrwürmer“')
   for (const width of [1280, 480]) {
@@ -1573,12 +1581,12 @@ test('#36 Woche frei nehmen: preview, take a later week off, the dates move, und
   try {
     await page.goto('/fahrplan')
     const notice = page.getByTestId('fp-notice-kling-qualityland')
-    await expect(notice).toContainText('ab 2.11. im Plan, Woche 4')
+    await expect(notice).toContainText('ab 6.11. im Plan, Woche 4')   // #38: after Momo's 11 days
     const box = page.getByTestId('fp-pause')
     await box.getByTestId('fp-pause-select').selectOption('2026-10-26')
     const preview = box.getByTestId('fp-pause-preview')
     await expect(preview).toContainText('beginnt Mo 2.11. statt Mo 26.10. — alles danach eine Woche später.')
-    await expect(preview).toContainText('Marc-Uwe Kling: QualityLand: fällig Sa 7.11. statt Sa 31.10.')
+    await expect(preview).toContainText('Marc-Uwe Kling: QualityLand: fällig Mi 11.11. statt Mi 4.11.')
     await expect(preview).toContainText('Heute zeigt dann: „Freie Woche bis So 1.11. — weiter am Mo 2.11.')
     for (const width of [1280, 480]) {
       await page.setViewportSize({ width, height: 900 })
@@ -1587,13 +1595,13 @@ test('#36 Woche frei nehmen: preview, take a later week off, the dates move, und
     await box.getByTestId('fp-pause-take').click()
     await expect(box.getByTestId('fp-pause-2026-10-26')).toContainText('Frei: Mo 26.10.–So 1.11.')
     await expect(preview).toHaveCount(0)
-    await expect(notice).toContainText('ab 9.11. im Plan, Woche 4')   // every date follows the shifted plan
+    await expect(notice).toContainText('ab 13.11. im Plan, Woche 4')   // every date follows the shifted plan
     await page.goto('/')
     await expect(page.getByTestId('block-karten')).toBeVisible()      // this week isn't the one off
     await page.goto('/fahrplan')
     await box.getByTestId('fp-pause-undo-2026-10-26').click()
     await expect(box.getByTestId('fp-pauses')).toHaveCount(0)
-    await expect(notice).toContainText('ab 2.11. im Plan, Woche 4')
+    await expect(notice).toContainText('ab 6.11. im Plan, Woche 4')
 
     // the week off is this one: one calm line on Heute, no blocks, Karten optional, the days "frei"
     sql("INSERT INTO settings(key, value) VALUES ('pauses', ?) ON CONFLICT(key) DO UPDATE SET value = excluded.value",

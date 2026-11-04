@@ -271,9 +271,11 @@ def test_bald_faellig_schirach_first_no_kaenguru(b2, monkeypatch):
     assert (v["by"], v["byEbook"], v["firstDay"], v["week"]) == ("2026-10-12", "2026-10-17", "2026-10-19", 2)
     assert v["book"]["isbn"] == "978-3-442-77066-3" and v["book"]["price"] == "12,00 €"
     assert not any("kaenguru" in x["id"] for x in n)
-    # #32: week 4 is QualityLand as a Kindle ebook — due two days ahead, one shop, no paper option
+    # #32: QualityLand is a Kindle ebook — due two days ahead, one shop, no paper option
+    # #38: it comes after Momo (11 days from week 2 Thursday, 22.10.), on Fr 6.11.
     q = next(x for x in n if x["id"] == "kling-qualityland")
-    assert (q["week"], q["by"], q["firstDay"]) == (4, "2026-10-31", "2026-11-02") and "byEbook" not in q
+    assert (q["week"], q["by"], q["firstDay"]) == (4, "2026-11-04", "2026-11-06") and "byEbook" not in q
+    assert not any(x["id"] in ("momo", "ende-unendliche-geschichte") for x in n)  # he has both (paper + Spotify)
     assert q["book"]["format"] == "ebook" and q["book"]["asin"] == "B071436DMF" and q["book"]["price"] == "9,99 €"
     assert q["book"]["shops"] == [{"name": "Amazon.de (Kindle)", "url": "https://www.amazon.de/dp/B071436DMF"}]
     assert not any("nordwind" in x["id"] for x in n)
@@ -285,15 +287,16 @@ def test_bald_faellig_schirach_first_no_kaenguru(b2, monkeypatch):
 
 
 def test_qualityland_days_name_chapters_and_the_kindle_due_date(b2, monkeypatch):
-    """#32: W4 Mo/Mi/Do/Fr read QualityLand by chapter; not bought yet → "Kaufen bis 31.10.", then "gekauft ✓"."""
-    at(monkeypatch, datetime(2026, 10, 26, 7, 0, tzinfo=timezone.utc))
-    mon = by_block(b2.get("/api/materials", params={"today": "2026-11-02"}).json()["today"])["lesen"]
-    assert mon["kind"] == "book" and mon["title"] == "Marc-Uwe Kling: QualityLand" and mon["minutes"] == 35
-    assert mon["part"] == "Vom Anfang bis „QualityLand Reiseführer: Ohrwürmer“" and mon["detail"] == "Kaufen bis 31.10."
-    assert "Frei lesen: kein Wörterbuch" in mon["text"] and "Inhaltsverzeichnis" in mon["text"]
+    """#32: QualityLand is read by chapter; not bought yet → "Kaufen bis …", then "gekauft ✓". #38: its days
+    follow Momo's last chapter — Fr 6.11. here, seen before the queue starts — one part a plan day."""
+    at(monkeypatch, datetime(2026, 10, 21, 7, 0, tzinfo=timezone.utc))
+    fri = by_block(b2.get("/api/materials", params={"today": "2026-11-06"}).json()["today"])["lesen"]
+    assert fri["kind"] == "book" and fri["title"] == "Marc-Uwe Kling: QualityLand" and fri["minutes"] == 40
+    assert fri["part"] == "Vom Anfang bis „QualityLand Reiseführer: Ohrwürmer“" and fri["detail"] == "Kaufen bis 4.11."
+    assert "Frei lesen: kein Wörterbuch" in fri["text"] and "Inhaltsverzeichnis" in fri["text"]
     b2.post("/api/books/kling-qualityland/bought", json={"done": True})
-    wed = by_block(b2.get("/api/materials", params={"today": "2026-11-04"}).json()["today"])["lesen"]
-    assert wed["part"] == "„Ado & Eva“ („Peter Arbeitsloser hat einmal …“) bis „PartnerCare“" and wed["detail"] == "gekauft ✓"
+    mon = by_block(b2.get("/api/materials", params={"today": "2026-11-09"}).json()["today"])["lesen"]
+    assert mon["part"] == "„Ado & Eva“ („Peter Arbeitsloser hat einmal …“) bis „PartnerCare“" and mon["detail"] == "gekauft ✓"
     assert not any(x["id"] == "kling-qualityland" for x in b2.get("/api/materials").json()["notices"])
 
 

@@ -92,11 +92,11 @@ def test_2b_weeks():
             no_empty_strings(d)
 
 
-def test_content_is_for_adults():
-    """Follow-up #7: no teen/youth/children's media anywhere in plans, texts or practice items."""
+def test_no_teen_school_dramas():
+    """Follow-up #7, changed by #38: children's and younger-reader books are fine now (Momo); teen series
+    and school dramas like DRUCK stay out of plans, texts and practice items."""
     import re
-    banned = [r"\bDRUCK\b", r"\bfunk\b", r"Kinderserie", r"Kinderbuch", r"Kindersendung", r"Jugendbuch",
-              r"Jugendserie", r"Nachrichten für Kinder", r"\bComic"]
+    banned = [r"\bDRUCK\b", r"\bfunk\b", r"Jugendserie", r"Schuldrama", r"Teenie"]
     for folder in ("plan", "texts", "practice"):
         for f in sorted((config.CONTENT_DIR / folder).glob("*.json")):
             text = f.read_text(encoding="utf-8")

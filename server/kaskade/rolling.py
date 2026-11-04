@@ -12,6 +12,8 @@ doesn't slide while he watches.
 
 Audio he hears on the phone leaves no player position (#31): an audio range he rated or whose
 block he ticked off counts as heard up to its end; a saved position further on still wins.
+
+On a day of the book queue (#38) the lesen audio gets only what the book leaves of the block.
 """
 import json
 import re
@@ -227,6 +229,14 @@ def load_cues(media_id: int) -> list[dict]:
 def plan_block(block: str, data: dict, start: date, ctx) -> dict[date, dict]:
     """The rolling ranges of one block from ctx.today on, fixing today's on its first computation."""
     block_slots = slots(start, data, block, getattr(ctx, "pauses", ()))
+    minutes = next((b["minutes"] for b in data["block"] if b["id"] == block), 60)
+    if block == "lesen" and hasattr(ctx, "books"):
+        # #38: on a day of the book queue the audio gets what the book leaves of the block
+        queued = ctx.books(data, start)["days"]
+        for s in block_slots:
+            if s["date"] in queued and rolls(s["m"]):
+                rest = minutes - queued[s["date"]]["minutes"]
+                s["m"] = {**s["m"], "minutes": rest} if rest > 5 else None
     planned: dict[str, list[dict]] = {}
     for s in block_slots:
         if rolls(s["m"]):
@@ -242,7 +252,6 @@ def plan_block(block: str, data: dict, start: date, ctx) -> dict[date, dict]:
         clips[key] = {"end": clip_end(ps, duration), "cues": cues, "planned": ps}
         # his player position — or, for audio, how far a range he rated or ticked off went (#31), whichever is further
         pos[key] = max((ctx.positions.get(row["id"]) or 0) if row else 0, on_phone.get(key, 0))
-    minutes = next((b["minutes"] for b in data["block"] if b["id"] == block), 60)
     fixed = frozen(day, block)
     with db.tx() as conn:
         done = conn.execute("SELECT 1 FROM plan_done WHERE local_date = ? AND block = ?", (day.isoformat(), block)).fetchone()

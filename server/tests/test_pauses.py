@@ -117,7 +117,8 @@ def test_materials_and_notices_follow_the_shifted_plan(b2, monkeypatch):
     nxt = by_block(m["next"])
     assert nxt["input"]["clip"] == "soko-leipzig-das-auge" and nxt["input"]["part"] == "21:54–43:31"
     ql = next(n for n in m["notices"] if n["id"] == "kling-qualityland")
-    assert (ql["by"], ql["firstDay"], ql["week"]) == ("2026-11-07", "2026-11-09", 4)   # Kindle: 2 days ahead
+    # #38: after Momo's 11 days from week 2 Thursday (29.10.); Kindle: 2 days ahead
+    assert (ql["by"], ql["firstDay"], ql["week"]) == ("2026-11-11", "2026-11-13", 4)
     # on the day itself, Radio Tatort goes on at 27:06 after the Schirach pages, which stay as they were
     at(monkeypatch, MON_26)
     lesen = by_block(b2.get("/api/materials").json()["today"])["lesen"]
@@ -232,11 +233,11 @@ def test_preview_then_take_a_later_week_off_and_undo_it(b2, monkeypatch):
     matt(b2, monkeypatch)
     p = b2.get("/api/pauses/preview", params={"monday": "2026-11-02"}).json()
     assert p["week"] == {"n": 3, "theme": plan.plan("2B")["weeks"][2]["theme"], "was": "2026-11-02", "now": "2026-11-09"}
-    assert {"id": "kling-qualityland", "title": "Marc-Uwe Kling: QualityLand", "was": "2026-11-07", "now": "2026-11-14"} in p["due"]
+    assert {"id": "kling-qualityland", "title": "Marc-Uwe Kling: QualityLand", "was": "2026-11-11", "now": "2026-11-18"} in p["due"]
     assert p["line"].startswith("Freie Woche bis So 8.11. — weiter am Mo 9.11. mit ")
     assert b2.post("/api/pauses", json={"monday": "2026-11-02"}).status_code == 200
     ql = next(n for n in b2.get("/api/materials").json()["notices"] if n["id"] == "kling-qualityland")
-    assert ql["by"] == "2026-11-14"
+    assert ql["by"] == "2026-11-18"
     view = b2.delete("/api/pauses/2026-11-02").json()
     assert [x["from"] for x in view["pauses"]] == ["2026-10-19"] and db.get_setting("pauses") == OFF
 

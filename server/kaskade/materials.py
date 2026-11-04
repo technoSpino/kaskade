@@ -16,7 +16,7 @@ import xml.etree.ElementTree as ET
 from datetime import date, datetime, time, timedelta, timezone
 from email.utils import parsedate_to_datetime
 
-from . import config, db, plan, ratings, rolling, srs, stock, texts, themes
+from . import books, config, db, plan, ratings, rolling, srs, stock, texts, themes
 
 log = logging.getLogger(__name__)
 
@@ -166,13 +166,25 @@ class Ctx:
         self.links = read_check().get("links", {})
         self.pauses = plan.pauses()  # #36: the weeks he took off
         self._rolling: dict = {}
+        self._books: dict = {}
 
     def rolling(self, block: str, data: dict, start: date) -> dict[date, dict]:
-        """#21: the block's rolling clip ranges from `today` on (computed once per request)."""
-        key = (block, id(data), start)
+        """#21: the block's rolling clip ranges from `today` on (computed once per request — and again
+        when a preview changes the weeks off)."""
+        key = (block, id(data), start, repr(self.pauses))
         if key not in self._rolling:
             self._rolling[key] = rolling.plan_block(block, data, start, self)
         return self._rolling[key]
+
+    def books(self, data: dict, start: date) -> dict:
+        """#38: the book queue laid out over the plan days (computed once per request, as `rolling`)."""
+        key = (id(data), start, repr(self.pauses))
+        if key not in self._books:
+            self._books[key] = books.schedule(data, start, self.pauses, self.real_today)
+        return self._books[key]
+
+    def owns(self, b: dict) -> bool:
+        return b["id"] in self.bought or bool(b.get("owned"))
 
     def due_cards(self, day: date) -> int:
         end = datetime.combine(day + timedelta(days=1), time(0), srs.TZ).astimezone(timezone.utc)
@@ -300,6 +312,10 @@ def _book(m: dict, ctx: Ctx, first_day: date | None, day: date, text: str, data:
     """A book part, read the way the book's latest rating says (#24) — or, at 20–40 %, nachrichtenleicht."""
     b = stock.book(m["book"]) or {"id": m["book"], "author": "", "title": m["book"], "format": "paper"}
     mode = ratings.book_mode(b["id"], day, start, data, ctx.pauses)
+    if mode["mode"] == "spaeter" and b["id"] in books.ids(data):
+        # #38: it waits in the book queue now, not for the next pass through the plan
+        line = books.line(ctx.books(data, start), data, b["id"], day + timedelta(days=1))
+        mode = {**mode, "back": None, "retest": None, "why": (line or mode["why"]).rstrip(".")}
     if mode["mode"] == "spaeter":
         out = _news({"block": m["block"], "kind": "news", "feed": "leicht", "minutes": m.get("minutes", 35)}, ctx, day)
         out.update(mode=mode, text=f"Statt {mode['name']}: {out['text']}")
@@ -317,20 +333,48 @@ def _book(m: dict, ctx: Ctx, first_day: date | None, day: date, text: str, data:
     return out
 
 
+def _queued(q: dict, ctx: Ctx, day: date, data: dict, start: date) -> dict:
+    """#38: the day's part of the book the queue is on — a read-along book with its audiobook, a book
+    part read in its mode, or the book's Lesetest."""
+    b = stock.book(q["book"]) or {"id": q["book"], "author": "", "title": q["book"], "format": "paper"}
+    if q["kind"] == "lesetest":
+        return _lesetest({"block": "lesen", "book": b["id"], "part": q["part"], "minutes": q["minutes"], "story": q.get("story")}, ctx)
+    mode = q["mode"]
+    out = _base("lesen", "book", title=f"{b['author']}: {b['title']}".strip(": "), part=q["part"], minutes=q["minutes"],
+                source=f"{b['author']} · {b['title']}".strip(" ·"), bookId=b["id"], mode=mode if mode["show"] else None,
+                text=q["desc"] if b.get("readAlong") else ratings.book_text(q["desc"], mode["mode"]))
+    ab = b.get("audiobook")
+    if b.get("readAlong") and ab:
+        out.update(source=f"{b['author']} · {b['title']} · Hörbuch: {ab['reader']} ({ab['service']})",
+                   chapters=[books.chapter_name(b["chapters"][i]) for i in q["chapters"]], repeat=q["repeat"],
+                   detail=f"dein Papierbuch · {q['detail']}", start={"href": ab["url"], "note": f"Hörbuch auf {ab['service']}"})
+    elif ctx.owns(b):
+        out["detail"] = "gekauft ✓" + (" · bis zu 3 Wörter pro Seite nachschlagen" if mode["mode"] == "nachschlagen" else "")
+    else:
+        first = books.first_days(ctx.books(data, start)).get(b["id"])
+        buy_by = stock.notice(first, b.get("format", "paper")) if first else None
+        out.update(status="todo", detail=f"Kaufen bis {buy_by.day}.{buy_by.month}." if buy_by else "noch nicht gekauft")
+    return out
+
+
 def leseprobe(b: dict, part: str) -> str | None:
-    """The publisher's free Leseprobe, opened at the first page of `part` ("S. 7–8")."""
+    """The publisher's free Leseprobe, opened at the first page of `part` ("S. 7–8") — if it has that page."""
     lp = b.get("leseprobe")
     first = re.match(r"S\. (\d+)", part or "")
     if not lp:
         return None
+    covers = re.match(r"S\. (\d+)–(\d+)", lp.get("pages", ""))
+    if first and covers and not int(covers.group(1)) <= int(first.group(1)) <= int(covers.group(2)):
+        return None  # e.g. „Glück“ (S. 75) is far past the Leseprobe (S. 5–20): the paper book
     return lp["url"] + (f"#page={int(first.group(1)) + lp.get('pdfOffset', 0)}" if first else "")
 
 
 def _lesetest(m: dict, ctx: Ctx) -> dict:
-    """#24: the first two pages of a book without a dictionary, then "Wie viel hast du verstanden?"."""
+    """#24: the first two pages of a book (or of one of its stories) without a dictionary, then "Wie viel
+    hast du verstanden?"."""
     b = stock.book(m["book"]) or {"id": m["book"], "author": "", "title": m["book"]}
     name = ratings.short_author(b)
-    story = "„Fähner“" if b["id"] == "schirach-verbrechen" else None
+    story = m.get("story") or ("„Fähner“" if b["id"] == "schirach-verbrechen" else None)
     title = f"Lesetest: {name}, {b['title']} — die ersten zwei Seiten" + (f" von {story}" if story else "")
     out = _base("pruefung", "lesetest", title=title, part=m["part"], minutes=m.get("minutes", 25), bookId=b["id"],
                 source=f"{b['author']} · {b['title']}".strip(" ·"),
@@ -340,7 +384,7 @@ def _lesetest(m: dict, ctx: Ctx) -> dict:
     if href and ctx.links.get(href) is not False:
         out.update(start={"href": href, "note": "Leseprobe des Verlags"},
                    detail=f"Leseprobe des Verlags ({b.get('publisher', 'Verlag')}), öffnet bei {m['part'].split('–')[0]} · ohne Wörterbuch lesen, dann einschätzen")
-    elif b["id"] in ctx.bought:
+    elif ctx.owns(b):
         out["detail"] = f"im Buch, {m['part']} · ohne Wörterbuch lesen, dann einschätzen"
     else:
         out.update(status="todo", detail="Leseprobe antwortet gerade nicht — und das Buch ist noch nicht als gekauft abgehakt")
@@ -388,21 +432,37 @@ def _cards(ctx: Ctx, day: date) -> dict:
 BUILDERS = {"clip": _clip, "satzcheck": _satzcheck}
 
 
-def first_days(start: date, data: dict, pauses=()) -> dict[str, date]:
-    """The first plan date each book is read on (for "Kaufen bis"), after the weeks off (#36)."""
+def first_days(start: date, data: dict, pauses=(), before: date | None = None) -> dict[str, date]:
+    """The first plan date each book is read on (for "Kaufen bis"), after the weeks off (#36) —
+    only plan days before `before` (#38: from the book queue's start on, the queue says)."""
     out: dict[str, date] = {}
     for wi, w in enumerate(data["weeks"]):
         for di, d in enumerate(w["days"]):
             for m in d.get("materials", []):
                 if m["kind"] == "book":
                     when = plan.slot_date(start, wi, di, pauses)
-                    out[m["book"]] = min(out.get(m["book"], when), when)
+                    if before is None or when < before:
+                        out[m["book"]] = min(out.get(m["book"], when), when)
     return out
 
 
-def _item(m: dict, b: dict, ctx: Ctx, day: date, d: dict, data: dict, start: date, books: dict) -> dict:
+def all_first_days(start: date, data: dict, ctx: Ctx) -> dict[str, date]:
+    """Each book's first day: a plan day before the book queue starts, else the queue's (#38) — also
+    when it was to be read before the queue but a rating of 20–40 % put it off (#24)."""
+    queued = books.first_days(ctx.books(data, start))
+    out = dict(queued)
+    for book_id, first in first_days(start, data, ctx.pauses, books.start_day(data, start, ctx.pauses)).items():
+        later = book_id in queued and ratings.book_mode(book_id, max(first, ctx.real_today), start, data, ctx.pauses)["mode"] == "spaeter"
+        if not later:
+            out[book_id] = first
+    return out
+
+
+def _item(m: dict, b: dict, ctx: Ctx, day: date, d: dict, data: dict, start: date, firsts: dict) -> dict:
     """One exact item for one material of a block."""
-    if rolling.rolls(m) and b["id"] in rolling.FILM:
+    if m["kind"] == "queued":
+        item = _queued(m["queued"], ctx, day, data, start)
+    elif rolling.rolls(m) and b["id"] in rolling.FILM:
         item = _rolled(m, ctx, day, data, start)
     elif m["kind"] in BUILDERS:
         item = BUILDERS[m["kind"]](m, ctx, day)
@@ -413,7 +473,7 @@ def _item(m: dict, b: dict, ctx: Ctx, day: date, d: dict, data: dict, start: dat
     elif m["kind"] == "text":
         item = _text(m, ctx)
     elif m["kind"] == "book":
-        item = _book(m, ctx, books.get(m["book"]), day, m.get("desc") or d.get(b["id"], ""), data, start)
+        item = _book(m, ctx, firsts.get(m["book"]), day, m.get("desc") or d.get(b["id"], ""), data, start)
     elif m["kind"] == "lesetest":
         item = _lesetest(m, ctx)
     elif m["kind"] == "practice":
@@ -450,6 +510,16 @@ def block_items(mats: list[dict], b: dict, build) -> list[dict]:
     return [items[i] for i in sorted(items)]
 
 
+def with_book(mats: list[dict], b: dict, queued: dict | None) -> list[dict]:
+    """#38: on a day of the book queue the lesen block is the queue's book first, then the day's
+    rolling audio for the rest of the block (none if less than 5 minutes are left)."""
+    if not queued:
+        return mats
+    audio = next((m for m in mats if rolling.rolls(m)), None)
+    rest = b["minutes"] - queued["minutes"]
+    return [{"block": b["id"], "kind": "queued", "queued": queued}] + ([{**audio, "minutes": rest}] if audio and rest > 5 else [])
+
+
 def day_items(info: dict, ctx: Ctx, data: dict, start: date) -> list[dict]:
     """The exact items of each block of the plan day in `info` (empty on days without a block):
     one item per block; a second (or third) one of the lesen block hangs on the first as "then"."""
@@ -457,12 +527,14 @@ def day_items(info: dict, ctx: Ctx, data: dict, start: date) -> list[dict]:
     if not d:
         return []
     day = date.fromisoformat(info["date"])
-    books = first_days(start, data, ctx.pauses)
+    firsts = all_first_days(start, data, ctx)
     out = []
     for b in data["block"]:
         if b["kind"] == "pause":
             continue
         mats = [m for m in d.get("materials", []) if m["block"] == b["id"]]
+        if b["kind"] == "lesen":
+            mats = with_book(mats, b, ctx.books(data, start)["days"].get(day))
         if b["kind"] == "karten":
             items = [_cards(ctx, day)]
         elif b["kind"] == "pruefung":  # older plans only (#27: no exam block in the daily plan)
@@ -473,7 +545,7 @@ def day_items(info: dict, ctx: Ctx, data: dict, start: date) -> list[dict]:
         elif not mats:
             items = [_base(b["id"], "none", title="Noch nichts eingeplant", status="todo", origin=None)]
         else:
-            items = block_items(mats, b, lambda m: _item(m, b, ctx, day, d, data, start, books))
+            items = block_items(mats, b, lambda m: _item(m, b, ctx, day, d, data, start, firsts))
         for it in items:
             it["block"] = b["id"]
         first = items[0]
@@ -502,12 +574,14 @@ def notices(start: date, today: date, data: dict, ctx: Ctx) -> list[dict]:
     `by` is the due date (paper a week ahead; `byEbook` two days ahead), sorted by it."""
     week = lambda d: plan.plan_index(start, d, ctx.pauses)[0] + 1  # noqa: E731
     out = []
-    for book_id, first in sorted(first_days(start, data, ctx.pauses).items(), key=lambda kv: kv[1]):
+    queue = books.ids(data)
+    for book_id, first in sorted(all_first_days(start, data, ctx).items(), key=lambda kv: kv[1]):
         b = stock.book(book_id)
-        if not b or book_id in ctx.bought or first < today and ratings.book_mode(book_id, today, start, data, ctx.pauses)["mode"] != "spaeter":
+        if not b or ctx.owns(b) or first < today and (book_id in queue or ratings.book_mode(book_id, today, start, data, ctx.pauses)["mode"] != "spaeter"):
             continue
         # #24: at 20–40 % the book waits for the next pass through the plan — and so does buying it
-        mode = ratings.book_mode(book_id, max(first, today + timedelta(days=1)), start, data, ctx.pauses)
+        # (#38: a book of the queue waits in the queue instead, and its first day says when)
+        mode = {"mode": None} if book_id in queue else ratings.book_mode(book_id, max(first, today + timedelta(days=1)), start, data, ctx.pauses)
         if mode["mode"] == "spaeter":
             first = date.fromisoformat(mode["back"])
         item = {"type": "book", "id": book_id, "by": stock.notice(first, b.get("format", "paper")).isoformat(),

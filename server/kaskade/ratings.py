@@ -12,7 +12,7 @@ rated by its first day 09:00 is read as at 60 %. Each pass through the 4 weeks s
 import json
 from datetime import date, datetime, time, timedelta, timezone
 
-from . import db, plan, srs, stock
+from . import books, db, plan, srs, stock
 
 PCTS = (20, 40, 60, 80, 100)
 TOO_HARD = 70               # under this, Heute says "Zu schwer"
@@ -226,6 +226,11 @@ def action(r: dict, start: date, data: dict, today: date) -> str:
     """What the plan does about a rating under 70 % (Heute's "Zu schwer" line)."""
     if r["book"]:
         nxt = today + timedelta(days=1)
+        if r["book"] in books.ids(data):  # #38: what the book queue does with it
+            sched = books.schedule(data, start, plan.pauses(), srs.now_utc().astimezone(srs.TZ).date())
+            line = books.line(sched, data, r["book"], nxt)
+            if line:
+                return line if line.endswith(".") else line + "."
         return book_mode(r["book"], nxt, start, data)["why"] + "."
     if r["item"].startswith("news:leicht:"):
         return (f"Nächstes Mal {leicht_count()} statt 5 Artikel pro 35 Minuten. Bleibt nachrichtenleicht unter 70 %, "

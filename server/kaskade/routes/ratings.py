@@ -7,7 +7,7 @@ from typing import Literal
 
 from pydantic import BaseModel, Field
 
-from .. import db, materials, plan, ratings, rolling, satzcheck, srs, transcripts
+from .. import books, db, materials, plan, ratings, rolling, satzcheck, srs, transcripts
 
 router = APIRouter(prefix="/api")
 
@@ -133,12 +133,20 @@ def list_ratings(days: int = 60):
 
 
 def book_modes(day: date, start: date, data: dict) -> list[dict]:
-    """How each book of the plan is read next (from tomorrow), once a test or rating says something."""
+    """How each book of the plan is read next (from tomorrow), once a test or rating says something —
+    and (#38) every book of the queue: the one being read with its mode, the others "nach …"."""
+    nxt = day + timedelta(days=1)
+    pauses = plan.pauses()
+    begins = books.start_day(data, start, pauses)
+    # a plan book read before the queue begins keeps its #24 mode until then
+    early = materials.first_days(start, data, pauses, begins) if begins and nxt < begins else {}
     out = []
     for book_id in materials.first_days(start, data):
-        m = ratings.book_mode(book_id, day + timedelta(days=1), start, data)
-        if m["show"]:
+        m = ratings.book_mode(book_id, nxt, start, data)
+        if m["show"] and (book_id not in books.ids(data) or book_id in early):
             out.append(m)
+    if begins:
+        out += [x for x in books.lines(books.schedule(data, start, pauses, _today()), data, nxt) if x["book"] not in early]
     return out
 
 

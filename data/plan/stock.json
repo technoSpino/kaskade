@@ -405,44 +405,142 @@
   ],
   "books": [
     {
-      "id": "schirach-verbrechen",
-      "author": "Ferdinand von Schirach",
-      "title": "Verbrechen",
-      "publisher": "btb",
-      "isbn": "978-3-442-77066-3",
+      "id": "momo",
+      "author": "Michael Ende",
+      "title": "Momo",
+      "short": "Momo",
+      "genre": "fantasy",
       "format": "paper",
-      "pages": 208,
-      "price": "12,00 €",
-      "note": "Elf wahre Kriminalfälle eines Berliner Strafverteidigers: nüchterne, klare Sätze, jede Geschichte für sich. Harte Fälle (Gewalt) — eine Geschichte darf man überspringen.",
-      "alternatives": "E-Book (btb, ISBN 978-3-641-26778-0, 10,99 €) · Hörbuch-Auswahl mit 8 Geschichten (Der Hörverlag, 3 h 28 min)",
-      "shops": [
+      "owned": "Papierbuch und Hörbuch (Spotify) hat Matt schon — keine Kaufkarte",
+      "shops": [],
+      "readAlong": true,
+      "perDay": 2,
+      "note": "Märchen-Roman (1973) über die grauen Herren, die den Menschen die Zeit stehlen, und das Mädchen Momo, das zuhören kann. Klare, ruhige Sätze, für jüngere Leser geschrieben (#38: Kinder- und Jugendbücher sind erlaubt).",
+      "themeCheck": "2026-11-04: Inhaltsangaben (Wikipedia „Momo (Roman)“, Hörbuch Hamburg, Spotify) geprüft, kein Kindesmissbrauch — das „Kinder-Depot“ ist eine Betreuungsanstalt der grauen Herren, in der die Kinder nur noch „nützliche“ Spiele spielen dürfen",
+      "chaptersNote": "Teile und Kapitel aus dem Inhaltsverzeichnis (Thienemann 2005, ISBN 978-3-522-17750-4, laut https://lbib.de/Momo-59695, geprüft 4.11.2026) — Kapitelnummern und Titel, keine Seitenzahlen: seine Ausgabe ist nicht bekannt.",
+      "chapters": [
         {
-          "name": "Penguin/btb",
-          "url": "https://www.penguin.de/buecher/ferdinand-von-schirach-verbrechen/taschenbuch/9783442770663"
+          "n": 1,
+          "title": "Eine große Stadt und ein kleines Mädchen",
+          "part": "Erster Teil: Momo und ihre Freunde"
         },
         {
-          "name": "Hugendubel",
-          "url": "https://www.hugendubel.de/de/taschenbuch/ferdinand_von_schirach-verbrechen-38554708-produkt-details.html"
+          "n": 2,
+          "title": "Eine ungewöhnliche Eigenschaft und ein ganz gewöhnlicher Streit",
+          "part": "Erster Teil: Momo und ihre Freunde"
         },
         {
-          "name": "Thalia",
-          "url": "https://www.thalia.de/shop/home/artikeldetails/A1057322056"
+          "n": 3,
+          "title": "Ein gespielter Sturm und ein wirkliches Gewitter",
+          "part": "Erster Teil: Momo und ihre Freunde"
+        },
+        {
+          "n": 4,
+          "title": "Ein schweigsamer Alter und ein zungenfertiger Junger",
+          "part": "Erster Teil: Momo und ihre Freunde"
+        },
+        {
+          "n": 5,
+          "title": "Geschichten für viele und Geschichten für eine",
+          "part": "Erster Teil: Momo und ihre Freunde"
+        },
+        {
+          "n": 6,
+          "title": "Die Rechnung ist falsch und geht doch auf",
+          "part": "Zweiter Teil: Die grauen Herren"
+        },
+        {
+          "n": 7,
+          "title": "Momo sucht ihre Freunde und wird von einem Feind besucht",
+          "part": "Zweiter Teil: Die grauen Herren"
+        },
+        {
+          "n": 8,
+          "title": "Eine Menge Träume und ein paar Bedenken",
+          "part": "Zweiter Teil: Die grauen Herren"
+        },
+        {
+          "n": 9,
+          "title": "Eine gute Versammlung, die nicht stattfindet, und eine schlimme Versammlung, die stattfindet",
+          "part": "Zweiter Teil: Die grauen Herren"
+        },
+        {
+          "n": 10,
+          "title": "Eine wilde Verfolgung und eine geruhsame Flucht",
+          "part": "Zweiter Teil: Die grauen Herren"
+        },
+        {
+          "n": 11,
+          "title": "Wenn Böse aus dem Schlechten das Beste machen",
+          "part": "Zweiter Teil: Die grauen Herren"
+        },
+        {
+          "n": 12,
+          "title": "Momo kommt hin, wo die Zeit herkommt",
+          "part": "Zweiter Teil: Die grauen Herren"
+        },
+        {
+          "n": 13,
+          "title": "Dort ein Tag und hier ein Jahr",
+          "part": "Dritter Teil: Die Stunden-Blumen"
+        },
+        {
+          "n": 14,
+          "title": "Zu viel zu essen und zu wenig Antworten",
+          "part": "Dritter Teil: Die Stunden-Blumen"
+        },
+        {
+          "n": 15,
+          "title": "Gefunden und verloren",
+          "part": "Dritter Teil: Die Stunden-Blumen"
+        },
+        {
+          "n": 16,
+          "title": "Die Not im Überfluss",
+          "part": "Dritter Teil: Die Stunden-Blumen"
+        },
+        {
+          "n": 17,
+          "title": "Große Angst und größerer Mut",
+          "part": "Dritter Teil: Die Stunden-Blumen"
+        },
+        {
+          "n": 18,
+          "title": "Wenn man voraussieht ohne zurückzuschauen",
+          "part": "Dritter Teil: Die Stunden-Blumen"
+        },
+        {
+          "n": 19,
+          "title": "Die Eingeschlossenen müssen sich entschließen",
+          "part": "Dritter Teil: Die Stunden-Blumen"
+        },
+        {
+          "n": 20,
+          "title": "Die Verfolgung der Verfolger",
+          "part": "Dritter Teil: Die Stunden-Blumen"
+        },
+        {
+          "n": 21,
+          "title": "Das Ende, mit dem etwas Neues beginnt",
+          "part": "Dritter Teil: Die Stunden-Blumen"
         }
       ],
-      "edition": "Taschenbuch, 13.04.2020",
-      "ebook": {
-        "isbn": "978-3-641-26778-0",
-        "price": "10,99 €"
-      },
-      "pagesNote": "208 Seiten laut Verlag, Text S. 5–205; Seitenzahlen der Geschichten aus dem Inhaltsverzeichnis dieser Ausgabe (DNB-Scan https://d-nb.info/1203761619/04)",
-      "genre": "krimi",
-      "themeCheck": "2026-10-16: Inhaltsangaben aller 11 Geschichten (Wikipedia „Verbrechen (Buch)“) + Leseprobe S. 5–20 geprüft, kein Kindesmissbrauch",
-      "leseprobe": {
-        "url": "https://www.bic-media.com/books/content/shortened/9783442770663.pdf",
-        "via": "penguin.de → Leseprobe (Blick ins Buch, btb)",
-        "pages": "S. 5–20",
-        "pdfOffset": 2,
-        "note": "Die Leseprobe des Verlags zeigt diese Ausgabe mit ihren Seitenzahlen: Vorwort S. 5–6, „Fähner“ ab S. 7 (geprüft 13.10.2026)."
+      "afterword": "Kurzes Nachwort des Verfassers",
+      "audiobook": {
+        "service": "Spotify",
+        "title": "Momo",
+        "reader": "Gert Heidenreich",
+        "publisher": "Silberfisch (Hörbuch Hamburg)",
+        "released": "2013-05-01",
+        "unabridged": true,
+        "minutes": 512,
+        "length": "8 Std. 32 Min.",
+        "url": "https://open.spotify.com/show/7tJOGiVmP8dJpaLLfsGJgG",
+        "tracks": 87,
+        "isbn": "978-3-8449-0769-8",
+        "album": "https://open.spotify.com/album/4qEqGtx6RlAdyNHNPwlaWD",
+        "checked": "2026-11-04: Spotify-Hörbuch „Momo“, „Gelesen von Gert Heidenreich“, 1. Mai 2013, 8 Std. 32 Min., Abschnitte „Track 1“ (5:56), „Track 2“ (3:26) … — die ungekürzte Lesung von Hörbuch Hamburg/Silberfisch (512 min, Download-ISBN 978-3-8449-0769-8), von hoerbuch-hamburg.de auf genau diese Spotify-Seite verlinkt; Audible B00CM6VWVG: gleiche Lesung, 87 Tracks gleicher Länge. Kein Hörspiel. Dieselbe Lesung steht auch als Album auf Spotify (242 Stücke „Kapitel 1–242“ à ~2 min).",
+        "chaptersNote": "Wo ein Buchkapitel im Hörbuch beginnt, steht nirgends: Spotify, Audible und die CDs zählen nur Tracks (87, je 1–10 min, ohne Titel). Deshalb öffnet Starten das Hörbuch: am ersten Tag ab Track 1, danach spielt Spotify weiter, wo er aufgehört hat; die Minuten pro Tag sind geschätzt (512 min / 21 Kapitel ≈ 24 min pro Kapitel)."
       }
     },
     {
@@ -465,7 +563,7 @@
       ],
       "edition": "Kindle-Ausgabe, 22.09.2017",
       "editionNote": "Amazon.de verkauft als Kindle-Ausgabe nur „QualityLand: Roman | Dunkle Edition“ (ASIN B071436DMF, 9,99 €, Ullstein Ebooks, 22.09.2017, ISBN 978-3843715973). Ullstein führt dieses E-Book als einziges (ePub, 9,99 €), seine Leseprobe ist die Dunkle Edition (geprüft 16.10.2026).",
-      "chaptersNote": "Kapitel und Reihenfolge aus dem Inhaltsverzeichnis dieses E-Books (Ullsteins Leseprobe als EPUB, https://www.bic-media.com/books/content/shortened/9783843715973.epub). Länge der Kapitel: Kapitelzeiten des ungekürzten Hörbuchs, Dunkle Edition, vom Autor gelesen (Audible B075F2NCQP, 8 h 26 min), bei ~137 Wörtern pro Minute (gezählt an den ganzen Kapiteln der Leseprobe), gelesen mit 110 Wörtern pro Minute wie die Bibliothekstexte (geprüft 16.10.2026).",
+      "chaptersNote": "Kapitel und Reihenfolge aus dem Inhaltsverzeichnis dieses E-Books (Ullsteins Leseprobe als EPUB, https://www.bic-media.com/books/content/shortened/9783843715973.epub). Länge der Kapitel: Kapitelzeiten des ungekürzten Hörbuchs, Dunkle Edition, vom Autor gelesen (Audible B075F2NCQP, 8 h 26 min), bei ~137 Wörtern pro Minute (gezählt an den ganzen Kapiteln der Leseprobe), gelesen mit 110 Wörtern pro Minute wie die Bibliothekstexte (geprüft 16.10.2026). Ab „Kleiner Helfer“: Kapitel und Längen aus den Kapitelmarken desselben Hörbuchs (Audible B075F2NCQP, 78 Einträge, geprüft 4.11.2026); die Zwischenstücke „QualityLand Reiseführer“ heißen dort ohne Untertitel — kein Tagesteil beginnt oder endet mit einem davon.",
       "chapters": [
         {
           "title": "Versionshinweis",
@@ -550,8 +648,636 @@
         {
           "title": "Kleiner Helfer",
           "audioMin": 6.38
+        },
+        {
+          "title": "Bücher für dich!",
+          "audioMin": 3.0
+        },
+        {
+          "title": "Aszendierende Okulogenitale Chlamydieninfektion",
+          "audioMin": 7.73
+        },
+        {
+          "title": "Geheime Kräfte",
+          "audioMin": 7.11
+        },
+        {
+          "title": "Präsidentin verurteilt Drohnenangriff als unmenschlich",
+          "audioMin": 3.06
+        },
+        {
+          "title": "German Code",
+          "audioMin": 16.72
+        },
+        {
+          "title": "QualityLand Reiseführer",
+          "audioMin": 0.8
+        },
+        {
+          "title": "Maschinen machen keine Fehler",
+          "audioMin": 6.27
+        },
+        {
+          "title": "\"4,63 × 10170\"",
+          "audioMin": 7.58
+        },
+        {
+          "title": "Dein neuer bester Freund",
+          "audioMin": 1.9
+        },
+        {
+          "title": "Eine freundliche Stimme",
+          "audioMin": 4.39
+        },
+        {
+          "title": "Kein Zurück",
+          "audioMin": 3.9
+        },
+        {
+          "title": "Ein ungewünschtes Produkt",
+          "audioMin": 8.33
+        },
+        {
+          "title": "Ausländer klauen Auto. Nutzloser läuft Amok.",
+          "audioMin": 1.91
+        },
+        {
+          "title": "Moralische Implikationen",
+          "audioMin": 9.18
+        },
+        {
+          "title": "Sie haben ein Problem?",
+          "audioMin": 1.41
+        },
+        {
+          "title": "Zack",
+          "audioMin": 11.75
+        },
+        {
+          "title": "Das Duell",
+          "audioMin": 12.92
+        },
+        {
+          "title": "Die ganze Menschheit bei Everybody",
+          "audioMin": 2.47
+        },
+        {
+          "title": "Hackfleisch",
+          "audioMin": 15.88
+        },
+        {
+          "title": "Maschinenstürmerbekennerschreiben aufgetaucht!",
+          "audioMin": 1.38
+        },
+        {
+          "title": "Was es wird",
+          "audioMin": 6.42
+        },
+        {
+          "title": "Peters Problem",
+          "audioMin": 17.81
+        },
+        {
+          "title": "QualityLand Reiseführer",
+          "audioMin": 1.29
+        },
+        {
+          "title": "Die Erschöpfung",
+          "audioMin": 9.18
+        },
+        {
+          "title": "QualityLand Reiseführer",
+          "audioMin": 0.99
+        },
+        {
+          "title": "Landluft",
+          "audioMin": 6.4
+        },
+        {
+          "title": "Wichser",
+          "audioMin": 8.66
+        },
+        {
+          "title": "Neue Filmempfehlungen für dich",
+          "audioMin": 2.59
+        },
+        {
+          "title": "Kollaterale Konsequenzen",
+          "audioMin": 11.21
+        },
+        {
+          "title": "Das Dinnerproblem",
+          "audioMin": 9.68
+        },
+        {
+          "title": "Fühlen Sie sich eigentlich sicher?",
+          "audioMin": 0.99
+        },
+        {
+          "title": "Alles in bester Ordnung",
+          "audioMin": 5.97
+        },
+        {
+          "title": "Nachhilfe",
+          "audioMin": 10.35
+        },
+        {
+          "title": "Miteinander reden",
+          "audioMin": 7.59
+        },
+        {
+          "title": "Jennifer Aniston kurz vor großem Comeback",
+          "audioMin": 2.79
+        },
+        {
+          "title": "Eine kleine Gartenparty",
+          "audioMin": 7.55
+        },
+        {
+          "title": "Die Reiskörner",
+          "audioMin": 13.8
+        },
+        {
+          "title": "Julia & Romeo",
+          "audioMin": 11.19
+        },
+        {
+          "title": "Qualitätsallianz",
+          "audioMin": 2.27
+        },
+        {
+          "title": "Die Beschwerde",
+          "audioMin": 8.67
+        },
+        {
+          "title": "Schnelle Aufklärung dank Selfiedrohne",
+          "audioMin": 1.41
+        },
+        {
+          "title": "Der Herr des Shitstorms",
+          "audioMin": 8.4
+        },
+        {
+          "title": "Oben",
+          "audioMin": 5.02
+        },
+        {
+          "title": "Du hast dein Leben satt?",
+          "audioMin": 1.91
+        },
+        {
+          "title": "In der Schrottpresse",
+          "audioMin": 10.96
+        },
+        {
+          "title": "Sauber",
+          "audioMin": 3.4
+        },
+        {
+          "title": "Orientierungslos",
+          "audioMin": 6.48
+        },
+        {
+          "title": "Die Grenzen der Qualität",
+          "audioMin": 1.77
+        },
+        {
+          "title": "Straße nach Nirgendwo",
+          "audioMin": 12.0
+        },
+        {
+          "title": "Der Blauäugige",
+          "audioMin": 8.26
+        },
+        {
+          "title": "Dieses Spiel ist real!",
+          "audioMin": 2.75
+        },
+        {
+          "title": "Ein gutes Frühstück",
+          "audioMin": 9.4
+        },
+        {
+          "title": "QualityLand vor linksradikaler Terrorwelle?",
+          "audioMin": 1.47
+        },
+        {
+          "title": "Tag der Entscheidung",
+          "audioMin": 7.42
+        },
+        {
+          "title": "Die Audienz",
+          "audioMin": 8.67
+        },
+        {
+          "title": "Zufall",
+          "audioMin": 7.91
+        },
+        {
+          "title": "Epilog",
+          "audioMin": 7.4
         }
-      ]
+      ],
+      "parts": [
+        {
+          "part": "Vom Anfang bis „QualityLand Reiseführer: Ohrwürmer“",
+          "chapters": [
+            "Versionshinweis",
+            "QualityLand Reiseführer: Ohrwürmer"
+          ],
+          "minutes": 40,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), vom Anfang („Versionshinweis“) bis zum Ende von „QualityLand Reiseführer: Ohrwürmer“ — die Kapitel stehen im Kindle im Inhaltsverzeichnis. Die erfundenen Produktnamen (TheShop, QualityPartner …) sind Namen: nicht nachschlagen. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„Ado & Eva“ („Peter Arbeitsloser hat einmal …“) bis „PartnerCare“",
+          "chapters": [
+            "Ado & Eva",
+            "PartnerCare"
+          ],
+          "minutes": 41,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Ado & Eva“ („Peter Arbeitsloser hat einmal …“) bis zum Ende von „PartnerCare“ — im Kindle: Inhaltsverzeichnis → „Ado & Eva“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„Jetzt spricht der Vater des Killerroboters“ bis „Kalliope 7.3“",
+          "chapters": [
+            "Jetzt spricht der Vater des Killerroboters",
+            "Kalliope 7.3"
+          ],
+          "minutes": 37,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Jetzt spricht der Vater des Killerroboters“ bis zum Ende von „Kalliope 7.3“ — im Kindle: Inhaltsverzeichnis → „Jetzt spricht der Vater des Killerroboters“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„QualityLand Reiseführer: Maschinenstürmer“ bis „Vorstellungsgespräch“",
+          "chapters": [
+            "QualityLand Reiseführer: Maschinenstürmer",
+            "Vorstellungsgespräch"
+          ],
+          "minutes": 35,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „QualityLand Reiseführer: Maschinenstürmer“ bis zum Ende von „Vorstellungsgespräch“ — im Kindle: Inhaltsverzeichnis → „QualityLand Reiseführer: Maschinenstürmer“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„Kleiner Helfer“ bis „Präsidentin verurteilt Drohnenangriff als unmenschlich“",
+          "chapters": [
+            "Kleiner Helfer",
+            "Präsidentin verurteilt Drohnenangriff als unmenschlich"
+          ],
+          "minutes": 34,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Kleiner Helfer“ bis zum Ende von „Präsidentin verurteilt Drohnenangriff als unmenschlich“ — im Kindle: Inhaltsverzeichnis → „Kleiner Helfer“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„German Code“ bis „Dein neuer bester Freund“",
+          "chapters": [
+            "German Code",
+            "Dein neuer bester Freund"
+          ],
+          "minutes": 41,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „German Code“ bis zum Ende von „Dein neuer bester Freund“ — im Kindle: Inhaltsverzeichnis → „German Code“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„Eine freundliche Stimme“ bis „Sie haben ein Problem?“",
+          "chapters": [
+            "Eine freundliche Stimme",
+            "Sie haben ein Problem?"
+          ],
+          "minutes": 36,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Eine freundliche Stimme“ bis zum Ende von „Sie haben ein Problem?“ — im Kindle: Inhaltsverzeichnis → „Eine freundliche Stimme“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„Zack“ bis „Die ganze Menschheit bei Everybody“",
+          "chapters": [
+            "Zack",
+            "Die ganze Menschheit bei Everybody"
+          ],
+          "minutes": 34,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Zack“ bis zum Ende von „Die ganze Menschheit bei Everybody“ — im Kindle: Inhaltsverzeichnis → „Zack“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„Hackfleisch“ bis „Was es wird“",
+          "chapters": [
+            "Hackfleisch",
+            "Was es wird"
+          ],
+          "minutes": 29,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Hackfleisch“ bis zum Ende von „Was es wird“ — im Kindle: Inhaltsverzeichnis → „Hackfleisch“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„Peters Problem“ bis „Landluft“",
+          "chapters": [
+            "Peters Problem",
+            "Landluft"
+          ],
+          "minutes": 44,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Peters Problem“ bis zum Ende von „Landluft“ — im Kindle: Inhaltsverzeichnis → „Peters Problem“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„Wichser“ bis „Das Dinnerproblem“",
+          "chapters": [
+            "Wichser",
+            "Das Dinnerproblem"
+          ],
+          "minutes": 40,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Wichser“ bis zum Ende von „Das Dinnerproblem“ — im Kindle: Inhaltsverzeichnis → „Wichser“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„Fühlen Sie sich eigentlich sicher?“ bis „Jennifer Aniston kurz vor großem Comeback“",
+          "chapters": [
+            "Fühlen Sie sich eigentlich sicher?",
+            "Jennifer Aniston kurz vor großem Comeback"
+          ],
+          "minutes": 34,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Fühlen Sie sich eigentlich sicher?“ bis zum Ende von „Jennifer Aniston kurz vor großem Comeback“ — im Kindle: Inhaltsverzeichnis → „Fühlen Sie sich eigentlich sicher?“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„Eine kleine Gartenparty“ bis „Julia & Romeo“",
+          "chapters": [
+            "Eine kleine Gartenparty",
+            "Julia & Romeo"
+          ],
+          "minutes": 41,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Eine kleine Gartenparty“ bis zum Ende von „Julia & Romeo“ — im Kindle: Inhaltsverzeichnis → „Eine kleine Gartenparty“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„Qualitätsallianz“ bis „Du hast dein Leben satt?“",
+          "chapters": [
+            "Qualitätsallianz",
+            "Du hast dein Leben satt?"
+          ],
+          "minutes": 34,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Qualitätsallianz“ bis zum Ende von „Du hast dein Leben satt?“ — im Kindle: Inhaltsverzeichnis → „Qualitätsallianz“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„In der Schrottpresse“ bis „Straße nach Nirgendwo“",
+          "chapters": [
+            "In der Schrottpresse",
+            "Straße nach Nirgendwo"
+          ],
+          "minutes": 43,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „In der Schrottpresse“ bis zum Ende von „Straße nach Nirgendwo“ — im Kindle: Inhaltsverzeichnis → „In der Schrottpresse“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„Der Blauäugige“ bis „Tag der Entscheidung“",
+          "chapters": [
+            "Der Blauäugige",
+            "Tag der Entscheidung"
+          ],
+          "minutes": 36,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Der Blauäugige“ bis zum Ende von „Tag der Entscheidung“ — im Kindle: Inhaltsverzeichnis → „Der Blauäugige“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        },
+        {
+          "part": "„Die Audienz“ bis „Epilog“ (Ende)",
+          "chapters": [
+            "Die Audienz",
+            "Epilog"
+          ],
+          "minutes": 30,
+          "desc": "Marc-Uwe Kling: QualityLand (Kindle-E-Book, Dunkle Edition), von „Die Audienz“ bis zum Ende von „Epilog“ — das letzte Kapitel — im Kindle: Inhaltsverzeichnis → „Die Audienz“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du die Szene grob verstehst, ist alles gut."
+        }
+      ],
+      "short": "QualityLand"
+    },
+    {
+      "id": "schirach-verbrechen",
+      "author": "Ferdinand von Schirach",
+      "title": "Verbrechen",
+      "publisher": "btb",
+      "isbn": "978-3-442-77066-3",
+      "format": "paper",
+      "pages": 208,
+      "price": "12,00 €",
+      "note": "Elf wahre Kriminalfälle eines Berliner Strafverteidigers: nüchterne, klare Sätze, jede Geschichte für sich. Harte Fälle (Gewalt) — eine Geschichte darf man überspringen.",
+      "alternatives": "E-Book (btb, ISBN 978-3-641-26778-0, 10,99 €) · Hörbuch-Auswahl mit 8 Geschichten (Der Hörverlag, 3 h 28 min)",
+      "shops": [
+        {
+          "name": "Penguin/btb",
+          "url": "https://www.penguin.de/buecher/ferdinand-von-schirach-verbrechen/taschenbuch/9783442770663"
+        },
+        {
+          "name": "Hugendubel",
+          "url": "https://www.hugendubel.de/de/taschenbuch/ferdinand_von_schirach-verbrechen-38554708-produkt-details.html"
+        },
+        {
+          "name": "Thalia",
+          "url": "https://www.thalia.de/shop/home/artikeldetails/A1057322056"
+        }
+      ],
+      "edition": "Taschenbuch, 13.04.2020",
+      "ebook": {
+        "isbn": "978-3-641-26778-0",
+        "price": "10,99 €"
+      },
+      "pagesNote": "208 Seiten laut Verlag, Text S. 5–205; Seitenzahlen der Geschichten aus dem Inhaltsverzeichnis dieser Ausgabe (DNB-Scan https://d-nb.info/1203761619/04)",
+      "genre": "krimi",
+      "themeCheck": "2026-10-16: Inhaltsangaben aller 11 Geschichten (Wikipedia „Verbrechen (Buch)“) + Leseprobe S. 5–20 geprüft, kein Kindesmissbrauch",
+      "leseprobe": {
+        "url": "https://www.bic-media.com/books/content/shortened/9783442770663.pdf",
+        "via": "penguin.de → Leseprobe (Blick ins Buch, btb)",
+        "pages": "S. 5–20",
+        "pdfOffset": 2,
+        "note": "Die Leseprobe des Verlags zeigt diese Ausgabe mit ihren Seitenzahlen: Vorwort S. 5–6, „Fähner“ ab S. 7 (geprüft 13.10.2026)."
+      },
+      "parts": [
+        {
+          "part": "S. 7–42: „Fähner“ und „Tanatas Teeschale“",
+          "minutes": 35,
+          "desc": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 7–42: „Fähner“ und „Tanatas Teeschale“. Das Vorwort (S. 5–6) gern vorher. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut."
+        },
+        {
+          "part": "S. 43–74: „Das Cello“ und „Der Igel“",
+          "minutes": 35,
+          "desc": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 43–74: „Das Cello“ und „Der Igel“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut."
+        },
+        {
+          "part": "S. 75–88: „Glück“",
+          "minutes": 35,
+          "desc": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 75–88: „Glück“. Eine kurze Geschichte: Wenn Zeit bleibt, lies sie ein zweites Mal. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut."
+        },
+        {
+          "part": "S. 89–120: „Summertime“",
+          "minutes": 35,
+          "desc": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 89–120: „Summertime“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut."
+        },
+        {
+          "part": "S. 121–160: „Notwehr“ und „Grün“",
+          "minutes": 35,
+          "desc": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 121–160: „Notwehr“ und „Grün“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut."
+        },
+        {
+          "part": "S. 161–184: „Der Dorn“ und „Liebe“",
+          "minutes": 35,
+          "desc": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 161–184: „Der Dorn“ und „Liebe“. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut."
+        },
+        {
+          "part": "S. 185–205: „Der Äthiopier“",
+          "minutes": 35,
+          "desc": "Ferdinand von Schirach: Verbrechen (Taschenbuch, btb), S. 185–205: „Der Äthiopier“. Die letzte Geschichte. Frei lesen: kein Wörterbuch, nicht zurückblättern — wenn du den Fall grob verstehst, ist alles gut."
+        }
+      ],
+      "short": "Schirach"
+    },
+    {
+      "id": "ende-unendliche-geschichte",
+      "author": "Michael Ende",
+      "title": "Die unendliche Geschichte",
+      "short": "Die unendliche Geschichte",
+      "genre": "fantasy",
+      "format": "paper",
+      "owned": "Papierbuch und Hörbuch (Spotify) hat Matt schon — keine Kaufkarte",
+      "shops": [],
+      "readAlong": true,
+      "maxMinutes": 50,
+      "note": "Fantasy-Roman (1979): Bastian liest im Antiquariat ein Buch und gerät nach Phantásien. Länger und reicher an Wörtern als „Momo“.",
+      "themeCheck": "2026-11-04: Inhaltsangaben (Hörbuch Hamburg, Spotify) geprüft, kein Kindesmissbrauch",
+      "chaptersNote": "Kapitel und Längen aus den Kapitelmarken des ungekürzten Hörbuchs (Audible B00BM5F96W, Hörbuch Hamburg, Gert Heidenreich, 906 min, geprüft 4.11.2026): „Antiquariat“ und I.–XXVI. wie im Buch.",
+      "chapters": [
+        {
+          "n": null,
+          "title": "Antiquariat · Inhaber: Karl Konrad Koreander",
+          "audioMin": 29.67
+        },
+        {
+          "n": "I",
+          "title": "Phantásien in Not",
+          "audioMin": 31.6
+        },
+        {
+          "n": "II",
+          "title": "Atréjus Berufung",
+          "audioMin": 36.03
+        },
+        {
+          "n": "III",
+          "title": "Die Uralte Morla",
+          "audioMin": 37.24
+        },
+        {
+          "n": "IV",
+          "title": "Ygramul, die Viele",
+          "audioMin": 23.46
+        },
+        {
+          "n": "V",
+          "title": "Die Zweisiedler",
+          "audioMin": 22.06
+        },
+        {
+          "n": "VI",
+          "title": "Die Drei Magischen Tore",
+          "audioMin": 35.3
+        },
+        {
+          "n": "VII",
+          "title": "Die Stimme der Stille",
+          "audioMin": 27.85
+        },
+        {
+          "n": "VIII",
+          "title": "Im Gelichterland",
+          "audioMin": 29.41
+        },
+        {
+          "n": "IX",
+          "title": "Spukstadt",
+          "audioMin": 36.0
+        },
+        {
+          "n": "X",
+          "title": "Der Flug zum Elfenbeinturm",
+          "audioMin": 29.64
+        },
+        {
+          "n": "XI",
+          "title": "Die Kindliche Kaiserin",
+          "audioMin": 27.75
+        },
+        {
+          "n": "XII",
+          "title": "Der Alte vom Wandernden Berge",
+          "audioMin": 30.84
+        },
+        {
+          "n": "XIII",
+          "title": "Perelín, der Nachtwald",
+          "audioMin": 28.57
+        },
+        {
+          "n": "XIV",
+          "title": "Goab, die Wüste der Farben",
+          "audioMin": 31.62
+        },
+        {
+          "n": "XV",
+          "title": "Graógramán, der Bunte Tod",
+          "audioMin": 24.05
+        },
+        {
+          "n": "XVI",
+          "title": "Die Silberstadt Amargánth",
+          "audioMin": 42.6
+        },
+        {
+          "n": "XVII",
+          "title": "Ein Drache für Held Hynreck",
+          "audioMin": 42.39
+        },
+        {
+          "n": "XVIII",
+          "title": "Die Acharai",
+          "audioMin": 30.36
+        },
+        {
+          "n": "XIX",
+          "title": "Die Weggenossen",
+          "audioMin": 30.95
+        },
+        {
+          "n": "XX",
+          "title": "Die Sehende Hand",
+          "audioMin": 42.73
+        },
+        {
+          "n": "XXI",
+          "title": "Das Sternenkloster",
+          "audioMin": 38.18
+        },
+        {
+          "n": "XXII",
+          "title": "Die Schlacht um den Elfenbeinturm",
+          "audioMin": 49.64
+        },
+        {
+          "n": "XXIII",
+          "title": "Die Alte-Kaiser-Stadt",
+          "audioMin": 44.1
+        },
+        {
+          "n": "XXIV",
+          "title": "Dame Aiuóla",
+          "audioMin": 39.06
+        },
+        {
+          "n": "XXV",
+          "title": "Das Bergwerk der Bilder",
+          "audioMin": 27.71
+        },
+        {
+          "n": "XXVI",
+          "title": "Die Wasser des Lebens",
+          "audioMin": 38.34
+        }
+      ],
+      "audiobook": {
+        "service": "Spotify",
+        "title": "Die unendliche Geschichte",
+        "reader": "Gert Heidenreich",
+        "publisher": "Hörbuch Hamburg",
+        "released": "2013-02-22",
+        "unabridged": true,
+        "minutes": 906,
+        "length": "15 Std. 6 Min.",
+        "url": "https://open.spotify.com/show/1E8S0xJbLZglicHv7E2mSI",
+        "checked": "2026-11-04: Spotify-Hörbuch „Die unendliche Geschichte“, „Gelesen von Gert Heidenreich“, 22. Februar 2013, 15 Std. 6 Min. — die ungekürzte Lesung (Audible B00BM5F96W, 906 min, gleiche Kapitel). Kein Hörspiel (die Hörspiele auf Spotify sind eigene Alben).",
+        "chaptersNote": "Spotify zählt auch hier nur Tracks; die Kapitelanfänge (Zeit im Hörbuch) stehen in Audibles Kapitelmarken — vor dem ersten Tag den Track jedes Kapitels nachtragen."
+      }
     }
   ],
   "later": [

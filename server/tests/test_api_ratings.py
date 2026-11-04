@@ -52,18 +52,19 @@ def test_leicht_articles_from_the_homepage_newest_first_never_twice(b2, monkeypa
 
 
 def test_leicht_item_text_and_count_follow_his_ratings(b2, monkeypatch):
-    at(monkeypatch, datetime(2026, 11, 3, 7, 0, tzinfo=timezone.utc))      # W4 Di: nachrichtenleicht
-    lesen = b2.get("/api/today").json()["assignments"]["lesen"]
+    at(monkeypatch, datetime(2026, 10, 12, 7, 0, tzinfo=timezone.utc))     # W1 Mo: a podcast, then nachrichtenleicht
+    first = b2.get("/api/today").json()["assignments"]["lesen"]
+    assert first["kind"] == "clip" and first["audio"]
+    lesen = first["then"][0]
     assert lesen["kind"] == "news" and lesen["feed"] == "leicht" and lesen["source"] == "nachrichtenleicht.de"
-    # 30 of the 60 minutes (#27): 4 articles at 5 per 35 min; then a podcast
+    # 30 of the 60 minutes (#27): 4 articles at 5 per 35 min
     assert lesen["title"] == "nachrichtenleicht.de: die 4 neuesten Artikel" and lesen["minutes"] == 30
     assert lesen["text"].startswith("nachrichtenleicht.de (Deutschlandfunk, Nachrichten in Einfacher Sprache): die vier neuesten")
-    assert lesen["then"][0]["kind"] == "clip" and lesen["then"][0]["audio"]  # rolls: the first podcast not yet heard
-    ratings.save(date(2026, 11, 2), "lesen", {"item": "news:leicht:2026-11-02", "kind": "news", "label": "x", "book": None}, 100)
+    ratings.save(date(2026, 10, 9), "lesen", {"item": "news:leicht:2026-10-09", "kind": "news", "label": "x", "book": None}, 100)
     assert ratings.leicht_count() == 7 and ratings.leicht_count(30) == 6
-    ratings.save(date(2026, 11, 2), "lesen", {"item": "news:leicht:2026-11-02", "kind": "news", "label": "x", "book": None}, 40)
+    ratings.save(date(2026, 10, 9), "lesen", {"item": "news:leicht:2026-10-09", "kind": "news", "label": "x", "book": None}, 40)
     assert ratings.leicht_count() == 4 and ratings.leicht_count(30) == 3
-    assert b2.get("/api/today").json()["assignments"]["lesen"]["title"] == "nachrichtenleicht.de: die 3 neuesten Artikel"
+    assert b2.get("/api/today").json()["assignments"]["lesen"]["then"][0]["title"] == "nachrichtenleicht.de: die 3 neuesten Artikel"
 
 
 def test_materialcheck_covers_nachrichtenleicht(b2, monkeypatch):
@@ -187,16 +188,18 @@ def test_lesetest_40_moves_the_book_and_reads_nachrichtenleicht(b2, monkeypatch)
     lesen = t["assignments"]["lesen"]
     assert lesen["kind"] == "news" and lesen["feed"] == "leicht"
     assert lesen["text"].startswith("Statt Schirach: nachrichtenleicht.de")
-    assert lesen["mode"]["why"] == ("Schirach: 40 % im Lesetest → kommt nach Woche 4 wieder (neuer Lesetest Fr 13.11.), "
-                                    "bis dahin nachrichtenleicht")
-    # every Schirach day of weeks 2–3 is nachrichtenleicht now
-    for iso in ("2026-10-21", "2026-10-27", "2026-10-28"):
+    # #38: Schirach waits in the book queue now, behind Momo and QualityLand
+    assert lesen["mode"]["why"] == "Schirach: nach Momo und QualityLand, weiter mit „Glück“"
+    # its days before the queue are nachrichtenleicht; from week 2 Thursday on the queue reads Momo
+    it = by_block(b2.get("/api/materials", params={"today": "2026-10-21"}).json()["today"])["lesen"]
+    assert it["kind"] == "news" and it["feed"] == "leicht"
+    for iso in ("2026-10-27", "2026-10-28"):
         it = by_block(b2.get("/api/materials", params={"today": iso}).json()["today"])["lesen"]
-        assert it["kind"] == "news" and it["feed"] == "leicht", iso
-    # "Bald fällig" moves with the book: first day in the next pass (week 6), buy a week ahead
+        assert it["kind"] == "book" and it["bookId"] == "momo", iso
+    # "Bald fällig" moves with the book: its first day in the queue (the Lesetest on „Glück“), a week ahead
     v = next(n for n in b2.get("/api/materials").json()["notices"] if n["id"] == "schirach-verbrechen")
-    assert (v["firstDay"], v["by"], v["week"]) == ("2026-11-16", "2026-11-09", 6) and v["mode"]["mode"] == "spaeter"
-    assert t["tooHard"][0]["action"].startswith("Schirach: 40 % im Lesetest → kommt nach Woche 4 wieder")
+    assert (v["firstDay"], v["by"]) == ("2026-12-01", "2026-11-24") and v["mode"] is None
+    assert t["tooHard"][0]["action"] == "Schirach: nach Momo und QualityLand, weiter mit „Glück“."
 
 
 def test_no_lesetest_by_monday_9_reads_as_60(b2, monkeypatch):
@@ -221,7 +224,7 @@ def test_a_rating_after_9_counts_from_the_next_day(b2, monkeypatch):
     b2.post("/api/ratings", json={"block": "lesen", "pct": 40})
     assert b2.get("/api/today").json()["assignments"]["lesen"]["kind"] == "book"  # today stays as it was
     tue = by_block(b2.get("/api/materials").json()["next"])["lesen"]
-    assert tue["kind"] == "news" and tue["mode"]["why"].startswith("Schirach: 40 % am 19.10. → kommt nach Woche 4 wieder")
+    assert tue["kind"] == "news" and tue["mode"]["why"] == "Schirach: nach Momo und QualityLand, weiter mit „Glück“"  # #38
 
 
 @pytest.mark.parametrize("pct,mode", [(100, "frei"), (80, "frei"), (60, "nachschlagen"), (40, "spaeter"), (20, "spaeter")])
