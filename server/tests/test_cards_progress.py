@@ -58,6 +58,48 @@ def test_pace_only_after_30_timed_gewusst_reviews(isolated):
     assert nxt["timing"]["pace"] == 2.0 and nxt["timing"]["typicalMs"] == 2 * (1500 + 450 * nxt["timing"]["words"])
 
 
+def log_reveals(ms_list, words=8):
+    with db.tx() as conn:
+        for ms in ms_list:
+            conn.execute("INSERT INTO review_log(card_id, rating, reviewed_at, local_date, reveal_ms, auto, words, autoplay)"
+                         " VALUES ('core:0001', 3, ?, '2026-11-05', ?, 1, ?, 1)", (T0.isoformat(), ms, words))
+
+
+def test_pace_never_below_1_with_fast_and_0_ms_reveals(isolated):
+    """#39: sub-second reveals after the autoplay clip and 0-ms ones (during it) used to pull his
+    pace to 0.238 — an 8-word card was Schwer after 1.9 s. The defaults are now the strictest."""
+    log_reveals([0] * 18 + [400, 700, 900] * 40 + [5000] * 20)
+    with db.tx() as conn:
+        assert srs.pace(conn) == 1.0
+    nxt = srs.next_card(T0, SCHED)
+    assert nxt["timing"]["pace"] == 1.0 and nxt["timing"]["typicalMs"] == 1500 + 450 * nxt["timing"]["words"]
+
+
+def test_slow_reveals_still_make_it_more_lenient(isolated):
+    typical8 = 1500 + 450 * 8
+    log_reveals([round(1.8 * typical8)] * 31 + [round(1.2 * typical8)] * 10 + [round(2.5 * typical8)] * 10)
+    with db.tx() as conn:
+        assert srs.pace(conn) == pytest.approx(1.8)
+
+
+def test_0_ms_reveals_are_left_out_of_the_pace(isolated):
+    typical8 = 1500 + 450 * 8
+    log_reveals([0] * 100)  # many reveals during the clip: still fewer than 30 timed ones → default
+    with db.tx() as conn:
+        assert srs.pace(conn) == 1.0
+    log_reveals([2 * typical8] * 30)  # with the zeros counted the median would be 0
+    with db.tx() as conn:
+        assert srs.pace(conn) == 2.0
+    log_reveals([0] * 250)  # and they don't push the timed ones out of the last 200
+    with db.tx() as conn:
+        assert srs.pace(conn) == 2.0
+
+
+def test_8_words_at_the_default_pace():
+    t = srs.timing("Ich habe heute Morgen einen langen Brief geschrieben.")  # 8 words
+    assert (t["words"], t["easyMs"], t["hardMs"], t["pace"]) == (8, 3570, 8160, 1.0)
+
+
 # ── API: reveal time and auto are stored, capped at 60 s ──
 
 def test_reveal_ms_and_auto_are_stored_and_undo_still_works(isolated):

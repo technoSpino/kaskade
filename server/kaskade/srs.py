@@ -190,13 +190,15 @@ def counts(conn, at: datetime) -> dict:
 
 def pace(conn) -> float:
     """His reveal speed against the typical one: 1.0 until 30 timed "gewusst" reviews, then the
-    median over the last 200 — so Leicht/Gut/Schwer follow his own speed."""
+    median over the last 200 — so Leicht/Gut/Schwer follow his own speed.
+    #39: never below 1.0 (slower makes the thresholds more lenient, faster never stricter), and a
+    0-ms reveal (during the autoplay clip) is Leicht but says nothing about his speed."""
     rows = conn.execute(
-        "SELECT reveal_ms, words FROM review_log WHERE reveal_ms IS NOT NULL AND words IS NOT NULL AND rating >= 2"
+        "SELECT reveal_ms, words FROM review_log WHERE reveal_ms > 0 AND words IS NOT NULL AND rating >= 2"
         " ORDER BY id DESC LIMIT ?", (PACE_WINDOW,)).fetchall()
     if len(rows) < PACE_MIN_REVIEWS:
         return 1.0
-    return statistics.median(min(r["reveal_ms"], REVEAL_CAP_MS) / (BASE_MS + PER_WORD_MS * r["words"]) for r in rows)
+    return max(1.0, statistics.median(min(r["reveal_ms"], REVEAL_CAP_MS) / (BASE_MS + PER_WORD_MS * r["words"]) for r in rows))
 
 
 def words_in(sentence: str) -> int:
