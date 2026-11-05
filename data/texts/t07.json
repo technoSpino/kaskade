@@ -1,0 +1,74 @@
+{
+  "id": "t07",
+  "origin": "ai",
+  "title": "Ein Termin wird verschoben",
+  "level": "A2+",
+  "theme": "Arbeit",
+  "slot": "lesen",
+  "text": "Jonas Weber arbeitet in einem kleinen Büro in Hamburg. Am Freitag um 14 Uhr hat er einen wichtigen Termin mit einer Kundin, Frau Krüger. Er hat alles gut vorbereitet: die Zahlen, die Bilder und sogar Kekse für den Tisch.\n\nAm Donnerstagmorgen klingelt sein Telefon. Es ist Frau Krüger. „Herr Weber, es tut mir sehr leid, aber morgen kann ich leider nicht. Mein Sohn ist krank, und ich bleibe bei ihm zu Hause. Können wir den Termin verschieben?“ Jonas antwortet: „Natürlich, kein Problem. Wann haben Sie denn Zeit?“\n\nDas ist leichter gesagt als getan. Frau Krüger schlägt Montag vor, aber am Montag ist Jonas den ganzen Tag in Berlin. Er fragt nach Dienstag. Da hat sie schon zwei andere Termine. Am Mittwoch hat keiner von beiden Zeit. „Und nächsten Freitag?“, fragt Jonas. „Um 14 Uhr, wie morgen?“ Frau Krüger lacht. „Ja, das ist perfekt. Warum sind wir nicht gleich darauf gekommen?“\n\nJonas schreibt den neuen Termin in seinen Kalender. Dann schickt er Frau Krüger eine kurze E-Mail. So hat sie den Termin auch schriftlich. Am Ende fragt er seine Kollege Ben, ob sie auch mitkommen kann. Er sieht kurz nach und sagt: „Ja, da habe ich Zeit.“\n\nDie Kekse legt Jonas in den Schrank. Sie sollen dort eine Woche warten. Das ist jedenfalls sein Plan. Am Freitag sind nur noch drei Kekse übrig, und Ben sieht sehr unschuldig aus.",
+  "glossary": [
+    {
+      "term": "Kundin",
+      "gloss": "(female) client, customer",
+      "note": "die Kundin, -nen"
+    },
+    {
+      "term": "Kekse",
+      "gloss": "biscuits, cookies",
+      "note": "der Keks, -e"
+    },
+    {
+      "term": "Donnerstagmorgen",
+      "gloss": "Thursday morning",
+      "note": "der Donnerstagmorgen"
+    },
+    {
+      "term": "Mittwoch",
+      "gloss": "Wednesday",
+      "note": "der Mittwoch"
+    },
+    {
+      "term": "Kalender",
+      "gloss": "calendar, diary",
+      "note": "der Kalender, -"
+    },
+    {
+      "term": "schriftlich",
+      "gloss": "in writing"
+    },
+    {
+      "term": "Schrank",
+      "gloss": "cupboard",
+      "note": "der Schrank, Schränke"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum kann Frau Krüger am Freitag nicht kommen?",
+      "options": [
+        "Ihr Sohn ist krank.",
+        "Sie ist in Berlin.",
+        "Sie hat einen anderen Termin."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Wann ist der neue Termin?",
+      "options": [
+        "Am Montag",
+        "Am Dienstag",
+        "Am Freitag in einer Woche"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Was ist mit den Keksen passiert?",
+      "options": [
+        "Frau Krüger hat sie mitgenommen.",
+        "Ben hat wahrscheinlich viele gegessen.",
+        "Jonas hat sie weggeworfen."
+      ],
+      "correct": 1
+    }
+  ]
+}

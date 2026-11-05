@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Kaskade — Bücher</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F4F6}
+*{box-sizing:border-box}
+a{color:#3B2BB0}a:hover{color:#14161B}
+:focus-visible{outline:3px solid #5B3FD6;outline-offset:2px}
+header nav a:not([aria-current]):hover{background:#2A2E37 !important;color:#FFFFFF !important}
+button{font-family:inherit;cursor:pointer}
+a[data-btn="ghost"]:hover,button[data-btn="ghost"]:hover{background:#ECEEF2 !important}
+button[data-btn="primary"]:hover{background:#2E323C !important}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F3F4F6; color: #14161B; font-family: 'Archivo', system-ui, sans-serif; font-variant-numeric: tabular-nums">
+
+<header style="background: #14161B; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 6px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 24px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF; text-decoration: none; font-weight: 800; font-size: 19px; letter-spacing: -0.01em; min-height: 44px"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><rect x="1" y="2" width="6" height="18" rx="1" fill="#FFD23F"></rect><rect x="8" y="7" width="6" height="13" rx="1" fill="#FFFFFF"></rect><rect x="15" y="12" width="6" height="8" rx="1" fill="#FFFFFF"></rect></svg>Kaskade</a>
+<nav aria-label="Hauptnavigation" style="display: flex; flex-wrap: wrap; gap: 2px">
+<a href="Main.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Heute</a>
+<a href="Fahrplan.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Fahrplan</a>
+<a href="Bibliothek.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Bibliothek</a>
+<a href="Lesen.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Lesen</a>
+<a href="Hoeren.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Hören</a>
+<a href="Sprechen.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Sprechen</a>
+<a href="Schreiben.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Schreiben</a>
+<a href="Karten.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Karten</a>
+<a href="Buecher.dc.html" aria-current="page" style="color: #14161B; background: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 700; padding: 12px; border-radius: 8px; line-height: 20px">Bücher</a>
+</nav>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 10px">
+<span style="font-size: 13px; font-weight: 700; color: #14161B; background: #FFD23F; padding: 5px 10px; border-radius: 999px">Phase 2A</span>
+<span aria-label="Profil Matt" style="width: 34px; height: 34px; border-radius: 999px; background: #2A2E37; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px">M</span>
+</div>
+</div>
+</header>
+
+<main style="max-width: 1200px; margin: 0 auto; padding: 32px 24px 56px; display: flex; flex-direction: column; gap: 24px">
+
+<div style="min-width: 0">
+<h1 style="margin: 0; font-size: 40px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em">Deine Bücher</h1>
+<p style="margin: 10px 0 0; font-size: 17px; line-height: 1.5; color: #3D4350; max-width: 66ch">Die Bücher geben die Struktur, die App macht daraus Input: Texte in den Reader, Audio ins Hören-Lab, Grammatik als kurze Primer. Dateien aus den Verlagsportalen bleiben privat auf deinem Server.</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px">
+<article style="background: #FFFFFF; border: 2px solid #14161B; border-radius: 14px; padding: 19px; display: flex; gap: 16px">
+<div aria-hidden="true" style="flex: none; width: 56px; height: 76px; border-radius: 4px; background: #14161B; color: #FFD23F; display: flex; align-items: flex-end; padding: 6px; font-size: 11px; font-weight: 800">B1.1</div>
+<div style="min-width: 0">
+<p style="margin: 0; font-size: 12px; font-weight: 700; color: #5B6270">Klett · Kurs- und Übungsbuch</p>
+<h2 style="margin: 2px 0 0; font-size: 18px; font-weight: 800">Kontext B1.1</h2>
+<p style="margin: 6px 0 0; font-size: 13px; line-height: 1.5; color: #3D4350">Portal verbunden · Audio, Videos, Transkripte · <strong style="color: #14161B">im Kurs gehabt</strong></p>
+</div>
+</article>
+<article style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 20px; display: flex; gap: 16px">
+<div aria-hidden="true" style="flex: none; width: 56px; height: 76px; border-radius: 4px; background: #3D4350; color: #FFFFFF; display: flex; align-items: flex-end; padding: 6px; font-size: 11px; font-weight: 800">B1.2</div>
+<div style="min-width: 0">
+<p style="margin: 0; font-size: 12px; font-weight: 700; color: #5B6270">Klett · Kurs- und Übungsbuch</p>
+<h2 style="margin: 2px 0 0; font-size: 18px; font-weight: 800">Kontext B1.2</h2>
+<p style="margin: 6px 0 0; font-size: 13px; line-height: 1.5; color: #3D4350">Portal verbunden · Audio, Videos, Transkripte · <strong style="color: #14161B">im Kurs gehabt</strong></p>
+</div>
+</article>
+<article style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 20px; display: flex; gap: 16px">
+<div aria-hidden="true" style="flex: none; width: 56px; height: 76px; border-radius: 4px; background: #FFD23F; color: #14161B; display: flex; align-items: flex-end; padding: 6px; font-size: 10px; font-weight: 800">A1–B1</div>
+<div style="min-width: 0">
+<p style="margin: 0; font-size: 12px; font-weight: 700; color: #5B6270">Cornelsen · Übungsgrammatik</p>
+<h2 style="margin: 2px 0 0; font-size: 18px; font-weight: 800">Grammatik aktiv</h2>
+<p style="margin: 6px 0 0; font-size: 13px; line-height: 1.5; color: #3D4350">Webcode fehlt noch · Themen zugeordnet · Foto-Check für Übungen</p>
+</div>
+</article>
+</div>
+
+<section aria-labelledby="portal-h" style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px">
+<h2 id="portal-h" style="margin: 0; font-size: 22px; font-weight: 800">Verlagsportale</h2>
+<p style="margin: 0; font-size: 14px; color: #3D4350">Deine Lizenzen, nur für dich — nichts davon wird öffentlich</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; margin-top: 16px">
+<div style="border: 1px solid #DCDFE5; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px">
+<p style="margin: 0; font-size: 17px; font-weight: 800">Klett · Kontext B1.1 + B1.2</p>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 700; color: #1F5F2A; background: #E8F5E9; padding: 4px 10px; border-radius: 999px"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Verbunden</span>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<li style="display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 10px"><strong>Audios</strong><span style="color: #3D4350">→ Hören-Lab und Wiederhören-Feed</span></li>
+<li style="display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 10px"><strong>Videos</strong><span style="color: #3D4350">→ Reader mit Untertiteln</span></li>
+<li style="display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 10px"><strong>Transkripte</strong><span style="color: #3D4350">→ Text und Ton synchron, ohne Whisper</span></li>
+<li style="display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 10px"><strong>Lösungen</strong><span style="color: #3D4350">→ KI prüft gegen den offiziellen Schlüssel (wenn angeboten)</span></li>
+</ul>
+<p style="margin: 0; padding-top: 10px; border-top: 1px solid #ECEEF2; font-size: 13px; color: #5B6270">Abgleich nachts auf deinem Server · zuletzt heute 03:00</p>
+</div>
+<div style="border: 1px solid #DCDFE5; border-radius: 12px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px">
+<p style="margin: 0; font-size: 17px; font-weight: 800">Cornelsen · Grammatik aktiv</p>
+<span style="font-size: 13px; font-weight: 700; color: #6B4A00; background: #FFF4C2; padding: 4px 10px; border-radius: 999px">Webcode nötig</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 8px">
+<label for="webcode" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Webcode aus dem Buch</label>
+<input id="webcode" type="text" placeholder="Webcode aus dem Buch" style="flex: 999 1 180px; min-width: 0; min-height: 44px; padding: 0 12px; font: inherit; font-size: 14px; border: 1px solid #C5CAD3; border-radius: 10px; color: #14161B">
+<button type="button" data-btn="primary" style="flex: 1 1 auto; min-height: 44px; padding: 0 16px; border: 0; border-radius: 10px; background: #14161B; color: #FFFFFF; font-weight: 700; font-size: 14px">Verbinden</button>
+</div>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px; font-size: 14px">
+<li style="display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 10px"><strong>Audios</strong><span style="color: #3D4350">→ Aussprache- und Strukturübungen im Hören-Lab</span></li>
+<li style="display: grid; grid-template-columns: 130px minmax(0, 1fr); gap: 10px"><strong>Übungsseiten</strong><span style="color: #3D4350">→ Foto deiner ausgefüllten Seite, KI prüft</span></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="kap-h" style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px">
+<h2 id="kap-h" style="margin: 0; font-size: 22px; font-weight: 800">Kontext B1.1 · Kapitel 3</h2>
+<p style="margin: 0; font-size: 13px; color: #5B6270">Beispiel-Zuordnung — die echten Inhalte kommen aus deinem Scan</p>
+</div>
+<p style="margin: 6px 0 18px; font-size: 15px; color: #3D4350">Im Kurs gehabt — deshalb Wiederholung statt neuer Stoff: Wortschatz prüfen, Audio als Input, Grammatik nur dort, wo du Fehler machst.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px">
+
+<div style="border: 1px solid #DCDFE5; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 12px; font-weight: 800; color: #5B6270; letter-spacing: 0.06em">1 · VORBEREITEN</p>
+<p style="margin: 0; font-size: 16px; font-weight: 800">Wortschatz-Vorschau</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #3D4350">38 Wörter im Kapitel · 21 kennst du schon · <strong style="color: #14161B">17 neu</strong>, jeweils mit dem Satz aus dem Buch</p>
+<button type="button" data-btn="primary" style="margin-top: auto; min-height: 44px; border: 0; border-radius: 10px; background: #14161B; color: #FFFFFF; font-weight: 700; font-size: 14px">17 Karten hinzufügen</button>
+</div>
+
+<div style="border: 1px solid #DCDFE5; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 12px; font-weight: 800; color: #5B6270; letter-spacing: 0.06em">2 · VERSTEHEN</p>
+<p style="margin: 0; font-size: 16px; font-weight: 800">Texte und Audio</p>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px">
+<li style="display: flex; justify-content: space-between; gap: 8px"><a href="Lesen.dc.html" style="font-weight: 700">Lesetext</a><span style="color: #3D4350">94 % · Reader</span></li>
+<li style="display: flex; justify-content: space-between; gap: 8px"><a href="Hoeren.dc.html" style="font-weight: 700">Hörtext 1</a><span style="color: #3D4350">Transkript · Diktat</span></li>
+<li style="display: flex; justify-content: space-between; gap: 8px"><a href="Hoeren.dc.html" style="font-weight: 700">Hörtext 2</a><span style="color: #3D4350">89 % · Loop</span></li>
+</ul>
+<p style="margin: auto 0 0; font-size: 13px; color: #5B6270">Audio wird danach Teil der Wiederhören-Playlist.</p>
+</div>
+
+<div style="border: 1px solid #DCDFE5; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 12px; font-weight: 800; color: #5B6270; letter-spacing: 0.06em">3 · KURZ GRAMMATIK</p>
+<p style="margin: 0; font-size: 16px; font-weight: 800">Relativsätze</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #3D4350">Primer (6 min) + passende Einheit in Grammatik aktiv. Übungen im Buch machen, Seite fotografieren — die KI prüft deine Antworten.</p>
+<button type="button" data-btn="ghost" style="margin-top: auto; min-height: 44px; border: 1px solid #C5CAD3; border-radius: 10px; background: #FFFFFF; color: #14161B; font-weight: 700; font-size: 14px; display: inline-flex; align-items: center; justify-content: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"></path><circle cx="12" cy="13" r="3.5"></circle></svg>Übungsseite prüfen</button>
+</div>
+
+<div style="border: 1px dashed #C5CAD3; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 10px; background: #F7F8FA">
+<p style="margin: 0; font-size: 12px; font-weight: 800; color: #5B6270; letter-spacing: 0.06em">4 · ANWENDEN · AB PHASE 4</p>
+<p style="margin: 0; font-size: 16px; font-weight: 800">Aufgaben aus dem Buch</p>
+<ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6; color: #3D4350">
+<li>Schreibaufgabe → <a href="Schreiben.dc.html">Tagebuch mit Korrektur</a></li>
+<li>Sprechaufgabe → <a href="Sprechen.dc.html">Rollenspiel mit KI</a></li>
+</ul>
+<p style="margin: auto 0 0; font-size: 13px; color: #5B6270">Jetzt schon möglich, aber noch kein Schwerpunkt.</p>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="gram-h" style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px">
+<h2 id="gram-h" style="margin: 0; font-size: 20px; font-weight: 800">Welche Grammatik lohnt sich jetzt?</h2>
+<p style="margin: 0; font-size: 14px; color: #3D4350">Im Kurs gelernt heißt nicht sicher: Input + deine Fehler entscheiden</p>
+</div>
+<div style="overflow-x: auto; margin-top: 14px">
+<table style="width: 100%; min-width: 640px; border-collapse: collapse; font-size: 15px">
+<thead>
+<tr style="text-align: left; color: #5B6270; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em">
+<th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #DCDFE5">Thema</th>
+<th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #DCDFE5">Niveau</th>
+<th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #DCDFE5; text-align: right">Im Input (30 T.)</th>
+<th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #DCDFE5; text-align: right">Deine Fehler</th>
+<th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #DCDFE5">Im Kurs</th>
+<th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #DCDFE5">Empfehlung</th>
+</tr>
+</thead>
+<tbody>
+<tr style="background: #FFF4C2"><th scope="row" style="text-align: left; padding: 11px 10px; font-weight: 800">Wortstellung</th><td style="padding: 11px 10px">A2</td><td style="padding: 11px 10px; text-align: right">140×</td><td style="padding: 11px 10px; text-align: right; font-weight: 800">14</td><td style="padding: 11px 10px">ja</td><td style="padding: 11px 10px; font-weight: 800">Jetzt gezielt üben</td></tr>
+<tr><th scope="row" style="text-align: left; padding: 11px 10px; border-bottom: 1px solid #ECEEF2">Adjektivendungen</th><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2">A2</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2; text-align: right">96×</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2; text-align: right; font-weight: 800">11</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2">ja</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2">Wiederholen · deine Tabellen</td></tr>
+<tr><th scope="row" style="text-align: left; padding: 11px 10px; border-bottom: 1px solid #ECEEF2">Relativsätze</th><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2">B1</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2; text-align: right">31×</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2; text-align: right">0</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2">ja</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2">Läuft — weiterlesen</td></tr>
+<tr><th scope="row" style="text-align: left; padding: 11px 10px; border-bottom: 1px solid #ECEEF2">Verben mit Präpositionen</th><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2">B1</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2; text-align: right">15×</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2; text-align: right">2</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2">ja</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2">Nächster Primer</td></tr>
+<tr><th scope="row" style="text-align: left; padding: 11px 10px; border-bottom: 1px solid #ECEEF2">Passiv</th><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2">B1</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2; text-align: right">12×</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2; text-align: right">0</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2">ja</td><td style="padding: 11px 10px; border-bottom: 1px solid #ECEEF2">Bald</td></tr>
+<tr><th scope="row" style="text-align: left; padding: 11px 10px">Konjunktiv II</th><td style="padding: 11px 10px">B1</td><td style="padding: 11px 10px; text-align: right">8×</td><td style="padding: 11px 10px; text-align: right">0</td><td style="padding: 11px 10px">ja</td><td style="padding: 11px 10px; color: #5B6270">Später — kommt noch selten vor</td></tr>
+</tbody>
+</table>
+</div>
+<p style="margin: 14px 0 0; font-size: 14px; color: #3D4350">Deine alten Seiten (Deklination, Modalverben, Perfekt, Präpositionen) bleiben als Nachschlagewerk — verlinkt aus jedem Primer.</p>
+</section>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1250}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

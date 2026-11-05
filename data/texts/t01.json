@@ -1,0 +1,80 @@
+{
+  "id": "t01",
+  "origin": "ai",
+  "title": "Ärger mit der Heizung",
+  "level": "A2+",
+  "theme": "Wohnen",
+  "slot": "input",
+  "text": "Es ist Montagmorgen im November. Lena steht auf, und es ist sehr kalt in der Wohnung. Sie geht ins Bad und will duschen. Aber das Wasser bleibt kalt. Dann legt sie die Hand an die Heizung. Auch die Heizung ist kalt. „Nicht schon wieder!“, denkt Lena.\n\nSie zieht einen dicken Pullover an und macht sich einen Tee. Dann ruft sie den Hausmeister an. Er heißt Herr Brandt und wohnt im Erdgeschoss. Leider geht er nicht ans Telefon. Lena schreibt ihm eine Nachricht: „Guten Morgen, Herr Brandt! In meiner Wohnung funktioniert die Heizung nicht. Es gibt auch kein warmes Wasser. Können Sie bitte heute noch kommen?“\n\nAuf der Treppe trifft sie ihre Nachbarin, Frau Kaya. Auch bei ihr ist alles kalt. „Ich habe gestern schon beim Hausmeister angerufen“, sagt Frau Kaya. „Er hat gesagt, er kümmert sich darum. Aber passiert ist nichts.“\n\nLena muss zur Arbeit. Im Büro ist es zum Glück schön warm. Am Mittag bekommt sie endlich eine Antwort von Herrn Brandt: „Das Problem liegt im Keller. Ein Mann von einer Firma kommt heute um vier Uhr. Ab heute Abend ist alles wieder in Ordnung.“\n\nAm Abend kommt Lena nach Hause. Sie öffnet die Tür und lächelt. Die Wohnung ist warm, und aus der Dusche kommt heißes Wasser. Später klopft es an der Tür. Frau Kaya steht da, mit einem Stück Kuchen in der Hand. „Zum Feiern“, sagt sie. „Endlich müssen wir nicht mehr frieren!“ Die beiden Frauen trinken zusammen Tee und lachen. Vielleicht ist der Ärger auch für etwas gut: Jetzt kennen sie sich besser.",
+  "glossary": [
+    {
+      "term": "Bad",
+      "gloss": "bathroom",
+      "note": "das Bad, die Bäder"
+    },
+    {
+      "term": "Heizung",
+      "gloss": "heating",
+      "note": "die Heizung, -en"
+    },
+    {
+      "term": "Erdgeschoss",
+      "gloss": "ground floor",
+      "note": "das Erdgeschoss, -e"
+    },
+    {
+      "term": "Pullover",
+      "gloss": "jumper, sweater",
+      "note": "der Pullover, -"
+    },
+    {
+      "term": "Treppe",
+      "gloss": "stairs, staircase",
+      "note": "die Treppe, -n"
+    },
+    {
+      "term": "Nachbarin",
+      "gloss": "(female) neighbour",
+      "note": "die Nachbarin, -nen"
+    },
+    {
+      "term": "November",
+      "gloss": "November",
+      "note": "der November"
+    },
+    {
+      "term": "frieren",
+      "gloss": "to be cold, to freeze",
+      "note": "hat gefroren"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Was funktioniert am Montagmorgen nicht?",
+      "options": [
+        "Das Telefon",
+        "Die Heizung und das warme Wasser",
+        "Die Tür"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Wo liegt das Problem?",
+      "options": [
+        "Im Keller",
+        "Im Bad",
+        "Bei Frau Kaya"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Was bringt Frau Kaya am Abend mit?",
+      "options": [
+        "Einen Tee",
+        "Einen Pullover",
+        "Ein Stück Kuchen"
+      ],
+      "correct": 2
+    }
+  ]
+}

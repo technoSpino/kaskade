@@ -333,3 +333,7 @@ The platform is successful when:
 - **Tailwind CSS docs:** https://tailwindcss.com/
 - **Pinia docs:** https://pinia.vuejs.org/
 - **Vite docs:** https://vitejs.dev/
+
+## Kaskade (branch `kaskade`, in progress)
+
+This branch turns the app into **Kaskade**, a Refold-style A2/B1→B2 learning app with a FastAPI backend on the Hetzner box. The build brief, hard rules and milestones are in `docs/kaskade/TASK.md`; progress is tracked in `docs/kaskade/PROGRESS.md`; design mockups are in `design/kaskade-mockups/`. The repo is public — never commit book content, exam material, third-party media, user data or secrets.

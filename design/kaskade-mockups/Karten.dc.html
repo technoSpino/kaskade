@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Kaskade — Karten</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F4F6}
+*{box-sizing:border-box}
+a{color:#3B2BB0}a:hover{color:#14161B}
+:focus-visible{outline:3px solid #5B3FD6;outline-offset:2px}
+header nav a:not([aria-current]):hover{background:#2A2E37 !important;color:#FFFFFF !important}
+button{font-family:inherit;cursor:pointer}
+button[data-rate]:hover{background:#ECEEF2 !important}
+button[data-btn="primary"]:hover{background:#2E323C !important}
+kbd{font-family:inherit}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F3F4F6; color: #14161B; font-family: 'Archivo', system-ui, sans-serif; font-variant-numeric: tabular-nums">
+
+<header style="background: #14161B; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 6px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 24px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF; text-decoration: none; font-weight: 800; font-size: 19px; letter-spacing: -0.01em; min-height: 44px"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><rect x="1" y="2" width="6" height="18" rx="1" fill="#FFD23F"></rect><rect x="8" y="7" width="6" height="13" rx="1" fill="#FFFFFF"></rect><rect x="15" y="12" width="6" height="8" rx="1" fill="#FFFFFF"></rect></svg>Kaskade</a>
+<nav aria-label="Hauptnavigation" style="display: flex; flex-wrap: wrap; gap: 2px">
+<a href="Main.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Heute</a>
+<a href="Fahrplan.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Fahrplan</a>
+<a href="Bibliothek.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Bibliothek</a>
+<a href="Lesen.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Lesen</a>
+<a href="Hoeren.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Hören</a>
+<a href="Sprechen.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Sprechen</a>
+<a href="Schreiben.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Schreiben</a>
+<a href="Karten.dc.html" aria-current="page" style="color: #14161B; background: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 700; padding: 12px; border-radius: 8px; line-height: 20px">Karten</a>
+<a href="Buecher.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Bücher</a>
+</nav>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 10px">
+<span style="font-size: 13px; font-weight: 700; color: #14161B; background: #FFD23F; padding: 5px 10px; border-radius: 999px">Phase 2A</span>
+<span aria-label="Profil Matt" style="width: 34px; height: 34px; border-radius: 999px; background: #2A2E37; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px">M</span>
+</div>
+</div>
+</header>
+
+<main style="max-width: 1200px; margin: 0 auto; padding: 28px 24px 56px; display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+
+<div style="flex: 999 1 560px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px">
+<h1 style="margin: 0; font-size: 32px; font-weight: 800; letter-spacing: -0.02em">Karten</h1>
+<p style="margin: 0; font-size: 15px; color: #3D4350"><strong style="color: #14161B">{{count}} / 23</strong> heute · 09:00–09:20 im Block</p>
+</div>
+<div style="height: 6px; background: #DCDFE5; border-radius: 3px"><div style="{{barStyle}}"></div></div>
+
+<article style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 18px; padding: 32px 40px; min-height: 420px; display: flex; flex-direction: column; gap: 22px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px">
+<span style="font-size: 13px; font-weight: 700; color: #5B6270; text-transform: uppercase; letter-spacing: 0.06em">{{card.source}}</span>
+<button type="button" aria-label="Original-Audio abspielen (Taste A)" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid #C5CAD3; background: #FFFFFF; color: #14161B; font-weight: 700; font-size: 14px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9z"></path><path d="M16.5 8.5a5 5 0 0 1 0 7"></path></svg>Audio <kbd style="font-size: 12px; color: #5B6270; border: 1px solid #C5CAD3; border-radius: 4px; padding: 0 5px">A</kbd></button>
+</div>
+<p style="margin: 0; font-family: 'Literata', Georgia, serif; font-size: 32px; line-height: 1.5">{{card.pre}}<mark style="background: #FFE27A; color: #14161B; padding: 0 5px; border-radius: 4px">{{card.target}}</mark>{{card.post}}</p>
+<sc-if value="{{hidden}}" hint-placeholder-val="{{true}}">
+<p style="margin: auto 0 0; font-size: 15px; color: #5B6270">Verstehst du den ganzen Satz? Einmal laut mitsprechen, dann aufdecken.</p>
+</sc-if>
+<sc-if value="{{revealed}}" hint-placeholder-val="{{false}}">
+<div style="border-top: 1px solid #ECEEF2; padding-top: 20px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px">
+<div style="display: flex; flex-direction: column; gap: 6px">
+<p style="margin: 0; font-size: 24px; font-weight: 800">{{card.lemma}}</p>
+<p style="margin: 0; font-size: 18px; color: #3D4350">„{{card.gloss}}“</p>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.5; color: #5B6270">{{card.en}}</p>
+</div>
+<div style="display: flex; gap: 12px; align-items: flex-start; background: #F7F8FA; border-radius: 12px; padding: 14px">
+<span style="{{card.badgeStyle}}">{{card.c}}</span>
+<p style="margin: 0; font-size: 15px; line-height: 1.5">{{card.note}}</p>
+</div>
+</div>
+</sc-if>
+</article>
+
+<sc-if value="{{hidden}}" hint-placeholder-val="{{true}}">
+<button type="button" data-btn="primary" onClick="{{reveal}}" style="min-height: 60px; border: 0; border-radius: 14px; background: #14161B; color: #FFFFFF; font-weight: 800; font-size: 18px; display: flex; align-items: center; justify-content: center; gap: 12px">Antwort zeigen <kbd style="font-size: 13px; font-weight: 700; color: #C9CDD6; border: 1px solid #5B6270; border-radius: 5px; padding: 1px 8px">Leertaste</kbd></button>
+</sc-if>
+<sc-if value="{{revealed}}" hint-placeholder-val="{{false}}">
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px">
+<button type="button" data-rate="1" onClick="{{next}}" style="min-height: 64px; border: 1px solid #C5CAD3; border-radius: 12px; background: #FFFFFF; color: #14161B; font-weight: 800; font-size: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span><kbd style="font-size: 12px; color: #5B6270">1</kbd> Nochmal</span><span style="font-size: 13px; font-weight: 500; color: #5B6270">10 Min</span></button>
+<button type="button" data-rate="1" onClick="{{next}}" style="min-height: 64px; border: 1px solid #C5CAD3; border-radius: 12px; background: #FFFFFF; color: #14161B; font-weight: 800; font-size: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span><kbd style="font-size: 12px; color: #5B6270">2</kbd> Schwer</span><span style="font-size: 13px; font-weight: 500; color: #5B6270">2 Tage</span></button>
+<button type="button" data-btn="primary" onClick="{{next}}" style="min-height: 64px; border: 0; border-radius: 12px; background: #14161B; color: #FFFFFF; font-weight: 800; font-size: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span><kbd style="font-size: 12px; color: #C9CDD6">3</kbd> Gut</span><span style="font-size: 13px; font-weight: 500; color: #C9CDD6">5 Tage</span></button>
+<button type="button" data-rate="1" onClick="{{next}}" style="min-height: 64px; border: 1px solid #C5CAD3; border-radius: 12px; background: #FFFFFF; color: #14161B; font-weight: 800; font-size: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px"><span><kbd style="font-size: 12px; color: #5B6270">4</kbd> Leicht</span><span style="font-size: 13px; font-weight: 500; color: #5B6270">9 Tage</span></button>
+</div>
+</sc-if>
+<p style="margin: 0; font-size: 13px; color: #5B6270">Tastatur: Leertaste aufdecken · 1–4 bewerten · A Audio · E Karte bearbeiten · Z rückgängig</p>
+</div>
+
+<aside aria-label="Sitzung" style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<section aria-labelledby="today-h" style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 20px">
+<h2 id="today-h" style="margin: 0; font-size: 17px; font-weight: 800">Heute fällig</h2>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 12px">
+<div><p style="margin: 0; font-size: 28px; font-weight: 800">15</p><p style="margin: 0; font-size: 13px; color: #3D4350">Wiederholungen</p></div>
+<div><p style="margin: 0; font-size: 28px; font-weight: 800">8</p><p style="margin: 0; font-size: 13px; color: #3D4350">neue Sätze</p></div>
+</div>
+<p style="margin: 14px 0 0; padding-top: 12px; border-top: 1px solid #ECEEF2; font-size: 14px; color: #3D4350">FSRS-Ziel: <strong style="color: #14161B">90 % behalten</strong> · letzte 30 Tage: 91 %</p>
+</section>
+
+<section aria-labelledby="src-h" style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 20px">
+<h2 id="src-h" style="margin: 0 0 10px; font-size: 17px; font-weight: 800">Woher die Karten kommen</h2>
+<ul style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px">
+<li style="display: flex; justify-content: space-between"><span>KI-Texte</span><strong>9</strong></li>
+<li style="display: flex; justify-content: space-between"><span>Videos</span><strong>6</strong></li>
+<li style="display: flex; justify-content: space-between"><span>Podcasts und Nachrichten</span><strong>4</strong></li>
+<li style="display: flex; justify-content: space-between"><span>Korrekturen aus dem Tagebuch</span><strong>4</strong></li>
+</ul>
+</section>
+
+<section aria-labelledby="types-h" style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 20px">
+<h2 id="types-h" style="margin: 0 0 10px; font-size: 17px; font-weight: 800">Kartentypen</h2>
+<ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.6; color: #3D4350">
+<li><strong style="color: #14161B">Satzkarte</strong> — ein neues Wort, markiert im echten Satz</li>
+<li><strong style="color: #14161B">Lückenkarte</strong> — aus deinen Schreibfehlern</li>
+<li><strong style="color: #14161B">Hörkarte</strong> — nur Audio, ab Phase 3</li>
+</ul>
+</section>
+
+<section aria-labelledby="leech-h" style="background: #FFF4C2; border-radius: 14px; padding: 18px 20px">
+<h2 id="leech-h" style="margin: 0; font-size: 15px; font-weight: 800">Immer wieder vergessen?</h2>
+<p style="margin: 6px 0 0; font-size: 14px; line-height: 1.5; color: #3D4350">Nach 4× „Nochmal“ wird die Karte pausiert. Sie kommt mit einem neuen Beispielsatz zurück, sobald das Wort wieder im Input auftaucht.</p>
+</section>
+</aside>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":950}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { idx: 0, revealed: false };
+  }
+  renderVals() {
+    const COL = { N: '#0D47A1', A: '#B71C1C', D: '#1B5E20', G: '#8A4100' };
+    const TINT = { N: '#E3F2FD', A: '#FFEBEE', D: '#E8F5E9', G: '#FFF3E0' };
+    const CARDS = [
+      { source: 'KI-Text · Ärger mit der Heizung', pre: 'Gestern habe ich ihn endlich im ', target: 'Treppenhaus', post: ' getroffen.', lemma: 'das Treppenhaus · die Treppenhäuser', gloss: 'stairwell', c: 'D', note: 'im = in dem. Wo? → Wechselpräposition mit Dativ.', en: 'Yesterday I finally ran into him in the stairwell.' },
+      { source: 'Podcast · gestern gemined', pre: 'Das ist der Film, den ich dir ', target: 'empfohlen', post: ' habe.', lemma: 'empfehlen · empfahl · hat empfohlen', gloss: 'to recommend', c: 'D', note: 'jemandem (Dativ: dir) etwas (Akkusativ: den Film) empfehlen.', en: 'That is the film I recommended to you.' },
+      { source: 'Nachrichten · Mittwoch', pre: 'Wegen des ', target: 'Streiks', post: ' fahren heute keine Züge.', lemma: 'der Streik · die Streiks', gloss: 'strike', c: 'G', note: 'wegen + Genitiv: der Streik → des Streiks (maskulin: -s).', en: 'Because of the strike, no trains are running today.' }
+    ];
+    const raw = CARDS[this.state.idx % CARDS.length];
+    const card = Object.assign({}, raw, {
+      badgeStyle: 'flex: none; width: 32px; height: 32px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 15px; color: ' + COL[raw.c] + '; background: ' + TINT[raw.c] + ';'
+    });
+    const count = Math.min(9 + this.state.idx, 23);
+    return {
+      card: card,
+      count: count,
+      barStyle: 'height: 6px; background: #14161B; border-radius: 3px; width: ' + Math.round((count / 23) * 100) + '%;',
+      hidden: !this.state.revealed,
+      revealed: this.state.revealed,
+      reveal: () => this.setState({ revealed: true }),
+      next: () => this.setState({ idx: this.state.idx + 1, revealed: false })
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+{
+  "about": "Original B1-style reading practice for Kaskade (not real exam material).",
+  "items": [
+    {
+      "id": "l1",
+      "origin": "ai",
+      "title": "Drei Monate in Leipzig",
+      "kind": "richtig-falsch",
+      "minutes": 10,
+      "instructions": "Lies den Text. Sind die Aussagen richtig oder falsch?",
+      "text": "Seit genau drei Monaten wohne ich jetzt in Leipzig, und viele von euch haben mich gefragt, wie es mir hier geht. Deshalb schreibe ich heute endlich wieder einen Beitrag.\n\nAls mir meine Firma im Frühling angeboten hat, in die neue Filiale nach Leipzig zu wechseln, war ich zuerst unsicher. In Kassel hatte ich meine Familie, meine Freunde und meinen Volleyballverein. Aber die Stelle war interessant, und ich wollte endlich mehr Verantwortung übernehmen. Also habe ich Ja gesagt.\n\nAm schwierigsten war die Wohnungssuche. Ich habe mir in zwei Wochen elf Wohnungen angesehen, und bei den meisten Besichtigungen waren schon zwanzig andere Leute da. Am Ende hatte ich Glück: Eine Kollegin hat mir erzählt, dass in ihrem Haus eine Zweizimmerwohnung frei wird. Die Wohnung ist nicht besonders groß, aber hell, und ich kann mit dem Fahrrad in fünfzehn Minuten zur Arbeit fahren.\n\nIn den ersten Wochen habe ich mich oft einsam gefühlt. Nach der Arbeit saß ich allein in meiner Wohnung und habe mit meinen Freunden in Kassel telefoniert. Dann habe ich beschlossen, etwas zu ändern. Ich habe im Internet einen Volleyballverein gefunden, der neue Mitglieder sucht. Beim ersten Training war ich ziemlich nervös, aber die Leute waren sehr offen und haben mich sofort zum Grillen am Wochenende eingeladen.\n\nInzwischen fühle ich mich in Leipzig fast wie zu Hause. Natürlich vermisse ich meine Eltern, aber sie wollen mich im Dezember besuchen, wenn der Weihnachtsmarkt geöffnet ist. Wenn ich heute noch einmal entscheiden müsste, würde ich wieder umziehen. Mein Tipp für alle, die in eine neue Stadt ziehen: Wartet nicht, bis die anderen auf euch zukommen. Sucht euch ein Hobby und geht unter Leute!\n\nBis bald,\neure Jana",
+      "questions": [
+        {"id": "l1-1", "statement": "Jana hat sich sofort über das Angebot ihrer Firma gefreut.", "correct": false},
+        {"id": "l1-2", "statement": "Bei der Wohnungssuche hatte Jana viel Konkurrenz.", "correct": true},
+        {"id": "l1-3", "statement": "Jana hat ihre Wohnung über eine Anzeige im Internet gefunden.", "correct": false},
+        {"id": "l1-4", "statement": "Mit dem Fahrrad braucht Jana etwa eine Viertelstunde zur Arbeit.", "correct": true},
+        {"id": "l1-5", "statement": "In ihrem neuen Volleyballverein wurde Jana freundlich aufgenommen.", "correct": true},
+        {"id": "l1-6", "statement": "Janas Eltern haben sie schon in Leipzig besucht.", "correct": false}
+      ]
+    },
+    {
+      "id": "l2",
+      "origin": "ai",
+      "title": "Sonntags in die Bibliothek",
+      "kind": "mc",
+      "minutes": 12,
+      "instructions": "Lies den Text und die Aufgaben. Wähle die richtige Lösung: a, b oder c.",
+      "text": "Wiesenbrück – Seit Anfang September ist die Stadtbibliothek von Wiesenbrück auch am Sonntag geöffnet, und zwar von 11 bis 17 Uhr. Damit ist sie eine der ersten Bibliotheken in der Region, die ihre Türen an sieben Tagen in der Woche öffnen. Nach den ersten fünf Wochen ist Bibliotheksleiterin Petra Kallweit sehr zufrieden: „Am Sonntag kommen fast doppelt so viele Besucher wie an einem normalen Wochentag.“\n\nDie Idee entstand vor zwei Jahren bei einer Umfrage unter den Einwohnern. Viele Berufstätige hatten damals geschrieben, dass sie unter der Woche keine Zeit für die Bibliothek haben, weil sie genau dann arbeiten, wenn die Bibliothek geöffnet ist. Auch Familien wünschten sich einen Ort, an dem man am Wochenende gemeinsam Zeit verbringen kann, ohne Geld auszugeben.\n\nGanz einfach war die Umsetzung aber nicht. Da Sonntagsarbeit teurer ist, musste der Stadtrat zusätzliches Geld bewilligen. Außerdem wollte man die festen Mitarbeiterinnen und Mitarbeiter nicht an jedem Wochenende einsetzen. Deshalb arbeitet die Bibliothek jetzt mit einem Modell, das in anderen Ländern schon erfolgreich ausprobiert wurde: Am Sonntag ist nur eine Bibliothekarin im Haus. Die Ausleihe und die Rückgabe funktionieren über Automaten, und ehrenamtliche Helfer aus dem Förderverein beantworten einfache Fragen.\n\nBesonders beliebt ist das neue Sonntagsprogramm für Kinder. Um 14 Uhr wird jede Woche eine Geschichte vorgelesen, danach dürfen die Kinder malen oder basteln. „Für uns ist das ein fester Termin geworden“, sagt Markus Hensel, Vater von zwei Töchtern. „Früher saßen wir sonntags meistens nur zu Hause vor dem Fernseher.“\n\nNicht alle sind von der neuen Regelung begeistert. Die Kirchengemeinde ist der Meinung, dass der Sonntag ein Ruhetag bleiben sollte. Kallweit versteht diese Sorge, sieht die Bibliothek aber gerade als einen ruhigen Ort: „Bei uns wird nicht eingekauft. Hier liest man, trifft sich und lernt.“\n\nOb es die Sonntagsöffnung auch im nächsten Jahr gibt, ist noch nicht sicher. Der Stadtrat will im März darüber entscheiden, wenn die Besucherzahlen der ersten sechs Monate vorliegen.",
+      "questions": [
+        {
+          "id": "l2-1",
+          "question": "Warum ist die Bibliothek jetzt auch sonntags geöffnet?",
+          "options": [
+            "Weil sich viele Einwohner das in einer Umfrage gewünscht hatten.",
+            "Weil die Bibliothek unter der Woche zu wenige Besucher hatte.",
+            "Weil die meisten Bibliotheken in der Region sonntags schon geöffnet haben."
+          ],
+          "correct": 0
+        },
+        {
+          "id": "l2-2",
+          "question": "Wie ist der Sonntagsbetrieb organisiert?",
+          "options": [
+            "Alle festen Mitarbeiterinnen und Mitarbeiter arbeiten jetzt an jedem Sonntag.",
+            "Eine Bibliothekarin wird von Automaten und Freiwilligen unterstützt.",
+            "Am Sonntag arbeiten nur ehrenamtliche Helfer aus dem Förderverein."
+          ],
+          "correct": 1
+        },
+        {
+          "id": "l2-3",
+          "question": "Was erfährt man über Markus Hensel?",
+          "options": [
+            "Er findet, dass das Kinderprogramm zu früh beginnt.",
+            "Er hat früher selbst sonntags in der Bibliothek gearbeitet.",
+            "Er kommt mit seinen Töchtern jetzt regelmäßig in die Bibliothek."
+          ],
+          "correct": 2
+        },
+        {
+          "id": "l2-4",
+          "question": "Was kritisiert die Kirchengemeinde?",
+          "options": [
+            "Das Kinderprogramm ist ihr am Sonntag zu laut.",
+            "Sie darf in der Bibliothek keine eigenen Veranstaltungen machen.",
+            "Sie findet, dass der Sonntag ein Tag der Ruhe sein sollte."
+          ],
+          "correct": 2
+        },
+        {
+          "id": "l2-5",
+          "question": "Was passiert im März?",
+          "options": [
+            "Der Stadtrat entscheidet, ob die Sonntagsöffnung bleibt.",
+            "Die Bibliothek bekommt neue Automaten für die Ausleihe.",
+            "Die Sonntagsöffnung endet, weil das Geld fehlt."
+          ],
+          "correct": 0
+        }
+      ]
+    },
+    {
+      "id": "l3",
+      "origin": "ai",
+      "title": "Wer findet was?",
+      "kind": "zuordnung",
+      "minutes": 10,
+      "instructions": "Mehrere Personen suchen etwas. Welche Anzeige passt? Für eine Person gibt es keine passende Anzeige – dort wählst du 0.",
+      "ads": [
+        {
+          "id": "a",
+          "title": "Spanisch kompakt – Sprachschule Puente",
+          "text": "Sie haben schon Grundkenntnisse und möchten in kurzer Zeit große Fortschritte machen? Unser Intensivkurs findet vom 4. bis 15. August statt, montags bis freitags von 9 bis 12:30 Uhr. Vor Kursbeginn machen alle Teilnehmenden einen kurzen Einstufungstest."
+        },
+        {
+          "id": "b",
+          "title": "Sicher im Wasser – Ferienkurs",
+          "text": "In den Sommerferien bietet der Schwimmverein Delfin e. V. einen Anfängerkurs für Kinder von 6 bis 10 Jahren an. Der Kurs hat zehn Termine, jeweils vormittags im Hallenbad Nord. Die Eltern müssen nicht dabei sein."
+        },
+        {
+          "id": "c",
+          "title": "Zimmer in netter WG",
+          "text": "Wir, zwei Studentinnen (23 und 25), suchen ab 1. Oktober eine Mitbewohnerin oder einen Mitbewohner. Das Zimmer ist 14 m² groß und kostet 380 € warm, Internet inklusive. Unser Kater Moritz freut sich über tierische Gesellschaft."
+        },
+        {
+          "id": "d",
+          "title": "Yoga für den Feierabend",
+          "text": "Entspannung nach einem langen Arbeitstag: Unser Anfängerkurs findet zehnmal statt, immer montags von 19 bis 20:30 Uhr. Die Gebühr beträgt 95 €, eine Anmeldung ist nötig. Bitte beachten Sie, dass verpasste Stunden nicht nachgeholt werden können."
+        },
+        {
+          "id": "e",
+          "title": "Spanisch von Anfang an – Volkshochschule Weststadt",
+          "text": "Dieser Kurs ist für Teilnehmende ohne Vorkenntnisse. Ab dem 16. September treffen wir uns jeden Dienstag von 18:30 bis 20 Uhr, insgesamt an zwölf Abenden. Sie lernen, sich im Alltag und auf Reisen zu verständigen."
+        },
+        {
+          "id": "f",
+          "title": "Aushilfe am Wochenende gesucht",
+          "text": "Die Bäckerei Krumme sucht freundliche Verstärkung für den Verkauf, samstags und sonntags von 6 bis 11 Uhr. Erfahrung ist nicht nötig, wir arbeiten Sie gern ein. Auch Rentnerinnen und Rentner sind herzlich willkommen."
+        },
+        {
+          "id": "g",
+          "title": "Kleines Apartment in Uninähe",
+          "text": "Möbliertes 1-Zimmer-Apartment, 22 m², mit Kochnische und Duschbad, ab sofort frei. Die Miete beträgt 390 € plus 90 € Nebenkosten. Haustiere sind leider nicht erlaubt."
+        },
+        {
+          "id": "h",
+          "title": "Abenteuercamp am Waldsee",
+          "text": "Zelten, Kanu fahren, Lagerfeuer: In der zweiten Hälfte der Sommerferien verbringen Jugendliche von 12 bis 16 Jahren eine Woche in der Natur. Die Gruppe wird von erfahrenen Betreuerinnen und Betreuern begleitet. Preis inklusive Verpflegung: 260 €."
+        }
+      ],
+      "situations": [
+        {"id": "l3-1", "text": "Lukas arbeitet montags bis freitags bis 17 Uhr. Er hat noch nie Spanisch gelernt und möchte nach der Arbeit damit anfangen, weil er nächstes Jahr nach Südamerika reisen will.", "correct": "e"},
+        {"id": "l3-2", "text": "Mira studiert seit diesem Semester Biologie und sucht ab Oktober ein Zimmer. Sie kann höchstens 400 Euro im Monat bezahlen und möchte ihre Katze mitbringen.", "correct": "c"},
+        {"id": "l3-3", "text": "Frau Lorenz ist Krankenpflegerin und hat jede Woche andere Arbeitszeiten. Sie möchte mit Yoga anfangen, kann sich aber nicht für feste Termine anmelden.", "correct": "0"},
+        {"id": "l3-4", "text": "Familie Okafor sucht für die Sommerferien einen Kurs für ihren achtjährigen Sohn. Er kann noch nicht schwimmen und soll es endlich lernen.", "correct": "b"},
+        {"id": "l3-5", "text": "Herr Yilmaz ist seit einem Jahr in Rente. Er möchte am Wochenende ein paar Stunden arbeiten und hat kein Problem damit, früh aufzustehen.", "correct": "f"},
+        {"id": "l3-6", "text": "Selin hatte in der Schule vier Jahre Spanisch, hat aber viel vergessen. Im August hat sie zwei Wochen Urlaub und möchte in dieser Zeit ihr Spanisch schnell verbessern.", "correct": "a"},
+        {"id": "l3-7", "text": "Herr Brandt sucht für seine 14-jährige Tochter etwas für die Sommerferien. Sie ist am liebsten draußen und möchte gern mit anderen Jugendlichen etwas erleben.", "correct": "h"}
+      ]
+    },
+    {
+      "id": "l4",
+      "origin": "ai",
+      "title": "Sperrmüll richtig anmelden",
+      "kind": "richtig-falsch",
+      "minutes": 8,
+      "instructions": "Lies die Information der Stadt. Sind die Aussagen richtig oder falsch?",
+      "text": "Jeder Haushalt in Kleinwalden kann zweimal im Jahr kostenlos Sperrmüll abholen lassen. Für jede weitere Abholung wird eine Gebühr von 30 Euro berechnet.\n\nWas ist Sperrmüll? Zum Sperrmüll gehören große Gegenstände aus dem Haushalt, die nicht in die normale Mülltonne passen, zum Beispiel Möbel, Matratzen oder Teppiche. Elektrogeräte wie Kühlschränke oder Waschmaschinen werden getrennt abgeholt. Bitte geben Sie diese bei der Anmeldung extra an. Bauabfälle, Farben und Autoreifen werden nicht mitgenommen.\n\nWie melde ich den Sperrmüll an? Die Anmeldung erfolgt online oder telefonisch beim Abfallamt, spätestens zwei Wochen vor dem gewünschten Termin. Sie erhalten dann eine schriftliche Bestätigung mit dem genauen Abholtag.\n\nWas muss ich beachten? Stellen Sie die Gegenstände am Abend vor dem Abholtag an den Straßenrand, aber nicht vor 18 Uhr. Gehwege und Einfahrten müssen frei bleiben. Pro Abholung dürfen höchstens fünf Kubikmeter bereitgestellt werden. Gegenstände, die nicht angemeldet wurden, bleiben stehen. Wer die Sachen nicht selbst nach draußen tragen kann, kann gegen eine Gebühr einen Trageservice bestellen.\n\nBei Fragen erreichen Sie das Abfallamt montags bis freitags von 8 bis 16 Uhr.",
+      "questions": [
+        {"id": "l4-1", "statement": "Nur die erste Abholung im Jahr ist kostenlos.", "correct": false},
+        {"id": "l4-2", "statement": "Ein alter Kühlschrank kann auch abgeholt werden, wenn man ihn bei der Anmeldung nennt.", "correct": true},
+        {"id": "l4-3", "statement": "Man kann den Sperrmüll noch drei Tage vor dem Wunschtermin anmelden.", "correct": false},
+        {"id": "l4-4", "statement": "Man darf die Sachen schon mittags am Tag vor der Abholung an die Straße stellen.", "correct": false},
+        {"id": "l4-5", "statement": "Gegenstände, die man nicht angemeldet hat, werden nicht mitgenommen.", "correct": true}
+      ]
+    }
+  ]
+}

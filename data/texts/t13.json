@@ -1,0 +1,74 @@
+{
+  "id": "t13",
+  "origin": "ai",
+  "title": "Mit dem Rad zur Arbeit",
+  "level": "B1",
+  "theme": "Gesundheit",
+  "slot": "lesen",
+  "text": "Jens Hoffmann ist 46 Jahre alt und sitzt jeden Tag acht Stunden vor dem Computer. Lange hatte er keine Probleme. Doch im Frühling begann sein Rücken wehzutun. Zuerst nur am Abend, dann auch morgens beim Aufstehen. Er dachte: „Das geht schon wieder weg.“ Aber es ging nicht weg.\n\nIrgendwann ging er doch zum Arzt. Der Arzt hörte ihm lange zu und stellte viele Fragen. Wie viel bewegen Sie sich? Wie kommen Sie zur Arbeit? Jens musste zugeben, dass er jeden Morgen mit dem Auto fuhr, obwohl sein Büro nur sechs Kilometer entfernt war. „Ihr Rücken ist nicht krank“, sagte der Arzt. „Er ist nur unglücklich. Er möchte sich mehr bewegen.“\n\nAm nächsten Wochenende holte Jens sein altes Fahrrad aus dem Keller. Es war voller Staub, und die Reifen hatten keine Luft mehr. Sein Sohn half ihm, und am Montag fuhr er zum ersten Mal mit dem Rad ins Büro. Er brauchte 25 Minuten und kam ziemlich nass an, weil es geregnet hatte. Die Kollegen lachten, aber freundlich.\n\nDie ersten Wochen waren nicht leicht. An manchen Tagen hätte er lieber das Auto genommen, besonders wenn es kalt war. Aber er blieb dabei. Nach einem Monat merkte er, dass der Schmerz weniger wurde. Er schlief besser, und am Nachmittag war er nicht mehr so müde.\n\nHeute, ein halbes Jahr später, fährt Jens fast jeden Tag mit dem Rad. Das Auto steht meistens vor dem Haus. Seine Frau sagt, er sei viel entspannter geworden. Und wenn ein Kollege über Rückenschmerzen klagt, sagt Jens nur: „Ich hätte da eine Idee für dich.“",
+  "glossary": [
+    {
+      "term": "Frühling",
+      "gloss": "spring",
+      "note": "der Frühling"
+    },
+    {
+      "term": "wehzutun",
+      "gloss": "to hurt (wehtun)",
+      "note": "hat wehgetan"
+    },
+    {
+      "term": "Fahrrad",
+      "gloss": "bicycle",
+      "note": "das Fahrrad, -räder"
+    },
+    {
+      "term": "Staub",
+      "gloss": "dust",
+      "note": "der Staub"
+    },
+    {
+      "term": "Rad",
+      "gloss": "bike (short for Fahrrad)",
+      "note": "das Rad, Räder"
+    },
+    {
+      "term": "nass",
+      "gloss": "wet"
+    },
+    {
+      "term": "klagt",
+      "gloss": "complains",
+      "note": "klagen, hat geklagt"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum hat Jens Rückenschmerzen?",
+      "options": [
+        "Er hatte einen Unfall mit dem Fahrrad.",
+        "Er sitzt viel und bewegt sich zu wenig.",
+        "Er trägt zu schwere Sachen."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Wie war die erste Fahrt ins Büro?",
+      "options": [
+        "Er kam nass an, weil es geregnet hatte.",
+        "Er brauchte über eine Stunde.",
+        "Er ist unterwegs gefallen."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Was hat sich nach einem Monat verändert?",
+      "options": [
+        "Er fährt wieder mit dem Auto.",
+        "Er hat ein neues Fahrrad gekauft.",
+        "Der Schmerz ist weniger geworden."
+      ],
+      "correct": 2
+    }
+  ]
+}

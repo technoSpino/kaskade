@@ -1,0 +1,57 @@
+{
+  "id": "t15",
+  "origin": "ai",
+  "title": "Nachtdienst am Sonntag",
+  "level": "A2+",
+  "theme": "Apotheke",
+  "slot": "lesen",
+  "text": "Es ist Sonntagabend, kurz nach zehn. Die kleine Anna ist drei Jahre alt und kann nicht schlafen. Sie weint und hält sich das Ohr. Ihr Vater, Daniel, sitzt an ihrem Bett und weiß nicht weiter. Er sucht in der ganzen Wohnung, aber er findet kein Medikament für Kinder.\n\nSeine Frau ist diese Woche bei ihrer Mutter in Köln. Daniel ruft sie an. „Am Sonntag ist doch alles zu“, sagt er. „Nicht alles“, antwortet sie. „Eine Apotheke hat immer Nachtdienst. Schau mal im Internet.“ Daniel sucht auf seinem Handy und findet eine Apotheke in der Nähe, nur fünfzehn Minuten zu Fuß.\n\nDer Nachbar, Herr Schulz, ist noch wach. Er kommt sofort und bleibt bei Anna. Daniel zieht seine Jacke an und geht los. Die Straßen sind dunkel und ganz ruhig. Vor der Apotheke ist das Licht an, aber die Tür ist zu. Was jetzt? Dann sieht er ein kleines Fenster in der Tür. Er klingelt.\n\nEine Frau mit müden Augen öffnet das Fenster. Daniel erklärt das Problem. Sie fragt, wie alt und wie groß Anna ist. Dann gibt sie ihm ein Medikament gegen die Schmerzen. „Wie viel Sie ihr geben dürfen, steht hier auf dem Papier. Und gehen Sie morgen mit ihr zum Kinderarzt“, sagt sie. Daniel bezahlt und sagt dreimal danke.\n\nAls er nach Hause kommt, schläft Anna schon fast. Er gibt ihr das Medikament, und nach einer halben Stunde ist sie ruhig. Herr Schulz geht wieder nach oben in seine Wohnung. Am nächsten Tag bringt Daniel ihm einen Kuchen und eine Flasche Wein.",
+  "glossary": [
+    {
+      "term": "Apotheke",
+      "gloss": "pharmacy",
+      "note": "die Apotheke, -n"
+    },
+    {
+      "term": "Nachtdienst",
+      "gloss": "night duty (pharmacy open at night)",
+      "note": "der Nachtdienst, -e"
+    },
+    {
+      "term": "dreimal",
+      "gloss": "three times"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum kann Anna nicht schlafen?",
+      "options": [
+        "Sie hat Hunger.",
+        "Sie hat Schmerzen im Ohr.",
+        "Sie hat Angst vor der Nacht."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Wer bleibt bei Anna, als Daniel zur Apotheke geht?",
+      "options": [
+        "Der Nachbar, Herr Schulz.",
+        "Ihre Mutter.",
+        "Niemand."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Was soll Daniel am nächsten Tag tun?",
+      "options": [
+        "Wieder zur Apotheke gehen.",
+        "Seine Frau in Köln besuchen.",
+        "Mit Anna zum Kinderarzt gehen."
+      ],
+      "correct": 2
+    }
+  ],
+  "names": [
+    "Anna"
+  ]
+}

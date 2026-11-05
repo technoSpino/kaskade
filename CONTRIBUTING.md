@@ -15,8 +15,8 @@ Thank you for your interest in contributing! This document provides guidelines f
 ### Setup
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/german-declension-mvp.git
-cd german-declension-mvp
+git clone https://github.com/technoSpino/kaskade.git
+cd kaskade
 
 # No build step needed - it's a static site!
 
@@ -33,7 +33,7 @@ python -m http.server 8000
 ## Project Structure
 
 ```
-german-declension-mvp/
+kaskade/
 ├── README.md               Main documentation
 ├── PROJECT_PLAN.md         Execution timeline
 ├── agent-1-table/          Table module specs
