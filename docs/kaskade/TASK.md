@@ -329,6 +329,23 @@ Placement result: vocab ≈ 3,550 (85 % of core 2,000), Lesen B1, Satz-Check 83 
     - **Don't rewrite past reviews.** The Schwer ratings he already gave stay, because Schwer still counts as known in FSRS and those cards just come back a bit sooner. No change to due dates.
     - **Tests:** unit `pace()` with mostly sub-second and 0-ms reveals → 1.0; with slow reveals (median ratio 1.8) → 1.8; zeros excluded; `timing()` for 8 words at pace 1.0 = (3570, 8160); the live DB copy gives `pace = 1.0`. Update `test_cards_progress.py` if it pins a pace below 1. Then a PROGRESS.md line with his pace before/after and the 8-word thresholds.
 
+40. **Schauen: every highlighted word has a meaning** *(Matt, Thu 2026-11-05 ~09:55, in the Schauen block with* Die 100*: "If you are going to higlight a word in shauen you need a definition")*. **Build now, deploy after 11:30 Berlin** (together with #39 is fine). This is a word-panel correction, so it may change clips he's in the middle of (#35 allows that). Lines and ranges stay as they are.
+    - **Today's numbers (live DB, `analyze.analyze` on each line of *Die 100* 0:00–24:42):** spoken track 655 highlighted words (`neu`/`lernend`), **55 without a meaning (8 %)**; ARD track 581, **61 without (10 %)**. The panel then says "Keine Übersetzung gefunden." Almost all are content words the dictionary lookup misses:
+      - **Compounds:** Sozialleistungen, Kinderzuschlag, Sozialzuschlägen, Familienmodell, Vollzeitarbeit, Betreuungsbedarf, Rentenkasse, Zahnarztbesuch, Nachtzuschläge …
+      - **Inflected forms:** Stellschrauben, Familienverhältnissen, Sozialzuschlägen.
+      - **Colloquial separable verbs:** rausbekommt, rauszukriegen, rüberstellen, umschaut, auffängt, pleitegehen, zurückwill.
+      - **Loanwords / slang:** tricky, gebuzzert, Buzzer, Netto, Hi.
+      - **Whisper mishearings:** Tinasse, Basser, Reinstsinne.
+    - **Rule (in `analyze.py`, so it holds in Schauen and in Lesen alike):** a token gets state `neu`/`lernend` only if it also has an `entry` with a gloss. Find the meaning in this order:
+      1. **Better lookup** (no new data):
+         - inflected forms → base form (strip plural/dative endings; try spaCy's lemma and the dictionary's `forms` on the lower-cased word);
+         - colloquial particles → standard verb (raus- → heraus-, rein- → herein-, rüber- → herüber-/hinüber-, runter- → herunter-, rauf- → herauf-, ran- → heran-; drop an infix `zu`: rauszukriegen → herauskriegen);
+         - **compounds** split into known parts, longest known head first (Kinder|zuschlag, Sozial|leistungen, Rente(n)|kasse, with linking -s-/-n-/-en-). Panel: "Kinderzuschlag = Kinder + Zuschlag" with both glosses, then the head's article/plural (der Kinderzuschlag · die Kinderzuschläge).
+      2. **KI meaning** for whatever is left. Use the existing `ai.py` word prompt (lemma, gloss, article, plural), given the word **in its sentence**, with `config.ANTHROPIC_MODEL`. Cache it in the DB per (word, sentence) so it's asked once. The panel marks it **KI** (OriginBadge, as for mined cards). **Precompute** it for clips in the plan: the Materialcheck (06:30) does each planned clip's next part, and opening a clip does the rest of today's range in the background. The panel must never wait on a tap. If the KI says it's a misheard or not a real word, or AI isn't available, go to 3.
+      3. **Still no meaning → not highlighted.** It stays tappable, and the panel may still say "Keine Übersetzung gefunden" (for Tinasse/Basser that's honest).
+    - **Mining:** "Satz minen" on such a word uses the same gloss. If it's KI, the card keeps the existing "von der KI ergänzt (KI)" note.
+    - **Tests:** unit for each lookup path (Stellschrauben → Stellschraube, rausbekommt → herausbekommen, rauszukriegen → herauskriegen, Kinderzuschlag split + article/plural, Sozialleistungen split); a token without any meaning has `state: null`; the KI path with AI mocked (cached per word + sentence, KI flag on the entry, a "misheard" answer → no highlight); E2E: in Schauen, every highlighted word's panel shows a meaning. Then re-run today's count on the live DB. Expected: **0 highlighted words without a meaning** on both tracks. Add a PROGRESS.md line with the before/after numbers, how many meanings came from each path (lookup / compound / KI / dropped), and the KI cost for that clip.
+
 ## Später — wenn ein Prüfungsdatum feststeht
 
 Geparkt mit #27 (2026-10-13): Kaskade ist erst einmal reines Refold, ohne Prüfungsteil im Lernblock. Der Code der Prüfungsseiten (`/aufgabe/<id>`, Prüfungstraining, Aufnahme, Bewertung) bleibt im Menü erreichbar. Kommt zurück, wenn Matt ein Prüfungsdatum wählt:
