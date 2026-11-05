@@ -14,7 +14,7 @@ AI_FIELDS = ("lemma", "gloss", "case")
 
 def needs_ai(lemma: str, gloss: str | None) -> bool:
     g = (gloss or "").strip()
-    return not g or g == "—" or not analyze.known_lemma(lemma)
+    return not g or g == "—" or not (analyze.known_lemma(lemma) or analyze.derived_lemma(lemma))
 
 
 def noun_display(lemma: str, article: str | None, plural: str | None) -> str:
@@ -26,8 +26,8 @@ def noun_display(lemma: str, article: str | None, plural: str | None) -> str:
 def enrich(sentence: str, target: str, word: dict) -> dict:
     """word = {lemma, display, gloss, case, note}; returns it with the KI's fields and `ai`."""
     out = {**word, "ai": list(word.get("ai") or [])}
-    if not needs_ai(word["lemma"], word.get("gloss")):
-        return out
+    if "gloss" in out["ai"] or not needs_ai(word["lemma"], word.get("gloss")):
+        return out  # #40: the word panel's meaning is already the KI's — the same one goes on the card
     info = ai.word_info(sentence, target)
     if not info:
         return out

@@ -171,6 +171,21 @@ CREATE TABLE IF NOT EXISTS news_picks (
   items TEXT NOT NULL,           -- JSON [{title, url, published}] — links only
   PRIMARY KEY (local_date, feed)
 );
+CREATE TABLE IF NOT EXISTS ki_meanings (
+  word TEXT NOT NULL,            -- #40: a highlighted word the dictionary has no meaning for, as written
+  sentence TEXT NOT NULL,        -- … in this sentence: the KI is asked once per pair
+  lemma TEXT,
+  gloss TEXT,                    -- NULL: the KI says it's no real word (misheard) → not highlighted
+  article TEXT,
+  plural TEXT,
+  kasus TEXT,
+  case_reason TEXT,
+  model TEXT NOT NULL,
+  in_tokens INTEGER,
+  out_tokens INTEGER,
+  created_at TEXT NOT NULL,
+  PRIMARY KEY (word, sentence)
+);
 """
 
 

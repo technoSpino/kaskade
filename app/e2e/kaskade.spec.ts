@@ -1461,6 +1461,49 @@ function savedPositions(page: Page, id: number) {
   return saves
 }
 
+test('#40 Schauen: every highlighted word has a meaning, a word without one is not highlighted', async ({ page, request }) => {
+  const errors = watchConsole(page)
+  // a word he is learning (a core card, rated once) and one no dictionary knows (there's no KI here)
+  expect((await request.post('http://127.0.0.1:8001/api/cards/core:r02250/review', { data: { rating: 3 } })).ok()).toBeTruthy()
+  const LINES = srtOf([[0.5, 2.0, 'Die Verhandlung war wegen der Tinasse lang.'], [2.5, 4.0, 'Die Ursache war eine andere.']])
+  const up = await request.post('http://127.0.0.1:8001/api/media/upload', {
+    multipart: {
+      title: 'E2E-Bedeutung',
+      subtitles: { name: 'b.srt', mimeType: 'application/x-subrip', buffer: Buffer.from(LINES) },
+      media: { name: 'b.webm', mimeType: 'video/webm', buffer: readFileSync(testClip()) }
+    }
+  })
+  const clip = await up.json()
+  const ahead = page.waitForResponse((r) => r.url().endsWith(`/api/media/${clip.id}/meanings`))
+  await page.goto(`/schauen/${clip.id}?von=0&bis=8`) // a plan range: the KI's meanings are asked ahead
+  expect((await ahead).status()).toBe(202)
+  const line = page.getByTestId('watch-line')
+  const panel = page.getByTestId('word-panel')
+  await page.getByTestId('watch-play').click()
+  await expect(line).toContainText('Die Verhandlung war wegen der Tinasse lang.')
+  await expect.poll(() => page.getByTestId('watch-video').evaluate((v: HTMLVideoElement) => v.paused), { timeout: 8000 }).toBe(true)
+  await expect(line.locator('.at-word', { hasText: /^Verhandlung$/ })).toHaveAttribute('data-state', 'lernend')
+  for (const text of ['Die Verhandlung war wegen der Tinasse lang.', 'Die Ursache war eine andere.']) {
+    if (!(await line.innerText()).includes(text)) await page.keyboard.press('ArrowRight')
+    await expect(line).toContainText(text)
+    await page.getByTestId('watch-video').evaluate((v: HTMLVideoElement) => v.pause())
+    const marked = line.locator('.at-neu, .at-lernend')
+    for (let i = 0; i < (await marked.count()); i++) {
+      await marked.nth(i).click()
+      await expect(page.getByTestId('word-gloss')).toBeVisible()
+      await expect(panel).not.toContainText('Keine Übersetzung gefunden')
+    }
+  }
+  // the word without a meaning: no highlight, still tappable, and the panel says so
+  await page.keyboard.press('ArrowLeft')
+  const unknown = line.locator('.at-word', { hasText: /^Tinasse$/ })
+  await expect(unknown).toBeVisible()
+  expect(await unknown.getAttribute('data-state')).toBeNull()
+  await unknown.click()
+  await expect(panel).toContainText('Keine Übersetzung gefunden.')
+  expect(errors).toEqual([])
+})
+
 test('#30 Schauen: play before the video has loaded still starts at today\'s part, and no control lands near 0:00', async ({ page, request }) => {
   test.setTimeout(120_000)
   const errors = watchConsole(page)

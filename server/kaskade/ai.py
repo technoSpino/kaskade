@@ -37,9 +37,10 @@ Gib für dieses Wort, so wie es in genau diesem Satz steht, an:
 - plural: Pluralform ohne Artikel bei Nomen (null, wenn es keinen gibt), sonst null
 - case: Kasus des Wortes in diesem Satz, "N", "A", "D" oder "G" — nur bei Nomen und Pronomen, sonst null
 - caseReason: bei case ein kurzer Grund auf einfachem Deutsch, z. B. „Subjekt → Nominativ“ oder „mit + Dativ“, sonst null
+- real: false, wenn „{target}“ hier kein echtes Wort ist (z. B. falsch gehört oder falsch transkribiert) und du keine sichere Bedeutung weißt, sonst true. Englische Wörter, die man im Deutschen so sagt (z. B. „tricky“), sind echt.
 
 Antworte NUR mit JSON in genau diesem Format:
-{{"lemma": "…", "gloss": "…", "article": null, "plural": null, "case": null, "caseReason": null}}"""
+{{"lemma": "…", "gloss": "…", "article": null, "plural": null, "case": null, "caseReason": null, "real": true}}"""
 
 
 def available() -> bool:
@@ -94,16 +95,24 @@ def _short(value, limit: int) -> str | None:
 def word_info(sentence: str, target: str) -> dict | None:
     """Lemma, gloss, article/plural and case-with-reason of `target` in `sentence` (#19).
 
-    For mined words the dictionary doesn't know. None if no key, the call fails or the answer
-    makes no sense — mining then keeps what the dictionary had.
+    For mined words the dictionary doesn't know. None if no key, the call fails, the answer
+    makes no sense or the KI says it's no real word (#40) — mining then keeps what the dictionary had.
     """
+    info = word_meaning(sentence, target)
+    return {k: v for k, v in info.items() if k not in ("real", "usage")} if info and info["real"] else None
+
+
+def word_meaning(sentence: str, target: str) -> dict | None:
+    """word_info's answer with `real` (False: misheard / no real word) and the tokens used (`usage`)."""
     if not available():
         return None
     try:
         msg = _client().messages.create(
             model=config.ANTHROPIC_MODEL,
-            max_tokens=300,
-            timeout=30,
+            # #40: the model thinks first (~200 tokens even at low effort) — 300 left no room for the answer
+            max_tokens=1500,
+            output_config={"effort": "low"},
+            timeout=60,
             messages=[{"role": "user", "content": WORD_PROMPT.format(sentence=sentence, target=target)}],
         )
         raw = parse_json("".join(getattr(b, "text", "") for b in msg.content)) or {}
@@ -111,10 +120,11 @@ def word_info(sentence: str, target: str) -> dict | None:
         log.exception("AI word info failed")
         return None
     lemma = _short(raw.get("lemma"), 60)
-    if not lemma:
+    if not lemma and raw.get("real") is not False:
         log.warning("AI word info: unparseable answer")
         return None
     case = raw.get("case") if raw.get("case") in ("N", "A", "D", "G") else None
+    usage = getattr(msg, "usage", None)
     return {
         "lemma": lemma,
         "gloss": _short(raw.get("gloss"), 120),
@@ -122,4 +132,6 @@ def word_info(sentence: str, target: str) -> dict | None:
         "plural": _short(raw.get("plural"), 60),
         "case": case,
         "caseReason": _short(raw.get("caseReason"), 120) if case else None,
+        "real": raw.get("real") is not False and bool(lemma),
+        "usage": {"in": getattr(usage, "input_tokens", None), "out": getattr(usage, "output_tokens", None)},
     }

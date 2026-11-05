@@ -5,5 +5,7 @@ After=network-online.target
 [Service]
 Type=oneshot
 WorkingDirectory=%h/kaskade/server
+# #40: the Materialcheck asks the KI for the meanings of planned clips (optional key, as for the API)
+EnvironmentFile=-%h/kaskade-data/.env
 ExecStart=%h/kaskade/server/.venv/bin/python scripts/stock.py
 Nice=10

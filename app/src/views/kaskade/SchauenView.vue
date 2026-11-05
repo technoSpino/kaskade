@@ -105,6 +105,8 @@ async function load() {
       rangeNote.value = r.note
       goal.value = r.reached
       t.value = r.at
+      // #40: the KI's meanings for the rest of today's part, asked ahead in the background (no waiting on a tap)
+      if (!r.reached) api.post(`/media/${media.value.id}/meanings`, { from: Math.max(von, r.at), to: bis }).catch(() => {})
     } else {
       range.value = null
       t.value = Number.isFinite(at) && at > 0 ? at : resumeAt(media.value.position, media.value.duration)

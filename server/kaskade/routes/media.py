@@ -13,7 +13,7 @@ from fastapi import APIRouter, BackgroundTasks, File, Form, HTTPException, Reque
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
 
-from .. import config, db, mediathek, satzcheck, srs, stock, transcode, transcripts
+from .. import config, db, meanings, mediathek, satzcheck, srs, stock, transcode, transcripts
 
 router = APIRouter(prefix="/api/media")
 log = logging.getLogger(__name__)
@@ -151,6 +151,21 @@ def get_media(media_id: int):
     transcripts.import_all(media_id)  # #29: its transcript arrived or was replaced: rebuild the track first
     r = _get(media_id)
     return _row(r, with_cues=True) | {"rangeReached": range_reached(r["key"])}
+
+
+class MeaningsIn(BaseModel):
+    start: float = Field(ge=0, alias="from")
+    to: float = Field(gt=0)
+
+
+@router.post("/{media_id}/meanings", status_code=202)
+def prefetch_meanings(media_id: int, body: MeaningsIn):
+    """#40: opening a clip asks the KI ahead for the rest of today's range, in the background —
+    the word panel never waits on a tap. Returns at once."""
+    _get(media_id)
+    if body.to <= body.start:
+        raise HTTPException(422, "Ungültiger Zeitbereich.")
+    return {"started": meanings.fill_in_background(media_id, body.start, body.to)}
 
 
 @router.get("/{media_id}/file")

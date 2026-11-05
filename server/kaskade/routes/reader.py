@@ -32,7 +32,10 @@ def text_analysis(text_id: str):
     t = texts.get(text_id)
     if not t:
         raise HTTPException(404, "Text nicht gefunden")
-    return analyze_text(AnalyzeIn(text=t["text"]))
+    try:  # #40: a word of the text's glossary has its meaning there
+        return analyze.analyze(t["text"], glossed={g["term"] for g in t.get("glossary", [])})
+    except OSError:
+        raise HTTPException(503, "Sprachanalyse nicht verfügbar (spaCy-Modell fehlt)")
 
 
 class MineIn(BaseModel):
@@ -50,6 +53,8 @@ class MineIn(BaseModel):
     start: float | None = Field(default=None, ge=0)
     end: float | None = Field(default=None, ge=0)
     track: Literal["spoken", "ard"] | None = None  # #29: a line of the Whisper track (word times)
+    # #40: the panel's meaning came from the KI (asked ahead) — these fields keep their KI mark, no second call
+    ai: list[Literal["lemma", "gloss", "case"]] | None = None
 
 
 def _snippet(mid: int, media_id: int, start: float, end: float, spoken: bool = False) -> str | None:
@@ -97,7 +102,7 @@ def mine(body: MineIn):
 
 def _word(body: MineIn) -> dict:
     return {"lemma": body.lemma, "display": body.display or body.lemma, "gloss": body.gloss, "case": body.case,
-            "note": body.note}
+            "note": body.note, "ai": list(dict.fromkeys(body.ai or []))}
 
 
 def _mined_card(n: int) -> dict:

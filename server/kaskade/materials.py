@@ -16,7 +16,7 @@ import xml.etree.ElementTree as ET
 from datetime import date, datetime, time, timedelta, timezone
 from email.utils import parsedate_to_datetime
 
-from . import books, config, db, plan, ratings, rolling, srs, stock, texts, themes
+from . import books, config, db, meanings, plan, ratings, rolling, srs, stock, texts, themes
 
 log = logging.getLogger(__name__)
 
@@ -643,11 +643,12 @@ def check(today: date, start: date, data: dict, days: int = 7, links: bool = Tru
     ctx = Ctx(today)
     if links:
         ctx.links = {}
-    gaps, urls = [], {}
+    gaps, urls, items = [], {}, []
     for i in range(days):
         day = today + timedelta(days=i)
         info = plan.plan_day(start, day, data, ctx.pauses)
         for it in flat(day_items(info, ctx, data, start)):
+            items.append(it)
             href = (it.get("start") or {}).get("href")
             if links and href and href not in urls:
                 urls[href] = link_ok(href)
@@ -663,7 +664,8 @@ def check(today: date, start: date, data: dict, days: int = 7, links: bool = Tru
             if not urls[url]:
                 gaps.append({"date": today.isoformat(), "block": "lesen", "title": NEWS_FEEDS[feed][0],
                              "problem": "Feed antwortet nicht — oder keine Artikel darin gefunden"})
-    return {"checkedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"), "days": days, "gaps": gaps, "links": urls}
+    return {"checkedAt": datetime.now(timezone.utc).isoformat(timespec="seconds"), "days": days, "gaps": gaps, "links": urls,
+            "clips": meanings.planned(items)}
 
 
 def write_check(today: date) -> dict:
@@ -676,6 +678,8 @@ def write_check(today: date) -> dict:
     # planned clips without a transcript: for PROGRESS.md (the Mac makes them), not a gap on Heute
     result["transcripts"] = {**imported, "missing": transcripts.missing(today, start, data)}
     result["themes"] = themes.scan()  # #33: also for the operator — a crime clip that needs a look before it's planned
+    # #40: the KI's meanings for each planned clip's next part, before he opens it
+    result["meanings"] = [{"mediaId": m, "from": f, "to": t, **meanings.fill(m, f, t)} for m, f, t in result.pop("clips")]
     (config.DATA_DIR / CHECK_FILE).write_text(json.dumps(result, ensure_ascii=False, indent=2), encoding="utf-8")
     return {"gaps": result["gaps"], "checkedAt": result["checkedAt"], "transcripts": result["transcripts"],
             "themes": result["themes"]}

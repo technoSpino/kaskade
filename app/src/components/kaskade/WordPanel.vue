@@ -2,6 +2,7 @@
 import { computed, ref, watch } from 'vue'
 import { api } from '../../lib/api'
 import { sentenceOf } from '../../lib/reader'
+import AiMark from './AiMark.vue'
 
 // Details for a tapped word + "Satz minen" (creates a sentence card).
 const props = defineProps({
@@ -33,15 +34,20 @@ const STATE = { neu: 'neu', lernend: 'am Lernen', bekannt: 'bekannt' }
 // #34: the word marked on the card — for a separable verb its verb form, whichever half was tapped
 const target = computed(() => props.token?.entry?.target ?? props.token?.text)
 
+// #40: the meaning came from the KI (asked ahead for this word in this sentence) — marked, and mined as it is
+const kiGloss = computed(() => !authorGloss.value && !!props.token?.entry?.ai?.includes('gloss'))
 // Case only where the parser is sure (the analysis leaves out the rest): no badge beats a wrong one.
+// Without one, the KI's case for this word (if it gave one) goes on the card, marked KI.
+const kiCase = computed(() => (!chunk.value && props.token?.entry?.ai?.includes('case') ? props.token.entry.case : null))
 const body = () => ({
   sentence: sentence.value,
   target: target.value,
   lemma: props.token.entry?.lemma ?? props.token.lemma, // the dictionary's headword beats spaCy's guess
   display: display.value,
   gloss: gloss.value ?? '',
-  note: chunk.value?.explain ?? authorGloss.value?.note ?? null,
-  case: chunk.value?.case ?? null,
+  note: chunk.value?.explain ?? authorGloss.value?.note ?? (kiCase.value ? props.token.entry.caseReason : null) ?? null,
+  case: chunk.value?.case ?? kiCase.value ?? null,
+  ai: (props.token.entry?.ai ?? []).filter((f) => (f === 'gloss' ? kiGloss.value : f === 'case' ? !!kiCase.value : true)),
   source: props.source,
   ...(props.extra ?? {})
 })
@@ -89,7 +95,9 @@ async function addWord() {
     <template v-else>
       <p class="m-0 k-read" style="font-size: 24px; font-weight: 600">{{ display }}</p>
       <p v-if="token.entry?.split" class="k-hint m-0" data-testid="word-split">Trennbares Verb: {{ token.entry.split }}</p>
-      <p v-if="gloss" class="m-0" style="font-size: 17px">„{{ gloss }}“</p>
+      <p v-if="token.entry?.compound" class="k-hint m-0" data-testid="word-compound">{{ token.entry.compound.text }}</p>
+      <p v-if="token.entry?.note" class="k-hint m-0" data-testid="word-note">{{ token.entry.note }}</p>
+      <p v-if="gloss" class="m-0" style="font-size: 17px" data-testid="word-gloss">„{{ gloss }}“ <AiMark v-if="kiGloss" field="gloss" /></p>
       <p v-else class="k-small m-0">Keine Übersetzung gefunden.</p>
       <p v-if="token.state" class="k-hint m-0">Status: {{ STATE[token.state] }}<template v-if="token.entry?.cardId"> · im Kernwortschatz</template></p>
       <div v-if="chunk" class="flex gap-2.5 items-start mt-1">
