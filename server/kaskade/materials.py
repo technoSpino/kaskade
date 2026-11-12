@@ -346,7 +346,7 @@ def _queued(q: dict, ctx: Ctx, day: date, data: dict, start: date) -> dict:
     ab = b.get("audiobook")
     if b.get("readAlong") and ab:
         out.update(source=f"{b['author']} · {b['title']} · Hörbuch: {ab['reader']} ({ab['service']})",
-                   chapters=[books.chapter_name(b["chapters"][i]) for i in q["chapters"]], repeat=q["repeat"],
+                   chapters=[books.chapter_name(b["chapters"][i]) for i in q["chapters"]],
                    detail=f"dein Papierbuch · {q['detail']}", start={"href": ab["url"], "note": f"Hörbuch auf {ab['service']}"})
     elif ctx.owns(b):
         out["detail"] = "gekauft ✓" + (" · bis zu 3 Wörter pro Seite nachschlagen" if mode["mode"] == "nachschlagen" else "")

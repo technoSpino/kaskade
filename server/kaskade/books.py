@@ -9,9 +9,9 @@ he rated (any %, also skipped) or ticked off counts, a day with neither brings t
 Today and later days are taken as done; a rating given today changes the days after it, never today.
 
 Ratings set the mode for the book's next days (#23/#24):
-- read-along, 60 % or more: `perDay` chapters a day. 20–40 %: "Kapitel zweimal hören" — that day's
-  chapters again, one a day, first only listening, then reading along — and one chapter a day like
-  that until a rating of 60 % or more. Two ratings of 20–40 % in a row while repeating park the book.
+- read-along, 60 % or more: `perDay` chapters a day. 20–40 %: "langsamer" — one new chapter a day
+  until a rating of 60 % or more (#41: never back to a chapter he has done, the story goes on). Two
+  ratings of 20–40 % in a row at one chapter a day park the book.
 - the others: 80–100 % frei, 60 % up to three words a page looked up, 20–40 % parked; a Lesetest
   that was done but not rated counts as 60 %.
 A parked book moves behind the others in the queue with its place kept, and starts fresh there.
@@ -79,11 +79,11 @@ class _Book:
         self.test = bool(self.entry.get("lesetest")) and self.ptr == next(
             (i for i, p in enumerate(self.b.get("parts", [])) if p["part"] == self.entry.get("fromPart")), 0)
         self.pct, self.rated, self.assumed, self.source = None, None, False, None
-        self.repeat, self.pending, self.bad = False, [], []
+        self.slow, self.bad = False, []
 
     def finished(self) -> bool:
         if self.along:
-            return self.ptr >= len(self.b["chapters"]) and not self.pending
+            return self.ptr >= len(self.b["chapters"])
         return self.ptr >= len(self.b.get("parts", []))
 
     # ── what a day gets ──
@@ -100,10 +100,8 @@ class _Book:
 
     def _chapters(self, first: bool) -> dict:
         chs = self.b["chapters"]
-        repeat = bool(self.pending) or self.repeat
-        again = bool(self.pending)  # a chapter he has heard once already
-        if repeat:
-            idx = [self.pending[0] if self.pending else self.ptr]
+        if self.slow:
+            idx = [self.ptr]
         elif self.b.get("perDay"):
             idx = list(range(self.ptr, min(self.ptr + self.b["perDay"], len(chs))))
         else:  # as many whole chapters as fit into maxMinutes of audio, at least one
@@ -114,9 +112,8 @@ class _Book:
                 idx.append(i)
                 total += chs[i]["audioMin"]
         audio = sum(self.minutes_of(i) for i in idx)
-        part = {"book": self.id, "kind": "book", "chapters": idx, "repeat": repeat, "again": again, "first": first,
-                "minutes": round(2 * audio if repeat else audio), "fromStart": idx[0] == 0 and not repeat,
-                "after": idx[0] - 1 if idx[0] > 0 else None, "last": idx[-1] == len(chs) - 1 and not repeat}
+        part = {"book": self.id, "kind": "book", "chapters": idx, "first": first, "minutes": round(audio),
+                "fromStart": idx[0] == 0, "after": idx[0] - 1 if idx[0] > 0 else None, "last": idx[-1] == len(chs) - 1}
         t = along(self.b, part)
         return {**part, "part": t["label"], "desc": t["text"], "detail": t["detail"]}
 
@@ -135,21 +132,16 @@ class _Book:
             self.assumed = pct is None
             return "park" if self.pct < HARD else None
         if self.along:
-            if part["repeat"]:
-                if self.pending:
-                    self.pending.pop(0)
-                else:
-                    self.ptr += 1
-                if pct is not None and pct < HARD:
+            self.ptr = part["chapters"][-1] + 1  # a done day is never served again, whatever the rating (#41)
+            if pct is not None and pct < HARD:
+                if self.slow:
                     self.bad.append((day, pct))
                     if len(self.bad) >= REPEATS_TO_PARK:
                         return "park"
-                elif pct is not None:
-                    self.repeat, self.bad = False, []
-            else:
-                self.ptr = part["chapters"][-1] + 1
-                if pct is not None and pct < HARD:
-                    self.repeat, self.pending, self.bad = True, list(part["chapters"]), []
+                else:
+                    self.slow, self.bad = True, []
+            elif pct is not None:
+                self.slow, self.bad = False, []
             if pct is not None:
                 self.pct, self.rated, self.source = pct, day, kind
             return None
@@ -168,13 +160,9 @@ class _Book:
         if self.along:
             per = self.b.get("perDay")
             normal = f"{'zwei Kapitel' if per == 2 else f'{per} Kapitel' if per else 'ein bis zwei Kapitel'} am Tag"
-            if self.repeat:
-                return {**out, "mode": "zweimal", "show": True,
-                        "why": f"{self.name}: {self.pct} % {when} → Kapitel zweimal hören: erst nur hören, dann mitlesen (ein Kapitel am Tag)"}
-            if self.pending:  # better again, one heard-once chapter still gets its second go
-                n = chapter_name(self.b["chapters"][self.pending[0]])
-                return {**out, "mode": "zweimal", "show": True,
-                        "why": f"{self.name}: {self.pct} % {when} → noch {n} zweimal, danach wieder mitlesen, {normal}"}
+            if self.slow:
+                return {**out, "mode": "langsamer", "show": True,
+                        "why": f"{self.name}: {self.pct} % {when} → langsamer: ein Kapitel am Tag, bis es wieder 60 % sind"}
             reason = f"{self.name}: {self.pct} % {when} → " if self.rated else f"{self.name}: "
             return {**out, "mode": "mitlesen", "why": f"{reason}{'weiter ' if self.rated else ''}mitlesen, {normal}"}
         if self.test:
@@ -211,15 +199,6 @@ def along(b: dict, part: dict) -> dict:
     book = f"{b['author']}: {b['title']}"
     spotify = f"Spotify: Hörbuch „{ab['title']}“"
     after = chapter_name(b["chapters"][part["after"]]) if part.get("after") is not None else None
-    if part["repeat"]:
-        c = chs[0]
-        n = chapter_name(c)
-        where = (f"{spotify} zurück an den Anfang von {n}" if part.get("again") else
-                 f"{spotify} weiter, wo du aufgehört hast (nach {after}), nach dem ersten Hören zurück an den Anfang von {n}")
-        return {"label": f"{n} zweimal — erst nur hören, dann mitlesen",
-                "text": f"{book} — {n} „{c['title']}“ zweimal: erst nur hören (Buch zu), dann noch einmal von vorn und im "
-                        f"Papierbuch mitlesen. Nicht für einzelne Wörter anhalten. {where} — {NOT_CHAPTERS}.",
-                "detail": f"Spotify: zurück an den Anfang von {n}" if part.get("again") else "Spotify: weiter, wo du aufgehört hast"}
     bits, prev = [], None
     for c in chs:
         intro = ""

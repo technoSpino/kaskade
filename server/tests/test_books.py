@@ -122,34 +122,49 @@ def test_a_day_he_didnt_do_brings_the_same_chapters_again(b2, monkeypatch):
     assert lesen_on(b2, "2026-11-06")["part"].startswith("Kapitel 3–4")
 
 
-def test_40_percent_means_each_chapter_twice_and_60_ends_it(b2, monkeypatch):
+def test_40_percent_means_one_new_chapter_a_day_never_back_and_60_ends_it(b2, monkeypatch):
+    """#41: a hard day slows the book down to one chapter a day; it never goes back to a chapter he has done."""
     matt(b2, monkeypatch)
     rate(b2, monkeypatch, "2026-11-05", 40)
     assert b2.get("/api/today").json()["assignments"]["lesen"]["part"].startswith("Kapitel 1–2")   # today stays
     fri = lesen_on(b2, "2026-11-06")
-    assert (fri["part"], fri["minutes"], fri["repeat"]) == ("Kapitel 1 zweimal — erst nur hören, dann mitlesen", 49, True)
-    assert fri["detail"] == "dein Papierbuch · Spotify: zurück an den Anfang von Kapitel 1"
-    assert "zweimal: erst nur hören (Buch zu), dann noch einmal von vorn und im Papierbuch mitlesen" in fri["text"]
-    why = "Momo: 40 % am Do 5.11. → Kapitel zweimal hören: erst nur hören, dann mitlesen (ein Kapitel am Tag)"
+    assert fri["part"] == "Kapitel 3 — Papierbuch mitlesen, Hörbuch auf Spotify" and fri["chapters"] == ["Kapitel 3"]
+    assert fri["detail"] == "dein Papierbuch · Spotify: weiter, wo du aufgehört hast"
+    assert "weiter, wo du aufgehört hast (nach Kapitel 2)" in fri["text"] and "bis zu 3 Wörter pro Seite" in fri["text"]
+    why = "Momo: 40 % am Do 5.11. → langsamer: ein Kapitel am Tag, bis es wieder 60 % sind"
     assert fri["mode"]["why"] == why
     assert [x["action"] for x in b2.get("/api/today").json()["tooHard"] if x["book"] == "momo"] == [why + "."]
-    assert lesen_on(b2, "2026-11-09")["part"].startswith("Kapitel 2 zweimal")
-    new = lesen_on(b2, "2026-11-10")                                  # still too hard: a new chapter, also twice
-    assert new["part"].startswith("Kapitel 3 zweimal") and new["detail"] == "dein Papierbuch · Spotify: weiter, wo du aufgehört hast"
-    # 60 % on the first repeat day: chapter 2 still gets its second go, then two chapters a day again
+    assert lesen_on(b2, "2026-11-09")["chapters"] == ["Kapitel 4"]
+    assert lesen_on(b2, "2026-11-10")["chapters"] == ["Kapitel 5"]
+    # 60 % on the one-chapter day: two chapters a day again, from the next new one
     rate(b2, monkeypatch, "2026-11-06", 60)
     at(monkeypatch, berlin("2026-11-06", 13))
-    second = lesen_on(b2, "2026-11-09")
-    assert second["part"].startswith("Kapitel 2 zweimal")
-    assert second["mode"]["why"] == "Momo: 60 % am Fr 6.11. → noch Kapitel 2 zweimal, danach wieder mitlesen, zwei Kapitel am Tag"
-    back = lesen_on(b2, "2026-11-10")
-    assert back["part"].startswith("Kapitel 3–4") and back["mode"]["why"] == "Momo: 60 % am Fr 6.11. → weiter mitlesen, zwei Kapitel am Tag"
+    back = lesen_on(b2, "2026-11-09")
+    assert back["chapters"] == ["Kapitel 4", "Kapitel 5"]
+    assert back["mode"]["why"] == "Momo: 60 % am Fr 6.11. → weiter mitlesen, zwei Kapitel am Tag"
+    # nothing anywhere says "zweimal" any more
+    for i in range(30):
+        day = (date(2026, 11, 5) + timedelta(days=i)).isoformat()
+        for it in b2.get("/api/materials", params={"today": day}).json()["today"]["items"]:
+            for x in [it, *it["then"]]:
+                assert "zweimal" not in (x.get("text") or "") + (x.get("part") or "") + str(x.get("mode")), day
 
 
-def test_parked_only_after_two_ratings_of_20_40_while_repeating(b2, monkeypatch):
+def test_matts_week_40_on_5_6_then_a_day_not_done_brings_chapter_7_twice_never_5(b2, monkeypatch):
+    """His real case (#41), one plan day earlier: 60 %, 60 %, then 40 % on Kapitel 5–6, then a day not done."""
     matt(b2, monkeypatch)
-    rate(b2, monkeypatch, "2026-11-05", 40)                          # → repeat mode
-    rate(b2, monkeypatch, "2026-11-06", 40)                          # one while repeating: not yet
+    for day, pct in (("2026-11-05", 60), ("2026-11-06", 60), ("2026-11-09", 40)):
+        rate(b2, monkeypatch, day, pct)
+    at(monkeypatch, berlin("2026-11-11", 8))                         # Di 10.11. neither rated nor ticked off
+    assert lesen_on(b2, "2026-11-10")["chapters"] == ["Kapitel 7"]
+    assert lesen_on(b2, "2026-11-11")["chapters"] == ["Kapitel 7"]
+    assert lesen_on(b2, "2026-11-12")["chapters"] == ["Kapitel 8"]
+
+
+def test_parked_only_after_two_ratings_of_20_40_at_one_chapter_a_day(b2, monkeypatch):
+    matt(b2, monkeypatch)
+    rate(b2, monkeypatch, "2026-11-05", 40)                          # → one chapter a day
+    rate(b2, monkeypatch, "2026-11-06", 40)                          # one at one chapter a day: not yet
     at(monkeypatch, berlin("2026-11-06", 13))
     assert lesen_on(b2, "2026-11-09")["bookId"] == "momo"
     rate(b2, monkeypatch, "2026-11-09", 20)                          # two in a row → parked
