@@ -1,0 +1,159 @@
+{
+  "about": "Original B1-style listening practice for Kaskade (not real exam material). Audio is generated with TTS.",
+  "items": [
+    {
+      "id": "h1",
+      "origin": "ai",
+      "title": "Ersatzbus nach Würzburg",
+      "kind": "durchsage",
+      "plays": 2,
+      "minutes": 6,
+      "instructions": "Du hörst eine Durchsage. Du hörst sie zweimal. Sind die Aussagen richtig oder falsch?",
+      "script": [
+        {
+          "speaker": "A",
+          "name": "Durchsage",
+          "text": "Achtung, eine Information zum Regionalexpress nach Würzburg, planmäßige Abfahrt zehn Uhr zwölf. Wegen einer Signalstörung fährt dieser Zug heute nur bis Ansbach. Fahrgäste nach Würzburg steigen in Ansbach bitte in einen Ersatzbus um. Die Busse warten direkt vor dem Bahnhofsgebäude in Ansbach. Bitte beachten Sie außerdem: Der Zug fährt heute nicht von Gleis drei, sondern von Gleis sieben ab. Wir rechnen mit einer Verspätung von etwa zwanzig Minuten. Fahrräder können im Ersatzbus leider nicht mitgenommen werden. Reisende mit Fahrrad nehmen bitte den Zug um elf Uhr vierzig über Treuchtlingen. Wir bitten um Ihr Verständnis."
+        }
+      ],
+      "questions": [
+        { "id": "h1-1", "statement": "Der Zug fährt heute bis nach Würzburg.", "correct": false },
+        { "id": "h1-2", "statement": "Der Zug fährt heute von Gleis sieben ab.", "correct": true },
+        { "id": "h1-3", "statement": "Man kann sein Fahrrad im Ersatzbus mitnehmen.", "correct": false },
+        { "id": "h1-4", "statement": "Die Ersatzbusse stehen vor dem Bahnhof in Ansbach.", "correct": true }
+      ]
+    },
+    {
+      "id": "h2",
+      "origin": "ai",
+      "title": "Nachricht von der Hausarztpraxis",
+      "kind": "anrufbeantworter",
+      "plays": 2,
+      "minutes": 6,
+      "instructions": "Du hörst eine Nachricht auf dem Anrufbeantworter. Du hörst sie zweimal. Wähle die richtige Antwort: a, b oder c.",
+      "script": [
+        {
+          "speaker": "B",
+          "name": "Frau Albers",
+          "text": "Guten Tag, hier ist Sabine Albers von der Hausarztpraxis Doktor Lindner. Die Nachricht ist für Herrn Okafor. Sie haben morgen um halb neun einen Termin zur Blutabnahme bei uns. Leider ist unser Labor morgen Vormittag geschlossen, deshalb müssen wir den Termin verschieben. Wir könnten Ihnen Donnerstag um Viertel nach acht anbieten oder Freitag um zehn. Bitte denken Sie daran: Zur Blutabnahme müssen Sie nüchtern kommen, also vorher nichts essen. Wasser dürfen Sie natürlich trinken. Und bringen Sie bitte Ihre neue Gesundheitskarte mit, die alte ist ja nicht mehr gültig. Rufen Sie uns bitte bis morgen Mittag zurück, am besten zwischen elf und zwölf, dann ist es bei uns meistens ruhiger. Vielen Dank und auf Wiederhören."
+        }
+      ],
+      "questions": [
+        {
+          "id": "h2-1",
+          "question": "Warum ruft Frau Albers an?",
+          "options": ["Herr Okafor hat seinen Termin vergessen.", "Der Termin muss verschoben werden.", "Die Ergebnisse vom Labor sind da."],
+          "correct": 1
+        },
+        {
+          "id": "h2-2",
+          "question": "Was muss Herr Okafor vor der Blutabnahme beachten?",
+          "options": ["Er darf nichts essen.", "Er darf kein Wasser trinken.", "Er soll keine Medikamente nehmen."],
+          "correct": 0
+        },
+        {
+          "id": "h2-3",
+          "question": "Was soll Herr Okafor mitbringen?",
+          "options": ["Seine alte Gesundheitskarte.", "Eine Überweisung.", "Seine neue Gesundheitskarte."],
+          "correct": 2
+        },
+        {
+          "id": "h2-4",
+          "question": "Wann soll Herr Okafor am besten zurückrufen?",
+          "options": ["Heute Abend.", "Am Donnerstag um Viertel nach acht.", "Morgen zwischen elf und zwölf."],
+          "correct": 2
+        }
+      ]
+    },
+    {
+      "id": "h3",
+      "origin": "ai",
+      "title": "Abschied für Herrn Brandt",
+      "kind": "gespraech",
+      "plays": 1,
+      "minutes": 8,
+      "instructions": "Du hörst ein Gespräch. Du hörst es einmal. Sind die Aussagen richtig oder falsch?",
+      "script": [
+        { "speaker": "A", "name": "Jonas", "text": "Miriam, hast du kurz Zeit? Es geht um die Abschiedsfeier für Herrn Brandt." },
+        { "speaker": "B", "name": "Miriam", "text": "Klar. Er hört ja Ende des Monats auf, oder?" },
+        { "speaker": "A", "name": "Jonas", "text": "Genau, sein letzter Arbeitstag ist der dreißigste. Ich dachte, wir feiern am Freitag davor, also am siebenundzwanzigsten." },
+        { "speaker": "B", "name": "Miriam", "text": "Freitag ist gut, aber bitte nicht zu spät. Viele fahren übers Wochenende weg. Wie wär's mit drei Uhr nachmittags?" },
+        { "speaker": "A", "name": "Jonas", "text": "Gute Idee. Und wo? Unser Besprechungsraum ist eigentlich zu klein für dreißig Leute." },
+        { "speaker": "B", "name": "Miriam", "text": "Stimmt. Was ist mit der Dachterrasse? Da war doch im Sommer auch unser Betriebsfest." },
+        { "speaker": "A", "name": "Jonas", "text": "Schon, aber Ende Oktober ist es da oben bestimmt zu kalt. Ich hab gestern in der Kantine nachgefragt. Wir dürfen den hinteren Teil benutzen, ab halb drei." },
+        { "speaker": "B", "name": "Miriam", "text": "Perfekt. Und das Essen? Bestellen wir was?" },
+        { "speaker": "A", "name": "Jonas", "text": "Ich würde sagen, jeder bringt etwas mit. Kuchen, Salate, so was. Die Getränke bezahlt die Firma, das hat die Chefin schon erlaubt." },
+        { "speaker": "B", "name": "Miriam", "text": "Super. Und das Geschenk? Hast du schon eine Idee?" },
+        { "speaker": "A", "name": "Jonas", "text": "Er wandert doch so gern. Vielleicht einen guten Rucksack?" },
+        { "speaker": "B", "name": "Miriam", "text": "Hm, er hat mir neulich erzählt, dass er sich gerade einen neuen gekauft hat. Wie wär's mit einem Gutschein für ein Wochenende in den Alpen? Dann hat er gleich was vor, wenn er in Rente ist." },
+        { "speaker": "A", "name": "Jonas", "text": "Das gefällt mir. Ich schreibe heute noch eine Mail an alle. Sollen wir sagen, zehn Euro pro Person?" },
+        { "speaker": "B", "name": "Miriam", "text": "Lieber ohne festen Betrag. Nicht alle verdienen gleich viel." },
+        { "speaker": "A", "name": "Jonas", "text": "Okay, dann schreib ich einfach: Wer möchte, kann etwas geben. Kümmerst du dich um die Karte?" },
+        { "speaker": "B", "name": "Miriam", "text": "Mach ich. Ich lege sie ab Montag in mein Büro, dann kann jeder unterschreiben." }
+      ],
+      "questions": [
+        { "id": "h3-1", "statement": "Die Feier ist am letzten Arbeitstag von Herrn Brandt.", "correct": false },
+        { "id": "h3-2", "statement": "Die Feier findet in der Kantine statt.", "correct": true },
+        { "id": "h3-3", "statement": "Die Firma bezahlt das Essen für die Feier.", "correct": false },
+        { "id": "h3-4", "statement": "Herr Brandt hat schon einen neuen Rucksack.", "correct": true },
+        { "id": "h3-5", "statement": "Jeder Kollege soll zehn Euro für das Geschenk geben.", "correct": false }
+      ]
+    },
+    {
+      "id": "h4",
+      "origin": "ai",
+      "title": "Schwimmen lernen mit einundvierzig",
+      "kind": "radio",
+      "plays": 1,
+      "minutes": 8,
+      "instructions": "Du hörst ein Interview im Radio. Du hörst es einmal. Wähle die richtige Antwort: a, b oder c.",
+      "script": [
+        { "speaker": "A", "name": "Moderator", "text": "Guten Abend und herzlich willkommen bei „Menschen in der Stadt“. Heute ist Petra Kessler bei mir im Studio. Frau Kessler, Sie haben mit einundvierzig Jahren schwimmen gelernt. Warum erst so spät?" },
+        { "speaker": "B", "name": "Frau Kessler", "text": "Guten Abend. Ja, das fragen mich viele. Als Kind hatte ich einfach keine Gelegenheit. In unserem Dorf gab es kein Schwimmbad, und meine Eltern hatten wenig Zeit. Später habe ich mich dann geschämt, das zuzugeben." },
+        { "speaker": "A", "name": "Moderator", "text": "Was war denn der Moment, in dem Sie gesagt haben: Jetzt mache ich es?" },
+        { "speaker": "B", "name": "Frau Kessler", "text": "Das war im Urlaub an der Ostsee. Meine Tochter wollte unbedingt mit mir ins Meer, und ich stand nur am Strand und hab gewartet. Sie war damals acht und konnte schon besser schwimmen als ich. Da hab ich gedacht: So geht das nicht weiter." },
+        { "speaker": "A", "name": "Moderator", "text": "Und wie haben Sie dann einen Kurs gefunden?" },
+        { "speaker": "B", "name": "Frau Kessler", "text": "Über die Volkshochschule. Dort gibt es Schwimmkurse nur für Erwachsene. Das war mir wichtig, weil ich nicht zwischen lauter Kindern im Becken stehen wollte. Wir waren zehn Leute, und alle hatten dasselbe Problem. Das hat sehr geholfen." },
+        { "speaker": "A", "name": "Moderator", "text": "Wie waren die ersten Stunden?" },
+        { "speaker": "B", "name": "Frau Kessler", "text": "Ehrlich gesagt furchtbar. Ich hatte schon Angst, wenn mein Gesicht nass wurde. Aber die Trainerin war sehr geduldig. In den ersten drei Wochen haben wir eigentlich nur geübt, im Wasser ruhig zu atmen." },
+        { "speaker": "A", "name": "Moderator", "text": "Wie lange hat es gedauert, bis Sie wirklich schwimmen konnten?" },
+        { "speaker": "B", "name": "Frau Kessler", "text": "Ungefähr ein halbes Jahr. Der erste Kurs ging zwölf Wochen, danach habe ich noch einen zweiten gemacht. Heute gehe ich zweimal pro Woche ins Hallenbad, immer morgens vor der Arbeit." },
+        { "speaker": "A", "name": "Moderator", "text": "Was möchten Sie Erwachsenen sagen, die auch nicht schwimmen können?" },
+        { "speaker": "B", "name": "Frau Kessler", "text": "Dass sie nicht allein sind. Man glaubt immer, man ist die Einzige. Aber das stimmt nicht. Und: Es ist nie zu spät. Diesen Sommer bin ich mit meiner Tochter zum ersten Mal zusammen im Meer geschwommen." },
+        { "speaker": "A", "name": "Moderator", "text": "Ein schönes Schlusswort. Vielen Dank, Frau Kessler, und weiterhin viel Spaß im Wasser." }
+      ],
+      "questions": [
+        {
+          "id": "h4-1",
+          "question": "Warum hat Frau Kessler als Kind nicht schwimmen gelernt?",
+          "options": ["Sie hatte große Angst vor Wasser.", "In ihrem Dorf gab es kein Schwimmbad.", "Sie war als Kind oft krank."],
+          "correct": 1
+        },
+        {
+          "id": "h4-2",
+          "question": "Warum wollte sie endlich schwimmen lernen?",
+          "options": ["Ihre Tochter wollte mit ihr im Meer schwimmen.", "Ihr Arzt hat es ihr empfohlen.", "Sie wollte im Urlaub tauchen lernen."],
+          "correct": 0
+        },
+        {
+          "id": "h4-3",
+          "question": "Warum war der Kurs bei der Volkshochschule für sie gut?",
+          "options": ["Er war sehr billig.", "Er war in der Nähe ihrer Arbeit.", "Er war nur für Erwachsene."],
+          "correct": 2
+        },
+        {
+          "id": "h4-4",
+          "question": "Was hat sie in den ersten Wochen vor allem geübt?",
+          "options": ["Tauchen.", "Ruhig atmen.", "Ins Wasser springen."],
+          "correct": 1
+        },
+        {
+          "id": "h4-5",
+          "question": "Wie oft geht sie heute schwimmen?",
+          "options": ["Jeden Morgen.", "Nur im Sommer.", "Zweimal pro Woche."],
+          "correct": 2
+        }
+      ]
+    }
+  ]
+}

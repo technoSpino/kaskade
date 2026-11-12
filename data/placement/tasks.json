@@ -1,0 +1,40 @@
+{
+  "about": "Original Schreiben/Sprechen tasks for the Kaskade placement test. Written for Kaskade.",
+  "writing": {
+    "id": "w-einstufung-1",
+    "origin": "ai",
+    "type": "E-Mail an Freunde (informell)",
+    "title": "Die neue Wohnung",
+    "situation": "Du bist vor zwei Wochen in eine neue Wohnung umgezogen. Deine Freundin Jana wohnt in einer anderen Stadt und weiß noch nichts davon. Schreib ihr eine E-Mail.",
+    "points": [
+      "Beschreib die neue Wohnung und die Gegend.",
+      "Erzähl, was beim Umzug schwierig war.",
+      "Lade Jana zu einem Besuch ein und schlag einen Termin vor."
+    ],
+    "words": 80,
+    "minutes": 20
+  },
+  "speaking": [
+    {
+      "id": "sp1",
+      "origin": "ai",
+      "prompt": "Stell dich kurz vor: Wo wohnst du, was machst du beruflich und warum lernst du Deutsch?",
+      "hint": "Etwa eine Minute. In ganzen Sätzen sprechen, nicht ablesen.",
+      "seconds": 90
+    },
+    {
+      "id": "sp2",
+      "origin": "ai",
+      "prompt": "Erzähl von deinem letzten Wochenende: Was hast du gemacht und wie war es?",
+      "hint": "Etwa eine Minute. Im Perfekt erzählen.",
+      "seconds": 90
+    },
+    {
+      "id": "sp3",
+      "origin": "ai",
+      "prompt": "Viele Menschen arbeiten heute im Homeoffice. Was findest du besser: zu Hause oder im Büro arbeiten? Begründe deine Meinung.",
+      "hint": "Etwa eine Minute. Mit weil, deshalb oder trotzdem begründen.",
+      "seconds": 90
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Kaskade — Bibliothek</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F4F6}
+*{box-sizing:border-box}
+a{color:#3B2BB0}a:hover{color:#14161B}
+:focus-visible{outline:3px solid #5B3FD6;outline-offset:2px}
+header nav a:not([aria-current]):hover{background:#2A2E37 !important;color:#FFFFFF !important}
+button{font-family:inherit;cursor:pointer}
+button[data-chip]:hover{border-color:#14161B !important}
+a[data-btn="primary"]:hover,button[data-btn="primary"]:hover{background:#2E323C !important;color:#FFFFFF !important}
+a[data-btn="ghost"]:hover{background:#ECEEF2 !important}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F3F4F6; color: #14161B; font-family: 'Archivo', system-ui, sans-serif; font-variant-numeric: tabular-nums">
+
+<header style="background: #14161B; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 6px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 24px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF; text-decoration: none; font-weight: 800; font-size: 19px; letter-spacing: -0.01em; min-height: 44px"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><rect x="1" y="2" width="6" height="18" rx="1" fill="#FFD23F"></rect><rect x="8" y="7" width="6" height="13" rx="1" fill="#FFFFFF"></rect><rect x="15" y="12" width="6" height="8" rx="1" fill="#FFFFFF"></rect></svg>Kaskade</a>
+<nav aria-label="Hauptnavigation" style="display: flex; flex-wrap: wrap; gap: 2px">
+<a href="Main.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Heute</a>
+<a href="Fahrplan.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Fahrplan</a>
+<a href="Bibliothek.dc.html" aria-current="page" style="color: #14161B; background: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 700; padding: 12px; border-radius: 8px; line-height: 20px">Bibliothek</a>
+<a href="Lesen.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Lesen</a>
+<a href="Hoeren.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Hören</a>
+<a href="Sprechen.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Sprechen</a>
+<a href="Schreiben.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Schreiben</a>
+<a href="Karten.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Karten</a>
+<a href="Buecher.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Bücher</a>
+</nav>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 10px">
+<span style="font-size: 13px; font-weight: 700; color: #14161B; background: #FFD23F; padding: 5px 10px; border-radius: 999px">Phase 2A</span>
+<span aria-label="Profil Matt" style="width: 34px; height: 34px; border-radius: 999px; background: #2A2E37; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px">M</span>
+</div>
+</div>
+</header>
+
+<main style="max-width: 1200px; margin: 0 auto; padding: 32px 24px 56px; display: flex; flex-direction: column; gap: 24px">
+
+<div style="display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px">
+<div style="min-width: 0">
+<h1 style="margin: 0; font-size: 40px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em">Bibliothek</h1>
+<p style="margin: 10px 0 0; font-size: 17px; line-height: 1.5; color: #3D4350; max-width: 62ch">Sortiert danach, wie viel du verstehst — berechnet aus deinen bekannten Wörtern. <strong style="color: #14161B">Sweet Spot: 90–98 %.</strong></p>
+</div>
+</div>
+
+<form style="display: flex; flex-wrap: wrap; gap: 10px; background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 14px">
+<label for="imp" style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0)">Link zum Importieren</label>
+<input id="imp" type="url" placeholder="Link einfügen: YouTube, Podcast-Feed, Artikel …" style="flex: 999 1 320px; min-width: 0; min-height: 48px; padding: 0 14px; font: inherit; font-size: 15px; border: 1px solid #C5CAD3; border-radius: 10px; background: #FFFFFF; color: #14161B">
+<button type="button" data-btn="primary" style="min-height: 48px; padding: 0 20px; background: #14161B; color: #FFFFFF; border: 0; border-radius: 10px; font-weight: 700; font-size: 15px">Importieren</button>
+<button type="button" data-chip="1" style="min-height: 48px; padding: 0 16px; background: #FFFFFF; color: #14161B; border: 1px solid #C5CAD3; border-radius: 10px; font-weight: 700; font-size: 15px; display: inline-flex; align-items: center; gap: 8px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 16V4M7 9l5-5 5 5M5 20h14"></path></svg>Datei: PDF, EPUB, MP3, SRT</button>
+<p style="flex: 1 1 100%; margin: 2px 4px 0; font-size: 13px; color: #5B6270">Keine Untertitel? Dein Server transkribiert das Audio (Whisper) und richtet Text und Ton aneinander aus.</p>
+</form>
+
+<section aria-labelledby="ki-h" style="background: #14161B; color: #FFFFFF; border-radius: 14px; padding: 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px">
+<h2 id="ki-h" style="margin: 0; font-size: 20px; font-weight: 800">KI-Texte aus deinen Wörtern</h2>
+<p style="margin: 0; font-size: 14px; color: #C9CDD6">Geschrieben für genau dein Level: fast nur bekannte Wörter + ein paar neue, mit Audio</p>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; margin-top: 16px">
+<a href="Lesen.dc.html" style="display: block; background: #2A2E37; border-radius: 12px; padding: 16px; color: #FFFFFF; text-decoration: none">
+<p style="margin: 0; font-size: 12px; font-weight: 700; color: #C9CDD6; text-transform: uppercase; letter-spacing: 0.06em">Wohnen · 320 Wörter · Audio</p>
+<p style="margin: 6px 0 0; font-family: 'Literata', Georgia, serif; font-size: 20px; font-weight: 600">Ärger mit der Heizung</p>
+<p style="margin: 8px 0 0; font-size: 14px; color: #C9CDD6"><strong style="color: #FFD23F">94 %</strong> bekannt · neu: Treppenhaus, Handwerker, wenigstens</p>
+</a>
+<a href="Lesen.dc.html" style="display: block; background: #2A2E37; border-radius: 12px; padding: 16px; color: #FFFFFF; text-decoration: none">
+<p style="margin: 0; font-size: 12px; font-weight: 700; color: #C9CDD6; text-transform: uppercase; letter-spacing: 0.06em">Behörden · 280 Wörter · Audio</p>
+<p style="margin: 6px 0 0; font-family: 'Literata', Georgia, serif; font-size: 20px; font-weight: 600">Ein Termin beim Bürgeramt</p>
+<p style="margin: 8px 0 0; font-size: 14px; color: #C9CDD6"><strong style="color: #FFD23F">95 %</strong> bekannt · übt: Relativsätze (dein Primer heute)</p>
+</a>
+<div style="background: #2A2E37; border-radius: 12px; padding: 16px; display: flex; flex-direction: column; gap: 10px">
+<p style="margin: 0; font-size: 14px; font-weight: 700">Neuen Text erstellen</p>
+<div style="display: flex; flex-wrap: wrap; gap: 6px">
+<button type="button" aria-pressed="true" style="min-height: 36px; padding: 0 12px; border-radius: 999px; border: 0; background: #FFD23F; color: #14161B; font-weight: 700; font-size: 13px">Arbeit</button>
+<button type="button" aria-pressed="false" style="min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid #5B6270; background: transparent; color: #FFFFFF; font-weight: 600; font-size: 13px">Reisen</button>
+<button type="button" aria-pressed="false" style="min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid #5B6270; background: transparent; color: #FFFFFF; font-weight: 600; font-size: 13px">Fußball</button>
+<button type="button" aria-pressed="false" style="min-height: 36px; padding: 0 12px; border-radius: 999px; border: 1px solid #5B6270; background: transparent; color: #FFFFFF; font-weight: 600; font-size: 13px">Kontext Kap. 3</button>
+</div>
+<p style="margin: 0; font-size: 13px; color: #C9CDD6">Zielwörter: 5 fällige Karten · Grammatik: Passiv</p>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="shelf-h" style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px">
+<h2 id="shelf-h" style="margin: 0; font-size: 20px; font-weight: 800">Deine Lese-Leiter</h2>
+<p style="margin: 0; font-size: 14px; color: #3D4350">Deine eigenen Bücher, nach Schwierigkeit sortiert. Das nächste ist dran, sobald du ≥ 90 % verstehst.</p>
+</div>
+<ol style="list-style: none; margin: 12px 0 0; padding: 0">
+<li style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding: 14px 0; border-top: 1px solid #ECEEF2">
+<span style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #14161B; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px">1</span>
+<div style="flex: 999 1 260px; min-width: 0"><p style="margin: 0; font-size: 17px; font-weight: 800">Kurzgeschichten B1/B2</p><p style="margin: 2px 0 0; font-size: 14px; color: #3D4350">Lernbuch · kurze Kapitel, ideal für freies Lesen</p></div>
+<strong style="flex: none; font-size: 22px; min-width: 64px">96 %</strong>
+<span style="flex: none; font-size: 12px; font-weight: 700; color: #FFD23F; background: #14161B; padding: 4px 9px; border-radius: 999px">Sweet Spot</span>
+<p style="flex: 1 1 220px; margin: 0; font-size: 13px; line-height: 1.45; color: #3D4350">Jetzt · fester Platz im Block (10:55, ohne Nachschlagen)</p>
+<a href="Buchbegleiter.dc.html" data-btn="ghost" style="flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #C5CAD3; border-radius: 10px; color: #14161B; text-decoration: none; font-weight: 700; font-size: 14px">Öffnen</a>
+</li>
+<li style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding: 14px 0; border-top: 1px solid #ECEEF2">
+<span style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #14161B; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px">2</span>
+<div style="flex: 999 1 260px; min-width: 0"><p style="margin: 0; font-size: 17px; font-weight: 800">Fluent German · Stories</p><p style="margin: 2px 0 0; font-size: 14px; color: #3D4350">Lernbuch · Geschichten für Lernende</p></div>
+<strong style="flex: none; font-size: 22px; min-width: 64px">95 %</strong>
+<span style="flex: none; font-size: 12px; font-weight: 700; color: #FFD23F; background: #14161B; padding: 4px 9px; border-radius: 999px">Sweet Spot</span>
+<p style="flex: 1 1 220px; margin: 0; font-size: 13px; line-height: 1.45; color: #3D4350">Parallel oder danach · gut zum Satz-Minen</p>
+<a href="Buchbegleiter.dc.html" data-btn="ghost" style="flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #C5CAD3; border-radius: 10px; color: #14161B; text-decoration: none; font-weight: 700; font-size: 14px">Öffnen</a>
+</li>
+<li style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding: 14px 0; border-top: 1px solid #ECEEF2">
+<span style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #14161B; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px">3</span>
+<div style="flex: 999 1 260px; min-width: 0"><p style="margin: 0; font-size: 17px; font-weight: 800">Momo</p><p style="margin: 2px 0 0; font-size: 14px; color: #3D4350">Michael Ende · Roman</p></div>
+<strong style="flex: none; font-size: 22px; min-width: 64px">89 %</strong>
+<span style="flex: none; font-size: 12px; font-weight: 700; color: #8A4100; background: #FFF3E0; padding: 4px 9px; border-radius: 999px">Etwas schwer</span>
+<p style="flex: 1 1 220px; margin: 0; font-size: 13px; line-height: 1.45; color: #3D4350">Papierbuch + Hörbuch im Buch-Begleiter · Sätze einfangen statt nachschlagen</p>
+<a href="Buchbegleiter.dc.html" data-btn="ghost" style="flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #C5CAD3; border-radius: 10px; color: #14161B; text-decoration: none; font-weight: 700; font-size: 14px">Öffnen</a>
+</li>
+<li style="display: flex; flex-wrap: wrap; align-items: center; gap: 10px 18px; padding: 14px 0; border-top: 1px solid #ECEEF2">
+<span style="flex: none; width: 32px; height: 32px; border-radius: 999px; background: #14161B; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px">4</span>
+<div style="flex: 999 1 260px; min-width: 0"><p style="margin: 0; font-size: 17px; font-weight: 800">Die unendliche Geschichte</p><p style="margin: 2px 0 0; font-size: 14px; color: #3D4350">Michael Ende · Roman</p></div>
+<strong style="flex: none; font-size: 22px; min-width: 64px">81 %</strong>
+<span style="flex: none; font-size: 12px; font-weight: 700; color: #3D4350; background: #ECEEF2; padding: 4px 9px; border-radius: 999px">Später</span>
+<p style="flex: 1 1 220px; margin: 0; font-size: 13px; line-height: 1.45; color: #3D4350">Kommt nach Momo · Erinnerung ab 90 %</p>
+<a href="Buchbegleiter.dc.html" data-btn="ghost" style="flex: none; display: inline-flex; align-items: center; min-height: 44px; padding: 0 14px; border: 1px solid #C5CAD3; border-radius: 10px; color: #14161B; text-decoration: none; font-weight: 700; font-size: 14px">Öffnen</a>
+</li>
+</ol>
+<p style="margin: 10px 0 0; padding-top: 12px; border-top: 1px solid #ECEEF2; font-size: 13px; line-height: 1.5; color: #5B6270">Papierbuch + Hörbuch: Der Buch-Begleiter fängt einzelne Sätze ein (12-Sekunden-Clip oder Foto einer Zeile) — das ganze Buch liegt nie im App. „% bekannt“ wird aus einer kurzen Hörprobe pro Kapitel geschätzt.</p>
+</section>
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px">
+<div role="group" aria-label="Filter nach Typ" style="display: flex; flex-wrap: wrap; gap: 6px">
+<button type="button" aria-pressed="true" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 0; background: #14161B; color: #FFFFFF; font-weight: 700; font-size: 14px">Alle</button>
+<button type="button" data-chip="1" aria-pressed="false" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #C5CAD3; background: #FFFFFF; color: #14161B; font-weight: 600; font-size: 14px">Video</button>
+<button type="button" data-chip="1" aria-pressed="false" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #C5CAD3; background: #FFFFFF; color: #14161B; font-weight: 600; font-size: 14px">Podcast</button>
+<button type="button" data-chip="1" aria-pressed="false" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #C5CAD3; background: #FFFFFF; color: #14161B; font-weight: 600; font-size: 14px">Artikel</button>
+<button type="button" data-chip="1" aria-pressed="false" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #C5CAD3; background: #FFFFFF; color: #14161B; font-weight: 600; font-size: 14px">Buch</button>
+<button type="button" data-chip="1" aria-pressed="false" style="min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1px solid #C5CAD3; background: #FFFFFF; color: #14161B; font-weight: 600; font-size: 14px">Serie</button>
+</div>
+<p style="margin: 0; font-size: 14px; color: #3D4350">Skala zeigt 70–100 % · <span style="display: inline-block; width: 22px; height: 10px; background: #FFF4C2; border: 1px solid #E6C64A; vertical-align: middle; border-radius: 2px"></span> Sweet Spot</p>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 16px">
+
+<article style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 12px; align-items: center">
+<span style="width: 40px; height: 40px; flex: none; border-radius: 10px; background: #F3F4F6; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14161B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h14v16H5z"></path><path d="M8 8h8M8 12h8M8 16h5"></path></svg></span>
+<div style="min-width: 0"><p style="margin: 0; font-size: 12px; font-weight: 700; color: #5B6270; text-transform: uppercase; letter-spacing: 0.06em">Artikel + Audio</p><h3 style="margin: 2px 0 0; font-size: 17px; font-weight: 800">nachrichtenleicht</h3></div>
+</div>
+<p style="margin: 0; font-size: 14px; color: #3D4350">Deutschlandfunk · Nachrichten in einfacher Sprache</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><strong style="font-size: 26px">97 %</strong><span style="font-size: 12px; font-weight: 700; color: #1F5F2A; background: #E8F5E9; padding: 4px 9px; border-radius: 999px">Leicht · freies Lesen</span></div>
+<div role="img" aria-label="97 Prozent bekannt" style="position: relative; height: 10px; background: #ECEEF2; border-radius: 5px"><div style="position: absolute; left: 66.7%; width: 26.7%; top: 0; bottom: 0; background: #FFF4C2; border-left: 1px solid #E6C64A; border-right: 1px solid #E6C64A"></div><div style="position: absolute; left: 90%; top: -4px; width: 4px; height: 18px; margin-left: -2px; background: #14161B; border-radius: 2px"></div></div>
+<p style="margin: 0; font-size: 13px; color: #5B6270">≈ 6 neue Wörter pro Artikel · Text vorhanden</p>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 12px; align-items: center">
+<span style="width: 40px; height: 40px; flex: none; border-radius: 10px; background: #F3F4F6; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14161B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M10 9l5 3-5 3z"></path></svg></span>
+<div style="min-width: 0"><p style="margin: 0; font-size: 12px; font-weight: 700; color: #5B6270; text-transform: uppercase; letter-spacing: 0.06em">Video-Serie</p><h3 style="margin: 2px 0 0; font-size: 17px; font-weight: 800">Nicos Weg · B1</h3></div>
+</div>
+<p style="margin: 0; font-size: 14px; color: #3D4350">Deutsche Welle · kurze Folgen mit Untertiteln</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><strong style="font-size: 26px">96 %</strong><span style="font-size: 12px; font-weight: 700; color: #FFD23F; background: #14161B; padding: 4px 9px; border-radius: 999px">Sweet Spot</span></div>
+<div role="img" aria-label="96 Prozent bekannt" style="position: relative; height: 10px; background: #ECEEF2; border-radius: 5px"><div style="position: absolute; left: 66.7%; width: 26.7%; top: 0; bottom: 0; background: #FFF4C2; border-left: 1px solid #E6C64A; border-right: 1px solid #E6C64A"></div><div style="position: absolute; left: 86.7%; top: -4px; width: 4px; height: 18px; margin-left: -2px; background: #14161B; border-radius: 2px"></div></div>
+<p style="margin: 0; font-size: 13px; color: #5B6270">≈ 5 neue Wörter pro Folge · Untertitel</p>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 12px; align-items: center">
+<span style="width: 40px; height: 40px; flex: none; border-radius: 10px; background: #F3F4F6; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14161B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"></path><path d="M5 17a3 3 0 0 1 3-3h11"></path></svg></span>
+<div style="min-width: 0"><p style="margin: 0; font-size: 12px; font-weight: 700; color: #5B6270; text-transform: uppercase; letter-spacing: 0.06em">Dein Buch</p><h3 style="margin: 2px 0 0; font-size: 17px; font-weight: 800">Kontext B1.1 · Kapitel 3</h3></div>
+</div>
+<p style="margin: 0; font-size: 14px; color: #3D4350">Lesetext (Scan) + Hörtext (deine MP3)</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><strong style="font-size: 26px">94 %</strong><span style="font-size: 12px; font-weight: 700; color: #FFD23F; background: #14161B; padding: 4px 9px; border-radius: 999px">Sweet Spot</span></div>
+<div role="img" aria-label="94 Prozent bekannt" style="position: relative; height: 10px; background: #ECEEF2; border-radius: 5px"><div style="position: absolute; left: 66.7%; width: 26.7%; top: 0; bottom: 0; background: #FFF4C2; border-left: 1px solid #E6C64A; border-right: 1px solid #E6C64A"></div><div style="position: absolute; left: 80%; top: -4px; width: 4px; height: 18px; margin-left: -2px; background: #14161B; border-radius: 2px"></div></div>
+<p style="margin: 0; font-size: 13px; color: #5B6270">12 neue Wörter · Whisper-Transkript</p>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 12px; align-items: center">
+<span style="width: 40px; height: 40px; flex: none; border-radius: 10px; background: #F3F4F6; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14161B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M10 9l5 3-5 3z"></path></svg></span>
+<div style="min-width: 0"><p style="margin: 0; font-size: 12px; font-weight: 700; color: #5B6270; text-transform: uppercase; letter-spacing: 0.06em">YouTube</p><h3 style="margin: 2px 0 0; font-size: 17px; font-weight: 800">Easy German</h3></div>
+</div>
+<p style="margin: 0; font-size: 14px; color: #3D4350">Straßeninterviews · echte Alltagssprache</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><strong style="font-size: 26px">91 %</strong><span style="font-size: 12px; font-weight: 700; color: #FFD23F; background: #14161B; padding: 4px 9px; border-radius: 999px">Sweet Spot</span></div>
+<div role="img" aria-label="91 Prozent bekannt" style="position: relative; height: 10px; background: #ECEEF2; border-radius: 5px"><div style="position: absolute; left: 66.7%; width: 26.7%; top: 0; bottom: 0; background: #FFF4C2; border-left: 1px solid #E6C64A; border-right: 1px solid #E6C64A"></div><div style="position: absolute; left: 70%; top: -4px; width: 4px; height: 18px; margin-left: -2px; background: #14161B; border-radius: 2px"></div></div>
+<p style="margin: 0; font-size: 13px; color: #5B6270">≈ 24 neue Wörter pro Video · Untertitel</p>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 12px; align-items: center">
+<span style="width: 40px; height: 40px; flex: none; border-radius: 10px; background: #F3F4F6; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14161B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15v-3a8 8 0 0 1 16 0v3"></path><rect x="3" y="14" width="4" height="6" rx="1.5"></rect><rect x="17" y="14" width="4" height="6" rx="1.5"></rect></svg></span>
+<div style="min-width: 0"><p style="margin: 0; font-size: 12px; font-weight: 700; color: #5B6270; text-transform: uppercase; letter-spacing: 0.06em">Podcast</p><h3 style="margin: 2px 0 0; font-size: 17px; font-weight: 800">Langsam gesprochene Nachrichten</h3></div>
+</div>
+<p style="margin: 0; font-size: 14px; color: #3D4350">Deutsche Welle · täglich, mit Text</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><strong style="font-size: 26px">88 %</strong><span style="font-size: 12px; font-weight: 700; color: #8A4100; background: #FFF3E0; padding: 4px 9px; border-radius: 999px">Etwas schwer</span></div>
+<div role="img" aria-label="88 Prozent bekannt" style="position: relative; height: 10px; background: #ECEEF2; border-radius: 5px"><div style="position: absolute; left: 66.7%; width: 26.7%; top: 0; bottom: 0; background: #FFF4C2; border-left: 1px solid #E6C64A; border-right: 1px solid #E6C64A"></div><div style="position: absolute; left: 60%; top: -4px; width: 4px; height: 18px; margin-left: -2px; background: #14161B; border-radius: 2px"></div></div>
+<p style="margin: 0; font-size: 13px; color: #5B6270">≈ 31 neue Wörter · Politik-Wortschatz fehlt noch</p>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 12px; align-items: center">
+<span style="width: 40px; height: 40px; flex: none; border-radius: 10px; background: #F3F4F6; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14161B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 15v-3a8 8 0 0 1 16 0v3"></path><rect x="3" y="14" width="4" height="6" rx="1.5"></rect><rect x="17" y="14" width="4" height="6" rx="1.5"></rect></svg></span>
+<div style="min-width: 0"><p style="margin: 0; font-size: 12px; font-weight: 700; color: #5B6270; text-transform: uppercase; letter-spacing: 0.06em">Podcast</p><h3 style="margin: 2px 0 0; font-size: 17px; font-weight: 800">Easy German Podcast</h3></div>
+</div>
+<p style="margin: 0; font-size: 14px; color: #3D4350">Lange Gespräche · natürliches Tempo</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><strong style="font-size: 26px">85 %</strong><span style="font-size: 12px; font-weight: 700; color: #8A4100; background: #FFF3E0; padding: 4px 9px; border-radius: 999px">Etwas schwer</span></div>
+<div role="img" aria-label="85 Prozent bekannt" style="position: relative; height: 10px; background: #ECEEF2; border-radius: 5px"><div style="position: absolute; left: 66.7%; width: 26.7%; top: 0; bottom: 0; background: #FFF4C2; border-left: 1px solid #E6C64A; border-right: 1px solid #E6C64A"></div><div style="position: absolute; left: 50%; top: -4px; width: 4px; height: 18px; margin-left: -2px; background: #14161B; border-radius: 2px"></div></div>
+<p style="margin: 0; font-size: 13px; color: #5B6270">Whisper-Transkript · gut für Passiv-Hören</p>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 18px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; gap: 12px; align-items: center">
+<span style="width: 40px; height: 40px; flex: none; border-radius: 10px; background: #F3F4F6; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#14161B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"></rect><path d="M8 21h8M12 18v3"></path></svg></span>
+<div style="min-width: 0"><p style="margin: 0; font-size: 12px; font-weight: 700; color: #5B6270; text-transform: uppercase; letter-spacing: 0.06em">Serie · SRT importiert</p><h3 style="margin: 2px 0 0; font-size: 17px; font-weight: 800">Dark · Staffel 1</h3></div>
+</div>
+<p style="margin: 0; font-size: 14px; color: #3D4350">Netflix · Untertitel-Datei importiert</p>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px"><strong style="font-size: 26px">74 %</strong><span style="font-size: 12px; font-weight: 700; color: #3D4350; background: #ECEEF2; padding: 4px 9px; border-radius: 999px">Später · Phase 3</span></div>
+<div role="img" aria-label="74 Prozent bekannt" style="position: relative; height: 10px; background: #ECEEF2; border-radius: 5px"><div style="position: absolute; left: 66.7%; width: 26.7%; top: 0; bottom: 0; background: #FFF4C2; border-left: 1px solid #E6C64A; border-right: 1px solid #E6C64A"></div><div style="position: absolute; left: 13.3%; top: -4px; width: 4px; height: 18px; margin-left: -2px; background: #14161B; border-radius: 2px"></div></div>
+<p style="margin: 0; font-size: 13px; color: #5B6270">Vorschau: die 40 häufigsten unbekannten Wörter vorab lernen</p>
+</article>
+
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1200}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>

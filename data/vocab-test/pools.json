@@ -1,0 +1,31 @@
+{
+  "about": "Wortschatz-Test (ja/nein). Words hand-picked from data/freq/lemmas.tsv per frequency band; 'size' = estimated number of real lemmas in the band (raw ranks minus junk, see PROGRESS.md). Pseudowords are original, checked against the frequency list.",
+  "perBand": 20,
+  "bands": [
+    {
+      "id": "b1", "from": 1, "to": 500, "size": 485,
+      "words": ["geben", "denken", "glauben", "finden", "leben", "wirklich", "Frau", "Zeit", "verstehen", "warten", "sicher", "Tag", "Kind", "kennen", "richtig", "fragen", "jung", "Name", "spielen", "erzählen", "Familie", "zeigen", "sofort", "Sohn", "Sache", "schlecht", "eigentlich", "erinnern", "Idee", "Tür", "schwer", "lernen", "anrufen", "nett", "gestern", "manchmal", "Geschichte", "heiraten", "glücklich", "möglich", "oft", "Herz", "wohnen", "beginnen", "leicht", "Arzt", "trotzdem", "Geld", "Arbeit", "Stadt"]
+    },
+    {
+      "id": "b2", "from": 501, "to": 1000, "size": 428,
+      "words": ["Bild", "öffnen", "völlig", "lustig", "bewegen", "bauen", "Rest", "Zukunft", "gefährlich", "Wohnung", "tief", "Körper", "übernehmen", "stolz", "normal", "vorsichtig", "Stimme", "Bein", "perfekt", "Handy", "besuchen", "Punkt", "ständig", "dumm", "kalt", "Fenster", "Schritt", "Anwalt", "Rolle", "Hochzeit", "schwierig", "lösen", "Beispiel", "Lage", "Tasche", "Frieden", "Patient", "trennen", "entdecken", "Gericht", "vorbereiten", "Regierung", "Lust", "wachsen", "Vergangenheit", "schneiden", "ankommen", "danken", "reisen", "Küche"]
+    },
+    {
+      "id": "b3", "from": 1001, "to": 2000, "size": 813,
+      "words": ["kochen", "trauen", "drinnen", "Erfahrung", "verschieden", "mitkommen", "Flasche", "befreien", "unterstützen", "Engel", "grün", "wechseln", "beten", "anhalten", "klären", "begleiten", "Vertrag", "anscheinend", "betreffen", "Gewalt", "studieren", "entspannen", "Zustand", "peinlich", "Reihe", "Mitglied", "heben", "Kraft", "eifersüchtig", "Aufmerksamkeit", "pfeifen", "schlau", "Mond", "Ergebnis", "Kunst", "zugeben", "romantisch", "deutlich", "üben", "Artikel", "auffallen", "Freundschaft", "ersetzen", "gegenseitig", "Notfall", "stinken", "blau", "zustimmen", "üblich", "Einladung"]
+    },
+    {
+      "id": "b4", "from": 2001, "to": 3000, "size": 770,
+      "words": ["Bürger", "abhalten", "begeistert", "Verletzung", "notwendig", "beschuldigen", "Ereignis", "aufheben", "Tasse", "zeichnen", "Schock", "füttern", "Schluck", "Wunde", "Jäger", "Gemeinde", "enthalten", "Interview", "Schokolade", "Tradition", "vertreten", "Kette", "Arbeiter", "darunter", "veröffentlichen", "umziehen", "Prüfung", "Besucher", "pleite", "Lieferung", "einsteigen", "zusätzlich", "Abstand", "hell", "backen", "Einbruch", "jahrelang", "sozusagen", "Forschung", "eigenartig", "abhängen", "Gewicht", "Stift"]
+    },
+    {
+      "id": "b5", "from": 3001, "to": 5000, "size": 1500,
+      "words": ["Sarg", "Verständnis", "Hügel", "Ebene", "tragisch", "Grundstück", "Salz", "Studie", "gruselig", "überfahren", "Salat", "gespannt", "Spaziergang", "Verhaftung", "Gürtel", "rechtfertigen", "Versager", "Anlass", "Glocke", "aufbewahren", "niedrig", "Verpflichtung", "evakuieren", "registrieren", "Verschwörung", "Veränderung", "abreißen", "Räuber", "Silber", "Zahnarzt", "durchhalten", "hinzufügen", "Geschäftsmann", "mittlerweile", "Münze", "Ruhestand", "Beförderung", "Wirtschaft", "Zuneigung", "Maßnahme", "saugen", "Knoten", "fleißig", "Pumpe", "finanziell", "Veranda", "Feuerwerk", "westlich", "Anfänger"]
+    },
+    {
+      "id": "b6", "from": 5001, "to": 8000, "size": 2150,
+      "words": ["Autogramm", "Flüssigkeit", "Kurve", "Ministerium", "fällig", "Kinn", "komplex", "angespannt", "Inspiration", "Kuppel", "Turnier", "Begräbnis", "Herd", "Flut", "Geschäftsführer", "verabreichen", "verlängern", "geheimnisvoll", "realistisch", "Fahndung", "unklar", "erkundigen", "intakt", "Sorgerecht", "Taschenlampe", "einweihen", "beeinträchtigen", "Heizung", "Gerichtssaal", "erforderlich", "Defekt", "unmittelbar", "Täuschung", "gegeneinander", "gewissermaßen", "Truhe", "Scheinwerfer", "verzögern", "Heuchler", "Temperament", "undankbar", "Fußboden", "rücksichtslos", "Handwerker", "Steuerung", "Nachschub", "Schwelle", "Spielplatz"]
+    }
+  ],
+  "pseudowords": ["Bruntel", "Schnepfung", "verlanken", "abtrüschen", "Gerstlung", "prullig", "Mörtsel", "Habrung", "Strüppe", "anfleuden", "Klonsel", "betrimpfen", "Trausling", "glommig", "Schwätel", "umpranzen", "Pelkunde", "Kirtenheit", "verstolmen", "hintrecken", "Galbung", "nüftig", "Wollunge", "dremseln", "Flonzer", "zerknaupen", "Rimpfel", "gaumlich", "Ostrelle", "beschlanzen"]
+}

@@ -1,0 +1,70 @@
+{
+  "id": "t12",
+  "origin": "ai",
+  "title": "Ein Termin beim Bürgeramt",
+  "level": "B1",
+  "theme": "Behörden",
+  "slot": "input",
+  "text": "Als Tomás Herrera nach Leipzig gezogen war, wusste er zuerst nicht, dass man in Deutschland seine neue Adresse innerhalb von zwei Wochen beim Amt melden muss. Ein Kollege erklärte es ihm in der Kaffeepause: „Ohne Anmeldung geht hier gar nichts. Du bekommst nicht mal ein Konto bei der Bank. Du brauchst einen Termin beim Bürgeramt.“\n\nAm selben Abend versuchte Tomás, im Internet einen Termin zu bekommen. Leider war in den nächsten sechs Wochen alles voll. „Das kann doch nicht wahr sein“, dachte er. Sein Nachbar, ein älterer Herr aus dem dritten Stock, hatte einen Tipp für ihn: „Schauen Sie jeden Morgen um sieben Uhr nach. Dann kommen oft neue Termine dazu, weil andere Leute ihren Termin absagen.“\n\nTomás stand also jeden Tag früh auf. Nach vier Tagen hatte er Glück: ein freier Termin am Freitag um 8:15 Uhr. Er druckte die E-Mail aus und legte alle Papiere auf den Tisch: seinen Pass, den Vertrag für die Wohnung und ein Papier von seinem Vermieter, das man für die Anmeldung braucht.\n\nAm Freitag war er schon um acht Uhr da. Im Wartebereich saßen schon viele Leute, und alle hatten eine Nummer. Als seine Nummer kam, ging er zu Platz 12. Die Frau hinter dem Schreibtisch sprach nicht viel, aber sie war nett. Sie prüfte seine Papiere und schrieb schnell etwas in ihren Computer. Nach zehn Minuten war alles erledigt, und sie gab ihm eine Bescheinigung.\n\nDraußen musste Tomás lachen. Sechs Wochen Ärger für zehn Minuten Arbeit! Er schickte seinem Nachbarn ein Foto von dem Papier. Der antwortete mit drei Herzen und schrieb: „Willkommen in Leipzig, jetzt sind Sie wirklich hier.“",
+  "glossary": [
+    {
+      "term": "Anmeldung",
+      "gloss": "registration (of your address)",
+      "note": "die Anmeldung, -en"
+    },
+    {
+      "term": "Konto",
+      "gloss": "bank account",
+      "note": "das Konto, Konten"
+    },
+    {
+      "term": "Bürgeramt",
+      "gloss": "citizens' office (registration office)",
+      "note": "das Bürgeramt, -ämter"
+    },
+    {
+      "term": "Pass",
+      "gloss": "passport",
+      "note": "der Pass, Pässe"
+    },
+    {
+      "term": "Vermieter",
+      "gloss": "landlord",
+      "note": "der Vermieter, -"
+    },
+    {
+      "term": "Bescheinigung",
+      "gloss": "certificate, confirmation",
+      "note": "die Bescheinigung, -en"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum braucht Tomás einen Termin beim Bürgeramt?",
+      "options": [
+        "Weil er seine neue Adresse melden muss.",
+        "Weil er einen neuen Pass braucht.",
+        "Weil er eine neue Wohnung sucht."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Welchen Tipp gibt der Nachbar?",
+      "options": [
+        "Er soll direkt ohne Termin hingehen.",
+        "Er soll morgens um sieben Uhr im Internet nachschauen.",
+        "Er soll den Vermieter anrufen."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Wie lange dauert der Termin beim Bürgeramt?",
+      "options": [
+        "Fast eine Stunde.",
+        "Sechs Wochen.",
+        "Etwa zehn Minuten."
+      ],
+      "correct": 2
+    }
+  ]
+}
