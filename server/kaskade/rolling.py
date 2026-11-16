@@ -13,9 +13,13 @@ doesn't slide while he watches.
 Audio he hears on the phone leaves no player position (#31): an audio range he rated or whose
 block he ticked off counts as heard up to its end; a saved position further on still wins.
 
+Where he is in a clip is the furthest point he played (#42, media_progress.furthest), or his last
+saved position if that is further on: a jump back, "Zurück zu" or a replay never pulls the next day back.
+
 On a day of the book queue (#38) the lesen audio gets only what the book leaves of the block.
 """
 import json
+import math
 import re
 import statistics
 from datetime import date
@@ -97,7 +101,8 @@ def day_range(pos: float, end: float | None, film: float, cues: list[dict]) -> t
     if rest / n > 1.3 * film:
         n += 1
     if n == 1:
-        return frm, int(round(end)), True
+        # #42: the clip's real end, never rounded up — a part ending after the video is never "reached"
+        return frm, math.floor(end), True
     return frm, int(round(cut_near(cues, frm + rest / n))), False
 
 
@@ -156,6 +161,12 @@ def schedule(block_slots: list[dict], clips: dict[str, dict], pos: dict[str, flo
 
 
 # ── Stored state: today's fixed range, and how far he got (his pace) ──────────
+
+def positions() -> dict[int, float]:
+    """#42: media id → how far he got: the furthest point he played, or his last save if that is further on."""
+    with db.tx() as conn:
+        return {r[0]: r[1] for r in conn.execute("SELECT media_id, MAX(position, COALESCE(furthest, 0)) FROM media_progress")}
+
 
 def frozen(day: date, block: str) -> dict | None:
     with db.tx() as conn:

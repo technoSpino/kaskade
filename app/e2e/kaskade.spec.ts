@@ -1666,3 +1666,60 @@ test('#36 Woche frei nehmen: preview, take a later week off, the dates move, und
   }
   expect(errors).toEqual([])
 })
+
+test('#42 Schauen: the day\'s last part played to the end — goal reached, Space and a media key never go back to 0:00', async ({ page, request }) => {
+  const errors = watchConsole(page)
+  const up = await request.post('http://127.0.0.1:8001/api/media/upload', {
+    multipart: {
+      subtitles: { name: 'ende.srt', mimeType: 'application/x-subrip', buffer: Buffer.from(SRT) },
+      media: { name: 'ende.webm', mimeType: 'video/webm', buffer: readFileSync(testClip()) },
+      title: 'E2E-Ende'
+    }
+  })
+  expect(up.ok()).toBeTruthy()
+  const clip = await up.json()
+  const saves = savedPositions(page, clip.id)
+  // Friday's part: it ended after the video (0:10 here, the 9-s clip ends before)
+  await page.goto(`/schauen/${clip.id}?von=5&bis=10`)
+  const video = page.getByTestId('watch-video')
+  const at = () => video.evaluate((v: HTMLVideoElement) => v.currentTime)
+  await expect.poll(() => video.evaluate((v: HTMLVideoElement) => v.duration > 0 && v.duration < 10)).toBe(true)
+  const end = await video.evaluate((v: HTMLVideoElement) => v.duration)
+  await page.getByTestId('watch-autopause').uncheck()
+  await page.getByTestId('watch-play').click()
+  await expect(page.getByTestId('watch-goal')).toContainText('Ziel für heute erreicht ✓', { timeout: 15_000 })
+  await expect.poll(() => video.evaluate((v: HTMLVideoElement) => v.paused)).toBe(true)
+  await expect(page.getByTestId('watch-end')).toHaveCount(0) // stopped just before the end: Space plays the rest
+  await page.keyboard.press('Space')
+  await expect(page.getByTestId('watch-end')).toHaveText('Ende des Clips. Auf Heute mit „Fertig“ abschließen.', { timeout: 5_000 })
+  expect(await at()).toBeGreaterThan(end - 0.1)
+
+  // Space, a click on the video and Z on the last line: nothing — HTML5 would start again at 0:00
+  await page.keyboard.press('Space')
+  await page.waitForTimeout(800)
+  await video.click()
+  await page.keyboard.press('z')
+  await page.waitForTimeout(800)
+  expect(await at()).toBeGreaterThan(end - 0.1)
+  expect(await video.evaluate((v: HTMLVideoElement) => v.paused)).toBe(true)
+  // a play() that isn't his (a media key): back to the end at once
+  await video.evaluate((v: HTMLVideoElement) => { v.play().catch(() => {}) })
+  await expect.poll(() => video.evaluate((v: HTMLVideoElement) => v.paused && v.currentTime > v.duration - 0.1)).toBe(true)
+  for (const width of [1280, 480]) {
+    await page.setViewportSize({ width, height: 900 })
+    await page.screenshot({ path: join(SHOTS, `schauen-ende-${width}.png`), fullPage: true })
+  }
+  await page.goto('/') // leaving saves once more
+  await expect.poll(() => saves.length).toBeGreaterThan(1)
+  expect(Math.min(...saves.map((s) => s.position))).toBeGreaterThanOrEqual(5) // never near 0:00
+  expect((await (await request.get(`http://127.0.0.1:8001/api/media/${clip.id}`)).json()).position).toBeGreaterThan(end - 0.5)
+  expect(Number(sql('SELECT furthest FROM media_progress WHERE media_id = ?', clip.id))).toBeGreaterThan(end - 0.5)
+
+  // a line he chooses still plays: ← from the end
+  await page.goto(`/schauen/${clip.id}?von=5&bis=10`)
+  await expect(page.getByTestId('watch-goal')).toBeVisible()
+  await page.keyboard.press('ArrowLeft')
+  await expect.poll(() => video.evaluate((v: HTMLVideoElement) => !v.paused || v.currentTime < 8.5)).toBe(true)
+  expect(await at()).toBeGreaterThan(4)
+  expect(errors).toEqual([])
+})

@@ -110,7 +110,8 @@ CREATE TABLE IF NOT EXISTS watch_ranges (
 CREATE TABLE IF NOT EXISTS media_progress (
   media_id INTEGER PRIMARY KEY,  -- resume position per clip (Schauen & minen)
   position REAL NOT NULL,
-  updated_at TEXT NOT NULL
+  updated_at TEXT NOT NULL,
+  furthest REAL                  -- #42: the furthest point he played (only playing forward raises it)
 );
 CREATE TABLE IF NOT EXISTS practice_attempts (
   id INTEGER PRIMARY KEY,
@@ -231,6 +232,9 @@ MIGRATIONS = [
     "ALTER TABLE media ADD COLUMN key TEXT",
     "ALTER TABLE media ADD COLUMN tag TEXT",
     "ALTER TABLE media ADD COLUMN duration REAL",
+    # #42: the furthest point he played in a clip; until a save sets it, his saved position is the best known
+    "ALTER TABLE media_progress ADD COLUMN furthest REAL",
+    "UPDATE media_progress SET furthest = position WHERE furthest IS NULL",
 ]
 
 

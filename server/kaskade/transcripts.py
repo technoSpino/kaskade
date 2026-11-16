@@ -526,16 +526,16 @@ def clip_end(media_id: int) -> float | None:
 
 def in_progress(media_id: int) -> bool:
     """#35: started but not finished — then its lines stay exactly as they are until he is through.
-    Finished = his position within 10 s of the end (#21's rule), the end being the plan's last "to"."""
-    with db.tx() as conn:
-        r = conn.execute("SELECT position FROM media_progress WHERE media_id = ?", (media_id,)).fetchone()
-    if not r or r["position"] <= STARTED:
+    Finished = how far he got (#42: the furthest point he played) within 10 s of the end (#21's rule),
+    the end being the plan's last "to"."""
+    from .rolling import DONE_SLACK, positions
+    pos = positions().get(media_id)
+    if pos is None or pos <= STARTED:
         return False
     end = clip_end(media_id)
     if end is None:
         return True  # length unknown: rather keep it
-    from .rolling import DONE_SLACK
-    return r["position"] < end - min(DONE_SLACK, end / 10)
+    return pos < end - min(DONE_SLACK, end / 10)
 
 
 def import_all(media_id: int | None = None, force: bool = False) -> dict:

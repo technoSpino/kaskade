@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { clipStatus, clock, endsSentence, formatTime, jobLabel, inside, isNonSpeech, JUMP, jumpedBack, LEAD, lineAt, pausedBefore, pickTrack, rangeStart, resumeAt, seekTarget, sentenceAround, shouldPause, shownLine, speechCues, stepLine, storeTrack, storedTrack } from '../../lib/watch'
+import { atEnd, clipStatus, clock, endsSentence, formatTime, jobLabel, inside, goalAt, isNonSpeech, JUMP, jumpedBack, LEAD, lineAt, pausedBefore, pickTrack, rangeStart, resumeAt, seekTarget, sentenceAround, shouldPause, shownLine, speechCues, stepLine, storeTrack, storedTrack } from '../../lib/watch'
 
 const CUES = [
   { start: 1, end: 2.5, text: 'Wo waren Sie gestern Abend?' },
@@ -166,6 +166,21 @@ describe('plan ranges (#16)', () => {
     expect(jumpedBack(3746, 3685.5)).toBe(true)
     expect(jumpedBack(3746, 3690)).toBe(false) // ← a line back, R, the loop
     expect(jumpedBack(3746, 3800)).toBe(false) // forward
+  })
+})
+
+describe('#42: the end of a clip', () => {
+  it('reaches today\'s part at its end, or just before the clip\'s own end if that comes first', () => {
+    expect(goalAt(2676, 2675.86)).toBeCloseTo(2675.61) // Friday: the part ended 0.14 s after the video
+    expect(goalAt(1329, 2675.86)).toBe(1329)
+    expect(goalAt(1329, NaN)).toBe(1329) // no metadata yet
+    expect(goalAt(1329, 0)).toBe(1329)
+  })
+  it('knows when play() would start the clip again at 0:00', () => {
+    expect(atEnd({ ended: true, duration: 2675.86, currentTime: 2675.86 })).toBe(true)
+    expect(atEnd({ ended: false, duration: 2675.86, currentTime: 2675.84 })).toBe(true) // within a frame
+    expect(atEnd({ ended: false, duration: 2675.86, currentTime: 2675.61 })).toBe(false) // stopped at the goal: plays the rest
+    expect(atEnd({ ended: false, duration: NaN, currentTime: 0 })).toBe(false)
   })
 })
 

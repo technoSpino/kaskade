@@ -115,6 +115,15 @@ export function rangeStart(from, to, position, prevReached = null) {
   return { at: from, reached: false, note: `Heute: ${clock(from)}–${clock(to)}.` }
 }
 
+/** #42: today's part counts as reached at its end — or just before the clip's own end, if that comes first. */
+export const END_SLACK = 0.25
+export function goalAt(to, duration) {
+  return Number.isFinite(duration) && duration > 0 ? Math.min(to, duration - END_SLACK) : to
+}
+
+/** #42: the player is at the clip's end — play() would start it again at 0:00 (HTML5). */
+export const atEnd = (v) => Boolean(v.ended) || (Number.isFinite(v.duration) && v.duration > 0 && v.currentTime >= v.duration - 0.05)
+
 /** #30: how far back the playhead may move by itself before it counts as a jump (← and chosen lines don't count). */
 export const JUMP = 60
 

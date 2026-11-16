@@ -98,21 +98,35 @@ class ProgressIn(BaseModel):
     from_: float | None = Field(default=None, alias="from", ge=0)
 
 
+PLAYED_STEP = 30  # #42: s — a save at most this far after the one before = he played on (not a seek)
+
+
+def furthest_after(old_position: float | None, old_furthest: float | None, new: float) -> float:
+    """#42: the furthest point he played, after a save at `new`. Only playing forward raises it — a forward
+    seek (a bigger step) doesn't, a jump back, "Zurück zu" or a replay never lowers it."""
+    prev = old_position or 0
+    furthest = old_furthest if old_furthest is not None else prev
+    return max(furthest, new) if 0 < new - prev <= PLAYED_STEP else furthest
+
+
 @router.put("/{media_id}/progress")
 def save_progress(media_id: int, body: ProgressIn):
     _get(media_id)
     new = round(body.position, 2)
     with db.tx() as conn:
-        old = conn.execute("SELECT position FROM media_progress WHERE media_id = ?", (media_id,)).fetchone()
+        old = conn.execute("SELECT position, furthest FROM media_progress WHERE media_id = ?", (media_id,)).fetchone()
+        furthest = furthest_after(old["position"] if old else None, old["furthest"] if old else None, new)
         conn.execute(
-            "INSERT INTO media_progress(media_id, position, updated_at) VALUES (?, ?, ?)"
-            " ON CONFLICT(media_id) DO UPDATE SET position = excluded.position, updated_at = excluded.updated_at",
-            (media_id, new, db.now_iso()))
+            "INSERT INTO media_progress(media_id, position, updated_at, furthest) VALUES (?, ?, ?, ?)"
+            " ON CONFLICT(media_id) DO UPDATE SET position = excluded.position, updated_at = excluded.updated_at,"
+            " furthest = excluded.furthest",
+            (media_id, new, db.now_iso(), furthest))
     old = old["position"] if old else None
+    kept = f" (furthest {furthest})" if furthest > new else ""
     if body.reason == "jump":
-        log.warning("position media %s: jumped back from %s to %s (saved before: %s)", media_id, body.from_, new, old)
+        log.warning("position media %s: jumped back from %s to %s (saved before: %s)%s", media_id, body.from_, new, old, kept)
     else:
-        log.info("position media %s: %s → %s", media_id, old, new)
+        log.info("position media %s: %s → %s%s", media_id, old, new, kept)
     return {"id": media_id, "position": new}
 
 

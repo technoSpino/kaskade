@@ -2,7 +2,7 @@
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { api } from '../../lib/api'
-import { clipStatus, clock, formatTime, inside, jumpedBack, pausedBefore, pickTrack, rangeStart, resumeAt, seekTarget, sentenceAround, shouldPause, shownLine, speechCues, stepLine, storeTrack, storedTrack } from '../../lib/watch'
+import { atEnd, clipStatus, clock, formatTime, goalAt, inside, jumpedBack, pausedBefore, pickTrack, rangeStart, resumeAt, seekTarget, sentenceAround, shouldPause, shownLine, speechCues, stepLine, storeTrack, storedTrack } from '../../lib/watch'
 import { hardShare, ratingLabel, shareLine } from '../../lib/ratings'
 import AnalyzedText from '../../components/kaskade/AnalyzedText.vue'
 import RateAsk from '../../components/kaskade/RateAsk.vue'
@@ -27,6 +27,9 @@ const mined = ref(0)
 const range = ref(null) // today's plan range from Heute (?von=…&bis=…, #16)
 const rangeNote = ref('')
 const goal = ref(false) // "Ziel für heute erreicht" shown
+// #42: the clip played to its end — from there only a seek he chooses (a line, ← →, "Zurück zu") plays again
+const ended = ref(false)
+let endedAt = 0
 const tags = ref([])
 const held = ref(-1) // the line auto-pause stopped after: shown (and mined) until play resumes (#18)
 const marks = ref([]) // #23: start times of today's lines marked "zu schwer" in this clip
@@ -77,6 +80,7 @@ const spokenLine = computed(() => spoken.value && !standIn.value)
 
 async function load() {
   touched = false
+  ended.value = false
   held.value = -1
   error.value = null
   media.value = null
@@ -159,7 +163,7 @@ function markHard() {
   hardNote.value = `„${c.text.length > 40 ? c.text.slice(0, 40) + ' …' : c.text}“ als zu schwer markiert`
   api.post(`/media/${media.value.id}/hard`, { start: c.start, end: c.end, text: c.text, track: spoken.value ? 'spoken' : 'ard' }).catch((e) => { error.value = e.message })
   if (i < cues.value.length - 1) seekLine(i + 1)
-  else video.value?.play().catch(() => {})
+  else if (video.value) playOn(video.value)
 }
 onMounted(load)
 watch(() => route.params.id, load)
@@ -247,7 +251,7 @@ function tick() {
     }
   }
   lastT = v.currentTime
-  if (range.value && !goal.value && v.currentTime >= range.value.to) {
+  if (range.value && !goal.value && v.currentTime >= goalAt(range.value.to, v.duration)) {
     goal.value = true // today's part is done: stop once, he may watch on
     v.pause()
   }
@@ -256,6 +260,13 @@ function tick() {
 }
 
 function onPlay() {
+  const v = video.value
+  if (v && ended.value) {
+    // #42: the browser started the ended clip again by itself (at 0:00, e.g. a media key): back to the end
+    v.pause()
+    v.currentTime = endedAt
+    return
+  }
   touched = true
   if (loopLine < 0 || !loop.value) loopLine = index.value
   held.value = -1
@@ -271,6 +282,23 @@ function onPause() {
   if (v && !notThereYet(v)) follow(v.currentTime)
   saveProgress()
 }
+// #42: the clip played to its end — today's part too, even if the last frame came after the last tick
+function onEnded() {
+  const v = video.value
+  if (!v) return
+  ended.value = true
+  endedAt = v.currentTime
+  follow(v.currentTime)
+  if (range.value) goal.value = true
+}
+// Play on from where it is. At the clip's end that would start it again at 0:00: then nothing, only the note.
+function playOn(v, failed = () => {}) {
+  if (atEnd(v)) {
+    if (!ended.value) onEnded()
+    return
+  }
+  v.play().catch(failed)
+}
 
 const CANT_PLAY = 'Dieser Browser kann das Video nicht abspielen. Wird der Clip gerade umgewandelt, in ein paar Minuten neu laden — sonst den Clip im Satz-Check neu hochladen (er wird dann als H.264/MP4 gespeichert). Untertitel, Wörter und „Satz minen“ gehen trotzdem.'
 
@@ -282,7 +310,7 @@ function toggle() {
   const v = video.value
   if (!v) return
   if (v.paused) {
-    v.play().catch((e) => {
+    playOn(v, (e) => {
       // AbortError = a seek interrupted play(): harmless. Everything else: explain in German.
       if (e?.name !== 'AbortError') error.value = v.error || e?.name === 'NotSupportedError' ? CANT_PLAY : `Abspielen nicht möglich (${e?.name ?? 'Fehler'}).`
     })
@@ -304,6 +332,7 @@ function seekLine(i, play = true) {
 // A seek he chose. Without metadata yet the element can't: then it's the pending start.
 function goTo(v, at) {
   startTries = 0
+  ended.value = false
   if (v.readyState < 1) pendingStart = at
   else {
     pendingStart = null
@@ -353,6 +382,8 @@ function setRate(r) {
 function saveProgress() {
   lastSaved = Date.now()
   if (!touched || !media.value || !video.value) return
+  // #42: after the end only a seek he chose moves him — a playhead back near 0:00 is never his place
+  if (ended.value && here(video.value) < endedAt - 5) return
   const body = { position: here(video.value) }
   if (jumpFrom !== null) {
     Object.assign(body, { reason: 'jump', from: jumpFrom }) // logged as a warning on the server
@@ -483,7 +514,7 @@ const minutesLeft = (c) => Math.max(0, Math.round((c.duration - c.position) / 60
       <div class="sw-grid">
         <div class="flex flex-col gap-3 min-w-0">
           <div :class="['sw-stage', { 'sw-stage-audio': media.isAudio }]">
-            <p v-if="media.isAudio" class="sw-audio-label" aria-hidden="true">♪ Nur Ton · {{ media.title }}</p>
+            <p v-if="media.isAudio && !ended" class="sw-audio-label" aria-hidden="true">♪ Nur Ton · {{ media.title }}</p>
             <video
               ref="video"
               class="sw-video"
@@ -496,8 +527,10 @@ const minutesLeft = (c) => Math.max(0, Math.round((c.duration - c.position) / 60
               @error="onVideoError"
               @play="onPlay"
               @pause="onPause"
+              @ended="onEnded"
               @click="toggle"
             ></video>
+            <p v-if="ended" class="sw-end" role="status" data-testid="watch-end">Ende des Clips.<template v-if="range"> Auf Heute mit „Fertig“ abschließen.</template></p>
           </div>
 
           <div class="k-card sw-line" data-testid="watch-line">
@@ -582,8 +615,9 @@ const minutesLeft = (c) => Math.max(0, Math.round((c.duration - c.position) / 60
 }
 .sw-grid { display: grid; gap: 24px; }
 @media (min-width: 980px) { .sw-grid { grid-template-columns: minmax(0, 1fr) 340px; align-items: start; } }
-.sw-stage { background: var(--stage-bg); border-radius: var(--radius-lg); overflow: hidden; }
-.sw-stage-audio { position: relative; }
+.sw-stage { position: relative; background: var(--stage-bg); border-radius: var(--radius-lg); overflow: hidden; }
+.sw-end { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; padding: 10px 16px; background: color-mix(in srgb, var(--stage-bg) 88%, transparent); color: var(--stage-text); font-weight: 700; text-align: center; pointer-events: none; }
+.sw-stage-audio .sw-end { top: 0; display: flex; align-items: center; justify-content: center; }
 .sw-stage-audio .sw-video { aspect-ratio: auto; height: 120px; }
 .sw-audio-label { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; margin: 0; padding: 0 16px; color: var(--stage-text); font-weight: 700; text-align: center; pointer-events: none; }
 .sw-tag { min-height: 32px; border: var(--border-width) solid var(--border-strong); border-radius: var(--radius-sm); background: var(--surface); color: var(--text); font: inherit; font-size: 14px; padding: 0 6px; }

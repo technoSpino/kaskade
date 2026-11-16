@@ -156,8 +156,8 @@ class Ctx:
         self.live = True  # False for previews (?today=, ?phase=): they never fix a day's range
         stock.link_existing()  # a clip uploaded under a catalog title counts as that item
         self.lib = stock.by_key()
+        self.positions = rolling.positions()  # #42: how far he got, not where he last was
         with db.tx() as conn:
-            self.positions = {r["media_id"]: r["position"] for r in conn.execute("SELECT media_id, position FROM media_progress")}
             self.unseen = len(srs.deck()) + conn.execute("SELECT COUNT(*) FROM mined").fetchone()[0] - \
                 conn.execute("SELECT COUNT(*) FROM cards").fetchone()[0]
         self.ai = config.anthropic_key() is not None
