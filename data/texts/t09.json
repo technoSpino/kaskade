@@ -1,0 +1,70 @@
+{
+  "id": "t09",
+  "origin": "ai",
+  "title": "Die Kollegin, die immer zu spät kommt",
+  "level": "B1",
+  "theme": "Arbeit",
+  "slot": "lesen",
+  "text": "In unserem Büro gibt es eine feste Regel: Die Besprechung am Montag beginnt um neun Uhr. Alle wissen das. Trotzdem kommt Carla fast jede Woche zehn Minuten zu spät. Sie öffnet leise die Tür, sagt „Sorry, sorry“ und setzt sich mit einem großen Becher Kaffee an den Tisch.\n\nAm Anfang fand ich das lustig. Carla hatte immer eine neue Geschichte: Mal war der Bus zu voll, mal war die Katze krank, und einmal stand angeblich eine Kuh auf der Straße. Aber nach ein paar Monaten haben sich die Kollegen geärgert. Thomas, der immer schon um halb neun da ist, sagte einmal laut: „Wenn sie wieder zu spät kommt, fangen wir einfach ohne sie an.“\n\nIch wollte keinen Streit im Team. Deshalb habe ich Carla in der Mittagspause gefragt, ob alles in Ordnung ist. Zuerst hat sie gelacht, aber dann wurde sie ernst. Sie erzählte mir, dass sie jeden Morgen zu ihrer Mutter fährt, die allein wohnt und nicht mehr gut laufen kann. Sie hilft ihr beim Frühstück und bringt ihr die Tabletten. Das dauert oft länger, als sie denkt. Sie hatte bisher nichts gesagt, weil sie kein Mitleid wollte.\n\nIch habe ihr vorgeschlagen, mit unserem Chef zu sprechen. Das hat sie am nächsten Tag gemacht. Jetzt beginnt die Besprechung am Montag erst um halb zehn, und niemand hat ein Problem damit. Thomas ist sogar froh, weil er vorher noch in Ruhe seine E-Mails lesen kann.\n\nUnd Carla? Sie ist seitdem fast immer pünktlich. Nur letzte Woche kam sie wieder fünf Minuten zu spät. Diesmal hatte sie aber eine gute Ausrede: Sie hatte für alle einen Kuchen gebacken.",
+  "glossary": [
+    {
+      "term": "Regel",
+      "gloss": "rule",
+      "note": "die Regel, -n"
+    },
+    {
+      "term": "Besprechung",
+      "gloss": "meeting",
+      "note": "die Besprechung, -en"
+    },
+    {
+      "term": "Becher",
+      "gloss": "mug",
+      "note": "der Becher, -"
+    },
+    {
+      "term": "Mittagspause",
+      "gloss": "lunch break",
+      "note": "die Mittagspause, -n"
+    },
+    {
+      "term": "Tabletten",
+      "gloss": "pills, tablets",
+      "note": "die Tablette, -n"
+    },
+    {
+      "term": "gebacken",
+      "gloss": "baked",
+      "note": "backen, hat gebacken"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum kommt Carla immer zu spät?",
+      "options": [
+        "Sie fährt morgens zu ihrer kranken Mutter.",
+        "Ihr Bus kommt jeden Tag zu spät.",
+        "Sie schläft zu lange."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Was hat sich nach Carlas Gespräch mit dem Chef geändert?",
+      "options": [
+        "Carla arbeitet jetzt im Homeoffice.",
+        "Thomas leitet jetzt die Besprechung.",
+        "Die Besprechung beginnt erst um halb zehn."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Warum kam Carla letzte Woche zu spät?",
+      "options": [
+        "Eine Kuh stand auf der Straße.",
+        "Sie hatte einen Kuchen für alle gebacken.",
+        "Ihre Katze war krank."
+      ],
+      "correct": 1
+    }
+  ]
+}

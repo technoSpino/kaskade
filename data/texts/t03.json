@@ -1,0 +1,75 @@
+{
+  "id": "t03",
+  "origin": "ai",
+  "title": "Besichtigung einer Wohnung",
+  "level": "B1",
+  "theme": "Wohnen",
+  "slot": "input",
+  "text": "Seit drei Monaten suchen Sara und Tim eine neue Wohnung in Leipzig. Ihre alte Wohnung ist zu klein, weil sie im Sommer ein Baby bekommen. Jeden Abend sitzen sie am Computer und lesen Anzeigen. Endlich finden sie eine Wohnung, die gut klingt: drei Zimmer, Balkon, nicht weit vom Park. Tim schreibt sofort eine Mail, und am nächsten Tag bekommen sie einen Termin.\n\nAls sie am Samstag zu dem Haus kommen, warten schon etwa zwanzig Leute vor der Tür. „Das gibt's doch nicht“, sagt Sara leise. Eine Frau von der Hausverwaltung führt alle zusammen durch die Wohnung. Die Zimmer sind hell, und die Küche ist ziemlich neu. Nur das Bad ist sehr klein, und es hat kein Fenster.\n\nTim fragt, wie hoch die Nebenkosten sind und ob man Haustiere haben darf. Die Frau antwortet freundlich: Katzen sind kein Problem, aber Hunde sind leider nicht erlaubt. Danach gibt sie jedem ein Formular. Darauf soll man seinen Beruf, sein Einkommen und seine alte Adresse schreiben.\n\nAuf dem Weg nach Hause sind beide still. „Ich glaube nicht, dass wir eine Chance haben“, sagt Tim. „Bei so vielen Leuten!“ Sara ist anderer Meinung. „Wir sollten der Frau noch heute einen kurzen Brief schreiben. Dann weiß sie, wer wir sind und warum wir die Wohnung brauchen.“\n\nAm Abend schreiben sie den Brief zusammen. Sie erzählen von ihrer Arbeit, von dem Baby und davon, dass sie ruhige Menschen sind. Eine Woche lang hören sie nichts. Dann ruft die Frau von der Hausverwaltung an. „Ihr Brief hat mir gefallen“, sagt sie. „Wenn Sie wollen, können Sie nächste Woche den Vertrag unterschreiben.“ Sara hätte vor Freude fast geweint.",
+  "glossary": [
+    {
+      "term": "Anzeigen",
+      "gloss": "(property) ads",
+      "note": "die Anzeige, -n"
+    },
+    {
+      "term": "Balkon",
+      "gloss": "balcony",
+      "note": "der Balkon, -e/-s"
+    },
+    {
+      "term": "Mail",
+      "gloss": "email",
+      "note": "die Mail, -s"
+    },
+    {
+      "term": "Hausverwaltung",
+      "gloss": "property management",
+      "note": "die Hausverwaltung, -en"
+    },
+    {
+      "term": "hell",
+      "gloss": "bright, light",
+      "note": "↔ dunkel"
+    },
+    {
+      "term": "Bad",
+      "gloss": "bathroom",
+      "note": "das Bad, die Bäder"
+    },
+    {
+      "term": "Formular",
+      "gloss": "form (to fill in)",
+      "note": "das Formular, -e"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum suchen Sara und Tim eine neue Wohnung?",
+      "options": [
+        "Die alte Wohnung ist zu teuer.",
+        "Sie bekommen ein Baby und brauchen mehr Platz.",
+        "Sie wollen in eine andere Stadt ziehen."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Was gefällt den beiden an der Wohnung nicht so gut?",
+      "options": [
+        "Das Bad ist klein und hat kein Fenster.",
+        "Die Küche ist alt.",
+        "Die Zimmer sind dunkel."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Warum bekommen sie die Wohnung wahrscheinlich?",
+      "options": [
+        "Sie haben einen Hund.",
+        "Sie kennen die Frau von der Hausverwaltung.",
+        "Sie haben einen persönlichen Brief geschrieben."
+      ],
+      "correct": 2
+    }
+  ]
+}

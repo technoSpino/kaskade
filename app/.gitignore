@@ -24,6 +24,9 @@ dist-ssr
 *.sw?
 
 # Test results
+.e2e-data/
+.e2e-legacy-data/
 test-results/
 playwright-report/
 playwright/.cache/
+dist-next

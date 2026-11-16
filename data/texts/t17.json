@@ -1,0 +1,60 @@
+{
+  "id": "t17",
+  "origin": "ai",
+  "title": "Ein Wochenende an der Ostsee",
+  "level": "B1",
+  "theme": "Reisen",
+  "slot": "lesen",
+  "text": "Seit Wochen hatten Sara und Tim keine Zeit für sich. Tim arbeitete jeden Tag lange im Büro, und Sara musste am Wochenende oft für die Uni lernen. Deshalb sagte Tim eines Abends: „Wir fahren am Samstag an die Ostsee. Nur wir zwei, ohne Arbeit.“ Sara lachte, weil sie das nicht glauben konnte. Aber am Samstagmorgen saßen sie wirklich im Auto.\n\nAls sie ankamen, war der Himmel dunkel, und es regnete. Das kleine Hotel lag direkt am Meer, aber vom Fenster aus konnte man fast nichts sehen. „Super“, sagte Sara. „Bei so einem Wetter hätten wir auch zu Hause bleiben können.“ Tim meinte nur, dass schlechtes Wetter an der Ostsee ganz normal ist. Sie zogen ihre Jacken an und gingen trotzdem spazieren.\n\nDer Wind war so stark, dass Sara kaum sprechen konnte. Nach einer halben Stunde waren beide nass und müde. In einem kleinen Restaurant am Hafen bestellten sie heißen Tee und Kuchen. Die Chefin erzählte ihnen, dass sie seit vierzig Jahren dort wohnte und das Meer jeden Tag anders aussah. „Morgen scheint die Sonne“, sagte sie. „Das weiß ich, das spüre ich.“\n\nUnd sie hatte recht. Am Sonntag war der Himmel blau, und das Meer war ruhig. Sara und Tim liefen barfuß am Strand entlang, obwohl das Wasser noch kalt war. Sie sprachen über alles Mögliche, nur nicht über die Arbeit.\n\nAuf dem Weg nach Hause war Sara ganz still. Dann sagte sie: „Weißt du was? Ich würde gern öfter so ein Wochenende machen.“ Tim lächelte. „Dann machen wir das. Einmal im Monat. Mit oder ohne Regen.“",
+  "glossary": [
+    {
+      "term": "Uni",
+      "gloss": "university (colloquial)",
+      "note": "die Uni, -s"
+    },
+    {
+      "term": "nass",
+      "gloss": "wet",
+      "note": "nass – nasser – am nassesten"
+    },
+    {
+      "term": "Hafen",
+      "gloss": "harbour, port",
+      "note": "der Hafen, Häfen"
+    },
+    {
+      "term": "Chefin",
+      "gloss": "(female) owner, boss",
+      "note": "die Chefin, -nen"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum fahren Sara und Tim an die Ostsee?",
+      "options": [
+        "Sie hatten lange keine Zeit füreinander.",
+        "Sara hat dort eine Prüfung.",
+        "Tim muss dort arbeiten."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Was machen sie am Samstag, obwohl es regnet?",
+      "options": [
+        "Sie bleiben den ganzen Tag im Hotel.",
+        "Sie fahren sofort nach Hause.",
+        "Sie gehen spazieren und trinken Tee in einem Restaurant."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Was möchten Sara und Tim in Zukunft machen?",
+      "options": [
+        "Am Meer wohnen.",
+        "Einmal im Monat so ein Wochenende machen.",
+        "Nie wieder bei Regen reisen."
+      ],
+      "correct": 1
+    }
+  ]
+}

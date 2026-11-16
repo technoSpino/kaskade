@@ -1,0 +1,65 @@
+{
+  "id": "t08",
+  "origin": "ai",
+  "title": "Gespräch mit der Chefin über mehr Gehalt",
+  "level": "B1",
+  "theme": "Arbeit",
+  "slot": "input",
+  "text": "Seit drei Jahren arbeitet Sara Yilmaz im Kundenservice einer Firma in Stuttgart. Sie mag ihre Arbeit, und sie macht sie gut. In den letzten Monaten hat sie sogar zwei neue Kollegen eingearbeitet. Ihr Gehalt ist aber seit dem ersten Tag gleich geblieben, obwohl die Miete und das Essen immer teurer werden. Deshalb wollte sie endlich mit ihrer Chefin sprechen.\n\nEine Woche lang hat sie sich vorbereitet. Sie hat aufgeschrieben, was sie in den drei Jahren alles geschafft hat. Sie hat im Internet gelesen, wie viel man in ihrem Beruf normalerweise verdient. Und sie hat mit ihrem Bruder geübt, der so getan hat, als wäre er ein sehr strenger Chef. „Du musst ruhig bleiben“, hat er gesagt. „Und nenn eine klare Zahl.“\n\nAm Dienstag war es so weit. Frau Berger, die Chefin, hat sie freundlich begrüßt. Sara war nervös, aber sie hat ruhig erklärt, warum sie mehr Geld bekommen sollte. Sie wollte 300 Euro mehr im Monat. Frau Berger hat lange zugehört und dann gesagt: „Sie haben recht, Sie machen wirklich gute Arbeit. Aber 300 Euro kann ich Ihnen im Moment nicht geben. Ich könnte Ihnen 200 Euro mehr anbieten, und im Frühling sprechen wir noch einmal.“\n\nSara hätte lieber die ganze Summe gehabt, aber sie wusste, dass das ein faires Angebot war. Außerdem durfte sie ab jetzt einen Tag pro Woche von zu Hause arbeiten. Das war ihr fast genauso wichtig wie das Geld.\n\nAm Abend hat sie ihren Bruder angerufen. „Und?“, fragte er. „War sie so streng wie ich?“ Sara lachte. „Nein, zum Glück war sie viel netter.“",
+  "glossary": [
+    {
+      "term": "Kundenservice",
+      "gloss": "customer service",
+      "note": "der Kundenservice"
+    },
+    {
+      "term": "Chefin",
+      "gloss": "(female) boss",
+      "note": "die Chefin, -nen"
+    },
+    {
+      "term": "Euro",
+      "gloss": "euro",
+      "note": "der Euro, -s"
+    },
+    {
+      "term": "Frühling",
+      "gloss": "spring",
+      "note": "der Frühling"
+    },
+    {
+      "term": "Summe",
+      "gloss": "sum, amount",
+      "note": "die Summe, -n"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Wie hat sich Sara auf das Gespräch vorbereitet?",
+      "options": [
+        "Sie hat mit ihren Kollegen gesprochen.",
+        "Sie hat mit ihrem Bruder geübt.",
+        "Sie hat einen Kurs besucht."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Wie viel Geld bekommt Sara jetzt mehr im Monat?",
+      "options": [
+        "100 Euro",
+        "300 Euro",
+        "200 Euro"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Was ist für Sara fast genauso wichtig wie das Geld?",
+      "options": [
+        "Ein Tag pro Woche im Homeoffice",
+        "Ein neues Büro",
+        "Mehr Urlaub im Frühling"
+      ],
+      "correct": 0
+    }
+  ]
+}

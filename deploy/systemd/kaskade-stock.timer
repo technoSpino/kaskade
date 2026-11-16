@@ -1,0 +1,10 @@
+[Unit]
+Description=Daily Kaskade stock + Materialcheck (before the 09:00 study block)
+
+[Timer]
+# 04:30 UTC = 06:30 in Berlin (05:30 in winter): everything is there before 09:00
+OnCalendar=*-*-* 04:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

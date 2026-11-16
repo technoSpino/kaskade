@@ -1,0 +1,70 @@
+{
+  "id": "t11",
+  "origin": "ai",
+  "title": "Eine Erkältung im Herbst",
+  "level": "A2+",
+  "theme": "Arzt",
+  "slot": "input",
+  "text": "Am Montagmorgen wacht Lena Brandt auf und fühlt sich schlecht. Ihr Hals tut weh, ihre Nase läuft, und der Kopf ist schwer. Sie hat Fieber: 38,2 Grad. „Oh nein“, sagt sie leise. Heute hat sie eigentlich ein wichtiges Treffen im Büro.\n\nZuerst schreibt sie ihrem Chef eine Nachricht: „Guten Morgen, Herr Kessler, ich bin leider krank und komme heute nicht. Ich gehe zum Arzt.“ Die Antwort kommt schnell: „Gute Besserung! Bleiben Sie zu Hause. Das Treffen machen wir nächste Woche.“ Lena ist froh.\n\nDann ruft sie in der Praxis an. Lange geht niemand ans Telefon. Nach zwanzig Minuten hat sie endlich Glück. Eine freundliche Frau fragt: „Was fehlt Ihnen denn?“ Lena erklärt alles. „Können Sie um halb elf kommen? Bringen Sie bitte Ihre Karte mit.“\n\nIm Wartezimmer sitzen schon sechs Leute. Ein kleiner Junge hustet, ein alter Mann liest Zeitung. Lena wartet fast eine Stunde. Dann ruft man ihren Namen. Der Arzt, Doktor Yilmaz, hört sie ab und schaut in ihren Hals. „Eine normale Erkältung“, sagt er. „Das ist nicht schlimm, aber Sie brauchen Ruhe. Trinken Sie viel Tee und schlafen Sie viel.“\n\nLena bekommt eine Krankmeldung für drei Tage. „Wenn Sie danach noch Fieber haben, kommen Sie bitte wieder“, sagt der Arzt. Auf dem Weg nach Hause kauft sie Tee, Obst und viele Taschentücher. Am Abend liegt sie mit einer heißen Tasse im Bett und sieht einen Film. So schlecht ist ein Tag zu Hause eigentlich gar nicht.",
+  "glossary": [
+    {
+      "term": "Fieber",
+      "gloss": "fever, temperature",
+      "note": "das Fieber"
+    },
+    {
+      "term": "Besserung",
+      "gloss": "recovery; „Gute Besserung!“ = get well soon",
+      "note": "die Besserung"
+    },
+    {
+      "term": "Praxis",
+      "gloss": "doctor's practice/surgery",
+      "note": "die Praxis, Praxen"
+    },
+    {
+      "term": "Erkältung",
+      "gloss": "cold (illness)",
+      "note": "die Erkältung, -en"
+    },
+    {
+      "term": "Krankmeldung",
+      "gloss": "sick note",
+      "note": "die Krankmeldung, -en"
+    },
+    {
+      "term": "Taschentücher",
+      "gloss": "tissues, handkerchiefs",
+      "note": "das Taschentuch, -tücher"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Was schreibt Lena ihrem Chef?",
+      "options": [
+        "Dass sie später kommt.",
+        "Dass sie krank ist und zum Arzt geht.",
+        "Dass das Treffen ausfällt."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Was sagt der Arzt?",
+      "options": [
+        "Lena hat eine normale Erkältung.",
+        "Lena muss ins Krankenhaus.",
+        "Lena kann morgen wieder arbeiten."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Wann soll Lena wieder in die Praxis kommen?",
+      "options": [
+        "Am nächsten Morgen, ohne Grund.",
+        "Nächste Woche zum Treffen.",
+        "Wenn sie nach drei Tagen noch Fieber hat."
+      ],
+      "correct": 2
+    }
+  ]
+}

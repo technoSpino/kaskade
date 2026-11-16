@@ -51,7 +51,7 @@ This guide covers deploying your German Declension Learning App to either GitHub
    git commit -m "Initial commit"
    
    # Create repo on GitHub, then:
-   git remote add origin https://github.com/YOUR_USERNAME/german-declension.git
+   git remote add origin https://github.com/YOUR_USERNAME/kaskade.git
    git push -u origin main
    ```
 
@@ -139,7 +139,7 @@ Create `netlify.toml` in project root:
    git commit -m "Initial commit"
    
    # Create GitHub repo, then:
-   git remote add origin https://github.com/YOUR_USERNAME/german-declension.git
+   git remote add origin https://github.com/YOUR_USERNAME/kaskade.git
    git push -u origin main
    ```
 
@@ -169,7 +169,7 @@ Create `netlify.toml` in project root:
    - Branch: `gh-pages` / `root`
    - Save
    - Wait ~2 minutes
-   - Your site will be at: `https://YOUR_USERNAME.github.io/german-declension/`
+   - Your site will be at: `https://YOUR_USERNAME.github.io/kaskade/`
 
 4. **Update Process**
    ```bash
@@ -463,7 +463,7 @@ git push origin main
 
 ### Issue: Broken links
 - Use relative paths: `./styles.css` not `/styles.css`
-- Or use absolute paths: `/german-declension/styles.css`
+- Or use absolute paths: `/kaskade/styles.css`
 
 ### Issue: LocalStorage not working
 - Check browser console for security errors

@@ -54,8 +54,8 @@ Week 3: Agent 3 (Integration & Deployment)
 
 ```bash
 # 1. Create project directory
-mkdir german-declension-app
-cd german-declension-app
+mkdir kaskade
+cd kaskade
 
 # 2. Initialize git
 git init

@@ -1,0 +1,70 @@
+{
+  "id": "t05",
+  "origin": "ai",
+  "title": "Samstag auf dem Wochenmarkt",
+  "level": "A2+",
+  "theme": "Einkaufen",
+  "slot": "lesen",
+  "text": "Jeden Samstag geht Maria auf den Wochenmarkt. Der Markt ist auf dem großen Platz vor der Kirche, nur fünf Minuten von ihrer Wohnung. Maria mag den Markt lieber als den Supermarkt. Hier ist alles frisch, und man kann mit den Leuten reden.\n\nHeute ist sie früh da, schon um acht Uhr. Zuerst kauft sie Brot. Dann geht sie zu ihrem liebsten Stand. Dort verkauft ein älterer Mann Obst und Gemüse aus seinem eigenen Garten. „Guten Morgen, Maria! Wie immer?“, fragt er. „Ja, bitte. Ein Kilo Tomaten und zwei Kilo Kartoffeln“, sagt sie. Der Mann gibt ihr noch einen Apfel dazu. „Den müssen Sie probieren. Ganz süß!“\n\nAm Käsestand ist eine lange Schlange. Maria wartet ruhig. Vor ihr steht eine junge Frau mit einem kleinen Kind. Das Kind weint, weil es müde ist. Maria gibt ihm den Apfel. Sofort ist das Kind still und isst. Die Mutter lacht. „Vielen Dank! Sie haben meinen Morgen gerettet.“\n\nDann kauft Maria noch Blumen für den Tisch, rote und weiße. Jetzt ist ihre Tasche voll und sehr schwer. Auf dem Weg nach Hause trifft sie ihren Nachbarn Paul. „Soll ich Ihnen helfen?“, fragt er. Maria sagt gern ja. Zusammen tragen sie die Sachen nach Hause.\n\nZu Hause kocht Maria eine Suppe mit Kartoffeln und Tomaten. Weil Paul ihr geholfen hat, lädt sie ihn zum Essen ein. Die Suppe ist sehr lecker. „Nächsten Samstag komme ich mit auf den Markt“, sagt Paul. „Dann trage ich die Tasche, und Sie kochen wieder.“ Maria lacht. „Das ist ein guter Plan.“",
+  "glossary": [
+    {
+      "term": "Supermarkt",
+      "gloss": "supermarket",
+      "note": "der Supermarkt, -märkte"
+    },
+    {
+      "term": "Gemüse",
+      "gloss": "vegetables",
+      "note": "das Gemüse"
+    },
+    {
+      "term": "Kilo",
+      "gloss": "kilo",
+      "note": "das Kilo, -s; ein Kilo Tomaten"
+    },
+    {
+      "term": "Tomaten",
+      "gloss": "tomatoes",
+      "note": "die Tomate, -n"
+    },
+    {
+      "term": "Kartoffeln",
+      "gloss": "potatoes",
+      "note": "die Kartoffel, -n"
+    },
+    {
+      "term": "Apfel",
+      "gloss": "apple",
+      "note": "der Apfel, die Äpfel"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum geht Maria lieber auf den Markt als in den Supermarkt?",
+      "options": [
+        "Der Markt ist billiger.",
+        "Die Sachen sind frisch, und man kann mit den Leuten reden.",
+        "Der Supermarkt ist am Samstag geschlossen."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Was macht Maria mit dem Apfel?",
+      "options": [
+        "Sie gibt ihn einem Kind.",
+        "Sie isst ihn selbst.",
+        "Sie macht eine Suppe damit."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Wer hilft Maria mit der Tasche?",
+      "options": [
+        "Der Mann vom Obststand",
+        "Die junge Mutter",
+        "Ihr Nachbar Paul"
+      ],
+      "correct": 2
+    }
+  ]
+}

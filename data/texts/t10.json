@@ -1,0 +1,85 @@
+{
+  "id": "t10",
+  "origin": "ai",
+  "title": "Probetraining im Sportverein",
+  "level": "A2+",
+  "theme": "Freizeit",
+  "slot": "lesen",
+  "text": "Stefan ist 38 Jahre alt und sitzt den ganzen Tag im Büro. Sein Rücken tut oft weh, und nach zehn Minuten zu Fuß ist er schon müde. „Du musst dich mehr bewegen“, sagt seine Frau. Stefan weiß das. Aber ein Fitnessstudio ist ihm zu langweilig.\n\nSein Nachbar Ben spielt Volleyball in einem Sportverein. „Komm doch am Dienstag mit“, sagt Ben. „Das erste Mal kostet nichts. Du kannst es einfach mal probieren.“ Stefan sagt Ja, bevor er lange nachdenken kann.\n\nAm Dienstagabend steht er in einer großen Halle. Er hat alte Turnschuhe an und eine Flasche Wasser in der Hand. Die anderen Spieler sind zwischen 25 und 60 Jahre alt, und alle sind sehr nett. Die Trainerin heißt Frau Schulz. Sie erklärt ihm die wichtigsten Regeln.\n\nZuerst laufen alle zehn Minuten im Kreis. Stefan ist schon nach fünf Minuten ganz rot im Gesicht. Dann üben sie mit dem Ball. Das ist schwerer, als es aussieht. Einmal fliegt ihm der Ball direkt an den Kopf. Alle lachen, und Stefan lacht mit.\n\nAm Ende spielen sie ein richtiges Spiel. Stefan macht viele Fehler, aber er holt auch zwei Punkte für sein Team. Nach dem Training trinken alle zusammen noch etwas in einer kleinen Kneipe gleich um die Ecke.\n\nAm nächsten Morgen tut Stefan alles weh: die Arme, die Beine, sogar der Bauch. Trotzdem meldet er sich im Verein an. Es kostet auch nicht viel. Seine Frau fragt: „Und? Wie war es?“ Stefan antwortet: „Schrecklich. Ich gehe nächsten Dienstag wieder hin.“",
+  "glossary": [
+    {
+      "term": "Fitnessstudio",
+      "gloss": "gym",
+      "note": "das Fitnessstudio, -s"
+    },
+    {
+      "term": "Volleyball",
+      "gloss": "volleyball",
+      "note": "der Volleyball"
+    },
+    {
+      "term": "Sportverein",
+      "gloss": "sports club",
+      "note": "der Sportverein, -e"
+    },
+    {
+      "term": "Halle",
+      "gloss": "sports hall",
+      "note": "die Halle, -n"
+    },
+    {
+      "term": "Turnschuhe",
+      "gloss": "trainers, sneakers",
+      "note": "der Turnschuh, -e"
+    },
+    {
+      "term": "Trainerin",
+      "gloss": "(female) coach",
+      "note": "die Trainerin, -nen"
+    },
+    {
+      "term": "Kneipe",
+      "gloss": "pub, bar",
+      "note": "die Kneipe, -n"
+    },
+    {
+      "term": "Training",
+      "gloss": "training session, practice",
+      "note": "das Training, -s"
+    },
+    {
+      "term": "Verein",
+      "gloss": "club",
+      "note": "der Verein, -e"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum geht Stefan nicht ins Fitnessstudio?",
+      "options": [
+        "Es ist zu teuer.",
+        "Es ist ihm zu langweilig.",
+        "Es ist zu weit weg."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Was passiert beim Üben mit dem Ball?",
+      "options": [
+        "Der Ball fliegt Stefan an den Kopf.",
+        "Stefan holt alle Punkte für sein Team.",
+        "Stefan verliert seine Schuhe."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Was macht Stefan am nächsten Morgen?",
+      "options": [
+        "Er bleibt im Bett.",
+        "Er ruft Ben an und sagt ab.",
+        "Er meldet sich im Verein an."
+      ],
+      "correct": 2
+    }
+  ]
+}

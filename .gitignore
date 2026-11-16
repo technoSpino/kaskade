@@ -1,0 +1,26 @@
+# Kaskade — never commit user data, media, secrets or environments.
+# User data and media live in ~/kaskade-data (outside the repo).
+kaskade-data/
+media/
+recordings/
+*.db
+*.sqlite
+*.sqlite3
+*.mp4
+*.mkv
+*.webm
+*.m4a
+*.mp3
+*.wav
+*.ogg
+*.onnx
+*.srt
+*.vtt
+.env
+.env.*
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+node_modules/
+.claude/worktrees/

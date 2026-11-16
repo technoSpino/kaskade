@@ -10,12 +10,96 @@ import PrepositionsView from '../views/PrepositionsView.vue'
 import WerdenView from '../views/WerdenView.vue'
 import ExercisesView from '../views/ExercisesView.vue'
 
+import HeuteView from '../views/kaskade/HeuteView.vue'
+
 const routes = [
+  // Kaskade
+  { path: '/', name: 'Heute', component: HeuteView, meta: { title: 'Heute' } },
+  { path: '/heute', redirect: '/' },
   {
-    path: '/',
+    path: '/wortschatz',
+    name: 'Wortschatz',
+    component: () => import('../views/kaskade/WortschatzView.vue'),
+    meta: { title: 'Wortschatz-Test' }
+  },
+  {
+    path: '/schauen/:id?',
+    name: 'Schauen',
+    component: () => import('../views/kaskade/SchauenView.vue'),
+    meta: { title: 'Schauen & minen' }
+  },
+  {
+    path: '/satz-check',
+    name: 'SatzCheck',
+    component: () => import('../views/kaskade/SatzCheckView.vue'),
+    meta: { title: 'Satz-Check' }
+  },
+  {
+    path: '/einstufung',
+    name: 'Einstufung',
+    component: () => import('../views/kaskade/EinstufungView.vue'),
+    meta: { title: 'Einstufung' }
+  },
+  {
+    path: '/karten',
+    name: 'Karten',
+    component: () => import('../views/kaskade/KartenView.vue'),
+    meta: { title: 'Karten' }
+  },
+  {
+    path: '/aufgabe/:id',
+    name: 'Aufgabe',
+    component: () => import('../views/kaskade/AufgabeView.vue'),
+    meta: { title: 'Prüfungsteil' }
+  },
+  {
+    path: '/fahrplan',
+    name: 'Fahrplan',
+    component: () => import('../views/kaskade/FahrplanView.vue'),
+    meta: { title: 'Fahrplan' }
+  },
+  {
+    path: '/lesen',
+    name: 'Lesen',
+    component: () => import('../views/kaskade/LesenView.vue'),
+    meta: { title: 'Lesen' }
+  },
+  {
+    path: '/lesen/eigener-text',
+    name: 'EigenerText',
+    component: () => import('../views/kaskade/EigenerTextView.vue'),
+    meta: { title: 'Eigener Text' }
+  },
+  {
+    path: '/lesen/:id',
+    name: 'Reader',
+    component: () => import('../views/kaskade/ReaderView.vue'),
+    meta: { title: 'Lesen' }
+  },
+  {
+    path: '/pruefung',
+    name: 'Pruefung',
+    component: () => import('../views/kaskade/PruefungView.vue'),
+    meta: { title: 'Prüfungstraining' }
+  },
+  {
+    path: '/pruefung/:module(lesen|hoeren|schreiben)/:id',
+    name: 'PruefungItem',
+    component: () => import('../views/kaskade/PruefungItemView.vue'),
+    meta: { title: 'Prüfungstraining' }
+  },
+  {
+    path: '/immersion',
+    name: 'Immersion',
+    component: () => import('../views/kaskade/ImmersionView.vue'),
+    meta: { title: 'Immersion' }
+  },
+  // Nachschlagen (the original grammar pages)
+  {
+    path: '/nachschlagen',
     name: 'Home',
     component: HomeView,
-    meta: { title: 'German A2 Grammar Learning App' }
+    meta: { title: 'Nachschlagen' }
   },
   {
     path: '/tables',
@@ -87,8 +171,24 @@ const router = createRouter({
 
 // Update document title on route change
 router.beforeEach((to, from, next) => {
-  document.title = to.meta.title || 'German Declension Learning App'
+  document.title = to.meta.title ? `${to.meta.title} · Kaskade` : 'Kaskade'
   next()
+})
+
+// After a deploy, a tab opened earlier still asks for the old lazy chunks, which are gone — the
+// page didn't change and only the block timer started (#20). Load the target fresh instead
+// (at most once in 10 s per target, so a real error can't loop).
+const STALE_CHUNK = /dynamically imported module|Importing a module script failed|MIME type/i
+router.onError((err, to) => {
+  if (!STALE_CHUNK.test(err?.message ?? '') || !to) return
+  const key = `kaskade-reload:${to.fullPath}`
+  try {
+    if (Date.now() - Number(sessionStorage.getItem(key) || 0) < 10000) return
+    sessionStorage.setItem(key, String(Date.now()))
+  } catch {
+    /* private mode: reload anyway */
+  }
+  window.location.assign(to.fullPath)
 })
 
 export default router

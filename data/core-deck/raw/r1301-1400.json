@@ -1,0 +1,1018 @@
+[
+  {
+    "rank": 1301,
+    "lemma": "reagieren",
+    "pos": "VERB",
+    "display": "reagieren · hat reagiert",
+    "gloss": "to react, to respond",
+    "sentence": "Der Vermieter hat auf meine E-Mail noch nicht reagiert.",
+    "target": "reagiert",
+    "en": "The landlord hasn't responded to my email yet.",
+    "note": "reagieren auf + Akk.",
+    "case": "A"
+  },
+  {
+    "rank": 1302,
+    "lemma": "Schwanz",
+    "pos": "NOUN",
+    "display": "der Schwanz · die Schwänze",
+    "gloss": "tail",
+    "sentence": "Der Hund wedelt fröhlich mit dem Schwanz.",
+    "target": "Schwanz",
+    "en": "The dog is happily wagging its tail.",
+    "note": "Achtung: umgangssprachlich auch vulgär",
+    "case": null
+  },
+  {
+    "rank": 1303,
+    "lemma": "begegnen",
+    "pos": "VERB",
+    "display": "begegnen · ist begegnet",
+    "gloss": "to meet, to run into",
+    "sentence": "Gestern bin ich im Supermarkt meiner alten Lehrerin begegnet.",
+    "target": "begegnet",
+    "en": "Yesterday I ran into my old teacher at the supermarket.",
+    "note": "begegnen + Dativ; Perfekt mit sein",
+    "case": "D"
+  },
+  {
+    "rank": 1304,
+    "skip": "englischer Titel"
+  },
+  {
+    "rank": 1305,
+    "lemma": "Großvater",
+    "pos": "NOUN",
+    "display": "der Großvater · die Großväter",
+    "gloss": "grandfather",
+    "sentence": "Mein Großvater hat früher in einer Fabrik gearbeitet.",
+    "target": "Großvater",
+    "en": "My grandfather used to work in a factory.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1306,
+    "lemma": "Sommer",
+    "pos": "NOUN",
+    "display": "der Sommer · die Sommer",
+    "gloss": "summer",
+    "sentence": "Im Sommer fahren wir oft an den See.",
+    "target": "Sommer",
+    "en": "In summer we often go to the lake.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1307,
+    "lemma": "warm",
+    "pos": "ADJ",
+    "display": "warm · wärmer · am wärmsten",
+    "gloss": "warm",
+    "sentence": "Zieh dir eine warme Jacke an, draußen ist es kalt.",
+    "target": "warme",
+    "en": "Put on a warm jacket, it's cold outside.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1308,
+    "lemma": "brav",
+    "pos": "ADJ",
+    "display": "brav",
+    "gloss": "well-behaved, good",
+    "sentence": "Die Kinder waren heute beim Arzt ganz brav.",
+    "target": "brav",
+    "en": "The kids were very well-behaved at the doctor's today.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1309,
+    "lemma": "hingehen",
+    "pos": "VERB",
+    "display": "hingehen · ging hin · ist hingegangen",
+    "gloss": "to go (there)",
+    "sentence": "Die Party ist am Samstag, aber ich gehe nicht hin.",
+    "target": "gehe",
+    "en": "The party is on Saturday, but I'm not going.",
+    "note": "trennbar: hin|gehen",
+    "case": null
+  },
+  {
+    "rank": 1310,
+    "lemma": "beibringen",
+    "pos": "VERB",
+    "display": "beibringen · brachte bei · hat beigebracht",
+    "gloss": "to teach",
+    "sentence": "Meine Mutter hat mir das Kochen beigebracht.",
+    "target": "beigebracht",
+    "en": "My mother taught me how to cook.",
+    "note": "jdm (Dativ) etwas (Akk.) beibringen; trennbar",
+    "case": null
+  },
+  {
+    "rank": 1311,
+    "lemma": "raten",
+    "pos": "VERB",
+    "display": "raten · riet · hat geraten",
+    "gloss": "to advise; to guess",
+    "sentence": "Der Arzt hat mir geraten, weniger Zucker zu essen.",
+    "target": "geraten",
+    "en": "The doctor advised me to eat less sugar.",
+    "note": "jdm raten + Dativ",
+    "case": "D"
+  },
+  {
+    "rank": 1312,
+    "skip": "Name"
+  },
+  {
+    "rank": 1313,
+    "lemma": "zuhören",
+    "pos": "VERB",
+    "display": "zuhören · hat zugehört",
+    "gloss": "to listen",
+    "sentence": "Du hörst mir überhaupt nicht zu!",
+    "target": "hörst",
+    "en": "You're not listening to me at all!",
+    "note": "jdm zuhören + Dativ; trennbar",
+    "case": "D"
+  },
+  {
+    "rank": 1314,
+    "lemma": "herkommen",
+    "pos": "VERB",
+    "display": "herkommen · kam her · ist hergekommen",
+    "gloss": "to come here",
+    "sentence": "Kannst du mal kurz herkommen und mir helfen?",
+    "target": "herkommen",
+    "en": "Can you come over here for a moment and help me?",
+    "note": "trennbar: her|kommen",
+    "case": null
+  },
+  {
+    "rank": 1315,
+    "skip": "Name"
+  },
+  {
+    "rank": 1316,
+    "lemma": "jener",
+    "pos": "PRON",
+    "display": "jener · jene · jenes",
+    "gloss": "that, those",
+    "sentence": "Zu jener Zeit gab es noch keine Handys.",
+    "target": "jener",
+    "en": "In those days there were no mobile phones yet.",
+    "note": "eher schriftlich; gesprochen meist: der/die/das",
+    "case": null
+  },
+  {
+    "rank": 1317,
+    "lemma": "Hose",
+    "pos": "NOUN",
+    "display": "die Hose · die Hosen",
+    "gloss": "trousers, pants",
+    "sentence": "Für das Vorstellungsgespräch brauche ich noch eine schwarze Hose.",
+    "target": "Hose",
+    "en": "I still need a pair of black trousers for the job interview.",
+    "note": "die Hose = Singular (ein Paar)",
+    "case": null
+  },
+  {
+    "rank": 1318,
+    "lemma": "Prinz",
+    "pos": "NOUN",
+    "display": "der Prinz · die Prinzen",
+    "gloss": "prince",
+    "sentence": "Im Märchen rettet der Prinz die Prinzessin.",
+    "target": "Prinz",
+    "en": "In the fairy tale the prince rescues the princess.",
+    "note": "n-Deklination: den Prinzen, dem Prinzen",
+    "case": null
+  },
+  {
+    "rank": 1319,
+    "lemma": "privat",
+    "pos": "ADJ",
+    "display": "privat",
+    "gloss": "private",
+    "sentence": "Darüber möchte ich nicht sprechen, das ist privat.",
+    "target": "privat",
+    "en": "I'd rather not talk about that, it's private.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1320,
+    "skip": "Duplikat: recht / rechts"
+  },
+  {
+    "rank": 1321,
+    "lemma": "gewöhnen",
+    "pos": "VERB",
+    "display": "sich gewöhnen · hat sich gewöhnt",
+    "gloss": "to get used to",
+    "sentence": "Ich habe mich langsam an das Wetter in Deutschland gewöhnt.",
+    "target": "gewöhnt",
+    "en": "I've slowly got used to the weather in Germany.",
+    "note": "sich gewöhnen an + Akk.",
+    "case": "A"
+  },
+  {
+    "rank": 1322,
+    "lemma": "klug",
+    "pos": "ADJ",
+    "display": "klug · klüger · am klügsten",
+    "gloss": "clever, wise",
+    "sentence": "Das war eine kluge Entscheidung.",
+    "target": "kluge",
+    "en": "That was a smart decision.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1323,
+    "skip": "Duplikat: Karte"
+  },
+  {
+    "rank": 1324,
+    "lemma": "umgehen",
+    "pos": "VERB",
+    "display": "umgehen · ging um · ist umgegangen",
+    "gloss": "to deal with, to handle",
+    "sentence": "Sie kann gut mit Kindern umgehen.",
+    "target": "umgehen",
+    "en": "She's good with children.",
+    "note": "umgehen mit + Dativ; trennbar",
+    "case": "D"
+  },
+  {
+    "rank": 1325,
+    "lemma": "Restaurant",
+    "pos": "NOUN",
+    "display": "das Restaurant · die Restaurants",
+    "gloss": "restaurant",
+    "sentence": "Wollen wir heute Abend in ein Restaurant gehen?",
+    "target": "Restaurant",
+    "en": "Shall we go to a restaurant tonight?",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1326,
+    "lemma": "Natur",
+    "pos": "NOUN",
+    "display": "die Natur · kein Plural",
+    "gloss": "nature",
+    "sentence": "Am Wochenende bin ich gern draußen in der Natur.",
+    "target": "Natur",
+    "en": "At the weekend I like being out in nature.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1327,
+    "lemma": "vertraut",
+    "pos": "ADJ",
+    "display": "vertraut",
+    "gloss": "familiar",
+    "sentence": "Nach ein paar Wochen war mir die neue Stadt schon vertraut.",
+    "target": "vertraut",
+    "en": "After a few weeks the new city already felt familiar to me.",
+    "note": "jdm vertraut sein; mit etwas vertraut sein",
+    "case": null
+  },
+  {
+    "rank": 1328,
+    "lemma": "Streit",
+    "pos": "NOUN",
+    "display": "der Streit · die Streitigkeiten",
+    "gloss": "argument, quarrel",
+    "sentence": "Wir hatten Streit mit den Nachbarn wegen des Lärms.",
+    "target": "Streit",
+    "en": "We had an argument with the neighbours about the noise.",
+    "note": "Streit haben mit + Dativ",
+    "case": null
+  },
+  {
+    "rank": 1329,
+    "skip": "Duplikat: küssen"
+  },
+  {
+    "rank": 1330,
+    "lemma": "begehen",
+    "pos": "VERB",
+    "display": "begehen · beging · hat begangen",
+    "gloss": "to commit (a crime, mistake)",
+    "sentence": "Der Mann hat mehrere Diebstähle begangen.",
+    "target": "begangen",
+    "en": "The man committed several thefts.",
+    "note": "ein Verbrechen / einen Fehler begehen",
+    "case": null
+  },
+  {
+    "rank": 1331,
+    "skip": "Duplikat: sprechen"
+  },
+  {
+    "rank": 1332,
+    "lemma": "längst",
+    "pos": "ADV",
+    "display": "längst",
+    "gloss": "long ago, for a long time",
+    "sentence": "Das weiß ich doch schon längst!",
+    "target": "längst",
+    "en": "I've known that for ages!",
+    "note": "längst = schon lange",
+    "case": null
+  },
+  {
+    "rank": 1333,
+    "lemma": "drüber",
+    "pos": "ADV",
+    "display": "drüber",
+    "gloss": "about it; over it",
+    "sentence": "Lass uns morgen noch mal drüber reden.",
+    "target": "drüber",
+    "en": "Let's talk about it again tomorrow.",
+    "note": "umgangssprachlich für darüber",
+    "case": null
+  },
+  {
+    "rank": 1334,
+    "skip": "Duplikat: einzig"
+  },
+  {
+    "rank": 1335,
+    "lemma": "erwachsen",
+    "pos": "ADJ",
+    "display": "erwachsen",
+    "gloss": "grown-up, adult",
+    "sentence": "Meine Kinder sind schon erwachsen und wohnen nicht mehr zu Hause.",
+    "target": "erwachsen",
+    "en": "My children are already grown up and don't live at home anymore.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1336,
+    "lemma": "lebendig",
+    "pos": "ADJ",
+    "display": "lebendig",
+    "gloss": "alive; lively",
+    "sentence": "Die Altstadt ist am Abend sehr lebendig.",
+    "target": "lebendig",
+    "en": "The old town is very lively in the evening.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1337,
+    "lemma": "normalerweise",
+    "pos": "ADV",
+    "display": "normalerweise",
+    "gloss": "normally, usually",
+    "sentence": "Normalerweise fahre ich mit dem Fahrrad zur Arbeit.",
+    "target": "Normalerweise",
+    "en": "Normally I cycle to work.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1338,
+    "skip": "Duplikat: schwarz"
+  },
+  {
+    "rank": 1339,
+    "lemma": "rauf",
+    "pos": "ADV",
+    "display": "rauf",
+    "gloss": "up (here/there)",
+    "sentence": "Komm doch kurz zu mir rauf!",
+    "target": "rauf",
+    "en": "Come on up to my place for a minute!",
+    "note": "umgangssprachlich für herauf / hinauf",
+    "case": null
+  },
+  {
+    "rank": 1340,
+    "lemma": "mehrere",
+    "pos": "DET",
+    "display": "mehrere",
+    "gloss": "several",
+    "sentence": "Ich habe schon mehrere Wohnungen angeschaut.",
+    "target": "mehrere",
+    "en": "I've already looked at several flats.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1341,
+    "lemma": "absehen",
+    "pos": "VERB",
+    "display": "absehen · sah ab · hat abgesehen",
+    "gloss": "to disregard; to foresee",
+    "sentence": "Abgesehen vom Wetter war der Urlaub super.",
+    "target": "Abgesehen",
+    "en": "Apart from the weather, the holiday was great.",
+    "note": "abgesehen von + Dativ = außer",
+    "case": "D"
+  },
+  {
+    "rank": 1342,
+    "lemma": "betrachten",
+    "pos": "VERB",
+    "display": "betrachten · hat betrachtet",
+    "gloss": "to look at, to consider",
+    "sentence": "Er betrachtet die alten Fotos von seiner Familie.",
+    "target": "betrachtet",
+    "en": "He's looking at the old photos of his family.",
+    "note": "betrachten = genau ansehen",
+    "case": null
+  },
+  {
+    "rank": 1343,
+    "lemma": "Flug",
+    "pos": "NOUN",
+    "display": "der Flug · die Flüge",
+    "gloss": "flight",
+    "sentence": "Unser Flug nach Lissabon hat zwei Stunden Verspätung.",
+    "target": "Flug",
+    "en": "Our flight to Lisbon is two hours late.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1344,
+    "skip": "Duplikat: Zahn"
+  },
+  {
+    "rank": 1345,
+    "skip": "Duplikat: halb"
+  },
+  {
+    "rank": 1346,
+    "lemma": "morgens",
+    "pos": "ADV",
+    "display": "morgens",
+    "gloss": "in the morning(s)",
+    "sentence": "Morgens trinke ich immer zuerst einen Kaffee.",
+    "target": "Morgens",
+    "en": "In the mornings I always have a coffee first.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1347,
+    "lemma": "festhalten",
+    "pos": "VERB",
+    "display": "festhalten · hielt fest · hat festgehalten",
+    "gloss": "to hold (on to)",
+    "sentence": "Bitte halten Sie sich während der Fahrt fest.",
+    "target": "halten",
+    "en": "Please hold on during the journey.",
+    "note": "sich festhalten an + Dativ; trennbar",
+    "case": null
+  },
+  {
+    "rank": 1348,
+    "skip": "Duplikat: lügen"
+  },
+  {
+    "rank": 1349,
+    "lemma": "studieren",
+    "pos": "VERB",
+    "display": "studieren · hat studiert",
+    "gloss": "to study (at university)",
+    "sentence": "Meine Schwester studiert Medizin in Leipzig.",
+    "target": "studiert",
+    "en": "My sister is studying medicine in Leipzig.",
+    "note": "studieren = an der Uni; lernen = z. B. für eine Prüfung",
+    "case": null
+  },
+  {
+    "rank": 1350,
+    "skip": "Duplikat: schwer"
+  },
+  {
+    "rank": 1351,
+    "skip": "Duplikat: Hund"
+  },
+  {
+    "rank": 1352,
+    "lemma": "verwandeln",
+    "pos": "VERB",
+    "display": "verwandeln · hat verwandelt",
+    "gloss": "to transform, to turn into",
+    "sentence": "Im Winter verwandelt sich der Park in eine weiße Landschaft.",
+    "target": "verwandelt",
+    "en": "In winter the park turns into a white landscape.",
+    "note": "sich verwandeln in + Akk.",
+    "case": "A"
+  },
+  {
+    "rank": 1353,
+    "lemma": "verdammt",
+    "pos": "ADJ",
+    "display": "verdammt",
+    "gloss": "damn(ed)",
+    "sentence": "Verdammt, ich habe meinen Schlüssel vergessen!",
+    "target": "Verdammt",
+    "en": "Damn, I forgot my key!",
+    "note": "umgangssprachlich (Fluch)",
+    "case": null
+  },
+  {
+    "rank": 1354,
+    "lemma": "Einsatz",
+    "pos": "NOUN",
+    "display": "der Einsatz · die Einsätze",
+    "gloss": "deployment, operation; effort",
+    "sentence": "Die Feuerwehr war die ganze Nacht im Einsatz.",
+    "target": "Einsatz",
+    "en": "The fire brigade was in action all night.",
+    "note": "im Einsatz sein",
+    "case": null
+  },
+  {
+    "rank": 1355,
+    "lemma": "Labor",
+    "pos": "NOUN",
+    "display": "das Labor · die Labore",
+    "gloss": "lab, laboratory",
+    "sentence": "Die Blutprobe wird ins Labor geschickt.",
+    "target": "Labor",
+    "en": "The blood sample is sent to the lab.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1356,
+    "lemma": "mindestens",
+    "pos": "ADV",
+    "display": "mindestens",
+    "gloss": "at least",
+    "sentence": "Die Wohnung kostet mindestens 900 Euro warm.",
+    "target": "mindestens",
+    "en": "The flat costs at least 900 euros including heating.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1357,
+    "skip": "Duplikat: euer"
+  },
+  {
+    "rank": 1358,
+    "skip": "Duplikat: blau"
+  },
+  {
+    "rank": 1359,
+    "lemma": "besiegen",
+    "pos": "VERB",
+    "display": "besiegen · hat besiegt",
+    "gloss": "to defeat, to beat",
+    "sentence": "Unsere Mannschaft hat gestern den Tabellenführer besiegt.",
+    "target": "besiegt",
+    "en": "Our team beat the league leaders yesterday.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1360,
+    "skip": "Englisch"
+  },
+  {
+    "rank": 1361,
+    "lemma": "riskieren",
+    "pos": "VERB",
+    "display": "riskieren · hat riskiert",
+    "gloss": "to risk",
+    "sentence": "Ich will meinen Job nicht riskieren.",
+    "target": "riskieren",
+    "en": "I don't want to risk my job.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1362,
+    "skip": "Duplikat: stehen"
+  },
+  {
+    "rank": 1363,
+    "lemma": "Fähigkeit",
+    "pos": "NOUN",
+    "display": "die Fähigkeit · die Fähigkeiten",
+    "gloss": "ability, skill",
+    "sentence": "Für diesen Job brauchen Sie gute organisatorische Fähigkeiten.",
+    "target": "Fähigkeiten",
+    "en": "For this job you need good organisational skills.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1364,
+    "lemma": "entspannen",
+    "pos": "VERB",
+    "display": "sich entspannen · hat sich entspannt",
+    "gloss": "to relax",
+    "sentence": "Nach der Arbeit entspanne ich mich gern in der Badewanne.",
+    "target": "entspanne",
+    "en": "After work I like to relax in the bath.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1365,
+    "lemma": "selten",
+    "pos": "ADV",
+    "display": "selten",
+    "gloss": "rarely, seldom",
+    "sentence": "Wir sehen uns leider nur noch selten.",
+    "target": "selten",
+    "en": "Sadly we only see each other rarely now.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1366,
+    "lemma": "Kuchen",
+    "pos": "NOUN",
+    "display": "der Kuchen · die Kuchen",
+    "gloss": "cake",
+    "sentence": "Ich habe für Sonntag einen Kuchen gebacken.",
+    "target": "Kuchen",
+    "en": "I've baked a cake for Sunday.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1367,
+    "lemma": "Zustand",
+    "pos": "NOUN",
+    "display": "der Zustand · die Zustände",
+    "gloss": "condition, state",
+    "sentence": "Die Wohnung ist in einem sehr guten Zustand.",
+    "target": "Zustand",
+    "en": "The flat is in very good condition.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1368,
+    "lemma": "Wunsch",
+    "pos": "NOUN",
+    "display": "der Wunsch · die Wünsche",
+    "gloss": "wish",
+    "sentence": "Hast du einen besonderen Wunsch zum Geburtstag?",
+    "target": "Wunsch",
+    "en": "Do you have a special wish for your birthday?",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1369,
+    "skip": "Duplikat: Gast"
+  },
+  {
+    "rank": 1370,
+    "lemma": "Farbe",
+    "pos": "NOUN",
+    "display": "die Farbe · die Farben",
+    "gloss": "colour; paint",
+    "sentence": "Welche Farbe soll das neue Sofa haben?",
+    "target": "Farbe",
+    "en": "What colour should the new sofa be?",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1371,
+    "lemma": "Zufall",
+    "pos": "NOUN",
+    "display": "der Zufall · die Zufälle",
+    "gloss": "coincidence, chance",
+    "sentence": "Was für ein Zufall, dass wir uns hier treffen!",
+    "target": "Zufall",
+    "en": "What a coincidence that we're meeting here!",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1372,
+    "lemma": "Garten",
+    "pos": "NOUN",
+    "display": "der Garten · die Gärten",
+    "gloss": "garden",
+    "sentence": "Im Sommer grillen wir oft im Garten.",
+    "target": "Garten",
+    "en": "In summer we often have barbecues in the garden.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1373,
+    "lemma": "schweigen",
+    "pos": "VERB",
+    "display": "schweigen · schwieg · hat geschwiegen",
+    "gloss": "to be silent",
+    "sentence": "Als ich nach dem Geld gefragt habe, hat er nur geschwiegen.",
+    "target": "geschwiegen",
+    "en": "When I asked about the money, he just said nothing.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1374,
+    "lemma": "Koffer",
+    "pos": "NOUN",
+    "display": "der Koffer · die Koffer",
+    "gloss": "suitcase",
+    "sentence": "Mein Koffer ist am Flughafen leider nicht angekommen.",
+    "target": "Koffer",
+    "en": "Unfortunately my suitcase didn't arrive at the airport.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1375,
+    "lemma": "Idiot",
+    "pos": "NOUN",
+    "display": "der Idiot · die Idioten",
+    "gloss": "idiot",
+    "sentence": "Ich Idiot habe den Schlüssel in der Wohnung vergessen.",
+    "target": "Idiot",
+    "en": "Idiot that I am, I left the key in the flat.",
+    "note": "umgangssprachlich, Schimpfwort; n-Deklination: den Idioten",
+    "case": null
+  },
+  {
+    "rank": 1376,
+    "skip": "Duplikat: nett"
+  },
+  {
+    "rank": 1377,
+    "lemma": "seitdem",
+    "pos": "ADV",
+    "display": "seitdem",
+    "gloss": "since then",
+    "sentence": "Ich bin 2019 nach Köln gezogen und wohne seitdem hier.",
+    "target": "seitdem",
+    "en": "I moved to Cologne in 2019 and have lived here since then.",
+    "note": "seitdem + Präsens (Englisch: present perfect)",
+    "case": null
+  },
+  {
+    "rank": 1378,
+    "lemma": "einstellen",
+    "pos": "VERB",
+    "display": "einstellen · hat eingestellt",
+    "gloss": "to hire; to adjust",
+    "sentence": "Die Firma will dieses Jahr zehn neue Mitarbeiter einstellen.",
+    "target": "einstellen",
+    "en": "The company wants to hire ten new employees this year.",
+    "note": "trennbar; auch: die Heizung einstellen",
+    "case": null
+  },
+  {
+    "rank": 1379,
+    "skip": "Duplikat: Geschichte"
+  },
+  {
+    "rank": 1380,
+    "lemma": "stoßen",
+    "pos": "VERB",
+    "display": "stoßen · stieß · hat gestoßen",
+    "gloss": "to push, to bump",
+    "sentence": "Ich habe mir den Kopf am Schrank gestoßen.",
+    "target": "gestoßen",
+    "en": "I bumped my head on the cupboard.",
+    "note": "stoßen auf + Akk. = finden (ist gestoßen)",
+    "case": null
+  },
+  {
+    "rank": 1381,
+    "lemma": "beantworten",
+    "pos": "VERB",
+    "display": "beantworten · hat beantwortet",
+    "gloss": "to answer",
+    "sentence": "Können Sie mir bitte noch eine Frage beantworten?",
+    "target": "beantworten",
+    "en": "Could you please answer one more question for me?",
+    "note": "eine Frage beantworten (+ Akk.) = auf eine Frage antworten",
+    "case": null
+  },
+  {
+    "rank": 1382,
+    "lemma": "peinlich",
+    "pos": "ADJ",
+    "display": "peinlich",
+    "gloss": "embarrassing",
+    "sentence": "Das war mir total peinlich.",
+    "target": "peinlich",
+    "en": "That was really embarrassing for me.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1383,
+    "lemma": "Lager",
+    "pos": "NOUN",
+    "display": "das Lager · die Lager",
+    "gloss": "storage, warehouse; camp",
+    "sentence": "Die Schuhe in Ihrer Größe haben wir leider nicht auf Lager.",
+    "target": "Lager",
+    "en": "Unfortunately we don't have the shoes in your size in stock.",
+    "note": "auf Lager haben = vorrätig haben",
+    "case": null
+  },
+  {
+    "rank": 1384,
+    "lemma": "Reihe",
+    "pos": "NOUN",
+    "display": "die Reihe · die Reihen",
+    "gloss": "row; turn",
+    "sentence": "Wer ist jetzt an der Reihe?",
+    "target": "Reihe",
+    "en": "Whose turn is it now?",
+    "note": "an der Reihe sein = dran sein",
+    "case": null
+  },
+  {
+    "rank": 1385,
+    "lemma": "Mitglied",
+    "pos": "NOUN",
+    "display": "das Mitglied · die Mitglieder",
+    "gloss": "member",
+    "sentence": "Ich bin seit einem Jahr Mitglied im Sportverein.",
+    "target": "Mitglied",
+    "en": "I've been a member of the sports club for a year.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1386,
+    "lemma": "ertragen",
+    "pos": "VERB",
+    "display": "ertragen · ertrug · hat ertragen",
+    "gloss": "to bear, to stand",
+    "sentence": "Ich kann den Lärm von der Baustelle kaum noch ertragen.",
+    "target": "ertragen",
+    "en": "I can hardly bear the noise from the construction site anymore.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1387,
+    "lemma": "heben",
+    "pos": "VERB",
+    "display": "heben · hob · hat gehoben",
+    "gloss": "to lift, to raise",
+    "sentence": "Der Arzt hat gesagt, ich darf nichts Schweres heben.",
+    "target": "heben",
+    "en": "The doctor said I mustn't lift anything heavy.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1388,
+    "lemma": "Strand",
+    "pos": "NOUN",
+    "display": "der Strand · die Strände",
+    "gloss": "beach",
+    "sentence": "Wir haben den ganzen Tag am Strand gelegen.",
+    "target": "Strand",
+    "en": "We lay on the beach all day.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1389,
+    "lemma": "loswerden",
+    "pos": "VERB",
+    "display": "loswerden · wurde los · ist losgeworden",
+    "gloss": "to get rid of",
+    "sentence": "Wie werde ich meinen alten Kühlschrank los?",
+    "target": "werde",
+    "en": "How do I get rid of my old fridge?",
+    "note": "trennbar: los|werden",
+    "case": null
+  },
+  {
+    "rank": 1390,
+    "lemma": "Amerikaner",
+    "pos": "NOUN",
+    "display": "der Amerikaner · die Amerikaner",
+    "gloss": "American (person)",
+    "sentence": "Mein neuer Kollege ist Amerikaner und lernt gerade Deutsch.",
+    "target": "Amerikaner",
+    "en": "My new colleague is American and is learning German.",
+    "note": "die Amerikanerin · die Amerikanerinnen",
+    "case": null
+  },
+  {
+    "rank": 1391,
+    "lemma": "reinkommen",
+    "pos": "VERB",
+    "display": "reinkommen · kam rein · ist reingekommen",
+    "gloss": "to come in",
+    "sentence": "Darf ich kurz reinkommen? Ich muss dir etwas zeigen.",
+    "target": "reinkommen",
+    "en": "Can I come in for a moment? I need to show you something.",
+    "note": "umgangssprachlich für hereinkommen; trennbar",
+    "case": null
+  },
+  {
+    "rank": 1392,
+    "lemma": "Programm",
+    "pos": "NOUN",
+    "display": "das Programm · die Programme",
+    "gloss": "programme, schedule",
+    "sentence": "Was steht morgen auf dem Programm?",
+    "target": "Programm",
+    "en": "What's on the agenda tomorrow?",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1393,
+    "lemma": "anstellen",
+    "pos": "VERB",
+    "display": "anstellen · hat angestellt",
+    "gloss": "to get up to (mischief); to employ",
+    "sentence": "Was hast du denn jetzt schon wieder angestellt?",
+    "target": "angestellt",
+    "en": "What have you gone and done now?",
+    "note": "etwas anstellen = etwas Dummes machen; sich anstellen = in der Schlange warten",
+    "case": null
+  },
+  {
+    "rank": 1394,
+    "skip": "Name"
+  },
+  {
+    "rank": 1395,
+    "lemma": "Toilette",
+    "pos": "NOUN",
+    "display": "die Toilette · die Toiletten",
+    "gloss": "toilet",
+    "sentence": "Entschuldigung, wo ist hier die Toilette?",
+    "target": "Toilette",
+    "en": "Excuse me, where's the toilet here?",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1396,
+    "lemma": "Scherz",
+    "pos": "NOUN",
+    "display": "der Scherz · die Scherze",
+    "gloss": "joke",
+    "sentence": "Das war doch nur ein Scherz!",
+    "target": "Scherz",
+    "en": "That was only a joke!",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1397,
+    "lemma": "Karriere",
+    "pos": "NOUN",
+    "display": "die Karriere · die Karrieren",
+    "gloss": "career",
+    "sentence": "Für ihre Karriere ist sie nach München gezogen.",
+    "target": "Karriere",
+    "en": "She moved to Munich for her career.",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1398,
+    "lemma": "wundervoll",
+    "pos": "ADJ",
+    "display": "wundervoll",
+    "gloss": "wonderful",
+    "sentence": "Wir hatten einen wundervollen Abend, danke für die Einladung!",
+    "target": "wundervollen",
+    "en": "We had a wonderful evening, thanks for the invitation!",
+    "note": null,
+    "case": null
+  },
+  {
+    "rank": 1399,
+    "skip": "vulgäres Schimpfwort"
+  },
+  {
+    "rank": 1400,
+    "lemma": "womit",
+    "pos": "ADV",
+    "display": "womit",
+    "gloss": "with what",
+    "sentence": "Womit kann ich Ihnen helfen?",
+    "target": "Womit",
+    "en": "How can I help you?",
+    "note": "womit = mit was",
+    "case": null
+  }
+]

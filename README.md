@@ -32,8 +32,8 @@ A comprehensive, interactive web application for learning German grammar at the 
 
 ```bash
 # Clone the repository
-git clone https://github.com/technoSpino/german-declension-app.git
-cd german-declension-app/app
+git clone https://github.com/technoSpino/kaskade.git
+cd kaskade/app
 
 # Install dependencies
 npm install
@@ -197,7 +197,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📧 Contact
 
-Project Link: [https://github.com/technoSpino/german-declension-app](https://github.com/technoSpino/german-declension-app)
+Project Link: [https://github.com/technoSpino/kaskade](https://github.com/technoSpino/kaskade)
 
 ---
 

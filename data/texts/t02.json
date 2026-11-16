@@ -1,0 +1,60 @@
+{
+  "id": "t02",
+  "origin": "ai",
+  "title": "Ein Paket für die Nachbarin",
+  "level": "A2+",
+  "theme": "Nachbarn",
+  "slot": "lesen",
+  "text": "Jonas arbeitet oft von zu Hause. Deshalb nimmt er gern Pakete für die Nachbarn an. An einem Dienstag klingelt es um zehn Uhr. Vor der Tür steht ein junger Mann mit einem großen Paket. „Das ist für Frau Weber im dritten Stock“, sagt er. „Sie ist nicht da. Können Sie es nehmen?“ Jonas sagt ja und unterschreibt.\n\nDas Paket ist schwer. Jonas stellt es in den Flur und arbeitet weiter. Am Nachmittag geht er nach oben und klingelt bei Frau Weber. Niemand macht auf. Er schreibt einen Zettel und legt ihn vor ihre Tür: „Ihr Paket ist bei mir, Jonas Hartmann, erster Stock.“\n\nAm Abend wartet Jonas, aber Frau Weber kommt nicht. Am nächsten Morgen auch nicht. Langsam macht er sich Sorgen. Frau Weber ist schon über achtzig Jahre alt und lebt allein. Er fragt die Nachbarn im Haus. Ein Mann aus dem zweiten Stock weiß mehr: „Frau Weber ist bei ihrer Tochter in Hamburg. Sie kommt am Freitag zurück.“ Jonas ist froh. Es ist also nichts passiert.\n\nAm Freitagabend klingelt es. Frau Weber steht vor der Tür und lächelt. „Vielen Dank, junger Mann! Ich habe Ihren Zettel gelesen.“ Jonas holt das Paket. „Was ist denn da drin? Es ist so schwer!“, fragt er. Frau Weber lacht. „Bücher! Ich lese jeden Abend. Ohne Bücher kann ich nicht schlafen.“\n\nZwei Tage später findet Jonas etwas vor seiner Tür: ein Buch und eine kleine Karte. Auf der Karte steht: „Für meinen netten Nachbarn. Dieses Buch hat mir sehr gefallen. Vielleicht gefällt es Ihnen auch.“ Jonas liest seit Jahren keine Romane mehr. Aber an diesem Abend macht er den Fernseher aus und fängt an zu lesen.",
+  "glossary": [
+    {
+      "term": "Pakete",
+      "gloss": "parcels",
+      "note": "das Paket, -e"
+    },
+    {
+      "term": "Paket",
+      "gloss": "parcel",
+      "note": "das Paket, -e"
+    },
+    {
+      "term": "Flur",
+      "gloss": "hallway",
+      "note": "der Flur, -e"
+    },
+    {
+      "term": "Zettel",
+      "gloss": "note, slip of paper",
+      "note": "der Zettel, -"
+    }
+  ],
+  "questions": [
+    {
+      "question": "Warum nimmt Jonas oft Pakete für die Nachbarn an?",
+      "options": [
+        "Er arbeitet oft zu Hause.",
+        "Er arbeitet bei der Post.",
+        "Er kennt alle Nachbarn sehr gut."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Wo ist Frau Weber?",
+      "options": [
+        "Im Krankenhaus",
+        "Im Urlaub am Meer",
+        "Bei ihrer Tochter in Hamburg"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Was ist in dem Paket?",
+      "options": [
+        "Kleider",
+        "Bücher",
+        "Geschirr"
+      ],
+      "correct": 1
+    }
+  ]
+}

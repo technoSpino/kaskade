@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Kaskade — Fahrplan</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&amp;family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#F3F4F6}
+*{box-sizing:border-box}
+a{color:#3B2BB0}a:hover{color:#14161B}
+:focus-visible{outline:3px solid #5B3FD6;outline-offset:2px}
+header nav a:not([aria-current]):hover{background:#2A2E37 !important;color:#FFFFFF !important}
+</style>
+</helmet>
+<div style="min-height: 100vh; background: #F3F4F6; color: #14161B; font-family: 'Archivo', system-ui, sans-serif; font-variant-numeric: tabular-nums">
+
+<header style="background: #14161B; color: #FFFFFF">
+<div style="max-width: 1200px; margin: 0 auto; padding: 6px 24px; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 24px">
+<a href="Main.dc.html" style="display: flex; align-items: center; gap: 10px; color: #FFFFFF; text-decoration: none; font-weight: 800; font-size: 19px; letter-spacing: -0.01em; min-height: 44px"><svg width="22" height="22" viewBox="0 0 22 22" aria-hidden="true"><rect x="1" y="2" width="6" height="18" rx="1" fill="#FFD23F"></rect><rect x="8" y="7" width="6" height="13" rx="1" fill="#FFFFFF"></rect><rect x="15" y="12" width="6" height="8" rx="1" fill="#FFFFFF"></rect></svg>Kaskade</a>
+<nav aria-label="Hauptnavigation" style="display: flex; flex-wrap: wrap; gap: 2px">
+<a href="Main.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Heute</a>
+<a href="Fahrplan.dc.html" aria-current="page" style="color: #14161B; background: #FFFFFF; text-decoration: none; font-size: 14px; font-weight: 700; padding: 12px; border-radius: 8px; line-height: 20px">Fahrplan</a>
+<a href="Bibliothek.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Bibliothek</a>
+<a href="Lesen.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Lesen</a>
+<a href="Hoeren.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Hören</a>
+<a href="Sprechen.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Sprechen</a>
+<a href="Schreiben.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Schreiben</a>
+<a href="Karten.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Karten</a>
+<a href="Buecher.dc.html" style="color: #C9CDD6; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px; border-radius: 8px; line-height: 20px">Bücher</a>
+</nav>
+<div style="margin-left: auto; display: flex; align-items: center; gap: 10px">
+<span style="font-size: 13px; font-weight: 700; color: #14161B; background: #FFD23F; padding: 5px 10px; border-radius: 999px">Phase 2A</span>
+<span aria-label="Profil Matt" style="width: 34px; height: 34px; border-radius: 999px; background: #2A2E37; color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 14px">M</span>
+</div>
+</div>
+</header>
+
+<main style="max-width: 1200px; margin: 0 auto; padding: 32px 24px 56px; display: flex; flex-direction: column; gap: 24px">
+
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: stretch">
+<div style="flex: 999 1 560px; min-width: 0">
+<p style="margin: 0 0 6px; font-size: 13px; font-weight: 700; color: #5B6270; text-transform: uppercase; letter-spacing: 0.08em">Dein Fahrplan</p>
+<h1 style="margin: 0; font-size: 40px; line-height: 1.1; font-weight: 800; letter-spacing: -0.02em">Von B1 nach B2</h1>
+<p style="margin: 10px 0 0; font-size: 17px; line-height: 1.55; color: #3D4350; max-width: 64ch">Die Fähigkeiten kommen nacheinander, wie eine Kaskade: <strong style="color: #14161B">Lesen → Hören → Sprechen → Genauigkeit</strong>. Dein B1.2-Kurs hat Grammatik und Grundwortschatz gelegt. Jetzt fehlt vor allem viel echter Input in normalem Tempo — dadurch wird aus Gelerntem Verstandenes.</p>
+</div>
+<section aria-labelledby="prog-h" style="flex: 1 1 340px; min-width: 0; background: #14161B; color: #FFFFFF; border-radius: 14px; padding: 22px 24px">
+<h2 id="prog-h" style="margin: 0; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #C9CDD6">Prognose B2</h2>
+<p style="margin: 8px 0 0; font-size: 15px; color: #C9CDD6">Block Mo–Fr 09:00–11:30 = <strong style="color: #FFFFFF">11,7 h aktiv pro Woche</strong></p>
+<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin-top: 16px">
+<div style="background: #2A2E37; border-radius: 10px; padding: 14px">
+<p style="margin: 0; font-size: 13px; color: #C9CDD6">Nur der Block</p>
+<p style="margin: 4px 0 0; font-size: 24px; font-weight: 800">≈ Dez. 2027</p>
+</div>
+<div style="background: #FFD23F; color: #14161B; border-radius: 10px; padding: 14px">
+<p style="margin: 0; font-size: 13px; font-weight: 600">+ 48 min passiv, Mo–Fr</p>
+<p style="margin: 4px 0 0; font-size: 24px; font-weight: 800">≈ Aug. 2027</p>
+</div>
+</div>
+<p style="margin: 14px 0 0; font-size: 13px; line-height: 1.5; color: #C9CDD6">Basis: ≈ 420 h laut Einstufung, Refold-Schätzung ≈ 1.150 h bis B2. Wird nach jedem Einstufungs-Check neu berechnet.</p>
+</section>
+</div>
+
+<section aria-labelledby="track-h" style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 24px">
+<div style="display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px">
+<h2 id="track-h" style="margin: 0; font-size: 20px; font-weight: 800">Stunden bis B2</h2>
+<p style="margin: 0; font-size: 14px; color: #3D4350"><strong style="color: #14161B">≈ 420 h</strong> von ≈ 1.150 h</p>
+</div>
+<div style="position: relative; margin-top: 40px">
+<div style="position: absolute; left: 36.5%; top: -34px; transform: translateX(-50%); font-size: 12px; font-weight: 800; background: #FFD23F; padding: 3px 8px; border-radius: 6px; white-space: nowrap">Du: ≈ 420 h</div>
+<div style="position: absolute; left: 36.5%; top: -10px; bottom: -10px; border-left: 3px solid #14161B; z-index: 1"></div>
+<div style="display: flex; gap: 2px; height: 36px">
+<div title="Phase 1 · 0–75 h" style="flex: 75 1 0; background: #14161B; border-radius: 6px 0 0 6px"></div>
+<div title="Phase 2 · 75–450 h" style="flex: 375 1 0; background: #ECEEF2; position: relative; overflow: hidden"><div style="position: absolute; left: 0; top: 0; bottom: 0; width: 92%; background: #14161B"></div></div>
+<div title="Phase 3 · 450–750 h" style="flex: 300 1 0; background: #ECEEF2"></div>
+<div title="Phase 4 · 750–900 h" style="flex: 150 1 0; background: #ECEEF2"></div>
+<div title="Phase 5 · 900–1.150 h" style="flex: 250 1 0; background: #ECEEF2; border-radius: 0 6px 6px 0"></div>
+</div>
+<div style="display: flex; gap: 2px; margin-top: 8px; font-size: 12px; font-weight: 700; color: #3D4350">
+<div style="flex: 75 1 0; min-width: 0">1</div>
+<div style="flex: 375 1 0; min-width: 0">2 · Verständnis <span style="font-weight: 500; color: #5B6270">bis 450 h</span></div>
+<div style="flex: 300 1 0; min-width: 0">3 · Hören <span style="font-weight: 500; color: #5B6270">bis 750 h</span></div>
+<div style="flex: 150 1 0; min-width: 0">4 · Sprechen</div>
+<div style="flex: 250 1 0; min-width: 0">5 · Genauigkeit <span style="font-weight: 500; color: #5B6270">bis 1.150 h</span></div>
+</div>
+</div>
+</section>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 16px">
+
+<article style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<span style="font-size: 12px; font-weight: 800; color: #5B6270; letter-spacing: 0.06em">PHASE 1</span>
+<span style="display: inline-flex; align-items: center; gap: 4px; font-size: 12px; font-weight: 700; color: #1F5F2A"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg>Erledigt</span>
+</div>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">Fundament</h3>
+<p style="margin: 0; font-size: 13px; color: #3D4350">Ziel: Lesen A2</p>
+<ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.5; color: #3D4350">
+<li>Grundwortschatz, Aussprache</li>
+<li>Grundgrammatik als Vorbereitung</li>
+</ul>
+<p style="margin: auto 0 0; padding-top: 10px; border-top: 1px solid #ECEEF2; font-size: 13px; color: #3D4350"><strong style="color: #14161B">Im App:</strong> deine bisherigen Deklinations-Tabellen, Verben, Präpositionen → werden zum Nachschlagewerk.</p>
+</article>
+
+<article style="background: #FFFFFF; border: 2px solid #14161B; border-radius: 14px; padding: 19px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<span style="font-size: 12px; font-weight: 800; color: #14161B; letter-spacing: 0.06em">PHASE 2</span>
+<span style="font-size: 12px; font-weight: 800; background: #FFD23F; padding: 3px 8px; border-radius: 6px">Jetzt · 2A</span>
+</div>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">Verständnis</h3>
+<p style="margin: 0; font-size: 13px; color: #3D4350">Ziel: Lesen B1 · Serien mit Untertiteln folgen</p>
+<ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.5; color: #3D4350">
+<li><strong style="color: #14161B">2A Die 2.000 häufigsten Wörter · 1.420 sicher</strong><span style="display: block; font-size: 13px; color: #3D4350">Tor zu 2B: 80 % im Satz-Check (zuletzt 78 %)</span></li>
+<li>2B Verstehen durch Satz-Mining</li>
+<li>2C Freies Lesen ohne Tools</li>
+</ul>
+<p style="margin: auto 0 0; padding-top: 10px; border-top: 1px solid #ECEEF2; font-size: 13px; color: #3D4350"><strong style="color: #14161B">Im App:</strong> Bibliothek mit „% bekannt“, Reader mit Kasus-Linse, KI-Texte aus deinen Wörtern, Satzkarten.<br><strong style="color: #14161B">Bücher:</strong> Kontext B1.1-Texte als Input.</p>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 12px; font-weight: 800; color: #5B6270; letter-spacing: 0.06em">PHASE 3</span>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">Hören</h3>
+<p style="margin: 0; font-size: 13px; color: #3D4350">Ziel: Hören B1–B2 · TV ohne Untertitel</p>
+<ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.5; color: #3D4350">
+<li>3A Die Hörlücke schließen</li>
+<li>3B Dialekt wählen</li>
+<li>3C Transkribieren, Loops</li>
+<li>3D Echte Gespräche verstehen</li>
+</ul>
+<p style="margin: auto 0 0; padding-top: 10px; border-top: 1px solid #ECEEF2; font-size: 13px; color: #3D4350"><strong style="color: #14161B">Im App:</strong> Hören-Lab mit Loop und Diktat, Whisper-Transkripte für jeden Podcast.<br><strong style="color: #14161B">Bücher:</strong> Kontext-Hörtexte als Diktat.</p>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<span style="font-size: 12px; font-weight: 800; color: #5B6270; letter-spacing: 0.06em">PHASE 4</span>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">Sprechen</h3>
+<p style="margin: 0; font-size: 13px; color: #3D4350">Ziel: Sprechen B1 · erst Komfort, dann Genauigkeit</p>
+<ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.5; color: #3D4350">
+<li>4A Chorusing, laut lesen, Monolog</li>
+<li>4B Viel sprechen, Fehler erlaubt</li>
+<li>4X Situationen: Amt, Arzt, Wohnung</li>
+</ul>
+<p style="margin: auto 0 0; padding-top: 10px; border-top: 1px solid #ECEEF2; font-size: 13px; color: #3D4350"><strong style="color: #14161B">Im App:</strong> KI-Gesprächspartner im Komfort-Modus, Shadowing mit Aufnahme.<br><strong style="color: #14161B">Bücher:</strong> Kontext-Sprechaufgaben als Rollenspiel.</p>
+</article>
+
+<article style="background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 20px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 8px">
+<span style="font-size: 12px; font-weight: 800; color: #5B6270; letter-spacing: 0.06em">PHASE 5</span>
+<span style="font-size: 12px; font-weight: 800; border: 2px solid #14161B; padding: 1px 7px; border-radius: 6px">B2</span>
+</div>
+<h3 style="margin: 0; font-size: 20px; font-weight: 800">Genauigkeit</h3>
+<p style="margin: 0; font-size: 13px; color: #3D4350">Ziel: B2 in allen vier Fähigkeiten</p>
+<ul style="margin: 0; padding-left: 18px; font-size: 14px; line-height: 1.5; color: #3D4350">
+<li>5A Schreib-Komfort</li>
+<li>5B Schreib-Genauigkeit</li>
+<li>5C Sprech-Genauigkeit</li>
+</ul>
+<p style="margin: auto 0 0; padding-top: 10px; border-top: 1px solid #ECEEF2; font-size: 13px; color: #3D4350"><strong style="color: #14161B">Im App:</strong> Tagebuch mit Korrektur, Fehlerprofil, Goethe-B2-Format.<br><strong style="color: #14161B">Bücher:</strong> Grammatik aktiv gezielt für deine Fehler, Kontext B1.2-Schreibaufgaben.</p>
+</article>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start">
+
+<section aria-labelledby="mat-h" style="flex: 999 1 560px; min-width: 0; background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 24px">
+<h2 id="mat-h" style="margin: 0; font-size: 20px; font-weight: 800">Ziele pro Phase</h2>
+<p style="margin: 6px 0 14px; font-size: 14px; color: #3D4350">Refold-Richtwerte (GER). Die Fähigkeiten wachsen ungleich — das ist gewollt.</p>
+<div style="overflow-x: auto">
+<table style="width: 100%; min-width: 440px; border-collapse: collapse; font-size: 15px">
+<thead>
+<tr style="text-align: left; color: #5B6270; font-size: 12px; text-transform: uppercase; letter-spacing: 0.06em">
+<th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #DCDFE5">Phase</th>
+<th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #DCDFE5">Lesen</th>
+<th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #DCDFE5">Hören</th>
+<th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #DCDFE5">Schreiben</th>
+<th scope="col" style="padding: 8px 10px; border-bottom: 1px solid #DCDFE5">Sprechen</th>
+</tr>
+</thead>
+<tbody>
+<tr><th scope="row" style="text-align: left; padding: 10px; border-bottom: 1px solid #ECEEF2; color: #5B6270">1 Fundament</th><td style="padding: 10px; border-bottom: 1px solid #ECEEF2; color: #5B6270">A2</td><td style="padding: 10px; border-bottom: 1px solid #ECEEF2; color: #5B6270">A1</td><td style="padding: 10px; border-bottom: 1px solid #ECEEF2; color: #5B6270">A1</td><td style="padding: 10px; border-bottom: 1px solid #ECEEF2; color: #5B6270">A1</td></tr>
+<tr style="background: #FFF4C2"><th scope="row" style="text-align: left; padding: 10px; font-weight: 800">2 Verständnis · jetzt</th><td style="padding: 10px; font-weight: 800">B1</td><td style="padding: 10px; font-weight: 700">A2</td><td style="padding: 10px; font-weight: 700">A1</td><td style="padding: 10px; font-weight: 700">A1</td></tr>
+<tr><th scope="row" style="text-align: left; padding: 10px; border-bottom: 1px solid #ECEEF2">3 Hören</th><td style="padding: 10px; border-bottom: 1px solid #ECEEF2">B2</td><td style="padding: 10px; border-bottom: 1px solid #ECEEF2; font-weight: 800">B1</td><td style="padding: 10px; border-bottom: 1px solid #ECEEF2">A1</td><td style="padding: 10px; border-bottom: 1px solid #ECEEF2">A2</td></tr>
+<tr><th scope="row" style="text-align: left; padding: 10px; border-bottom: 1px solid #ECEEF2">4 Sprechen</th><td style="padding: 10px; border-bottom: 1px solid #ECEEF2">B2</td><td style="padding: 10px; border-bottom: 1px solid #ECEEF2">B2</td><td style="padding: 10px; border-bottom: 1px solid #ECEEF2">A2</td><td style="padding: 10px; border-bottom: 1px solid #ECEEF2; font-weight: 800">B1</td></tr>
+<tr><th scope="row" style="text-align: left; padding: 10px">5 Genauigkeit</th><td style="padding: 10px">C1</td><td style="padding: 10px">B2</td><td style="padding: 10px; font-weight: 800">B2</td><td style="padding: 10px; font-weight: 800">B2</td></tr>
+</tbody>
+</table>
+</div>
+<p style="margin: 14px 0 0; font-size: 14px; line-height: 1.5; color: #3D4350">Schreiben (B1) und Sprechen (A2+) liegen dank Kurs schon über dem Phase-2-Ziel — gut so. Die Kaskade ist ein Rahmen, kein Dogma.</p>
+</section>
+
+<section aria-labelledby="chk-h" style="flex: 1 1 340px; min-width: 0; background: #FFFFFF; border: 1px solid #DCDFE5; border-radius: 14px; padding: 24px">
+<h2 id="chk-h" style="margin: 0; font-size: 20px; font-weight: 800">Einstufungs-Checks</h2>
+<p style="margin: 6px 0 16px; font-size: 14px; line-height: 1.5; color: #3D4350">Alle 4 Wochen: ein <a href="Satzcheck.dc.html">Satz-Check</a> (Refolds Phasen-Tor, 5 min) plus ein kurzer Test im Prüfungsstil für die Fähigkeiten der aktuellen Phase.</p>
+<ol style="list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 10px">
+<li style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border: 2px solid #14161B; border-radius: 10px">
+<span><strong>Satz-Check + Lesen/Hören</strong><span style="display: block; font-size: 13px; color: #3D4350">in 4 Wochen · 25 min</span></span>
+<span style="font-size: 13px; font-weight: 700; align-self: center">nächster</span>
+</li>
+<li style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border: 1px solid #DCDFE5; border-radius: 10px; color: #3D4350">
+<span><a href="Einstufung.dc.html" style="font-weight: 800">Einstufung nach dem Kurs</a><span style="display: block; font-size: 13px">heute · alle 4 Fähigkeiten</span></span>
+<span style="font-size: 14px; font-weight: 700; color: #14161B; align-self: center">L B1 · H A2+ · 78 %</span>
+</li>
+<li style="display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border: 1px solid #DCDFE5; border-radius: 10px; color: #3D4350">
+<span><strong style="color: #14161B">Intensivkurs B1.2</strong><span style="display: block; font-size: 13px">abgeschlossen · ohne Prüfung</span></span>
+<span style="font-size: 14px; font-weight: 700; color: #14161B; align-self: center">B1.2</span>
+</li>
+</ol>
+<p style="margin: 16px 0 0; padding-top: 14px; border-top: 1px solid #ECEEF2; font-size: 13px; line-height: 1.5; color: #3D4350">Offizielle Prüfung geplant? Ein Zertifikat braucht eigenes Format-Training — das kommt als Modul in Phase 5.</p>
+</section>
+</div>
+
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1280,"height":1250}}'>
+class Component extends DCLogic {
+  renderVals() {
+    return {};
+  }
+}
+</script>
+</body>
+</html>
