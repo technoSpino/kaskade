@@ -282,19 +282,20 @@ function onPause() {
   if (v && !notThereYet(v)) follow(v.currentTime)
   saveProgress()
 }
-// #42: the clip played to its end — today's part too, even if the last frame came after the last tick
-function onEnded() {
-  const v = video.value
-  if (!v) return
+// #42: the clip is at its end — today's part too, even if the last frame came after the last tick
+function reachedEnd(v) {
   ended.value = true
   endedAt = v.currentTime
-  follow(v.currentTime)
   if (range.value) goal.value = true
+}
+// Only when he got there (played, or a seek he chose) — not the start seek to a part past a clip's end
+function onEnded() {
+  if (video.value && touched) reachedEnd(video.value)
 }
 // Play on from where it is. At the clip's end that would start it again at 0:00: then nothing, only the note.
 function playOn(v, failed = () => {}) {
   if (atEnd(v)) {
-    if (!ended.value) onEnded()
+    if (!ended.value) reachedEnd(v)
     return
   }
   v.play().catch(failed)
